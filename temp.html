@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Pagina Mutante</title>
+    <title>Laboratorio Bandoneon</title>
     
     <!-- import the webpage's stylesheet -->
     <!--<link rel="stylesheet" href="/style.css">-->
@@ -24,7 +24,7 @@
 		$("body").keydown(function(e){
 			e.preventDefault();
 			var keyCode = e.keyCode || e.which;
-			//console.log(e.key);
+			//console.log(keyCode);
 			 tirarnota(entrakeysalenota(keyCode));
 			 	
 		});
@@ -84,11 +84,11 @@
 					
 	var row = 5;
 	
-	var notasKey = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
+	var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
 	
 	
-	
-	var player = new Tone.Player("https://freesound.org/data/previews/68/68437_871124-lq.mp3").sync().start(0);
+	var player = new Tone.Player("https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa3.mp3?v=1590699817060").sync().start(0);
+	//var player = new Tone.Player("https://freesound.org/data/previews/68/68437_871124-lq.mp3").sync().start(0);
 	var pitchShift = new Tone.PitchShift().toDestination();
 	player.connect(pitchShift);
 	
@@ -107,13 +107,13 @@
 	
 	
 	function entrakeysalenota(n){
-		var ret = notasKey.indexOf(n);
+		var ret = notas.indexOf(n);
 		$("body").append("<br>,"+n);
 		return ret != -1 ? ret: 0;
 	}
 	
 	function tirarnota(tecl){	
-		pitchShift.pitch = tecl -24 ;
+		pitchShift.pitch = tecl  ;
 		setTimeout(function(){Tone.Transport.start();console.log(tecl);},5);
 	}
 	</script>
