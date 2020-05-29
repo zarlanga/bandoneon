@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frankenpiano</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  
+var g_instrument = 'Piano';
+//48 a 75
+//function gasendevent(action,label) { return "ga('send', 'event', '" + g_instrument + "', '" + action + "', '" + label + "');"; }
+//function evallog(gastring) { eval(gastring); console.log(gastring); }
+//function galog(action,label) { evallog(gasendevent(action,label)); }
+function threshold(n) { var log8ile = Math.log(n)/Math.log(8); return (log8ile == Math.floor(log8ile)); }
+  
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audiocontext = new AudioContext();
+var piano7sounds = [];
+for (var i=24; i<=108; i++) piano7sounds[i] = null;
+var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fd3.mp3?v=1590711281058",
+           "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa4.mp3?v=1590711070510",
+           "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",
+          "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",
+          "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]
+  
+function piano7loadsound(n)
+{
+ var request = new XMLHttpRequest();
+ request.open("get", n == 44 ? urlsG[0] : n == 51 ? urlsG[1] : n == 58 ? urlsG[2] : n == 65 ? urlsG[3] : n == 72 ? urlsG[4] : ""   , true);
+ request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ request.responseType = "arraybuffer";
+ request.onload =
+  function()
+  {
+   audiocontext.decodeAudioData
+    (
+      request.response,
+      function(buffer)
+      {
+       if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
+       piano7sounds[n] = buffer;
+      },
+      function(error) { console.error('decodeAudioData error ('+n+'): ', error); }
+    );
+  }
+ request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
+ request.send('n='+n);
+}
+  
+ function piano7loadbasic(){
+   piano7loadsound(44);
+ piano7loadsound(51); piano7loadsound(58);
+ piano7loadsound(65); piano7loadsound(72);
+}
+  
+  function sustain_sourcestart(n,rate,delayInSeconds)
+{
+ if (audiocontext.state == 'suspended') audiocontext.resume();
+ var source = audiocontext.createBufferSource();
+ source.buffer = piano7sounds[n];
+ source.playbackRate.setValueAtTime(rate,0);
+ source.connect(audiocontext.destination);
+ source.start(audiocontext.currentTime + delayInSeconds);
+}
+
+function sourcestart(n,rate,delayInSeconds)
+{
+ //if (susbox.checked) { sustain_sourcestart(n,rate,delayInSeconds); return; }
+  if (true) { sustain_sourcestart(n,rate,delayInSeconds); return; }
+ 
+ if (audiocontext.state == 'suspended') audiocontext.resume();
+ 
+ var volume = 1;
+ var duration = 0.6; // in seconds
+ var start = audiocontext.currentTime + delayInSeconds;
+ var stop = start + duration;
+ 
+ var gainNode = audiocontext.createGain();
+ gainNode.gain.setValueAtTime(volume, start);
+ gainNode.gain.linearRampToValueAtTime(1, stop);
+ gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
+ gainNode.connect(audiocontext.destination);
+ var source = audiocontext.createBufferSource();
+ source.buffer = piano7sounds[n];
+ source.playbackRate.setValueAtTime(rate,0);
+ source.connect(gainNode);
+ source.start(start); 
+  console.log("sasasa");
+}
+
+function playpiano7sound(n,delayInSeconds)
+{
+ delayInSeconds = delayInSeconds || 0;
+ if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+  if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
+  if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
+  if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
+  if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
+  if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
+  if (n%7 == 5) return sourcestart(n-3,Math.pow(2,3/12),delayInSeconds);
+  if (n%7 == 6) return sourcestart(n+3,Math.pow(2,-3/12),delayInSeconds);
+  if (n%7 == 0) return sourcestart(n+2,Math.pow(2,-2/12),delayInSeconds);
+  if (n%7 == 1) return sourcestart(n+1,Math.pow(2,-1/12),delayInSeconds);
+}
+
+
+function preloadoctaves(a,b)
+{
+ if (a<3 || b>4) piano7loadall();
+}
+
+function playpianosound(context,n,delayInSeconds)
+{
+ playpiano7sound(n,delayInSeconds);
+  //console.log("culo");
+}
+
+// -----
+
+function isblackkey(n)
+{
+ var i = n % 12;
+ return (i==1 || i==3 || i==6 || i==8 || i==10);
+}
+
+function freq(n)
+{
+ var f = 440*Math.pow(2,(n-69)/12);
+ return f.toFixed(1);
+}
+
+function soundletter(n,sharp)
+{
+ if (n<21 || n>109) { alert('wrong number for sound'); return '?'; }
+ var names = ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B','Cb'];
+ if (sharp) names = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B','B#']; 
+ return names[n%12];
+}
+
+function soundnumber(n,sharp)
+{
+ if (n<21 || n>109) { alert('wrong number for sound'); return '?'; }
+ return Math.floor(n/12)-1;
+}
+
+function soundname(n,sharp)
+{
+ return soundletter(n,sharp)+'<sub>'+soundnumber(n,sharp)+'</sub>';
+}
+
+var ileplayaudio = 0;
+
+function playaudio(n)
+{
+ playpianosound(audiocontext,n);
+ //document.title = '('+n+') ' + soundname(n).replace('<sub>','').replace('</sub>','');
+ //recordnow(n);
+ //if (threshold(++ileplayaudio)) galog('Playaudio', 'playaudio-'+ileplayaudio);
+}
+  
+
+  /*****
+   function recordnow(n)
+{
+ if (document.getElementById('recordbox').checked == false) return;
+ var ms = Date.now() - document.getElementById('starttime').value;
+ var tape = document.getElementById('recordedsounds');
+ tape.value += n+'.'+ms+' ';
+ document.getElementById('playbackbutton').disabled = false;
+}
+  
+  ******************/
+  piano7loadbasic()
+  
+</script>
+</head>
+<body>
+<button onclick="audiocontext.resume();console.log(audiocontext.state);">
+     fffff
+    </button>
+  
+  <br>
+  <script>
+  for(i=40;i<=75;i++) {
+    var test = `<button onclick="playaudio(${i})">--${i}---</button>`
+     $("body").append(test);
+    
+  }
+  </script>
+  
+
+</body>
+</html>
