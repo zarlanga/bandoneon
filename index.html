@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frankenpiano</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+   <script>
+
+    $(document).ready(function(){
+      $("body").keydown(function(e){
+        e.preventDefault();
+        var keyCode = e.keyCode || e.which;
+        //console.log(keyCode);
+         tirarnota(entrakeysalenota(keyCode,true));
+        resaltarNota(entrakeysalenota(keyCode), true);
+      });
+      
+      $("body").keyup(function(e){
+        resaltarNota(entrakeysalenota(e.keyCode), false);
+      });
+      
+    });
+
+
+  </script>
   <style>
+   
+    
+    /*
     .botonota{
       width: 40px;
       height: 40px;
@@ -23,19 +46,165 @@
     #row1, #row2, #row3, #row4, #row5 {
       display:flex;
       justify-content:space-evenly;
+    }*/
+    *{
+      margin:0;
+      padding:0;
+    }
+     img{
+      width:60vw;
+      z-index:10; 
+    }
+    #sobrecontainer{
+      text-align:center;
+      background:silver;
+      font-size:0;
+    }
+    .container{
+      display:inline-block;
+      position:relative;
+      top:0;
+            
+    }
+    .overlay{
+      font-size:12px;
+      width:2.18vw;
+      height:10vh;
+      background:rgba(100,100,100,0.5);
+      z-index:30;
+      display:inline-block;
+    /*  border:1px red solid;*/
+    }
+    #tiagarro1{
+      position:absolute;
+      top:3vh;
+      left:3.7vw;
+    }
+    
+     #tiagarro2{
+      position:absolute;
+      top:2.5vh;
+      left:3.7vw;
+    }
+    
+    #tiagarro2 .overlay{
+      width:2.9vw;
+    }
+    #overnota12{
+      margin-left:1.6vw
+    }
+    #overnota36{
+      margin-left:1.6vw;
     }
 	</style>
-<script>
+ <script>
+   
+   $(document).ready(function(){
+     var moneda=true;
+     for(var i= 0; i<39;i++){
+      // var c= moneda ? i*10 : 250 - i*10
+        var c= moneda ? 50 : 200
+       var color =`rgb(${c},${c},${c}) `
+       var testo= `<div class="overlay"style="background:${color};opacity:0;" id="overnota${i}"></div>`
+       if(i<24){
+       $("#tiagarro1").append(testo)
+         }else{
+      $("#tiagarro2").append(testo)
+         }
+       //$("#tiagarro" + i<24 ? "1" : "2").append(testo)
+       moneda= !moneda;
+     }
+   });
+   
+   function resaltarNota(n, bool){
+     console.log("opa"+n);
+     $("#overnota"+n).css("opacity",bool ? "0.5": "0");
+   }
+   </script>
+</head>
+<body>
   
-  $(document).ready(function(){
-    $("body").keydown(function(e){
-      e.preventDefault();
-      var keyCode = e.keyCode || e.which;
-      //console.log(keyCode);
-       tirarnota(entrakeysalenota(keyCode));
-    });
-  });
+  <div id="sobrecontainer">
+    <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
+    <div class="container">
+      <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20notas1.jpg?v=1590790494721">
+      <div id="tiagarro1">
+        asdfasdf
+      </div>
+    </div>
+    <div class="container">
+    <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20notas2.jpg?v=1590790494341">
+      <div id="tiagarro2">
+        asdfasdf
+      </div>
+    </div>
+  </div>
+  <!--<div id="contBand">
+    <div id="row5"></div>
+    <div id="row4"></div>
+    <div id="row3"></div>
+    <div id="row2"></div>
+    <div id="row1"></div>
+	</div>
+  <br>-->
+  <script>
+  /*for(i=40;i<=75;i++) {
+    var test = `<button onclick="playaudio(${i})">--${i}---</button>`
+     $("body").append(test);
+    
+  }
+  var notasText= ["C#4","A6","F#6","E6","Eb6",
+					"C4","D4","G4","Bb5","C6","D6",
+					"B3","E4","C#5","F#4","A4","C5","E5",
+					"A3","F4","Bb4","G#4","B4","D5","G#5","B5",
+					"Bb3","Eb4","F5","Eb5","F#5","A5","C#6","G5"];
+	
+	var colores = ["cyan","olive","yellow","gray"]
+					
+	var row = 5;
   
+  for (var i = 1; i<35; i++){
+		//var testo = `<div class="botonota">${notasText[i-1]}</div>`;
+		var testo = `<div class="botonota" id="tecla${i}">${notasText[i-1]}</div>`;
+		if (i==6 || i==12 || i == 19 || i == 27) row--;
+		$("#row"+row).append(testo);
+		$("#tecla"+i).css("background-color", colores[notasText[i-1].substr(-1)-3] );
+	}
+	*/
+	
+  var suspenderNotas=[];
+    
+  var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
+  
+  function entrakeysalenota(n,bool){
+		var ret = notas.indexOf(n);
+		if(bool) $("body").append("<br>,"+n);
+		//return ret != -1 ? ret: 0;
+    return ret
+	}
+  
+  function tirarnota(tecl){	
+    console.log(tecl+39);
+    if(tecl>=0) playaudio(tecl+39);
+  }
+   /* 
+  function cargarNotaHold(n) {
+    suspenderNotas.push(n);
+  }
+  
+  function descargarNotaHold(n){
+    
+  }*/
+    
+    
+ 
+    
+    /******************************************************************************/ 
+    /******************************************************************************/ 
+    /******************************************************************************/ 
+    /******************************************************************************/ 
+    
+    
   var g_instrument = 'Piano';
   
   function threshold(n) { var log8ile = Math.log(n)/Math.log(8); return (log8ile == Math.floor(log8ile)); }
@@ -135,101 +304,13 @@
     //console.log("culo");
   }
 
-  // borrar desde aca?
-    function preloadoctaves(a,b)
-  {
-   if (a<3 || b>4) piano7loadall();
-  }
-
-
-  function isblackkey(n)
-  {
-   var i = n % 12;
-   return (i==1 || i==3 || i==6 || i==8 || i==10);
-  }
-
-  function freq(n)
-  {
-   var f = 440*Math.pow(2,(n-69)/12);
-   return f.toFixed(1);
-  }
-
-  function soundletter(n,sharp)
-  {
-   if (n<21 || n>109) { alert('wrong number for sound'); return '?'; }
-   var names = ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B','Cb'];
-   if (sharp) names = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B','B#']; 
-   return names[n%12];
-  }
-
-  function soundnumber(n,sharp)
-  {
-   if (n<21 || n>109) { alert('wrong number for sound'); return '?'; }
-   return Math.floor(n/12)-1;
-  }
-
-  function soundname(n,sharp)
-  {
-   return soundletter(n,sharp)+'<sub>'+soundnumber(n,sharp)+'</sub>';
-  }
-
-  var ileplayaudio = 0;
-/*** borrar hasta aca?**/
-  
+   
   function playaudio(n) {
     playpianosound(audiocontext,n);
   }
 
   piano7loadbasic()
   
-</script>
-</head>
-<body>
-  <div id="contBand">
-    <div id="row5"></div>
-    <div id="row4"></div>
-    <div id="row3"></div>
-    <div id="row2"></div>
-    <div id="row1"></div>
-	</div>
-  <br>
-  <script>
-  /*for(i=40;i<=75;i++) {
-    var test = `<button onclick="playaudio(${i})">--${i}---</button>`
-     $("body").append(test);
-    
-  }*/
-  var notasText= ["C#4","A6","F#6","E6","Eb6",
-					"C4","D4","G4","Bb5","C6","D6",
-					"B3","E4","C#5","F#4","A4","C5","E5",
-					"A3","F4","Bb4","G#4","B4","D5","G#5","B5",
-					"Bb3","Eb4","F5","Eb5","F#5","A5","C#6","G5"];
-	
-	var colores = ["cyan","olive","yellow","gray"]
-					
-	var row = 5;
-	
-	var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
-    
-  for (var i = 1; i<35; i++){
-		//var testo = `<div class="botonota">${notasText[i-1]}</div>`;
-		var testo = `<div class="botonota" id="tecla${i}">${notasText[i-1]}</div>`;
-		if (i==6 || i==12 || i == 19 || i == 27) row--;
-		$("#row"+row).append(testo);
-		$("#tecla"+i).css("background-color", colores[notasText[i-1].substr(-1)-3] );
-	}
-  
-  function entrakeysalenota(n){
-		var ret = notas.indexOf(n);
-		$("body").append("<br>,"+n);
-		return ret != -1 ? ret: 0;
-	}
-  
-  function tirarnota(tecl){	
-    console.log(tecl+39);
-    
-    playaudio(tecl+39);
-  }
   </script>
 </body>
 </html>
