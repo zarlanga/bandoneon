@@ -13,12 +13,18 @@
         e.preventDefault();
         var keyCode = e.keyCode || e.which;
         //console.log(keyCode);
-         tirarnota(entrakeysalenota(keyCode,true));
-        resaltarNota(entrakeysalenota(keyCode), true);
+		if(podemoTocarLaNota(keyCode)){
+		  tirarnota(entrakeysalenota(keyCode,true));
+      resaltarNota(entrakeysalenota(keyCode), true);
+		  cargarNotaHold(keyCode);
+		  //console.log(notasAntitremolo);
+		}
       });
       
       $("body").keyup(function(e){
         resaltarNota(entrakeysalenota(e.keyCode), false);
+		descargarNotaHold(e.keyCode);
+		//console.log(notasAntitremolo);
       });
       
     });
@@ -139,6 +145,7 @@
       </div>
     </div>
   </div>
+  <button onclick="testearNotas()">testear notas </button>
   <!--<div id="contBand">
     <div id="row5"></div>
     <div id="row4"></div>
@@ -172,7 +179,7 @@
 	}
 	*/
 	
-  var suspenderNotas=[];
+  var notasAntitremolo=[];
     
   var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
   
@@ -187,17 +194,28 @@
     console.log(tecl+39);
     if(tecl>=0) playaudio(tecl+39);
   }
-   /* 
+    
   function cargarNotaHold(n) {
-    suspenderNotas.push(n);
+    notasAntitremolo.push(n);
   }
   
   function descargarNotaHold(n){
-    
-  }*/
-    
-    
- 
+    var ind = notasAntitremolo.indexOf(n);
+    notasAntitremolo.splice(ind,1);
+  }
+  
+  function podemoTocarLaNota(n){
+   return notasAntitremolo.indexOf(n) == -1
+  }
+  
+  function testearNotas() {
+    var n =34 ;
+    var pepe = setInterval(function(){
+     playaudio(n);
+     resaltarNota(n-39,true);
+      resaltarNota(n-40,false);
+  console.log(n++);if(n>75)clearInterval(pepe)},1000)
+}
     
     /******************************************************************************/ 
     /******************************************************************************/ 
