@@ -22,8 +22,12 @@
       });
       
       $("body").keyup(function(e){
-        resaltarNota(entrakeysalenota(e.keyCode), false);
-		descargarNotaHold(e.keyCode);
+        var keyCode = e.keyCode || e.which;
+        resaltarNota(entrakeysalenota(keyCode), false);
+        console.log("nota ="+ entrakeysalenota(keyCode)+39);
+        sourcesCabeza[entrakeysalenota(keyCode)+39].stop(audiocontext.currentTime);
+        sourcesCabeza[entrakeysalenota(keyCode)+39]=null;
+		descargarNotaHold(keyCode);
 		//console.log(notasAntitremolo);
       });
       
@@ -75,7 +79,8 @@
     .overlay{
       font-size:12px;
       width:2.18vw;
-      height:10vh;
+     // height:10vh;
+	  height:8vw;
       background:rgba(100,100,100,0.5);
       z-index:30;
       display:inline-block;
@@ -83,13 +88,15 @@
     }
     #tiagarro1{
       position:absolute;
-      top:3vh;
+      //top:3vh;
+	  top:2.5vw;
       left:3.7vw;
     }
     
      #tiagarro2{
       position:absolute;
-      top:2.5vh;
+      //top:2.5vh;
+	  top:1.7vw;
       left:3.7vw;
     }
     
@@ -102,6 +109,25 @@
     #overnota36{
       margin-left:1.6vw;
     }
+	
+	.botonota{
+      width: 3.2vw;
+      height: 3.2vw;
+      display: inline-block;
+      border-radius: 22px;
+      border: 1px solid black;
+      text-align:center;
+      position: absolute;
+	  top:0;
+	  left:0;
+      background:white;
+	  font-size:12px;
+	  color:white;
+    }
+	
+	input{
+	width:5vw;
+	}
 	</style>
  <script>
    
@@ -112,28 +138,69 @@
         var c= moneda ? 50 : 200
        var color =`rgb(${c},${c},${c}) `
        var testo= `<div class="overlay"style="background:${color};opacity:0;" id="overnota${i}"></div>`
+	   var testo2= `<div class="botonota" style="background:blue;opacity:0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
+	   $("#tiagarro0").append(testo2);
        if(i<24){
-       $("#tiagarro1").append(testo)
-         }else{
-      $("#tiagarro2").append(testo)
-         }
+		 $("#tiagarro1").append(testo)
+	   }else{
+         $("#tiagarro2").append(testo)
+	   }
        //$("#tiagarro" + i<24 ? "1" : "2").append(testo)
        moneda= !moneda;
      }
    });
    
-   function resaltarNota(n, bool){
-     console.log("opa"+n);
-     $("#overnota"+n).css("opacity",bool ? "0.5": "0");
+   function moverboton(bool){
+     var n = $("#botonoind").val();
+	 var x=  $("#botonox").val() ;
+	 var y= $("#botonoy").val() 
+     $("#bono"+n).css("top",x+"vw");
+	 $("#bono"+n).css("left",y+"vw");
    }
+   
+   function printValues(){
+   var testo = "["
+	for(var i= 0; i<39;i++){
+	   var x = $("#bono" + i ).css("top");
+	   var y = $("#bono" + i ).css("left");
+	   testo += "[" + x + "," +y+"],";
+	}
+	$("#oupu").append(testo);
+  }
+  
+ 
+  /*
+  //530.39 (--- ancho de la imagen
+  var posbotones=[[179.452px,38.012px],[217.464px,55.692px],[124.644px,75.14px],[85.748px,95.472px],[53.924px,118.456px],[83.98px,155.584px],[205.972px,108.732px],[114.036px,129.948px],[162.656px,92.82px],[107.848px,242.216px],[82.212px,212.16px],[150.28px,206.856px],[114.92px,296.14px],[153.816px,149.396px],[150.28px,254.592px],[127.296px,350.064px],[111.384px,184.756px],[156.468px,312.052px],[192.712px,221.884px],[144.976px,404.872px],[194.48px,165.308px],[190.944px,277.576px],[227.188px,444.652px],[169.728px,369.512px],[200.668px,332.384px],[79.56px,273.156px],[183.872px,425.204px],[87.516px,329.732px],[209.508px,388.96px],[106.964px,387.192px],[68.068px,363.324px],[52.156px,301.444px],[32.708px,341.224px],[49.504px,243.984px],[19.448px,281.996px],[23.868px,213.044px],[47.736px,181.22px],[24.752px,152.048px],[0px,0px]};
+  var posbotones2 = {}
+for (var i =0; i<39;i++){
+  var y = posbotones[i][0]
+  var x = posbotones[i][1]
+  y = y.substr(0, y.length -3);
+  x = x.substr(0, y.length -3);
+  y = y / (530.39/80);
+  x = x /  (530.39/80);
+  posbotones2[i] = [y+"vw", x+"vw"]
+}  */
    </script>
 </head>
-<body>
-  
+<body><!--
+	<div class="container">
+	nronota<input type="number" id="botonoind" oninput="moverboton()" step="1" value="0"></input><br>
+    X<input type="number" id="botonox" oninput="moverboton()" step="0.1" value="0"></input><br>
+	Y<input type="number" id="botonoy" oninput="moverboton()" step="0.1" value="0"></input>
+     <br>
+	 <button onclick="printValues()">plantar nritoss</button><div id="oupu"></div>
+	 <br>
+  </div>-->
   <div id="sobrecontainer">
-    <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
+	<div class="container" id="tiagarro0">
+		<img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
+		<div class="botonota"></div>
+    </div>
     <div class="container">
       <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20notas1.jpg?v=1590790494721">
+	
       <div id="tiagarro1">
         asdfasdf
       </div>
@@ -145,7 +212,10 @@
       </div>
     </div>
   </div>
+  <br>
   <button onclick="testearNotas()">testear notas </button>
+  <br><br>
+   <button onclick="pararTesteo()">stahp </button>
   <!--<div id="contBand">
     <div id="row5"></div>
     <div id="row4"></div>
@@ -180,9 +250,16 @@
 	*/
 	
   var notasAntitremolo=[];
-    
-  var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
   
+  var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
+  var posbot = [["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],]
+  var sourcesCabeza=[];  
+    
+    
+  var pepe; // intervalo para testeo de notas
+    
+  for (var i = 0; i<100;i++) sourcesCabeza[i] = null;
+    
   function entrakeysalenota(n,bool){
 		var ret = notas.indexOf(n);
 		if(bool) $("body").append("<br>,"+n);
@@ -191,10 +268,16 @@
 	}
   
   function tirarnota(tecl){	
-    console.log(tecl+39);
+    //console.log(tecl+39);
     if(tecl>=0) playaudio(tecl+39);
   }
     
+  function resaltarNota(n, bool){
+     //console.log("opa"+n);
+     $("#overnota"+n).css("opacity",bool ? "0.5": "0");
+	 $("#bono"+n).css("opacity",bool ? "0.5": "0");
+   }	
+
   function cargarNotaHold(n) {
     notasAntitremolo.push(n);
   }
@@ -209,13 +292,22 @@
   }
   
   function testearNotas() {
-    var n =34 ;
-    var pepe = setInterval(function(){
-     playaudio(n);
-     resaltarNota(n-39,true);
-      resaltarNota(n-40,false);
-  console.log(n++);if(n>75)clearInterval(pepe)},1000)
-}
+    var n =39 ; //34
+    pepe = setInterval(function(){
+		 playaudio(n);
+		 resaltarNota(n-39,true);
+		 resaltarNota(n-40,false);
+		 console.log(n++);
+		 if(n>79) {clearInterval(pepe); resaltarNota(n-40,false); }
+      },1000)
+  }
+  
+  function pararTesteo(){
+    clearInterval(pepe);
+	for (var i = 39; i < 79; i++) resaltarNota(i-39,false);
+  }
+  
+
     
     /******************************************************************************/ 
     /******************************************************************************/ 
@@ -272,7 +364,7 @@
     piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
    piano7loadsound(65); piano7loadsound(72);
   }
-
+/*
   function sustain_sourcestart(n,rate,delayInSeconds) {
     if (audiocontext.state == 'suspended') audiocontext.resume();
     var source = audiocontext.createBufferSource();
@@ -280,12 +372,14 @@
     source.playbackRate.setValueAtTime(rate,0);
     source.connect(audiocontext.destination);
     source.start(audiocontext.currentTime + delayInSeconds);
-  }
+  }*/
 
   function sourcestart(n,rate,delayInSeconds) {
    //if (susbox.checked) { sustain_sourcestart(n,rate,delayInSeconds); return; }
     //if (true) { sustain_sourcestart(n,rate,delayInSeconds); return; }
     if (audiocontext.state == 'suspended') audiocontext.resume();
+    var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
+                  Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
     var volume = 1;
     var duration = 0.6; // in seconds
     var start = audiocontext.currentTime + delayInSeconds;
@@ -295,14 +389,23 @@
     gainNode.gain.linearRampToValueAtTime(1, stop);
     gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
     gainNode.connect(audiocontext.destination);
-    var source = audiocontext.createBufferSource();
-    source.buffer = piano7sounds[n];
-    source.playbackRate.setValueAtTime(rate,0);
-    source.connect(gainNode);
-    source.start(start); 
-    console.log("sasasa");
+    console.log("indice0="+indexes.indexOf(rate));
+    var ind = n+ indexes.indexOf(rate)-3;
+    console.log("indice="+ind)
+    sourcesCabeza[ind] = audiocontext.createBufferSource();
+    //source.buffer = 
+    sourcesCabeza[ind].buffer = piano7sounds[n];
+    //console.log(sourcesCabeza);
+    sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
+    sourcesCabeza[ind].connect(gainNode);
+    sourcesCabeza[ind].start(start); 
+    //console.log("noesploto");
+    
   }
-
+  
+  
+  
+  
   function playpiano7sound(n,delayInSeconds) {
     delayInSeconds = delayInSeconds || 0;
     if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
