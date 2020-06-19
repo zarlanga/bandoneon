@@ -3,60 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frankenpiano</title>
+  <title>Laboratorio Bandoneon</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
-   <script>
-
-    $(document).ready(function(){
-      $("body").keydown(function(e){
-        e.preventDefault();
-        var keyCode = e.keyCode || e.which;
-        //console.log(keyCode);
-		if(podemoTocarLaNota(keyCode)){
-		  tirarnota(entrakeysalenota(keyCode,true));
-      resaltarNota(entrakeysalenota(keyCode), true);
-		  cargarNotaHold(keyCode);
-		  //console.log(notasAntitremolo);
-		}
-      });
-      
-      $("body").keyup(function(e){
-        var keyCode = e.keyCode || e.which;
-        resaltarNota(entrakeysalenota(keyCode), false);
-        console.log("nota ="+ entrakeysalenota(keyCode)+39);
-        sourcesCabeza[entrakeysalenota(keyCode)+39].stop(audiocontext.currentTime);
-        sourcesCabeza[entrakeysalenota(keyCode)+39]=null;
-		descargarNotaHold(keyCode);
-		//console.log(notasAntitremolo);
-      });
-      
-    });
-
-
-  </script>
   <style>
    
-    
-    /*
-    .botonota{
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      border-radius: 22px;
-      border: 2px solid black;
-      text-align:center;
-      margin:15px 10px;
-      background:white;
-    }
-    #contBand{
-      padding:30px;
-      background:silver;
-    }
-    #row1, #row2, #row3, #row4, #row5 {
-      display:flex;
-      justify-content:space-evenly;
-    }*/
     *{
       margin:0;
       padding:0;
@@ -129,8 +80,14 @@
 	width:5vw;
 	}
 	</style>
- <script>
-   
+  
+  <script>
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/**************terminan las keys carga los overlays***/
    $(document).ready(function(){
      var moneda=true;
      for(var i= 0; i<39;i++){
@@ -150,6 +107,7 @@
      }
    });
    
+  /**** pacalibrar los overlays de los botones */
    function moverboton(bool){
      var n = $("#botonoind").val();
 	 var x=  $("#botonox").val() ;
@@ -182,17 +140,37 @@ for (var i =0; i<39;i++){
   x = x /  (530.39/80);
   posbotones2[i] = [y+"vw", x+"vw"]
 }  */
+    
+    /***********************comienzan las keys **************************/
+    $(document).ready(function(){
+      $("body").keydown(function(e){
+        e.preventDefault();
+        var keyCode = e.keyCode || e.which;
+        //console.log(keyCode);
+		//if(podemoTocarLaNota(keyCode)){
+		  tirarnota(entrakeysalenota(keyCode,true));
+      
+		//}
+      });
+      
+      $("body").keyup(function(e){
+        var keyCode = e.keyCode || e.which;
+        
+        largarnota(entrakeysalenota(keyCode));
+        
+		  });
+      
+    });
+/*******************************************************************/
    </script>
 </head>
-<body><!--
-	<div class="container">
-	nronota<input type="number" id="botonoind" oninput="moverboton()" step="1" value="0"></input><br>
-    X<input type="number" id="botonox" oninput="moverboton()" step="0.1" value="0"></input><br>
-	Y<input type="number" id="botonoy" oninput="moverboton()" step="0.1" value="0"></input>
-     <br>
-	 <button onclick="printValues()">plantar nritoss</button><div id="oupu"></div>
-	 <br>
-  </div>-->
+<body>
+  <button onclick="toggleDispositivos()">
+    ver/ocultar dispositivos midi
+  </button><br>
+  <ul id="midi-list"></ul>
+  <div id="debug"></div>
+  <br>
   <div id="sobrecontainer">
 	<div class="container" id="tiagarro0">
 		<img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
@@ -216,68 +194,99 @@ for (var i =0; i<39;i++){
   <button onclick="testearNotas()">testear notas </button>
   <br><br>
    <button onclick="pararTesteo()">stahp </button>
-  <!--<div id="contBand">
-    <div id="row5"></div>
-    <div id="row4"></div>
-    <div id="row3"></div>
-    <div id="row2"></div>
-    <div id="row1"></div>
-	</div>
-  <br>-->
-  <script>
-  /*for(i=40;i<=75;i++) {
-    var test = `<button onclick="playaudio(${i})">--${i}---</button>`
-     $("body").append(test);
-    
-  }
-  var notasText= ["C#4","A6","F#6","E6","Eb6",
-					"C4","D4","G4","Bb5","C6","D6",
-					"B3","E4","C#5","F#4","A4","C5","E5",
-					"A3","F4","Bb4","G#4","B4","D5","G#5","B5",
-					"Bb3","Eb4","F5","Eb5","F#5","A5","C#6","G5"];
-	
-	var colores = ["cyan","olive","yellow","gray"]
-					
-	var row = 5;
   
-  for (var i = 1; i<35; i++){
-		//var testo = `<div class="botonota">${notasText[i-1]}</div>`;
-		var testo = `<div class="botonota" id="tecla${i}">${notasText[i-1]}</div>`;
-		if (i==6 || i==12 || i == 19 || i == 27) row--;
-		$("#row"+row).append(testo);
-		$("#tecla"+i).css("background-color", colores[notasText[i-1].substr(-1)-3] );
-	}
-	*/
-	
+  <script>
+  
   var notasAntitremolo=[];
   
-  var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
+  var notas = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+                54,75,55,77,56,118,117,null,116,null,null,115];
   var posbot = [["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],]
   var sourcesCabeza=[];  
-    
+  for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
     
   var pepe; // intervalo para testeo de notas
+  
+  const list = document.getElementById('midi-list');
+  const debugEl = document.getElementById('debug');
+  
+
+  function toggleDispositivos(){
+    //console.log("culo");
+    if (list.style.display == "") list.style.display="none";
+    else list.style.display="";
     
-  for (var i = 0; i<100;i++) sourcesCabeza[i] = null;
+  }
+    function connectToDevice(device) {
+  console.log('Connecting to device', device);
+  device.onmidimessage = function(m) {
+    //console.log("conectoadevice");
+    const [command, key, velocity] = m.data;
+    debugEl.innerText = command + '\nrotecla: ' + key;
+    if (command == 144) tirarnota(key+6);
+    if (command ==128) largarnota(key+6);
+    
+  }
+}
+
+function replaceElements(inputs) {
+  while(list.firstChild) {
+    list.removeChild(list.firstChild)
+  }
+  const elements = inputs.map(e => {
+        console.log(e);
+        const el = document.createElement('li')
+        el.innerText = `${e.name} (${e.manufacturer}) CLICK ACA`;
+        el.addEventListener('click', connectToDevice.bind(null, e));
+        return el;
+    });
+
+    elements.forEach(e => list.appendChild(e));
+}
+
+navigator.requestMIDIAccess()
+    .then(function(access) {
+      console.log('access', access);
+      replaceElements(Array.from(access.inputs.values()));
+      access.onstatechange = function(e) {
+        replaceElements(Array.from(this.inputs.values()));
+      }
+
+    })
+    
+    
+  /**********************************************/
     
   function entrakeysalenota(n,bool){
 		var ret = notas.indexOf(n);
-		if(bool) $("body").append("<br>,"+n);
-		//return ret != -1 ? ret: 0;
-    return ret
+		//if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
+		return ret+39;
 	}
-  
-  function tirarnota(tecl){	
+  	
+  //para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest?
+  function tirarnota(tecl){
+    if (podemoTocarLaNota(tecl)){
+      console.log("tironota"+tecl);
+      if(tecl>=39) playaudio(tecl);
+      resaltarNota(tecl-39, true);
+      cargarNotaHold(tecl);
+    }
+  }
+    
+  function largarnota(tecl){
     //console.log(tecl+39);
-    if(tecl>=0) playaudio(tecl+39);
+    resaltarNota(tecl-39, false);
+    sourcesCabeza[tecl].stop(audiocontext.currentTime);
+    sourcesCabeza[tecl]=null;
+		descargarNotaHold(tecl);
   }
     
   function resaltarNota(n, bool){
-     //console.log("opa"+n);
-     $("#overnota"+n).css("opacity",bool ? "0.5": "0");
-	 $("#bono"+n).css("opacity",bool ? "0.5": "0");
+    $("#overnota"+n).css("opacity",bool ? "0.5": "0");
+	  $("#bono"+n).css("opacity",bool ? "0.5": "0");
    }	
 
+    /************antitremolo*****/
   function cargarNotaHold(n) {
     notasAntitremolo.push(n);
   }
@@ -290,7 +299,8 @@ for (var i =0; i<39;i++){
   function podemoTocarLaNota(n){
    return notasAntitremolo.indexOf(n) == -1
   }
-  
+    
+  /**********************************/
   function testearNotas() {
     var n =39 ; //34
     pepe = setInterval(function(){
@@ -317,7 +327,7 @@ for (var i =0; i<39;i++){
     
   var g_instrument = 'Piano';
   
-  function threshold(n) { var log8ile = Math.log(n)/Math.log(8); return (log8ile == Math.floor(log8ile)); }
+ // function threshold(n) { var log8ile = Math.log(n)/Math.log(8); return (log8ile == Math.floor(log8ile)); }
 
   var AudioContext = window.AudioContext || window.webkitAudioContext;
   var audiocontext = new AudioContext();
@@ -329,13 +339,27 @@ for (var i =0; i<39;i++){
              "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]
-*/
+            
   var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsol%202%2B.wav?v=1590779270760",
              "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fre%203%2B.wav?v=1590777317892",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fla%203%2B.wav?v=1590777316166",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fmi%204%2B.wav?v=1590777316937",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsi%204%2B.wav?v=1590777317258",
             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ffa%20%235%2B.wav?v=1590777317355"];
+ 
+var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
+             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
+*/     
+ var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
+             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
+            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
             
   function piano7loadsound(n){
     var request = new XMLHttpRequest();
@@ -362,21 +386,11 @@ for (var i =0; i<39;i++){
   function piano7loadbasic(){
     piano7loadsound(37);
     piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
-   piano7loadsound(65); piano7loadsound(72);
+   piano7loadsound(65); 
+    piano7loadsound(72);
   }
-/*
-  function sustain_sourcestart(n,rate,delayInSeconds) {
-    if (audiocontext.state == 'suspended') audiocontext.resume();
-    var source = audiocontext.createBufferSource();
-    source.buffer = piano7sounds[n];
-    source.playbackRate.setValueAtTime(rate,0);
-    source.connect(audiocontext.destination);
-    source.start(audiocontext.currentTime + delayInSeconds);
-  }*/
 
   function sourcestart(n,rate,delayInSeconds) {
-   //if (susbox.checked) { sustain_sourcestart(n,rate,delayInSeconds); return; }
-    //if (true) { sustain_sourcestart(n,rate,delayInSeconds); return; }
     if (audiocontext.state == 'suspended') audiocontext.resume();
     var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
                   Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
@@ -387,19 +401,15 @@ for (var i =0; i<39;i++){
     var gainNode = audiocontext.createGain();
     gainNode.gain.setValueAtTime(volume, start);
     gainNode.gain.linearRampToValueAtTime(1, stop);
-    gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
+   // gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
     gainNode.connect(audiocontext.destination);
-    console.log("indice0="+indexes.indexOf(rate));
+
     var ind = n+ indexes.indexOf(rate)-3;
-    console.log("indice="+ind)
     sourcesCabeza[ind] = audiocontext.createBufferSource();
-    //source.buffer = 
     sourcesCabeza[ind].buffer = piano7sounds[n];
-    //console.log(sourcesCabeza);
     sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
     sourcesCabeza[ind].connect(gainNode);
     sourcesCabeza[ind].start(start); 
-    //console.log("noesploto");
     
   }
   
@@ -422,7 +432,6 @@ for (var i =0; i<39;i++){
 
   function playpianosound(context,n,delayInSeconds) {
     playpiano7sound(n,delayInSeconds);
-    //console.log("culo");
   }
 
    
@@ -430,7 +439,9 @@ for (var i =0; i<39;i++){
     playpianosound(audiocontext,n);
   }
 
-  piano7loadbasic()
+  piano7loadbasic();
+    
+  toggleDispositivos();
   
   </script>
 </body>
