@@ -84,6 +84,24 @@
   <script>
 /*******************************************************************/
 /*******************************************************************/
+/*on key press (barra espaciadora) hacer una funcion que cambia de modo.
+cambio de modo :
+  - cambiar el array de notas y teclas del teclado
+  - cambiar la imagen 
+  - cambiar los overlays (hacer otro array de posiciones? y mandarle un for cabeza que cambie style.top, style.left?)
+  - (cortar cualquier nota que haya quedado sonando)
+  - y de todo esto que pueda volver para atras (ponele tirarle un boolean como parametro? mejor un numero y que sobreescriba violento? 
+  -ver en que casos combiene hacer directamente pares de array (para las notas? para los buffers?, para las posiciones casi seguro que si)
+    
+despues va a haber que hacerle otro cambio de modo que seria todo lo de arriba 
+     +.... cambiar los samples?
+	 +cambiar una variable que corrija el -39 de la funcion playaudio(tecl)
+  
+  -preguntar: la barra espaciadora que la mantengan apretada y en key up volver al anterior? (se podrian tirar menos notas asi)
+  -como va a hacer en el midi para cambiar de abierto a cerrado y de una mano a otra?
+  
+  */
+/*******************************************************************/
 /*******************************************************************/
 
 /*******************************************************************/
@@ -223,8 +241,8 @@ for (var i =0; i<39;i++){
     //console.log("conectoadevice");
     const [command, key, velocity] = m.data;
     debugEl.innerText = command + '\nrotecla: ' + key;
-    if (command == 144) tirarnota(key+6);
-    if (command ==128) largarnota(key+6);
+    if (command == 144 && velocity != 0) tirarnota(key+6);
+    if (command ==128 || velocity == 0) largarnota(key+6);
     
   }
 }
