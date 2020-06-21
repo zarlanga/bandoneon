@@ -106,24 +106,7 @@ despues va a haber que hacerle otro cambio de modo que seria todo lo de arriba
 
 /*******************************************************************/
 /**************terminan las keys carga los overlays***/
-   $(document).ready(function(){
-     var moneda=true;
-     for(var i= 0; i<39;i++){
-      // var c= moneda ? i*10 : 250 - i*10
-        var c= moneda ? 50 : 200
-       var color =`rgb(${c},${c},${c}) `
-       var testo= `<div class="overlay"style="background:${color};opacity:0;" id="overnota${i}"></div>`
-	   var testo2= `<div class="botonota" style="background:blue;opacity:0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
-	   $("#tiagarro0").append(testo2);
-       if(i<24){
-		 $("#tiagarro1").append(testo)
-	   }else{
-         $("#tiagarro2").append(testo)
-	   }
-       //$("#tiagarro" + i<24 ? "1" : "2").append(testo)
-       moneda= !moneda;
-     }
-   });
+
    
   /**** pacalibrar los overlays de los botones */
    function moverboton(bool){
@@ -159,36 +142,17 @@ for (var i =0; i<39;i++){
   posbotones2[i] = [y+"vw", x+"vw"]
 }  */
     
-    /***********************comienzan las keys **************************/
-    $(document).ready(function(){
-      $("body").keydown(function(e){
-        e.preventDefault();
-        var keyCode = e.keyCode || e.which;
-        //console.log(keyCode);
-		//if(podemoTocarLaNota(keyCode)){
-		  tirarnota(entrakeysalenota(keyCode,true));
-      
-		//}
-      });
-      
-      $("body").keyup(function(e){
-        var keyCode = e.keyCode || e.which;
-        
-        largarnota(entrakeysalenota(keyCode));
-        
-		  });
-      
-    });
-/*******************************************************************/
+
    </script>
 </head>
 <body>
   <button onclick="toggleDispositivos()">
-    ver/ocultar dispositivos midi
+    ver/ocultar dispositivos midiff
   </button><br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
   <br>
+  <h2 id="titulo"></h2>
   <div id="sobrecontainer">
 	<div class="container" id="tiagarro0">
 		<img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
@@ -215,251 +179,316 @@ for (var i =0; i<39;i++){
   
   <script>
   
-  var notasAntitremolo=[];
-  
-  var notas = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
-                54,75,55,77,56,118,117,null,116,null,null,115];
-  var posbot = [["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],]
-  var sourcesCabeza=[];  
-  for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
+	/***********************las keys **************************/
     
-  var pepe; // intervalo para testeo de notas
-  
-  const list = document.getElementById('midi-list');
-  const debugEl = document.getElementById('debug');
-  
-
-  function toggleDispositivos(){
-    //console.log("culo");
-    if (list.style.display == "") list.style.display="none";
-    else list.style.display="";
-    
-  }
-    function connectToDevice(device) {
-  console.log('Connecting to device', device);
-  device.onmidimessage = function(m) {
-    //console.log("conectoadevice");
-    const [command, key, velocity] = m.data;
-    debugEl.innerText = command + '\nrotecla: ' + key;
-    if (command == 144 && velocity != 0) tirarnota(key+6);
-    if (command ==128 || velocity == 0) largarnota(key+6);
-    
-  }
-}
-
-function replaceElements(inputs) {
-  while(list.firstChild) {
-    list.removeChild(list.firstChild)
-  }
-  const elements = inputs.map(e => {
-        console.log(e);
-        const el = document.createElement('li')
-        el.innerText = `${e.name} (${e.manufacturer}) CLICK ACA`;
-        el.addEventListener('click', connectToDevice.bind(null, e));
-        return el;
+	$(document).ready(function(){
+      
+	  $("body").keydown(function(e){
+        e.preventDefault();
+        var keyCode = e.keyCode || e.which;
+        //console.log(keyCode);
+		//if(podemoTocarLaNota(keyCode)){
+		if (keyCode != 32) {
+			tirarnota(entrakeysalenota(keyCode,true)); }
+		  else {
+			cambiaModo()
+		}
+		
+		//}
+      });
+      
+      
+	  $("body").keyup(function(e){
+        var keyCode = e.keyCode || e.which;
+		if (keyCode != 32) largarnota(entrakeysalenota(keyCode));
+      });
+      
     });
+	
+	
+	/*********************************crea y carga los overlays**********************************/
 
-    elements.forEach(e => list.appendChild(e));
-}
+   $(document).ready(function(){
+		var moneda=true;
+		for(var i= 0; i<39;i++){
+			// var c= moneda ? i*10 : 250 - i*10
+			var c= moneda ? 50 : 200
+			var color =`rgb(${c},${c},${c}) `
+			var testo= `<div class="overlay"style="background:${color};opacity:0;" id="overnota${i}"></div>`
+			var testo2= `<div class="botonota" style="background:blue;opacity:0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
+			$("#tiagarro0").append(testo2);
+			if(i<24){
+				$("#tiagarro1").append(testo)
+			}else{
+				$("#tiagarro2").append(testo)
+			}
+			//$("#tiagarro" + i<24 ? "1" : "2").append(testo)
+			moneda= !moneda;
+		}
+	});
+  
+	/**************************************************************************************/
+	
+	/*************************VARIABLES (PONELE)************************/
+	
+	var estaAbriendo = true;
+	
+	var notasAntitremolo=[];
+  
+	var notas = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+                54,75,55,77,56,118,117,null,116,null,null,115];
+	var posbot = [["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],]
+	var sourcesCabeza=[];  
+	for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
+    
+	var pepe; // intervalo para testeo de notas
+  
+	const list = document.getElementById('midi-list');
+	const debugEl = document.getElementById('debug');
+  
+	/*****************FUNCIONES*******************************************/
 
-navigator.requestMIDIAccess()
-    .then(function(access) {
-      console.log('access', access);
-      replaceElements(Array.from(access.inputs.values()));
-      access.onstatechange = function(e) {
-        replaceElements(Array.from(this.inputs.values()));
-      }
 
-    })
+    /***********CAMBIO DE MODOO******/
+	
+	function cambiaModo(){
+		console.log("cambioModo");
+		estaAbriendo = !estaAbriendo;
+		if (estaAbriendo){
+			$("#titulo").html("abriendo");
+			notas = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+                54,75,55,77,56,118,117,null,116,null,null,115]; //insertar aca las notas
+			//cargarImagenes(1);
+			//reordenarOverlays(1); //ver que onda el array de posiciones
+		} else{
+			$("#titulo").html("cerrando");
+			notas = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,82,73,66,74,116,78,117,75,56,118,77,null,null,115] //insertar aca las notas cerrando
+			//notas = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,73,66,74,116,78,117,75,56,118,77,null,null,115] //insertar aca las notas cerrando
+			//cargarImagenes(2);
+			//reordenarOverlays(2); //
+		}
+	
+	}
+
+
+
+
+	/****FUNCIONES MIDI***/
+  	function connectToDevice(device) {
+		console.log('Connecting to device', device);
+		device.onmidimessage = function(m) {
+		  const [command, key, velocity] = m.data;
+		  debugEl.innerText = command + '\nrotecla: ' + key;
+		  if (command == 144 && velocity != 0) tirarnota(key+6);
+		  if (command ==128 || velocity == 0) largarnota(key+6);
+		}
+	}
+
+	
+	function replaceElements(inputs) {
+		while(list.firstChild) {
+			list.removeChild(list.firstChild)
+		}
+		const elements = inputs.map(e => {
+			console.log(e);
+			const el = document.createElement('li')
+			el.innerText = `${e.name} (${e.manufacturer}) CLICK ACA`;
+			el.addEventListener('click', connectToDevice.bind(null, e));
+			return el;
+		});
+
+		elements.forEach(e => list.appendChild(e));
+	}
+
+	navigator.requestMIDIAccess()
+		.then(function(access) {
+			console.log('access', access);
+			replaceElements(Array.from(access.inputs.values()));
+			access.onstatechange = function(e) {
+			replaceElements(Array.from(this.inputs.values()));
+		}
+	});
     
+	
+	
+	
+	/******************LA MAGIA**********************/
+	/******************LA MAGIA**********************/
     
-  /**********************************************/
-    
-  function entrakeysalenota(n,bool){
+	
+	
+	function entrakeysalenota(n,bool){
 		var ret = notas.indexOf(n);
-		//if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
+		if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
 		return ret+39;
 	}
   	
-  //para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest?
-  function tirarnota(tecl){
-    if (podemoTocarLaNota(tecl)){
-      console.log("tironota"+tecl);
-      if(tecl>=39) playaudio(tecl);
-      resaltarNota(tecl-39, true);
-      cargarNotaHold(tecl);
-    }
-  }
+	//para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest? tecl = nota para el sampler
+	function tirarnota(tecl){
+		if (podemoTocarLaNota(tecl)){
+			console.log("tironota"+tecl);
+			if(tecl>=39) playaudio(tecl);
+			resaltarNota(tecl-39, true);
+			cargarNotaHold(tecl);
+		}
+	}
     
-  function largarnota(tecl){
-    //console.log(tecl+39);
-    resaltarNota(tecl-39, false);
-    sourcesCabeza[tecl].stop(audiocontext.currentTime);
-    sourcesCabeza[tecl]=null;
+	function largarnota(tecl){
+		//console.log("largo "+tecl);
+		resaltarNota(tecl-39, false);
+		sourcesCabeza[tecl].stop(audiocontext.currentTime);
+		sourcesCabeza[tecl]=null;
 		descargarNotaHold(tecl);
-  }
+	}
     
-  function resaltarNota(n, bool){
-    $("#overnota"+n).css("opacity",bool ? "0.5": "0");
-	  $("#bono"+n).css("opacity",bool ? "0.5": "0");
-   }	
-
-    /************antitremolo*****/
-  function cargarNotaHold(n) {
-    notasAntitremolo.push(n);
-  }
-  
-  function descargarNotaHold(n){
-    var ind = notasAntitremolo.indexOf(n);
-    notasAntitremolo.splice(ind,1);
-  }
-  
-  function podemoTocarLaNota(n){
-   return notasAntitremolo.indexOf(n) == -1
-  }
-    
-  /**********************************/
-  function testearNotas() {
-    var n =39 ; //34
-    pepe = setInterval(function(){
-		 playaudio(n);
-		 resaltarNota(n-39,true);
-		 resaltarNota(n-40,false);
-		 console.log(n++);
-		 if(n>79) {clearInterval(pepe); resaltarNota(n-40,false); }
-      },1000)
-  }
-  
-  function pararTesteo(){
-    clearInterval(pepe);
-	for (var i = 39; i < 79; i++) resaltarNota(i-39,false);
-  }
-  
+	function resaltarNota(n, bool){
+		$("#overnota"+n).css("opacity",bool ? "0.5": "0");
+		$("#bono"+n).css("opacity",bool ? "0.5": "0");
+	}	
+	
+	/***************/
+	
+	function toggleDispositivos(){
+    	if (list.style.display == "") list.style.display="none";
+		else list.style.display="";
+    }
 
     
-    /******************************************************************************/ 
-    /******************************************************************************/ 
-    /******************************************************************************/ 
-    /******************************************************************************/ 
-    
-    
-  var g_instrument = 'Piano';
+	/************antitremolo*****/
+	function cargarNotaHold(n) {
+		notasAntitremolo.push(n);
+	}
   
- // function threshold(n) { var log8ile = Math.log(n)/Math.log(8); return (log8ile == Math.floor(log8ile)); }
+	function descargarNotaHold(n){
+		var ind = notasAntitremolo.indexOf(n);
+		notasAntitremolo.splice(ind,1);
+	}
+  
+	function podemoTocarLaNota(n){
+		return notasAntitremolo.indexOf(n) == -1
+	}
+    
+	
+	/**********************************/
+	function testearNotas() {
+		var n =39 ; //34
+		pepe = setInterval(function(){
+			  playaudio(n);
+			  resaltarNota(n-39,true);
+			  resaltarNota(n-40,false);
+			  console.log(n++);
+			  if(n>79) {clearInterval(pepe); resaltarNota(n-40,false);
+			}
+		},1000);
+	}
+  
+	function pararTesteo(){
+		clearInterval(pepe);
+		for (var i = 39; i < 79; i++) resaltarNota(i-39,false);
+	}
+  
 
-  var AudioContext = window.AudioContext || window.webkitAudioContext;
-  var audiocontext = new AudioContext();
-  var piano7sounds = [];
-  for (var i=24; i<=108; i++) piano7sounds[i] = null;
+    /******************************************************************************/ 
+    /**********************AFANADO Y MANOSEADO*************************************/ 
+    /******************************************************************************/ 
+    /******************************************************************************/ 
+    
+    
+	var g_instrument = 'Piano';
+
+
+	var AudioContext = window.AudioContext || window.webkitAudioContext;
+	var audiocontext = new AudioContext();
+	var piano7sounds = [];
+	for (var i=24; i<=108; i++) piano7sounds[i] = null;
   
- /* var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fd3.mp3?v=1590711281058",
-             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa4.mp3?v=1590711070510",
-             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]
+	/* var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fd3.mp3?v=1590711281058",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa4.mp3?v=1590711070510",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]              var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsol%202%2B.wav?v=1590779270760",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fre%203%2B.wav?v=1590777317892",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fla%203%2B.wav?v=1590777316166",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fmi%204%2B.wav?v=1590777316937",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsi%204%2B.wav?v=1590777317258",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ffa%20%235%2B.wav?v=1590777317355"];  var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];*/     
+
+	var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
+				"https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
+				"https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
+				"https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
+				"https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
+				"https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
             
-  var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsol%202%2B.wav?v=1590779270760",
-             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fre%203%2B.wav?v=1590777317892",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fla%203%2B.wav?v=1590777316166",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fmi%204%2B.wav?v=1590777316937",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsi%204%2B.wav?v=1590777317258",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ffa%20%235%2B.wav?v=1590777317355"];
- 
-var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
-             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
-*/     
- var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
-             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
-            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
-            
-  function piano7loadsound(n){
-    var request = new XMLHttpRequest();
-    request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
+	function piano7loadsound(n){
+		var request = new XMLHttpRequest();
+		request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
                 n == 58 ? urlsG[3] : n == 65 ? urlsG[4] : n == 72 ? urlsG[5] : ""   , true); //n dividido 7?
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.responseType = "arraybuffer";
-    request.onload =
-      function() {
-        audiocontext.decodeAudioData (
-          request.response,
-          function(buffer) {
-            if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
-            piano7sounds[n] = buffer;
-          },
-          function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
-          }
-        );
-      }
-    request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
-    request.send('n='+n);
-  }
+		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		request.responseType = "arraybuffer";
+		request.onload =
+		  function() {
+			audiocontext.decodeAudioData (
+			  request.response,
+              function(buffer) {
+                if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
+                piano7sounds[n] = buffer;
+              },
+              function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
+              }
+			);
+		  }
+		request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
+		request.send('n='+n);
+	}
 
-  function piano7loadbasic(){
-    piano7loadsound(37);
-    piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
-   piano7loadsound(65); 
-    piano7loadsound(72);
-  }
+	function piano7loadbasic(){
+		piano7loadsound(37);
+		piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
+		piano7loadsound(65); 
+		piano7loadsound(72);
+	}
 
-  function sourcestart(n,rate,delayInSeconds) {
-    if (audiocontext.state == 'suspended') audiocontext.resume();
-    var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
+	function sourcestart(n,rate,delayInSeconds) {
+		if (audiocontext.state == 'suspended') audiocontext.resume();
+		var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
                   Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
-    var volume = 1;
-    var duration = 0.6; // in seconds
-    var start = audiocontext.currentTime + delayInSeconds;
-    var stop = start + duration;
-    var gainNode = audiocontext.createGain();
-    gainNode.gain.setValueAtTime(volume, start);
-    gainNode.gain.linearRampToValueAtTime(1, stop);
-   // gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
-    gainNode.connect(audiocontext.destination);
+		var volume = 1;
+		var duration = 0.6; // in seconds
+		var start = audiocontext.currentTime + delayInSeconds;
+		var stop = start + duration;
+		var gainNode = audiocontext.createGain();
+		gainNode.gain.setValueAtTime(volume, start);
+		gainNode.gain.linearRampToValueAtTime(1, stop);
+		// gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
+		gainNode.connect(audiocontext.destination);
 
-    var ind = n+ indexes.indexOf(rate)-3;
-    sourcesCabeza[ind] = audiocontext.createBufferSource();
-    sourcesCabeza[ind].buffer = piano7sounds[n];
-    sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
-    sourcesCabeza[ind].connect(gainNode);
-    sourcesCabeza[ind].start(start); 
+		var ind = n+ indexes.indexOf(rate)-3;
+		sourcesCabeza[ind] = audiocontext.createBufferSource();
+		sourcesCabeza[ind].buffer = piano7sounds[n];
+		sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
+		sourcesCabeza[ind].connect(gainNode);
+		sourcesCabeza[ind].start(start); 
     
-  }
+	}
   
-  
-  
-  
-  function playpiano7sound(n,delayInSeconds) {
-    delayInSeconds = delayInSeconds || 0;
-    if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
-    if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
-    if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
-    if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
-    if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
-    if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
-    if (n%7 == 5) return sourcestart(n-3,Math.pow(2,3/12),delayInSeconds);
-    if (n%7 == 6) return sourcestart(n+3,Math.pow(2,-3/12),delayInSeconds);
-    if (n%7 == 0) return sourcestart(n+2,Math.pow(2,-2/12),delayInSeconds);
-    if (n%7 == 1) return sourcestart(n+1,Math.pow(2,-1/12),delayInSeconds);
-  }
+	function playpiano7sound(n,delayInSeconds) {
+		delayInSeconds = delayInSeconds || 0;
+		if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+		if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
+		if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
+		if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
+		if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
+		if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
+		if (n%7 == 5) return sourcestart(n-3,Math.pow(2,3/12),delayInSeconds);
+		if (n%7 == 6) return sourcestart(n+3,Math.pow(2,-3/12),delayInSeconds);
+		if (n%7 == 0) return sourcestart(n+2,Math.pow(2,-2/12),delayInSeconds);
+		if (n%7 == 1) return sourcestart(n+1,Math.pow(2,-1/12),delayInSeconds);
+	}
 
-  function playpianosound(context,n,delayInSeconds) {
-    playpiano7sound(n,delayInSeconds);
-  }
+	function playpianosound(context,n,delayInSeconds) {
+		playpiano7sound(n,delayInSeconds);
+	}
 
    
-  function playaudio(n) {
-    playpianosound(audiocontext,n);
-  }
+	function playaudio(n) {
+		playpianosound(audiocontext,n);
+	}
 
-  piano7loadbasic();
+	piano7loadbasic();
     
-  toggleDispositivos();
+	toggleDispositivos();
   
   </script>
 </body>
