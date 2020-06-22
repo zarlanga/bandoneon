@@ -167,9 +167,9 @@ for (var i =0; i<39;i++){
 	 <button onclick="printValues()">plantar nritoss</button><button onclick="plantarOverlays()">mostrar overlays</button><div id="oupu"></div>
 	 <br>
   </div> -->
-
+  
   <button onclick="toggleDispositivos()">
-    ver/ocultar dispositivos midiff
+    ver/ocultar dispositivos midi
   </button><br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
@@ -375,7 +375,8 @@ for (var i =0; i<39;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
-		if(notasAntitremolo.indexOf(tecl) != -1){
+		//if(notasAntitremolo.indexOf(tecl) != -1){
+		if (sourcesCabeza[tecl]){
 			resaltarNota(tecl-39, false);
 			sourcesCabeza[tecl].stop(audiocontext.currentTime);
 			sourcesCabeza[tecl]=null;
@@ -430,13 +431,19 @@ for (var i =0; i<39;i++){
 	}
 	
 	function silenciarTodo(){
-		notasAntitremolo.forEach(m => {
+		/*notasAntitremolo.forEach(m => {
 			console.log("silencia" +m);
 			sourcesCabeza[m].stop(audiocontext.currentTime);
 		  });
 		notasAntitremolo.forEach(m => descargarNotaHold(m));
 		for (var i = 39; i < 79; i++) resaltarNota(i-39,false);
+		*/
 		
+		
+		for (var i = 39; i < 79; i++) {
+			if (sourcesCabeza[i]) largarnota(i);
+			
+		}
 	}
   
 
