@@ -502,7 +502,7 @@ for (var i =0; i<39;i++){
 	function sourcestart(n,rate,delayInSeconds) {
 		if (audiocontext.state == 'suspended') audiocontext.resume();
 		var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
-                  Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
+                  Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12),Math.pow(2,4/12),Math.pow(2,5/12)]
 		var volume = 1;
 		var duration = 0.6; // in seconds
 		var start = audiocontext.currentTime + delayInSeconds;
@@ -525,8 +525,10 @@ for (var i =0; i<39;i++){
 	function playpiano7sound(n,delayInSeconds) {
 		delayInSeconds = delayInSeconds || 0;
 		if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
-		if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
-		if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
+		if (n ==77) return sourcestart(n-5, Math.pow(2,5/12), delayInSeconds);
+		if (n ==76) return sourcestart(n-4, Math.pow(2,4/12), delayInSeconds);
+		//if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
+		//if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
 		if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
 		if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
 		if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
