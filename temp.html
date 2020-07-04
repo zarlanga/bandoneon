@@ -72,6 +72,7 @@
 	<div id="row2"></div>
 	<div id="row1"></div>
 	</div>
+	<a href="nota.mp3"> test</a>
 	<script>
 	
 	var notasText= ["C#4","A6","F#6","E6","Eb6",
@@ -87,7 +88,7 @@
 	var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
 	
 	
-	var player = new Tone.Player("https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa3.mp3?v=1590699817060").sync().start(0);
+	var player = new Tone.Player("nota.mp3").sync().start(0);
 	//var player = new Tone.Player("https://freesound.org/data/previews/68/68437_871124-lq.mp3").sync().start(0);
 	var pitchShift = new Tone.PitchShift().toDestination();
 	player.connect(pitchShift);
