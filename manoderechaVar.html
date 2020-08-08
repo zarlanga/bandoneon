@@ -494,7 +494,8 @@ for (var i =0; i<1;i++){
 		//var notas = mano == "der" ? ["1_g3","2_d4","3_a4","4_e4","5_b5","6_f6"] 
 		//	: ["1_bb2", "2_f2", "3_c3", "4_g3", "5_d4", "6_a4"] ;
 		
-		var notas = ["1_g3","2_d4","3_a4","4_e4","5_b5","6_f6"];
+		//var notas = ["1_g3","2_d4","3_a4","4_e4","5_b5","6_f6"];
+		var notas = ["1_g3","2_d4","3_a4","4_e5","5_b5","6_f6"];
 		
 		notas = notas.map( (n) => testo + n + ".wav" )
 		
@@ -551,6 +552,7 @@ for (var i =0; i<1;i++){
               function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
               }
 			);
+			console.log("cargo " + n); 
 		  }
 		request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
 		request.send('n='+n);
@@ -561,6 +563,7 @@ for (var i =0; i<1;i++){
 		piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
 		piano7loadsound(65); 
 		piano7loadsound(72);
+		//console.log("cargo todo");
 	}
 
 	function sourcestart(n,rate,delayInSeconds) {
