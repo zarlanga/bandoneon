@@ -381,7 +381,11 @@ for (var i =0; i<1;i++){
   	
 	//para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest? tecl = nota para el sampler
 	function tirarnota(tecl){
+		console.log("tecla = " +tecl);
+		
 		if (podemoTocarLaNota(tecl)){
+		
+			if (tecl == 77) cambiaModo();
 			if(tecl==76 && !estaAbriendo){ //el mi que se repite en cerrando
 				playaudio(58);
 				resaltarNota(39,true);
