@@ -12,15 +12,40 @@
       margin:0;
       padding:0;
     }
+	body{
+		text-align:center;
+		
+	}
+	
+	button {
+	
+		background-color: orange;
+		display:inline-block;
+		padding: 7px;
+		border-radius: 5px;
+		
+	}
+	
+	#header {
+		display:inline-block;
+		padding:15px;
+		border-radius:10px;
+		background-color:blue;
+		margin:0 0 15px;
+	}
+	
+	
      img{
       width:60vw;
       z-index:10; 
+	  border-radius:15px;
     }
     #sobrecontainer{
       text-align:center;
-      background:silver;
+      /*background:silver;*/
       font-size:0;
     }
+
     .container{
       display:inline-block;
       position:relative;
@@ -172,15 +197,18 @@ for (var i =0; i<1;i++){
   </div>
   --> 
   
+<br>
   <button onclick="toggleDispositivos()">
-    ver/ocultar dispositivos midi
+    ver/ocultar dispositivos midiff
   </button><br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
   <br>
-  <h3 id="sampleStatus"></h3>
-  <h1 id="titulo0"></h1>
-  <h2 id="titulo"></h2>
+  <div id="header">
+	<h3 id="sampleStatus"></h3>
+	<h1 id="titulo0"></h1>
+	<h2 id="titulo"></h2>
+  </div>
   <div id="sobrecontainer">
 	<input style="width:20vw; padding:15px" type="range" id="vol" name="vol" min="0" max="200" value="60" onchange="cambiarVolumen(this.value)"/><br>
 	<div class="container" id="tiagarro0">
@@ -326,7 +354,21 @@ for (var i =0; i<1;i++){
 	}
 
 
+	function setColor(t){
+		var col = getColor3();
+		$(t).css("background-color", col[0])
+		$(t).css("color", col[1])
+	}
 
+	function getColor3(){
+        gr = Math.floor(Math.random()*255);
+        re = Math.floor(Math.random()*255);
+        blu = Math.floor(Math.random()*255);
+		gr1 = 255 - gr;
+		re1 = 255- re;
+		blu1 = 255- blu;
+        return ["rgb("+ re+","+gr+","+blu+")","rgb("+ re1+","+gr1+","+blu1+")"];
+      }
 
 	/****FUNCIONES MIDI***/
   	function connectToDevice(device) {
@@ -643,6 +685,13 @@ for (var i =0; i<1;i++){
 	cambiaModo();
 	
 	toggleDispositivos();
+	
+	mostrarSamplesCargados();
+	
+	setColor("#header");
+	setColor("body");
+	setColor("button");
+	
 	
 	document.getElementById("titulo0").innerText = getQueryVariable("band");
   
