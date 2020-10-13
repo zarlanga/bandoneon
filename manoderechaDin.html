@@ -214,7 +214,7 @@ for (var i =0; i<1;i++){
 	<div class="container" id="tiagarro0">
 		<img id="img0" src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20teclas.jpg?v=1590790495439">
 		<img id= "img1" src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion2%20teclas.jpg?v=1592777743097">
-		<div class="botonota"></div>
+		<!--	<div class="botonota"></div>-->
     </div>
     <div class="container">
       <img src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion1%20notas1.jpg?v=1590790494721">
@@ -333,6 +333,9 @@ for (var i =0; i<1;i++){
 			for( var i = 0; i<39; i++){
 				$("#bono"+i).css("top", posbot[i][0]);
 				$("#bono"+i).css("left", posbot[i][1]);
+				if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
+				else $("#bono"+i).css("display","");
+			
 			}
 			//reordenarOverlays(1); //ver que onda el array de posiciones
 		} else{
@@ -345,6 +348,10 @@ for (var i =0; i<1;i++){
 				
 				$("#bono"+i).css("top", posbot1[i][0]);
 				$("#bono"+i).css("left", posbot1[i][1]);
+				
+				if (posbot1[i][0] == "0vw") $("#bono"+i).css("display","none");
+				else $("#bono"+i).css("display","");
+			
 			}
 			//reordenarOverlays(2); //
 		}
