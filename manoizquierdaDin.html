@@ -188,8 +188,10 @@ for (var i =0; i<37;i++){
   <ul id="midi-list"></ul>
   <div id="debug"></div>
   <br>
+  <h3 id="sampleStatus"></h3>
   <h1 id="titulo0"></h1>
   <h2 id="titulo"></h2>
+  
   <div id="sobrecontainer">
   <input style="width:20vw; padding:15px" type="range" id="vol" name="vol" min="0" max="200" value="60" onchange="cambiarVolumen(this.value)"/><br>
 	<div class="container" id="tiagarro0">
@@ -290,6 +292,7 @@ for (var i =0; i<37;i++){
 	
 	var volu = 0.6;
 	
+	var samplesCargados= 0;
   
 	const list = document.getElementById('midi-list');
 	const debugEl = document.getElementById('debug');
@@ -519,6 +522,10 @@ for (var i =0; i<37;i++){
 		return notas;
 		
 	}
+	
+	function mostrarSamplesCargados(){
+		document.getElementById("sampleStatus").innerText = `${samplesCargados} de 6 samples cargados`;
+	}
   
 
     /******************************************************************************/ 
@@ -583,6 +590,10 @@ for (var i =0; i<37;i++){
               }
 			);
 			console.log("cargo " + n); 
+			
+			samplesCargados++;//
+			mostrarSamplesCargados();
+			
 		  }
 		request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
 		request.send('n='+n);
@@ -647,6 +658,8 @@ for (var i =0; i<37;i++){
 	cambiaModo();
 	
 	toggleDispositivos();
+	
+	mostrarSamplesCargados();
 	
 	document.getElementById("titulo0").innerText = getQueryVariable("band");
   
