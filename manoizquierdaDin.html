@@ -105,7 +105,9 @@
 	  left:0;
       background:white;
 	  font-size:12px;
-	  color:white;
+	  color:black;
+	  /*text-shadow: 1px 1px #f7f;*/
+}
     }
 	
 	input{
@@ -289,8 +291,8 @@ for (var i =0; i<37;i++){
 		for(var i= 0; i<37;i++){
 			// var c= moneda ? i*10 : 250 - i*10
 			var c= moneda ? 30 : 150 ;
-			//var color =`rgb(${c},${c},${c}) `
-			var color =`rgb(200,${c},${c}) `
+			var color =`rgb(${c},${c},${c}) `
+			//var color =`rgb(200,${c},${c}) `
 			var testo= `<div class="overlay"style="background:${color};opacity:0.2;" id="overnota${i}"></div>`
 			var testo2= `<div class="botonota" style="background:transparent;opacity:0.2;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
 			$("#tiagarro0").append(testo2);
@@ -304,6 +306,7 @@ for (var i =0; i<37;i++){
 			
 		}
 		cambiaModo();
+		if (getQueryVariable("cerr") == "true") cambiaModo();
 	});
   
 	/**************************************************************************************/
