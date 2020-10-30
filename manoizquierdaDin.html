@@ -249,9 +249,9 @@ for (var i =0; i<37;i++){
     </div>
   </div>
   <br>
-  <button onclick="testearNotas()">testear notas </button>
+  <!--<button onclick="testearNotas()">testear notas </button>
   <br><br>
-   <button onclick="pararTesteo()">stahp </button>
+   <button onclick="pararTesteo()">stahp </button>-->
   
   <script>
   
@@ -292,7 +292,7 @@ for (var i =0; i<37;i++){
 			//var color =`rgb(${c},${c},${c}) `
 			var color =`rgb(200,${c},${c}) `
 			var testo= `<div class="overlay"style="background:${color};opacity:0.2;" id="overnota${i}"></div>`
-			var testo2= `<div class="botonota" style="background:blue;opacity:0.2;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
+			var testo2= `<div class="botonota" style="background:transparent;opacity:0.2;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
 			$("#tiagarro0").append(testo2);
 			if(i<24){
 				$("#tiagarro1").append(testo)
