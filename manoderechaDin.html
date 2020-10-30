@@ -274,7 +274,7 @@ for (var i =0; i<1;i++){
 			// var c= moneda ? i*10 : 250 - i*10
 			var c= moneda ? 50 : 200
 			var color =`rgb(${c},${c},${c}) `
-			var testo= `<div class="overlay"style="background:${color};opacity:0;" id="overnota${i}"></div>`
+			var testo= `<div class="overlay"style="background:${color};opacity:0.2;" id="overnota${i}"></div>`
 			var testo2= `<div class="botonota" style="background:blue;opacity:0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
 			$("#tiagarro0").append(testo2);
 			if(i<24){
@@ -472,11 +472,11 @@ for (var i =0; i<1;i++){
     
 	function resaltarNota(n, bool){
 		if(n==39 && !estaAbriendo){
-			$("#bono"+n).css("opacity",bool ? "0.5": "0");
-			$("#overnota"+19).css("opacity",bool ? "0.5": "0");
+			$("#bono"+n).css("opacity",bool ? "0.7": "0.0");
+			$("#overnota"+19).css("opacity",bool ? "0.7": "0.2");
 		} else {
-			$("#overnota"+n).css("opacity",bool ? "0.5": "0");
-			$("#bono"+n).css("opacity",bool ? "0.5": "0");
+			$("#overnota"+n).css("opacity",bool ? "0.7": "0.2");
+			$("#bono"+n).css("opacity",bool ? "0.7": "0.2");
 		}
 	}	
 	
@@ -536,6 +536,7 @@ for (var i =0; i<1;i++){
 			
 		}
 	}
+	
 	
 	
 	function getQueryVariable(variable){
@@ -624,8 +625,8 @@ for (var i =0; i<1;i++){
               }
 			);
 			console.log("cargo " + n); 
-			samplesCargados++;//(------------------------------
-			mostrarSamplesCargados();
+			//samplesCargados++;//(------------------------------
+			//mostrarSamplesCargados();
 		  }
 		request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
 		request.send('n='+n);
@@ -693,7 +694,7 @@ for (var i =0; i<1;i++){
 	
 	toggleDispositivos();
 	
-	mostrarSamplesCargados();
+	//mostrarSamplesCargados();
 	
 	setColor("#header");
 	setColor("body");
