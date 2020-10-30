@@ -53,16 +53,14 @@
             
     }
     .overlay{
-	  text-align:center;
-      font-size:5px;
+	  padding:3vh 0;
+      font-size:12px;
       width:2.18vw;
      // height:10vh;
 	  height:8vw;
       background:rgba(100,100,100,0.5);
       z-index:99;
-	  
-	  
-      display:inline-block;
+	  display:inline-block;
     /* overflow:hidden;
 	border:1px red solid;*/
     }
@@ -71,6 +69,8 @@
       //top:3vh;
 	  top:2.5vw;
       left:3.7vw;
+	  display:flex;
+	  align-items:stretch;
     }
     
      #tiagarro2{
@@ -78,6 +78,9 @@
       //top:2.5vh;
 	  top:1.7vw;
       left:3.7vw;
+	  display:flex;
+	  align-items:stretch;
+		
     }
     
     #tiagarro2 .overlay{
@@ -285,10 +288,11 @@ for (var i =0; i<37;i++){
 		var moneda=true;
 		for(var i= 0; i<37;i++){
 			// var c= moneda ? i*10 : 250 - i*10
-			var c= moneda ? 50 : 200
-			var color =`rgb(${c},${c},${c}) `
+			var c= moneda ? 30 : 150 ;
+			//var color =`rgb(${c},${c},${c}) `
+			var color =`rgb(200,${c},${c}) `
 			var testo= `<div class="overlay"style="background:${color};opacity:0.2;" id="overnota${i}"></div>`
-			var testo2= `<div class="botonota" style="background:blue;opacity:0.3;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
+			var testo2= `<div class="botonota" style="background:blue;opacity:0.2;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}">${i}</div>`
 			$("#tiagarro0").append(testo2);
 			if(i<24){
 				$("#tiagarro1").append(testo)
@@ -496,7 +500,7 @@ for (var i =0; i<37;i++){
 
 	function asignarTecla(i) {
 		var txt = String.fromCharCode(notas[i]);
-		//if (i !=36)	$("#overnota"+i).html(txt);
+		if (i !=36)	$("#overnota"+i).html(txt);
 		$("#bono"+i).html(txt);
 		
 		console.log(i + "//" + txt);
