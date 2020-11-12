@@ -648,9 +648,8 @@ for (var i =0; i<37;i++){
 	}
 	
 	function buildUrlSample(band, mano){
-		//var testo = "https://raw.githubusercontent.com/zarlanga/bandolica/master/\s/";
-		
-		var testo = "/s/"; //(------------------ asi?
+		if (getQueryVariable(gh) == "t") var testo = "https://raw.githubusercontent.com/zarlanga/bandolica/master/\s/";
+		else var testo = "/s/"; //(------------------ asi?
 		
 		if (mano == "izq") testo += "mi_";
 		else testo += "md_";
@@ -733,11 +732,12 @@ for (var i =0; i<37;i++){
               function(buffer) {
                 if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
                 piano7sounds[n] = buffer;
+				console.log("cargo " + n); 
               },
               function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
               }
 			);
-			console.log("cargo " + n); 
+			
 			
 			//samplesCargados++;//
 			//mostrarSamplesCargados();
