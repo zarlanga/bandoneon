@@ -650,7 +650,7 @@ for (var i =0; i<37;i++){
 	function buildUrlSample(band, mano){
 		//var testo = "https://raw.githubusercontent.com/zarlanga/bandolica/master/\s/";
 		
-		var testo = "/s/"; //(------------------ asi?
+		var testo = window.location.hostname + "/s/"; //(------------------ asi?
 		
 		if (mano == "izq") testo += "mi_";
 		else testo += "md_";
