@@ -277,7 +277,9 @@ for (var i =0; i<37;i++){
 		if (keyCode != 32) {
 			tirarnota(entrakeysalenota(keyCode,true)); }
 		  else {
-			cambiaModo()
+			//cambiaModo()
+			setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
+			
 		}
 		
 		//}
@@ -353,6 +355,8 @@ for (var i =0; i<37;i++){
 	var posbotI_C = [["0vw","0vw"],["20.69vw","46.59vw"],["8.19vw","5.79vw"],["0vw","0vw"],["24.19vw","2.19vw"],["22.69vw","54.29vw"],["10.29vw","54.49vw"],["10.69vw","10.09vw"],["2.43vw","17.39vw"],["17.79vw","5.59vw"],["2.09vw","26.39vw"],["17.79vw","52.09vw"],["7.79vw","46.79vw"],["5.29vw","38.29vw"],["6.39vw","13.49vw"],["2.29vw","34.59vw"],["15.19vw","12.79vw"],["19.19vw","38.89vw"],["12.45vw","48.99vw"],["8.99vw","18.49vw"],["15.39vw","44.09vw"],["13.89vw","20.99vw"],["4.69vw","22.09vw"],["8.49vw","25.99vw"],["5.39vw","30.39vw"],["13.39vw","28.89vw"],["8.79vw","34.09vw"],["3.89vw","43.69vw"],["14.19vw","36.29vw"],["10.09vw","41.59vw"],["19.94vw","15.79vw"],["5.59vw","51.79vw"],["18.59vw","23.39vw"],["0vw","0vw"],["0vw","0vw"],["18.79vw","31.39vw"],["22.29vw","7.89vw"]];
     var posbotFull = [posbotD_A, posbotD_C, posbotI_A, posbotI_C ]
 	
+	var modo;
+	
 	var sourcesCabeza=[];  
 	for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
     
@@ -379,6 +383,8 @@ for (var i =0; i<37;i++){
 		
 		notas = notasFull[n];
 		posbot= posbotFull[n];
+		modo = n;
+		
 		
 		$("#img0").attr("src", imgsrc[0]);
 		$("#imgP1").attr("src", imgsrc[1]);
@@ -386,13 +392,22 @@ for (var i =0; i<37;i++){
 		
 		$(".botonota").css("width", n < 2 ? "3.2vw" : "3.8vw" );
 		$(".botonota").css("height", n < 2 ? "3.2vw" : "3.8vw" );
-		$(".overlay").css("width", n < 2 ? "2.18vw" : "2.9vw" );
+		
+		
+		/*$(".overlay").css("width", n < 2 ? "2.18vw" : "2.18vw" );
+		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
+		
+		
 		$("#titulo").html( n % 2 == 0 ? "abriendo" : "cerrando");
 		
 		reordenarOverlays();
 	}
 
 	function cambiaModo(){
+	
+		// funcion vieja, la dejamos nomas de recuerdo (?)
+		
+		
 		console.log("cambioModo");
 		estaAbriendo = !estaAbriendo;
 		if (estaAbriendo){
@@ -442,7 +457,7 @@ for (var i =0; i<37;i++){
 			$("#bono"+i).css("left", posbot[i][1]);
 			if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
 			else $("#bono"+i).css("display","");
-			}
+		}
 	}
 	
 	function setColor(t){
