@@ -221,7 +221,7 @@ for (var i =0; i<37;i++){
   <br>
   <div id="sampload">
 	<h3><label for="insamp">Cargar samples </label></h3>
-	<input type="file" name="insamp" id="insamp" style="width:50vw" onchange="cargarSamplesLocal(this.files)" multiple>
+	<input type="file" name="insamp" id="insamp" style="width:50vw" accept="audio/mpeg, audio/ogg, audio/*" onchange="cargarSamplesLocal(this.files)" multiple>
   </div>
   <br><br>
   
@@ -812,18 +812,21 @@ for (var i =0; i<37;i++){
 	
 	function cargarSamplesLocal(files) {
 		console.log(files);//[0].name
-		reader= new FileReader()
-		var i = files.length;
-		reader.onload = function(ev) {
-			if (i > 0) {
+		if (files.length != 6) alert("seleccione los 6 samples de la carpeta md_aa");
+		else {
+			reader= new FileReader()
+			var i = files.length;
+			reader.onload = function(ev) {
+				
 				i--
 				console.log(i);
 				cargarUnSample(ev.target.result,51 - i*7)
-				
-				reader.readAsArrayBuffer(files[files.length - i])
+				if (i > 0) {	
+					reader.readAsArrayBuffer(files[files.length - i])
 				}
 			}
-		reader.readAsArrayBuffer(files[files.length - i])
+			reader.readAsArrayBuffer(files[files.length - i])
+		}
 		
 		//cargarUnSample(files[0], 16);
 	}
