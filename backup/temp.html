@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laboratorio Bandoneon</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <!--<link rel="stylesheet" href="/style.css">-->
+    
+    <!-- import the webpage's javascript file -->
+    <!--<script src="/script.js" defer></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/tone@next/build/Tone.js"></script>
+	<script>
+	
+	
+	
+	$(document).ready(function(){
+		
+  
+		$("body").keydown(function(e){
+			e.preventDefault();
+			var keyCode = e.keyCode || e.which;
+			//console.log(keyCode);
+			 tirarnota(entrakeysalenota(keyCode));
+			 	
+		});
+		
+		$("body").keyup(function(){
+			Tone.Transport.stop()
+		});
+	});
+    
+    //8+8+7+6+5 = 34
+	
+	</script>
+	<style>
+	.botonota{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		border-radius: 22px;
+		border: 2px solid black;
+		text-align:center;
+		margin:15px 10px;
+		background:white;
+		
+	}
+	#contBand{
+	padding:30px;
+	background:silver;
+	}
+	
+	#row1, #row2, #row3, #row4, #row5 {
+	display:flex;
+	justify-content:space-evenly;
+	}
+	</style>
+  </head>  
+  <body>
+   <button onclick="Tone.context.resume();alert('aversiahisi?')">
+     aveeergaaa
+    </button>
+	
+	<div id="contBand">
+	<div id="row5"></div>
+	<div id="row4"></div>
+	<div id="row3"></div>
+	<div id="row2"></div>
+	<div id="row1"></div>
+	</div>
+	<a href="nota.mp3"> test</a>
+	<script>
+	
+	var notasText= ["C#4","A6","F#6","E6","Eb6",
+					"C4","D4","G4","Bb5","C6","D6",
+					"B3","E4","C#5","F#4","A4","C5","E5",
+					"A3","F4","Bb4","G#4","B4","D5","G#5","B5",
+					"Bb3","Eb4","F5","Eb5","F#5","A5","C#6","G5"];
+	
+	var colores = ["cyan","olive","yellow","gray"]
+					
+	var row = 5;
+	
+	var notas = [65, 90,87,51,115,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78];
+	
+	
+	var player = new Tone.Player("nota.mp3").sync().start(0);
+	//var player = new Tone.Player("https://freesound.org/data/previews/68/68437_871124-lq.mp3").sync().start(0);
+	var pitchShift = new Tone.PitchShift().toDestination();
+	player.connect(pitchShift);
+	
+	
+	for (var i = 1; i<35; i++){
+		//var testo = `<div class="botonota">${notasText[i-1]}</div>`;
+		var testo = `<div class="botonota" id="tecla${i}">${notasText[i-1]}</div>`;
+		
+		if (i==6 || i==12 || i == 19 || i == 27) row--;
+		
+		$("#row"+row).append(testo);
+	
+		$("#tecla"+i).css("background-color", colores[notasText[i-1].substr(-1)-3] );
+		
+	}
+	
+	
+	function entrakeysalenota(n){
+		var ret = notas.indexOf(n);
+		$("body").append("<br>,"+n);
+		return ret != -1 ? ret: 0;
+	}
+	
+	function tirarnota(tecl){	
+		pitchShift.pitch = tecl  ;
+		setTimeout(function(){Tone.Transport.start();console.log(tecl);},5);
+	}
+	</script>
+  </body>
+</html>
