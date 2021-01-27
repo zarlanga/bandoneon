@@ -494,8 +494,8 @@ for (var i =0; i<37;i++){
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
 		  debugEl.innerText = command + '\nrotecla: ' + key;
-		  if (command == 144 && velocity != 0) tirarnota(key+6);
-		  if (command ==128 || velocity == 0) largarnota(key+6);
+		  if (command == 144 && velocity != 0) tirarnota(key+15); //emparche dudoso, antes estaba key+6
+		  if (command ==128 || velocity == 0) largarnota(key+15);
 		}
 	}
 
