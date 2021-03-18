@@ -529,7 +529,8 @@ for (var i =0; i<37;i++){
 	function entrakeysalenota(n,bool){
 		var ret = notas.indexOf(n);
 		//if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
-		return ret+18;
+		var corridas =	getQueryVariable("mano") == 'izq' ? 18 : 39; //dudoooooso
+		return ret+corridas;
 	}
   	
 	//para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest? tecl = nota para el sampler
