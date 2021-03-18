@@ -400,7 +400,7 @@ for (var i =0; i<37;i++){
 		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
 		
 		
-		$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+		$("#titulo").html( n % 2 == 0 ? "abriendo" : "cerrando");
 		
 		reordenarOverlays();
 	}
@@ -558,7 +558,7 @@ for (var i =0; i<37;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
-		if(tecl==54){
+		if(tecl==54 && corridas == 18){
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
 			sourcesCabeza[34]=null;
