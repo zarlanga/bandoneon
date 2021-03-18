@@ -721,10 +721,14 @@ for (var i =0; i<37;i++){
 	
 	function piano7loadsound(n){
 		var request = new XMLHttpRequest();
-		/*request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
+		
+		if (getQueryVariable("mano") == 'izq' )
+			request.open("get", n == 16 ? urlsG[0] :n == 23 ? urlsG[1] : n == 30 ? urlsG[2] :
+					n == 37 ? urlsG[3] : n == 44 ? urlsG[4] : n == 51 ? urlsG[5] : ""   , true); 
+		else 
+			request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
                 n == 58 ? urlsG[3] : n == 65 ? urlsG[4] : n == 72 ? urlsG[5] : ""   , true); //n dividido 7?*/
-		request.open("get", n == 16 ? urlsG[0] :n == 23 ? urlsG[1] : n == 30 ? urlsG[2] :
-                n == 37 ? urlsG[3] : n == 44 ? urlsG[4] : n == 51 ? urlsG[5] : ""   , true); 
+				
 		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		request.responseType = "arraybuffer";
 		request.onload =
