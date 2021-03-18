@@ -357,6 +357,8 @@ for (var i =0; i<37;i++){
 	
 	var modo;
 	
+	var corridas =	getQueryVariable("mano") == 'izq' ? 18 : 39; //dudoooooso
+	
 	var sourcesCabeza=[];  
 	for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
     
@@ -529,7 +531,7 @@ for (var i =0; i<37;i++){
 	function entrakeysalenota(n,bool){
 		var ret = notas.indexOf(n);
 		//if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
-		var corridas =	getQueryVariable("mano") == 'izq' ? 18 : 39; //dudoooooso
+		
 		return ret+corridas;
 	}
   	
@@ -546,7 +548,7 @@ for (var i =0; i<37;i++){
 				console.log("tironota"+tecl);
 				if(tecl>=18) {
 					playaudio(tecl);
-					resaltarNota(tecl-18, true);
+					resaltarNota(tecl-corridas, true);
 					cargarNotaHold(tecl);
 				}
 			}
@@ -562,7 +564,7 @@ for (var i =0; i<37;i++){
 			sourcesCabeza[34]=null;
 		} else {
 			if(notasAntitremolo.indexOf(tecl) != -1){
-				resaltarNota(tecl-18, false);
+				resaltarNota(tecl-corridas, false);
 				sourcesCabeza[tecl].stop(audiocontext.currentTime);
 				sourcesCabeza[tecl]=null;
 			}
