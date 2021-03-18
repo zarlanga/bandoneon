@@ -400,7 +400,7 @@ for (var i =0; i<37;i++){
 		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
 		
 		
-		$("#titulo").html( n % 2 == 0 ? "abriendo" : "cerrando");
+		$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
 		
 		reordenarOverlays();
 	}
@@ -539,14 +539,14 @@ for (var i =0; i<37;i++){
 	//18 para el sampler (mano izq)
 	function tirarnota(tecl){
 		if (podemoTocarLaNota(tecl)){
-			if(tecl==54){
+			if(tecl==54 && corridas == 18){
 				//console.log("entro");
 				resaltarNota(36,true);
 				playaudio(34)
 				cargarNotaHold(tecl);
 			} else {
 				console.log("tironota"+tecl);
-				if(tecl>=18) {
+				if(tecl>=corridas) {
 					playaudio(tecl);
 					resaltarNota(tecl-corridas, true);
 					cargarNotaHold(tecl);
