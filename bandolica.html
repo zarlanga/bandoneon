@@ -400,7 +400,7 @@ for (var i =0; i<37;i++){
 		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
 		
 		
-		$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+		$("#titulo").html( n % 2 == 0 ? "abriendo" : "cerrando");
 		
 		reordenarOverlays();
 	}
@@ -797,7 +797,7 @@ for (var i =0; i<37;i++){
 	function playpiano7sound(n,delayInSeconds) {
 		delayInSeconds = delayInSeconds || 0;
 		if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
-		if (n == 77) return sourcestart(72, Math.pow(2.5/12),delayInSeconds);
+		if (n == 77) return sourcestart(72, Math.pow(2,5/12),delayInSeconds);
 		else {
 			//if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
 			//if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
