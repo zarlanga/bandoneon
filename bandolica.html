@@ -400,7 +400,7 @@ for (var i =0; i<37;i++){
 		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
 		
 		
-		$("#titulo").html( n % 2 == 0 ? "abriendo" : "cerrando");
+		$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
 		
 		reordenarOverlays();
 	}
@@ -785,7 +785,7 @@ for (var i =0; i<37;i++){
 		// gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
 		gainNode.connect(audiocontext.destination);
 
-		var ind = n+ indexes.indexOf(rate)-3;
+		var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
 		sourcesCabeza[ind] = audiocontext.createBufferSource();
 		sourcesCabeza[ind].buffer = piano7sounds[n];
 		sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
