@@ -487,7 +487,7 @@ for (var i =0; i<37;i++){
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
 		  debugEl.innerText = command + '\nrotecla: ' + key;
-		  if (command == 144 && velocity != 0) tirarnota(key+6);
+		  if (command == 144 && velocity != 0) tirarnota(key+6); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  if (command ==128 || velocity == 0) largarnota(key+6);
 		}
 	}
@@ -539,7 +539,7 @@ for (var i =0; i<37;i++){
 	//18 para el sampler (mano izq)
 	function tirarnota(tecl){
 		if (podemoTocarLaNota(tecl)){
-			if(tecl==54 && corridas == 18){
+			if(tecl==54 && corridas == 18){ 
 				//console.log("entro");
 				resaltarNota(36,true);
 				playaudio(34)
@@ -558,7 +558,7 @@ for (var i =0; i<37;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
-		if(tecl==54 && corridas == 18){
+		if(tecl==54 && corridas == 18){ 
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
 			sourcesCabeza[34]=null;
