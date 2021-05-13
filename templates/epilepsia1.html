@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<title>epilepsiah</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.trompo {
+/*			//animation:rotahhh 5s linear 2s infinite;
+			position: absolute;
+			top:50vh;
+			left:50vw;
+			 overflow:hidden;
+			 height:150vh;
+			 width:150vw;
+			 */
+		}
+		.unaparte {
+			/*position: absolute;
+            top:-50vh;
+            left:-50vw;
+			*/
+			background:url(../img_lab/img6.jpg) no-repeat fixed;
+			background-size: cover;
+			background-position: center center;
+		}
+		
+		.otraparte{
+				/*	position: absolute;
+				top:0px;
+				left:-50vw;
+				*/
+				background:url(../img_lab/img10.jpg) no-repeat fixed;
+				background-size: cover;
+				background-position: center center;
+		}
+		.unaparte, .otraparte {
+		
+			width:100vw;
+			height: 70vh;
+		}
+		
+			@keyframes rotahhh {
+    0%{
+      -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Safari */
+  transform: rotate(0deg);
+      
+    }
+	
+	50%  {
+    -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
+    }
+    100%{
+      -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg);
+    }
+    
+}
+	</style>
+<body>
+	<div class="trompo">
+		<div class="unaparte">
+		</div>
+		<div class="otraparte">
+		</div>
+	</div>
+	<script>
+	for (var i = 0; i< 50; i++) document.querySelector(".trompo").innerHTML += ' <div class="unaparte">		</div>		<div class="otraparte">		</div>'
+	</script>
+</body>
+</html>
