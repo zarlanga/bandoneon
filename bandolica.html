@@ -60,11 +60,11 @@
             
     }
     .overlay{
-	  padding:3vh 0;
+	  padding:1vh 0;
       font-size:12px;
       width:2.18vw;
      // height:10vh;
-	  height:8vw;
+	  height:8vh;
       background:rgba(100,100,100,0.5);
       z-index:99;
 	  display:inline-block;
@@ -74,7 +74,7 @@
     #tiagarro1{
       position:absolute;
       //top:3vh;
-	  top:2.5vw;
+	  top:1vh;
       left:3.7vw;
 	  display:flex;
 	  align-items:stretch;
@@ -83,7 +83,7 @@
      #tiagarro2{
       position:absolute;
       //top:2.5vh;
-	  top:1.7vw;
+	  top:1vh;
       left:3.7vw;
 	  display:flex;
 	  align-items:stretch;
@@ -250,7 +250,7 @@ for (var i =0; i<37;i++){
   
   <br>
   <button onclick="toggleDispositivos()">
-    ver/ocultar dispositivos midiff
+    CONECTAR BANDOLICA|
   </button><br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
@@ -423,8 +423,11 @@ for (var i =0; i<37;i++){
 		posbot= posbotFull[n];
 		modo = n;
 		
-		//-----
-		imgsrc[0] = "img_lab/rectangularbordess.png"
+		//----- ESTOSEVADESCONTORLAAAR
+		var bando = getQueryVariable("band") || "aa";
+		
+		imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
+						bando == "bb" ? "img_lab/unisonoroTecl.png" : "" ;
 		//-----
 		
 		$("#img0").attr("src", imgsrc[0]);
