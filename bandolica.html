@@ -25,22 +25,62 @@
 	}
 	
 	button {
-	
-		background-color: orange;
+		//background-color: #088;
+		background-color: #445;
+		color:white;
 		display:inline-block;
 		padding: 7px;
 		border-radius: 5px;
 		
+		
 	}
+	
+	
 	
 	#header {
 		display:inline-block;
 		padding:15px;
-		border-radius:10px;
-		background-color:blue;
+		border-radius:15px;
+		//background-color: #0aa;
+		background-color:#556;
+		color:white;
+		
 		margin:0 0 15px;
+		
 	}
 	
+	#manito {
+			
+		position:absolute;
+		right:0vw;
+		top:60vh;
+		height:15vh;
+		width:15vw;
+		background-color:rgba(180,100,100,0.5);
+		font-size:25px;
+		padding:2vw 0vw;
+		display:none;
+		//transition: * 2s;
+	}
+	#manito:hover {
+		cursor:pointer;
+	}
+	
+	#manito[left="0vw"]:hover  {
+		background-color:blue;
+	}
+	
+	#manito[right="0vw"]:hover  {
+		background-color:green;
+	}
+	
+	.espejado{
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	}
 	
      img{
       width:60vw;
@@ -57,9 +97,9 @@
       display:inline-block;
       position:relative;
       top:0;
-	  
-            
+	        
     }
+	
     .overlay{
 	  padding:1vh 0;
       font-size:12px;
@@ -72,6 +112,7 @@
     /* overflow:hidden;
 	border:1px red solid;*/
     }
+	
     #tiagarro1{
       position:absolute;
       //top:3vh;
@@ -121,23 +162,7 @@
 	width:5vw;
 	}
 	
-	#manito {
-		position:absolute;
-		right:0px;
-		top:70vh;
-		height:15vh;
-		width:15vw;
-		background-color:rgba(150,90,90,0.5);
-		font-size:25px;
-	}
 	
-	.espejado{
-	-moz-transform: scale(-1, 1);
-	-webkit-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-	}
 	</style>
   
   <script>
@@ -282,7 +307,7 @@ for (var i =0; i<37;i++){
   </div>
   <div id="sobrecontainer">
   <input style="width:20vw; padding:15px" type="range" id="vol" name="vol" min="0" max="200" value="60" onchange="cambiarVolumen(this.value)"/><br>
-  <div id="manito"  ></div>
+  <div id="manito"  onclick="cambiarMano()"></div>
 	<div class="container">
 		<img id="img0" src="">
 	<!--	<img id="img1" src="https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fdisposicion4%20teclas.jpg?v=1593484357792">
@@ -432,7 +457,17 @@ for (var i =0; i<37;i++){
 	const debugEl = document.getElementById('debug');
   
 	/*****************FUNCIONES*******************************************/
-
+	
+	function cambiarMano() {
+	 var url = "./bandolica.html?";
+	 if (getQueryVariable("gh") ) url += "&gh=t";
+	 if (getQueryVariable("band") ) url += "&band=" + getQueryVariable("band");
+	 if ( !getQueryVariable("mano") || getQueryVariable("mano") == "der")  url += "&mano=izq";
+	
+	window.open(url,"_self");
+	//window.open("./bandolica.html?band=aa","_self");
+	}
+	
 
     /***********CAMBIO DE MODOO******/
 	
@@ -452,12 +487,27 @@ for (var i =0; i<37;i++){
 		
 		if (n < 2) {
 			$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+			$("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
+			$("#manito").hover(function(){
+					$(this).css("background-color", "yellow");
+				}, function(){
+					$(this).css("background-color", "pink");
+				});
 		
+			
 			imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
 						bando == "bb" ? "img_lab/unisonoroTecl.png" : "" ;
 		} else {
 			$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
-		
+			$("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
+			
+			$("#manito").hover(function(){
+					$(this).css("background-color", "blue");
+				}, function(){
+					$(this).css("background-color", "red");
+				});
+			
+			
 			imgsrc[0] = "img_lab/manoIzqBB.png";
 		}
 		//-----
@@ -920,9 +970,9 @@ for (var i =0; i<37;i++){
 	
 	//mostrarSamplesCargados();
 	
-	setColor("#header");
-	setColor("body");
-	setColor("button");
+	//setColor("#header");
+	//setColor("body");
+	//setColor("button");
 	
 	
 	
