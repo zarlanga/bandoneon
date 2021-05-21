@@ -60,10 +60,27 @@
 		font-size:25px;
 		padding:2vw 0vw;
 		display:none;
-		//transition: * 2s;
+		transition: transform 1s;
+		
 	}
 	#manito:hover {
 		cursor:pointer;
+	}
+	
+	.abreIzquierda {
+		transform-origin: 0% 100%;
+	}
+	
+	.abreDerecha {
+		transform-origin: 100% 100%;
+	}
+	.abreIzquierda:hover {
+	
+		transform: rotateY(65deg) rotateZ(-5deg) scale(1.3,1.2);
+	}
+	.abreDerecha:hover {
+	
+		transform: rotateY(-65deg) rotateZ(5deg) scale(1.3,1.3);
 	}
 	
 	#manito[left="0vw"]:hover  {
@@ -488,12 +505,15 @@ for (var i =0; i<37;i++){
 		if (n < 2) {
 			$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
+			
+			$("#manito").addClass("abreIzquierda");
+			/*
 			$("#manito").hover(function(){
 					$(this).css("background-color", "yellow");
 				}, function(){
 					$(this).css("background-color", "pink");
 				});
-		
+		*/
 			
 			imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
 						bando == "bb" ? "img_lab/unisonoroTecl.png" : "" ;
@@ -501,12 +521,15 @@ for (var i =0; i<37;i++){
 			$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
 			
+			$("#manito").addClass("abreDerecha");
+		
+		/*	
 			$("#manito").hover(function(){
 					$(this).css("background-color", "blue");
 				}, function(){
 					$(this).css("background-color", "red");
 				});
-			
+			*/
 			
 			imgsrc[0] = "img_lab/manoIzqBB.png";
 		}
