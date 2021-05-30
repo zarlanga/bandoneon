@@ -636,8 +636,8 @@ for (var i =0; i<37;i++){
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
 		  debugEl.innerText = command + '\nrotecla: ' + key;
-		  if (key == 100 && modo % 2 != 0 ) setMode(modo - 1)
-		  else if (key == 101 && modo % 2 == 0 ) setMode(modo + 1) 
+		  if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
+		  else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
 		}
