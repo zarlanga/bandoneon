@@ -364,7 +364,8 @@ for (var i =0; i<37;i++){
       
 	  $("body").keydown(function(e){
         var keyCode = e.keyCode || e.which;
-		if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  e.preventDefault();
+		//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
+		e.preventDefault();
         
         //console.log(keyCode);
 		//if(podemoTocarLaNota(keyCode)){
@@ -485,71 +486,64 @@ for (var i =0; i<37;i++){
 	//window.open("./bandolica.html?band=aa","_self");
 	}
 	
-
-    /***********CAMBIO DE MODOO******/
-	
-	function setMode(n) {
-	//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
-		var modificador = ["D_A", "D_C", "I_A", "I_C"];
-		var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`, 
-					`img_lab/penta_${modificador[n]}_1.jpg`, 
-					`img_lab/penta_${modificador[n]}_2.jpg` ]
-		
-		notas = notasFull[n];
-		posbot= posbotFull[n];
-		modo = n;
-		
-		//----- ESTOSEVADESCONTORLAAAR
-		var bando = getQueryVariable("band") || "aa";
-		
+	function setManito(n) {
 		if (n < 2) {
 			$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
 			
 			$("#manito").addClass("abreIzquierda");
-			/*
-			$("#manito").hover(function(){
-					$(this).css("background-color", "yellow");
-				}, function(){
-					$(this).css("background-color", "pink");
-				});
-		*/
 			
-			imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
-						bando == "bb" ? "img_lab/unisonoroTecl.png" : "" ;
+			
+			
 		} else {
 			$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
-			
 			$("#manito").addClass("abreDerecha");
 		
-		/*	
-			$("#manito").hover(function(){
-					$(this).css("background-color", "blue");
-				}, function(){
-					$(this).css("background-color", "red");
-				});
-			*/
 			
-			imgsrc[0] = "img_lab/manoIzqBB.png";
+		
 		}
+		
+	}
+	
+
+    /***********CAMBIO DE MODOO******/
+	
+	function setMode(n) {
+	//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
+		var abr = n % 2 == 0 ? "abriendo" : "cerrando";
+		var man = n < 2  ? "derecha" : "izquierda";
+		var modificador = ["D_A", "D_C", "I_A", "I_C"];
+		var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`, 
+					`img/pentagramas/penta_${modificador[n]}_1.jpg`, 
+					`img/pentagramas/penta_${modificador[n]}_2.jpg` ]
+		
+		notas = notasFull[n];
+		posbot= posbotFull[n];
+		setManito(n);
+		
+		modo = n;
+		
+		
+		
+		
+		//----- ESTOSEVADESCONTORLAAAR
+		var bando = getQueryVariable("band") || "aa";
+		
+		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
+		
+		//imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
+		//imgsrc[0] = "img_lab/manoIzqBB.png";
+		
 		//-----
 		
 		$("#img0").attr("src", imgsrc[0]);
 		$("#imgP1").attr("src", imgsrc[1]);
 		$("#imgP2").attr("src", imgsrc[2]);
 		
-		/*
-		$(".botonota").css("width", n < 2 ? "3.2vw" : "3.8vw" );
-		$(".botonota").css("height", n < 2 ? "3.2vw" : "3.8vw" );
-		*/
 		
-		/*$(".overlay").css("width", n < 2 ? "2.18vw" : "2.18vw" );
-		$("#tiagarro2 .overlay").css("width", n < 2 ? "2.9vw" : "2.9vw" );]*/
-		
-		
-		
-		$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+		//$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+		$("#titulo").html( abr);
 		
 		reordenarOverlays();
 	}
