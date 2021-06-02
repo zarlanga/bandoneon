@@ -516,7 +516,7 @@ for (var i =0; i<37;i++){
 		var abr = n % 2 == 0 ? "abriendo" : "cerrando";
 		var man = n < 2  ? "derecha" : "izquierda";
 		var modificador = ["D_A", "D_C", "I_A", "I_C"];
-		var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`, 
+		var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`,  //pisar este
 					`img/pentagramas/penta_${modificador[n]}_1.jpg`, 
 					`img/pentagramas/penta_${modificador[n]}_2.jpg` ]
 		
@@ -531,11 +531,10 @@ for (var i =0; i<37;i++){
 		
 		//----- ESTOSEVADESCONTORLAAAR
 		var bando = getQueryVariable("band") || "aa";
-		
-		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
-		
+		if ( man == "derecha") imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
+		else  imgsrc[0] = "img_lab/manoIzqBB.png";
 		//imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
-		//imgsrc[0] = "img_lab/manoIzqBB.png";
+		
 		
 		//-----
 		
