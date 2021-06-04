@@ -106,6 +106,10 @@ header span {
 	padding:14px;
 }
 
+.w3-card:hover {
+	transform: scale(1.15, 1.15);
+}
+
 
 @media screen and (min-width:800px) {
 	header span{
@@ -116,7 +120,8 @@ header span {
 		
 	}
 	#logo {
-	width:2vw;
+	width:6vw;
+	
 	}
 }
 </style>
@@ -128,7 +133,7 @@ header span {
 
   <div class="w3-bar w3-white w3-card" id="myNavbar">
   
-    <a href="#home" class="w3-bar-item w3-button w3-wide"> <img src="../img_lab/logo.png" id="logo"> BANDOLICA</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide"> <img src="../img/logo.png" id="logo"> BANDOLICA</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#lanzamiento" class="w3-bar-item w3-button">LANZAMIENTO</a>
@@ -217,10 +222,9 @@ header span {
   <div class="w3-row-padding">
     <div class="w3-col m8" id="preventacont">
       <h3>PREVENTA.</h3>
-	  <p>Las primeros 50 dispositivos de BANDOLICA 
-Saldrán a la venta el día oficial de lanzamiento y serán una edición firmada y limitada. </p>
-      <p>Para obtener una de las primeras 50 unidades, escribinos a esta casilla de email, contándonos de tu interés por el instrumento y en breve nos pondremos en contacto </p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-envelope"> </i> bandolica@gmail.com</a></p>
+	  <p>Las primeros 50 dispositivos de BANDOLICA saldrán a la venta el día oficial de lanzamiento y serán una edición seriada, firmada y limitada.</p>
+      <p>Para obtener una de las primeras 50 unidades de BANDOLICA en preventa, escribinos a esta casilla de email, contándonos de tu interés por el instrumento y en breve nos pondremos en contacto.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-envelope"> </i> ventasbandolica@gmail.com</a></p>
     </div>
     <div class="w3-col m4">
       <img class="w3-image w3-round-large" src="../img_lab/img10.jpg" alt="Buildings" width="700" height="394">
@@ -231,65 +235,95 @@ Saldrán a la venta el día oficial de lanzamiento y serán una edición firmada
 <div class="w3-container" style="padding:128px 16px" id="lanzamiento">
 	<div id="lanzcont">
 	  <h3 class="w3-center">LANZAMIENTO</h3>
-	  <p class="w3-center w3-large">El 11 de Julio, en homenaje al Bandoneon, saldrán a la venta los primeros 50 dispositivos de BANDOLICA. <br>
-	Será una edición firmada y limitada. <br>
-	Te invitamos a seguirnos en Instagram para ser parte del evento de lanzamiento .</p>
+	  <p class="w3-center w3-large">El 11 de Julio, en homenaje al Bandoneon, se realiazará el lanzamiento de BANDOLICA.
+		<br>
+		Te invitamos a seguirnos en Instagram para ser parte del evento.   
+		</p>
 	  <p><a href="#work" class="w3-button w3-grey"><i class="fa fa-instagram w3-text-red" style="font-size:1.5em;"> </i> @bandolica</a></p>
 	</div>
 </div>
 
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="bv">
+<div class="w3-container" style="padding:128px 35px" id="bv">
   <div id="bvcont">
     <h3 class="w3-center">BANDOLICA VIRTUAL</h3>
-    <p class="w3-center w3-large">Si queres tener una experiencia virtual de la BANDOLICA , podes entrar a nuestro sitio EMULATOR y tocar desde el teclado de tu computadora .</p>
+    <p class="w3-center w3-large">
+	Si querés tener una experiencia virtual de la BANDOLICA, podes entrar a nuestro sitio BANDOLICA VIRTUAL y tocar desde el teclado de tu computadora . </p>
   </div>
   <div class="w3-row-padding" style="margin-top:64px">
-	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white">
+  <a href="../bandolica.html?gh=t">
+	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white w3-hover-grayscale">
 	  <div class="w3-card"> 
-		<img src="../img/home/AA-home.jpg" alt="John" style="width:100%;">
 		<div class="w3-container">
-		  <h3>AA</h3>
+		<img src="../img/home/AA-home.jpg" alt="John" style="width:100%;">
+		
+		  <h3 class="w3-center">DOBLE A</h3>
+		  <!--
 		  <p class="w3-opacity">Emulador de Bandoneon AA</p>
 		  <p>Sonidos obtenidos de un Bandoneon del año 1923 número de serie 799073</p>
-		  <p><a href="../bandolica.html?gh=t"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></a></p>
+		  -->
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></p>
+		  
 		</div>
 	  </div>
 	</div>
-	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white">
+  </a>
+  <a > <!--href="../bandolica.html?gh=t&band=bb"-->
+	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white ">
 	  <div class="w3-card">
-		<img src="../img/home/BB-home.jpg" alt="John" style="width:100%;">
-		<div class="w3-container">
-		  <h3>UNISONORO</h3>
+		<div class="w3-container" style="position:relative; top:0px;">
+		<img src="../img/home/BB-home.jpg" class="w3-sepia-max" alt="John" style="width:100%;">
+		<img src="../img/prox.png" alt="John" style="width:100%; position:absolute; top:0px;left:0px;z-index:90" >
+		
+		  <h3 class="w3-center" >UNISONORO</h3>
+		  <!--
 		  <p class="w3-opacity">Emulador de Bandoneon Unisonoro</p>
 		  <p>Sonidos de un bandoneon AA con una sola lengüeta por tecla, tambien conocido como Bandoneon de estudio .  </p>
-		  <p><a href="../bandolica.html?gh=t&band=bb"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></a></p>
+		  -->
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> En construccion<i class="fa fa-music"></i> </button></p>
+		  
+		
 		</div>
 	  </div>
 	</div>
-	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white">
+  </a>
+  <a> <!-- href="../bandolica.html?gh=t&band=ela" -->
+	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white ">
 	  <div class="w3-card">
-		<img src="../img/home/ELA-home.jpg" alt="John" style="width:100%;">
-		<div class="w3-container">
-		  <h3>ELA</h3>
+		<div class="w3-container" style="position:relative; top:0px;">
+		<img src="../img/home/ELA-home.jpg" class="w3-sepia-max" alt="John" style="width:100%;">
+		<img src="../img/prox.png" alt="John" style="width:100%; position:absolute; top:0px;left:0px;">
+		
+		  <h3 class="w3-center" >ELA</h3>
+		  <!--
 		  <p class="w3-opacity">Emulador de Bandoneon ELA</p>
 		  <p>Sonidos obtenidos de Bandoneon ELA año 1940 con peines de aluminio .</p>
-		  <p><a href="../bandolica.html?gh=t&band=ela"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></a></p>
+		  -->
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> En construccion<i class="fa fa-music"></i> </button></p>
+		
 		</div>
 	  </div>
 	</div>
-	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white">
+  </a>
+  <a > <!--href="../bandolica.html?gh=t&band=emu" -->
+	<div class="w3-col l3 m6 w3-margin-bottom w3-text-white ">
 	  <div class="w3-card">
-		<img src="../img/home/Bandolica-home.jpg" alt="John" style="width:100%;">
-		<div class="w3-container">
-		  <h3>BANDOLICA</h3>
+		<div class="w3-container" style="position:relative; top:0px;">
+		<img src="../img_lab/bandolicaCard.png" class="w3-sepia-max" alt="John" style="width:100%;">
+		<img src="../img/prox.png" alt="John" style="width:100%; position:absolute; top:0px;left:0px;">
+		
+		  <h3 class="w3-center" >BANDOLICA</h3>
+		  <!--
 		  <p class="w3-opacity">Sonido original Bandolica.</p>
 		  <p>Sonidos creados por síntesis aditiva, sampler y morphing</p>
-		  <p><a href="../bandolica.html?gh=t&band=emu"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></a></p>
+		  -->
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> En construccion<i class="fa fa-music"></i> </button></p>
+		
 		</div>
 	  </div>
 	</div>
+  </a>
 	
   </div>
 </div>
@@ -298,11 +332,31 @@ Saldrán a la venta el día oficial de lanzamiento y serán una edición firmada
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="antecedentes">
 <div class="antcont">
 	<h3 class="w3-center">ANTECEDENTES .</h3>
-	<p class="w3-center w3-large">Mariano Godoy, creador de Bandolica y músico argentino ha realizando desde el año 2010 hasta la actualidad talleres de difusión e iniciación al Bandoneon en sus giras por Argentina, Latinoamérica y Europa. <br>
-	En estos talleres a descubierto un interés y un entusiasmo tan grande por el instrumento que en el año 2016 fundó la primer orquesta escuela de bandoneones “OEB”.<br>
-	Actualmente la OEB recibe estudiantes e interesados en el estudio del Bandoneon provenientes de todo el mundo , teniendo como objetivo trabajar a partir de repertorio no tradicional para Bandoneon y explorar las posibilidades sonoras y expresivas del instrumento. <br>
-	El entusiasmo por seguir explorando posibilidades sonoras por los estudiantes de la Escuela , y el difícil  acceso al instrumento por sus costos y su escasez dieron lugar a la idea de este nuevo instrumento llamado BANDOLICA<br>
+	<p class="w3-center w3-large" style="padding: 0 10vw">
 	Actualmente BANDOLICA es desarrollado por Mariano Godoy y Sebastian Barbui.
+<br>
+<br>
+
+<strong>Mariano Godoy</strong><br>
+Creador de BANDOLICA y músico argentino ha realizado desde el año 2010 hasta la actualidad talleres de difusión e iniciación al Bandoneón en sus giras por Argentina, Latinoamérica y Europa.
+<br><br>
+En estos talleres a descubierto un interés y un entusiasmo tan grande por el instrumento que en el año 2016 fundó la primer orquesta escuela de bandoneones “OEB”.
+<br><br>
+Actualmente la OEB recibe estudiantes e interesados en el estudio del Bandoneón provenientes de todo el mundo , teniendo como objetivo trabajar a partir de repertorio no tradicional para Bandoneón y explorar las posibilidades sonoras y expresivas del instrumento.
+<br><br>
+El entusiasmo por seguir explorando posibilidades sonoras por los estudiantes y las estudiantes de la Escuela , y el difícil acceso al instrumento por sus costos y su escasez dieron lugar a la idea de este nuevo instrumento llamado BANDOLICA.
+<br>
+<br><br>
+<strong>Sebastian Barbui</strong>
+<br>
+Desarrollador de Bandolica y músico argentino ha tocado, grabado y producido junto a Artistas de diversos estilos como Amelita Baltar, Fernando Ruiz Diaz, Raul Carnota, Horacio Ferrer, Luis Alberto Spinetta, y Pedro Aznar.
+<br><br>
+Su trabajo difundiendo la obra de Piazzolla lo llevo a dar conciertos en Asia, Europa, Latinoamerica y Argentina convocando a los bandoneonistas más prestigiosos y diversos del mundo. 
+<br><br>
+En esta cercanía con el Bandoneón desarrolló una fascinación por su sonido, experimentando con el potencial sonoro del instrumento en cada disco, y relacionándolo a la experiencia timbrica con su instrumento: la guitarra electrica.
+<br><br>
+Con la motivación de desarrollar un nuevo instrumento en si mismo, llegar a los jóvenes, y facilitar el estudio del bandoneón Sebastian Barbui, trabaja en la produción y el desarrollo de BANDOLICA. 
+<br>
 	</p>
 </div>
   <!--
@@ -454,15 +508,16 @@ Saldrán a la venta el día oficial de lanzamiento y serán una edición firmada
 </div>
 -->
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Sacable pero lo dejo por las dudas</p>
+<div class="w3-container w3-light-grey" style="padding:128px 16px; text-shadow: 1px 1px teal" id="contact">
+  <h3 class="w3-center"><b>CONTACTO</b></h3>
+  <p class="w3-center w3-large"><b>Me puse creativo para que se vea con el fondo. Me sigue pareciendo sacable esta parte</b></p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> <b>Banfield? o lo saco esto</b></p>
+    <!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <b>Email: ventasbandolica@gmail.com </b></p>
     <br>
-    <form action="/action_page.php" target="_blank">
+    <!--
+	<form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
@@ -473,6 +528,7 @@ Saldrán a la venta el día oficial de lanzamiento y serán una edición firmada
         </button>
       </p>
     </form>
+	-->
     <!-- Image of location/map 
     <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
 	-->
