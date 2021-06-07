@@ -20,7 +20,7 @@
 	background-image:url(img_lab/Fondoedit.jpg);
 	
 	*/
-	background-image:url(img/fondohome.jpg);
+	background-image:url(img/fondohomesinusb.jpg);
 		background-position:center;
 		background-size:cover;
 		
@@ -181,7 +181,18 @@
 	width:5vw;
 	}
 	
-	
+	#logohome {
+		display:inline-block;
+		background-color:black;
+		border-radius:10px;
+	}
+	#logohome img {
+	width: 20vw;
+	border-radius:10px;
+	}
+	#logohome img:hover {
+		opacity:0.6;
+	}
 	</style>
   
   <script>
@@ -313,8 +324,11 @@ for (var i =0; i<37;i++){
   <!-- --> 
   
   <br>
+   <a href="maquetas/maqueta1.html" id="logohome"><img src="img/logohome.jpg"></a>
+  <br>
+  <br>
   <button onclick="toggleDispositivos()">
-    CONECTAR BANDOLICA|
+    CONECTAR BANDOLICA
   </button><br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
@@ -997,7 +1011,7 @@ for (var i =0; i<37;i++){
 	
 	
 	
-	document.getElementById("titulo0").innerText = getQueryVariable("band") || "aa";
+	document.getElementById("titulo0").innerText = ( getQueryVariable("band") == "aa" || !getQueryVariable("band") ) ? "Doble A" :  getQueryVariable("band").toUpperCase() ;
   
   </script>
 </body>
