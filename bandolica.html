@@ -210,6 +210,22 @@
 	#logohome:hover {
 		opacity:0.9;
 	}
+	
+	#errormidi {
+		display:none;
+		max-width:25vw;
+		position:fixed;
+		bottom:0px;
+		right:0px;
+		color:red;
+		background-color:#faa;
+		opacity:0.9;
+		padding: 30px;
+		border: 10px solid red;
+		z-index:99;
+		border-radius:20px;
+		
+	}
 	</style>
   
   <script>
@@ -352,7 +368,10 @@ for (var i =0; i<37;i++){
   
   -> 
   <!-- --> 
-  
+  <div id="errormidi">
+  <h3>ERROR</h3>
+  <p>Estas usando un explorador no compatible, recomendamos google chrome para utilizar bandolica con todas sus funciones</p>
+  </div>
   <br>
    <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
   <br>
@@ -701,15 +720,19 @@ for (var i =0; i<37;i++){
 		elements.forEach(e => list.appendChild(e));
 	}
 
-	navigator.requestMIDIAccess()
-		.then(function(access) {
-			console.log('access', access);
-			replaceElements(Array.from(access.inputs.values()));
-			access.onstatechange = function(e) {
-			replaceElements(Array.from(this.inputs.values()));
-		}
-	});
-    
+	if( !navigator.requestMIDIAccess) {
+		document.getElementById("errormidi").style.display="block";
+	}else { 
+		navigator.requestMIDIAccess()
+			.then(function(access) {
+				console.log('access', access);
+				replaceElements(Array.from(access.inputs.values()));
+				access.onstatechange = function(e) {
+				replaceElements(Array.from(this.inputs.values()));
+			}
+		});
+	
+	}
 	
 	
 	
