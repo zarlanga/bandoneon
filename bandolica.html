@@ -6,7 +6,7 @@
   <title>Bandolica</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <style>
    
     *{
@@ -182,16 +182,33 @@
 	}
 	
 	#logohome {
+	  line-height: 1.8;
+		font-family: "Raleway", sans-serif;
+		position:absolute;
+		top:0px;
+		left:0px;
 		display:inline-block;
-		background-color:black;
-		border-radius:10px;
+		background-color:white;
+		//border-radius:10px;
+		width:25vw;
+		padding:16px;
+		vertical-align: middle;
+		text-decoration:none;
+		color:black;
+		letter-spacing:4px;
+		opacity:0.7;
+	}
+	 a:visited  {
+	 
+	text-decoration:none;
+	color:black;
 	}
 	#logohome img {
-	width: 20vw;
-	border-radius:10px;
+	width: 6vw;
+	float:left;
 	}
-	#logohome img:hover {
-		opacity:0.6;
+	#logohome:hover {
+		opacity:0.9;
 	}
 	</style>
   
@@ -199,6 +216,17 @@
 /*******************************************************************/
 /*******************************************************************/
 /*
+
+	1) el carrito 
+2) las fotos que se agrandan en el celular 
+3) lo de chrome
+4) armar las redes y sincronizar 
+5) siguen cargando lento ... serán las fotos ? Probar bajarlas más de calidad
+
+Dice que 90 le puso al de más arriba
+
+https://obfuscator.io/
+	
   -cambiar imagenes (ta, borrarle el moco a la disposicion 3) 
   -cambiar teclas (z,s,e,3,f4)
   -cambiar sonidos
@@ -280,7 +308,9 @@ despues va a haber que hacerle otro cambio de modo que seria todo lo de arriba
 	for(var i= 0; i<39;i++) $("#bono" + i ).css({"opacity":"0.5","background-color":"yellow"});
   }
  
-  /*  [215.5px,468.066px],[0px,0px],[228.43px,12.93px],[198.26px,399.968px],[88.786px,43.962px],[106.888px,468.066px],[172.4px,448.24px],[125.852px,421.518px],[39.652px,146.54px],[73.27px,112.06px],[35.342px,224.12px],[212.052px,63.788px],[106.026px,356.006px],[37.928px,295.666px],[111.198px,81.028px],[64.65px,258.6px],[173.262px,43.1px],[50.858px,374.97px],[185.33px,332.732px],[59.478px,187.054px],[149.988px,106.888px],[96.544px,155.16px],[85.338px,402.554px],[138.782px,177.572px],[92.234px,220.672px],[152.574px,379.28px],[135.334px,246.532px],[181.02px,267.22px],[93.958px,291.356px],[63.788px,327.56px],[142.23px,310.32px],[193.088px,131.886px],[66.374px,445.654px],[180.158px,198.26px],[0px,0px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]
+  /*
+
+  [215.5px,468.066px],[0px,0px],[228.43px,12.93px],[198.26px,399.968px],[88.786px,43.962px],[106.888px,468.066px],[172.4px,448.24px],[125.852px,421.518px],[39.652px,146.54px],[73.27px,112.06px],[35.342px,224.12px],[212.052px,63.788px],[106.026px,356.006px],[37.928px,295.666px],[111.198px,81.028px],[64.65px,258.6px],[173.262px,43.1px],[50.858px,374.97px],[185.33px,332.732px],[59.478px,187.054px],[149.988px,106.888px],[96.544px,155.16px],[85.338px,402.554px],[138.782px,177.572px],[92.234px,220.672px],[152.574px,379.28px],[135.334px,246.532px],[181.02px,267.22px],[93.958px,291.356px],[63.788px,327.56px],[142.23px,310.32px],[193.088px,131.886px],[66.374px,445.654px],[180.158px,198.26px],[0px,0px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]
   [163.78px,37.066px],[200.846px,54.306px],[112.06px,72.408px],[43.962px,113.784px],[73.27px,148.264px],[74.994px,92.234px],[188.778px,104.302px],[140.506px,143.092px],[149.126px,87.924px],[101.716px,124.128px],[94.82px,231.016px],[70.684px,201.708px],[136.196px,196.536px],[68.96px,260.324px],[102.578px,282.736px],[75.856px,315.492px],[137.058px,243.946px],[114.646px,335.318px],[209.466px,424.966px],[142.23px,298.252px],[178.434px,159.47px],[98.268px,175.848px],[131.024px,386.176px],[174.986px,265.496px],[155.16px,352.558px],[39.652px,233.602px],[184.468px,317.216px],[42.238px,288.77px],[168.09px,406.002px],[93.958px,369.798px],[56.892px,347.386px],[193.088px,370.66px],[24.136px,325.836px],[12.068px,268.944px],[38.79px,173.262px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]]
   //530.39 (--- ancho de la imagen 
    517.19
@@ -324,7 +354,7 @@ for (var i =0; i<37;i++){
   <!-- --> 
   
   <br>
-   <a href="maquetas/maqueta1.html" id="logohome"><img src="img/logohome.jpg"></a>
+   <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
   <br>
   <br>
   <button onclick="toggleDispositivos()">
