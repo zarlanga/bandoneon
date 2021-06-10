@@ -702,10 +702,10 @@ for (var i =0; i<37;i++){
 		  
 		  
 		  
-		  else if (velocity == 90 && modo < 2)   tirarnota(58)//  tirarnota(notadearriba)
-		  //elsei if (key == 76 && velocity != 90 && modo < 2 ) largarnota(58) //largarnota(notadearriba)
-		  else if ( key == 76 && velocity != 0 && command != 128  && modo < 2)  tirarnota(76) // tirarnota(notadeabajo)
-		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo < 2) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
+		  else if (velocity == 90 && modo == 1)   tirarnota(58)//  tirarnota(notadearriba)
+		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
+		  else if ( key == 76 && velocity != 0 && command != 128  && modo == 1)  tirarnota(76) // tirarnota(notadeabajo)
+		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
 		  
 		  
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
