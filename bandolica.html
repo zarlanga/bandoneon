@@ -238,6 +238,15 @@
 	cursor:pointer;
 	
 	}
+	
+	#mapas {
+	position: absolute;
+	right: 0;
+	top: 40vh;
+	background-color:white;
+	cursor:pointer;
+	padding:10px ;
+	}
 	</style>
   
   <script>
@@ -380,6 +389,11 @@ for (var i =0; i<37;i++){
   
   -> 
   <!-- --> 
+  
+  <div id="mapas">
+  <a onclick="bajarpdf()">Descargar mapa de notas <i class="fa fa-download"></i>
+  </a>
+  </div>
   <div id="errormidi">
   <a onclick="document.getElementById('errormidi').style.display='none'"><i class="fa fa-close"></i></a>
   <h3>ERROR</h3>
@@ -553,6 +567,29 @@ for (var i =0; i<37;i++){
 	const debugEl = document.getElementById('debug');
   
 	/*****************FUNCIONES*******************************************/
+	
+	function bajarpdf() {
+	var url = "img/mapas/";
+		switch (modo) {
+			case 0 :
+				url += "der_abriendo.pdf"
+			break;
+			
+			case 1 :
+				url += "der_cerrando.pdf"
+			break;
+			
+			case 2 :
+				url += "izq_abriendo.pdf"
+			break;
+			
+			case 3 :
+				url += "izq_cerrando.pdf"
+			break;
+		}
+		console.log(url);
+	window.open(url, '_blank');
+	}
 	
 	function cambiarMano() {
 	 var url = "./bandolica.html?";
