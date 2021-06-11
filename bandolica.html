@@ -229,6 +229,15 @@
 		border-radius:20px;
 		
 	}
+	
+	#errormidi a {
+	float:right;
+	position:relative;
+	top:-15px;
+	right:-15px;
+	cursor:pointer;
+	
+	}
 	</style>
   
   <script>
@@ -372,8 +381,9 @@ for (var i =0; i<37;i++){
   -> 
   <!-- --> 
   <div id="errormidi">
+  <a onclick="document.getElementById('errormidi').style.display='none'"><i class="fa fa-close"></i></a>
   <h3>ERROR</h3>
-  <p>Estas usando un explorador no compatible, recomendamos google chrome para utilizar bandolica con todas sus funciones</p>
+  <p>Tu explorador no es compatible con las funciones midi de bandolica, podras usar la bandolica virtual pero para utilizar el dispositivo fisico recomendamos google chrome.</p>
   </div>
   <br>
    <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
