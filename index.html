@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+<script src="https://kit.fontawesome.com/62aa6b900f.js" crossorigin="anonymous"></script>
 <style>
 /*
 - manos izquierda y derecha en los emuladores
@@ -41,8 +42,9 @@ header div i {
 	
 }
 
-header div .fa {
+header div .fas, header div .fab  {
 font-size:2.5em;
+color:white;
 }
 #home , #antecedentes{
 	color:white;
@@ -62,29 +64,11 @@ font-size:2.5em;
 	background-color:white;
 		
 }
-/*
-#preventa > *, #contact > *,#bv > * {
-background-color:blue;
-		opacity:2;
-}*/
-
-/* {
-
- antes taba vacio el fondo 
-	color:white;
-		background:url(img_lab/fondoelegirband.jpg) no-repeat fixed;
-		background-size: cover;
-        background-position: center center;
-	
-}*/
 
 #bv .w3-card .w3-container , #bvcont, #preventacont{
 	background-color: rgba(40,40,40,0.8); 
 }
-/*
-header div{
-	background-color: rgba(200,200,200,0.3); 
-}*/
+
 
 #lanzamiento{
 text-align:center;
@@ -154,16 +138,16 @@ header span {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#lanzamiento" class="w3-bar-item w3-button">LANZAMIENTO</a>
-      <a href="#preventa" class="w3-bar-item w3-button"><i class="fa fa-shopping-cart"></i> PREVENTA</a>
-      <a href="#bv" class="w3-bar-item w3-button"><i class="fa fa-th"></i> BANDOLICA VIRTUAL</a>
-      <a href="#antecedentes" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ANTECEDENTES</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+      <a href="#preventa" class="w3-bar-item w3-button"><i class="fas fa-shopping-cart"></i> PREVENTA</a>
+      <a href="#bv" class="w3-bar-item w3-button"><i class="fas fa-th"></i> BANDOLICA VIRTUAL</a>
+      <a href="#antecedentes" class="w3-bar-item w3-button"><i class="fas fa-user"></i> ANTECEDENTES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> CONTACTO</a>
     </div>
 	
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </a>
   </div>
   
@@ -190,12 +174,10 @@ header span {
   </div> 
   -->
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/Bandólica-106612134989910/" ><i class="fab fa-facebook w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/bandolica/" ><i class="fab fa-instagram w3-hover-opacity"></i></a>
+    <a href="" ><i class="fab fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://vm.tiktok.com/ZMdLNhuvM/" ><i class="fab fa-tiktok w3-hover-opacity"></i></a>
   </div>
   
 </header>
@@ -241,7 +223,7 @@ header span {
       <h3>PREVENTA.</h3>
 	  <p>Las primeros 50 dispositivos de BANDOLICA saldrán a la venta el día oficial de lanzamiento y serán una edición seriada, firmada y limitada.</p>
       <p>Para obtener una de las primeras 50 unidades de BANDOLICA en preventa, escribinos a esta casilla de email, contándonos de tu interés por el instrumento y en breve nos pondremos en contacto.</p>
-      <p><a href="mailto:ventasbandolica@gmail.com" class="w3-button w3-black"><i class="fa fa-envelope"> </i> ventasbandolica@gmail.com</a></p>
+      <p><a href="mailto:ventasbandolica@gmail.com" class="w3-button w3-black"><i class="fas fa-envelope"> </i> ventasbandolica@gmail.com</a></p>
     </div>
     <div class="w3-col m4">
       <img class="w3-image w3-round-large" src="img/home/fondo3.jpg" alt="Buildings" width="700" height="394">
@@ -256,7 +238,7 @@ header span {
 		<br>
 		Te invitamos a seguirnos en Instagram para ser parte del evento.   
 		</p>
-	  <p><a href="#work" class="w3-button w3-grey"><i class="fa fa-instagram w3-text-red" style="font-size:1.5em;"> </i> @bandolica</a></p>
+	  <p><a href="#work" class="w3-button w3-grey"><i class="fab fa-instagram w3-text-red" style="font-size:1.5em;"> </i> @bandolica</a></p>
 	</div>
 </div>
 
@@ -280,7 +262,7 @@ header span {
 		  <p class="w3-opacity">Emulador de Bandoneon AA</p>
 		  <p>Sonidos obtenidos de un Bandoneon del año 1923 número de serie 799073</p>
 		  -->
-		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-music"></i> Tocar <i class="fa fa-music"></i> </button></p>
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fas fa-music"></i> Tocar <i class="fas fa-music"></i> </button></p>
 		  
 		</div>
 	  </div>
@@ -298,7 +280,7 @@ header span {
 		  <p class="w3-opacity">Emulador de Bandoneon Unisonoro</p>
 		  <p>Sonidos de un bandoneon AA con una sola lengüeta por tecla, tambien conocido como Bandoneon de estudio .  </p>
 		  -->
-		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-minus-circle"></i> Disponible a partir del 11/7 <i class="fa fa-minus-circle"></i> </button></p>
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fas fa-minus-circle"></i> Disponible a partir del 11/7 <i class="fas fa-minus-circle"></i> </button></p>
 		  
 		
 		</div>
@@ -317,7 +299,7 @@ header span {
 		  <p class="w3-opacity">Emulador de Bandoneon ELA</p>
 		  <p>Sonidos obtenidos de Bandoneon ELA año 1940 con peines de aluminio .</p>
 		  -->
-		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-minus-circle"></i> Disponible a partir del 11/7<i class="fa fa-minus-circle"></i> </button></p>
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fas fa-minus-circle"></i> Disponible a partir del 11/7<i class="fas fa-minus-circle"></i> </button></p>
 		
 		</div>
 	  </div>
@@ -335,7 +317,7 @@ header span {
 		  <p class="w3-opacity">Sonido original Bandolica.</p>
 		  <p>Sonidos creados por síntesis aditiva, sampler y morphing</p>
 		  -->
-		  <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-minus-circle"></i> Disponible a partir del 11/7<i class="fa fa-minus-circle"></i> </button></p>
+		  <p><button class="w3-button w3-light-grey w3-block"><i class="fas fa-minus-circle"></i> Disponible a partir del 11/7<i class="fas fa-minus-circle"></i> </button></p>
 		
 		</div>
 	  </div>
@@ -532,9 +514,9 @@ Con la motivación de desarrollar un nuevo instrumento en si mismo, llegar a los
   <h3 class="w3-center"><b>CONTACTO</b></h3>
   <p class="w3-center w3-large"><b></b></p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> <b>Buenos Aires, Argentina</b></p>
+    <p><i class="fas fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> <b>Buenos Aires, Argentina</b></p>
     <!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <a href="mailto:ventasbandolica@gmail.com"><b>Email: ventasbandolica@gmail.com </b></a></p>
+    <p><i class="fas fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <a href="mailto:ventasbandolica@gmail.com"><b>Email: ventasbandolica@gmail.com </b></a></p>
     <br>
     <!--
 	<form action="/action_page.php" target="_blank">
@@ -559,12 +541,10 @@ Con la motivación de desarrollar un nuevo instrumento en si mismo, llegar a los
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/Bandólica-106612134989910/" ><i class="fab fa-facebook w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/bandolica/" ><i class="fab fa-instagram w3-hover-opacity"></i></a>
+    <a href="" ><i class="fab fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://vm.tiktok.com/ZMdLNhuvM/" ><i class="fab fa-tiktok w3-hover-opacity"></i></a>
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
