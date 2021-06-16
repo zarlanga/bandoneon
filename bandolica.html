@@ -14,6 +14,18 @@
 </head>
 <body>
   
+  
+<script>  
+var url_= window.location.href;
+
+if (window.location.href.substring(0,5)== "http:" )  window.location.href = insert(url_, 4, "s")
+
+function insert(str, index, value) {
+    return str.substr(0, index) + value + str.substr(index);
+}
+
+</script>
+  
   <div id="mapas">
   <a onclick="bajarpdf()">Descargar mapa de notas <i class="fa fa-download"></i>
   </a>
