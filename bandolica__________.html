@@ -496,7 +496,7 @@ for (var i =0; i<37;i++){
 			//var color =`rgb(200,${c},${c}) `
 			var testo= `<div class="overlay"style="background:${color};opacity:0.02;" id="overnota${i}"></div>`
 			//var testo2= `<div class="botonota" style="background:white;opacity:0.0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}"></div>`
-			var testo2= `<div class="botonota" style="opacity:0.0;" id="bono${i}"></div>`;
+			var testo2= `<div class="botonota" onclick="tirarnota(${i} + corridas); setTimeout(largarnota(${i} + corridas),300)" style="opacity:0.0;" id="bono${i}"></div>`;
 			$("#tiagarro0").append(testo2);
 			if (i < 24) { 
 				$("#tiagarro1").append(testo)
