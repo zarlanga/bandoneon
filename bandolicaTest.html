@@ -405,9 +405,11 @@ for (var i =0; i<37;i++){
   <br>
   <br>
   <!-- onclick="toggleDispositivos()" --> 
+  <span id="circulo" style="font-size:2em"> <strong>O<strong></span><br>
   <button id="bandcon">
     CONECTAR BANDOLICA
   </button><br>
+  
   <ul id="midi-list"></ul>
   <div id="debug"></div>
   <br>
@@ -763,7 +765,7 @@ for (var i =0; i<37;i++){
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
 		}
-		document.getElementById("bandcon").innerHTML ="BANDOLICA ANDANDO JOSHANUNCATASI";
+		bandStatus(2);
 	}
 
 	
@@ -772,7 +774,7 @@ for (var i =0; i<37;i++){
 			list.removeChild(list.firstChild)
 		}
 		
-		document.getElementById("bandcon").innerHTML ="NO HAY BANDOLICA";
+		bandStatus(0);
 		const elements = inputs.map(e => {
 			console.log(e);
 			const el = document.createElement('li')
@@ -780,7 +782,7 @@ for (var i =0; i<37;i++){
 			if (el.innerHTML.substring(0,4) == "ardu" ) {
 				document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
 				
-				document.getElementById("bandcon").innerHTML ="BANDOLICA DISPONIBLE: CLICK PARA CONECTAR";
+				bandStatus(1);
 			}
 			//el.addEventListener('click', connectToDevice.bind(null, e));
 			return el;
@@ -804,6 +806,24 @@ for (var i =0; i<37;i++){
 	
 	}
 	
+	function bandStatus(i) {
+		var sta = document.getElementById("bandcon");
+		var culo = document.getElementById("circulo");
+		switch (i){
+		case 0: 
+			sta.innerHTML ="BANDOLICA NO ENCHUFADA";
+			culo.style.color="red";
+			break;
+		case 1:
+			sta.innerHTML ="BANDOLICA DISPONIBLE: CLICK PARA ACTIVAR";
+			culo.style.color="red";
+			break;
+		case 2:
+			sta.innerHTML ="BANDOLICA ACTIVADA";
+			culo.style.color="green";
+			break;
+		}
+	}
 	
 	
 	/******************LA MAGIA**********************/
