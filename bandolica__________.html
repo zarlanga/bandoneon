@@ -404,7 +404,7 @@ for (var i =0; i<37;i++){
    <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
   <br>
   <br>
-  <button onclick="toggleDispositivos()">
+  <button onclick="toggleDispositivos()" id="bandcon">
     CONECTAR BANDOLICA
   </button><br>
   <ul id="midi-list"></ul>
@@ -772,7 +772,8 @@ for (var i =0; i<37;i++){
 		const elements = inputs.map(e => {
 			console.log(e);
 			const el = document.createElement('li')
-			el.innerText = `${e.name} (${e.manufacturer}) CLICK ACA`;
+			el.innerHTML = `${e.name} (${e.manufacturer})`;
+			if (el.innerHTML.substring(0,4) == "ard" ) el.innerHTML += "CLICK ACA" ;
 			el.addEventListener('click', connectToDevice.bind(null, e));
 			return el;
 		});
