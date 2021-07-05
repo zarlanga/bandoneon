@@ -773,7 +773,7 @@ for (var i =0; i<37;i++){
 			console.log(e);
 			const el = document.createElement('li')
 			el.innerHTML = `${e.name} (${e.manufacturer})`;
-			if (el.innerHTML.substring(0,4) == "ard" ) {
+			if (el.innerHTML.substring(0,4) == "ardu" ) {
 				el.innerHTML += "(dispositivo activo)" ;
 				connectToDevice.bind(null, e)
 				document.getElementById("bandcon").innerHTML ="CONECTADO"
