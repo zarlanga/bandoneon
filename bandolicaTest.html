@@ -404,7 +404,8 @@ for (var i =0; i<37;i++){
    <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
   <br>
   <br>
-  <button onclick="toggleDispositivos()" id="bandcon">
+  <!-- onclick="toggleDispositivos()" --> 
+  <button id="bandcon">
     CONECTAR BANDOLICA
   </button><br>
   <ul id="midi-list"></ul>
@@ -788,14 +789,17 @@ for (var i =0; i<37;i++){
 	if( !navigator.requestMIDIAccess) {
 		document.getElementById("errormidi").style.display="block";
 	}else { 
-		navigator.requestMIDIAccess()
-			.then(function(access) {
-				console.log('access', access);
-				replaceElements(Array.from(access.inputs.values()));
-				access.onstatechange = function(e) {
-				replaceElements(Array.from(this.inputs.values()));
-			}
-		});
+	
+		document.getElementById("bandcon").addEventListener('click', function() {
+			navigator.requestMIDIAccess()
+				.then(function(access) {
+					console.log('access', access);
+					replaceElements(Array.from(access.inputs.values()));
+					access.onstatechange = function(e) {
+					replaceElements(Array.from(this.inputs.values()));
+				}
+			});
+		})
 	
 	}
 	
