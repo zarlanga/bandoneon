@@ -771,13 +771,14 @@ for (var i =0; i<37;i++){
 			list.removeChild(list.firstChild)
 		}
 		const elements = inputs.map(e => {
+		document.getElementById("bandcon").innerHTML ="NO HAY BANDOLICA";
 			console.log(e);
 			const el = document.createElement('li')
 			el.innerHTML = `${e.name} (${e.manufacturer})`;
 			if (el.innerHTML.substring(0,4) == "ardu" ) {
-				el.innerHTML += "(dispositivo activo)" ;
-				connectToDevice.bind(null, e)
-				document.getElementById("bandcon").innerHTML ="CONECTADO"
+				document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
+				
+				document.getElementById("bandcon").innerHTML ="BANDOLICA DISPONIBLE: CLICK PARA CONECTAR";
 			}
 			//el.addEventListener('click', connectToDevice.bind(null, e));
 			return el;
@@ -789,17 +790,15 @@ for (var i =0; i<37;i++){
 	if( !navigator.requestMIDIAccess) {
 		document.getElementById("errormidi").style.display="block";
 	}else { 
-	
-		document.getElementById("bandcon").addEventListener('click', function() {
-			navigator.requestMIDIAccess()
-				.then(function(access) {
-					console.log('access', access);
-					replaceElements(Array.from(access.inputs.values()));
-					access.onstatechange = function(e) {
-					replaceElements(Array.from(this.inputs.values()));
-				}
-			});
-		})
+		
+		navigator.requestMIDIAccess()
+			.then(function(access) {
+				console.log('access', access);
+				replaceElements(Array.from(access.inputs.values()));
+				access.onstatechange = function(e) {
+				replaceElements(Array.from(this.inputs.values()));
+			}
+		});
 	
 	}
 	
