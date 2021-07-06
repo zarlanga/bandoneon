@@ -408,7 +408,7 @@ for (var i =0; i<37;i++){
   
   <button id="bandcon">
     CONECTAR BANDOLICA
-  </button><span id="circulo" style="font-size:2em;position:relative;bottom:-0.8vh;left:1vw;border-radius:20px;background-color:white;height:1.8vw;width:1.8vw;display:inline-block;opacity:0.65;"> <strong> <strong></span><br><br>
+  </button><span id="circulo" style="font-size:2em;position:relative;bottom:-0.8vh;left:1vw;border-radius:20px;background-color:white;height:1.8vw;width:1.8vw;display:inline-block;opacity:0.65;"> </span><br><br>
   
   <ul id="midi-list"></ul>
   <div id="debug"></div>
@@ -416,10 +416,11 @@ for (var i =0; i<37;i++){
   <div id="header">
 	<h3 id="sampleStatus"></h3>
 	<h1 id="titulo0"></h1>
+	<h2 id="titulo1" style="padding:10px;"></h2>
 	<h2 id="titulo"></h2>
   </div>
   <div id="sobrecontainer">
-  <input style="width:20vw; padding:15px" type="range" id="vol" name="vol" min="0" max="200" value="60" onchange="cambiarVolumen(this.value)"/><br>
+  <i class='fa fa-volume-down' style="font-size:20px;padding:15px;display:inline-block;position:relative;bottom:15px;color:#333;"></i><input style="width:20vw; padding:15px" type="range" id="vol" name="vol" min="0" max="200" value="60" onchange="cambiarVolumen(this.value)"/><i class='fa fa-volume-up' style="font-size:20px;padding:15px;display:inline-block;position:relative;bottom:15px;color:#333;"></i><br>
   <div id="manito"  onclick="cambiarMano()"></div>
 	<div class="container">
 		<img id="img0" src="">
@@ -607,7 +608,8 @@ for (var i =0; i<37;i++){
 	
 	function setManito(n) {
 		if (n < 2) {
-			$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+			//$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+			$("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
 			
 			$("#manito").addClass("abreIzquierda");
@@ -615,7 +617,8 @@ for (var i =0; i<37;i++){
 			
 			
 		} else {
-			$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+			//$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+			$("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
 			$("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
 			$("#manito").addClass("abreDerecha");
 		
@@ -630,7 +633,7 @@ for (var i =0; i<37;i++){
 	
 	function setMode(n) {
 	//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
-		var abr = n % 2 == 0 ? "abriendo" : "cerrando";
+		var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
 		var man = n < 2  ? "derecha" : "izquierda";
 		var modificador = ["D_A", "D_C", "I_A", "I_C"];
 		var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`,  //pisar este
@@ -664,8 +667,9 @@ for (var i =0; i<37;i++){
 		
 		
 		//$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
-		$("#titulo").html( abr);
 		
+		$("#titulo").html( abr);
+		$("#titulo1").html("MANO " + man.toUpperCase());
 		reordenarOverlays();
 	}
 
