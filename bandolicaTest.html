@@ -497,7 +497,7 @@ for (var i =0; i<37;i++){
 			var c= moneda ? 30 : 150 ;
 			var color =`rgb(${c},${c},${c}) `
 			//var color =`rgb(200,${c},${c}) `
-			var testo= `<div class="overlay"style="background:${color};opacity:0.02;" id="overnota${i}"></div>`
+			var testo= `<div class="overlay"style="background:${color};opacity:0.02;" id="overnota${i}" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" ></div>`
 			//var testo2= `<div class="botonota" style="background:white;opacity:0.0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}"></div>`
 			var testo2= `<div class="botonota" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" style="opacity:0.0;" id="bono${i}"></div>`;
 			$("#tiagarro0").append(testo2);
