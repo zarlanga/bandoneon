@@ -377,6 +377,20 @@ for (var i =0; i<37;i++){
 
    </script>
 </head>
+
+<script>  
+var url_= window.location.href;
+
+if (window.location.href.indexOf("z") != -1 && window.location.href.indexOf("guarlix") == -1) window.location.href = "https://bandolica.com/bandolica.html"
+
+if (window.location.href.substring(0,5)== "http:" )  window.location.href = insert(url_, 4, "s")
+
+
+function insert(str, index, value) {
+    return str.substr(0, index) + value + str.substr(index);
+}
+
+</script>
 <body>
 	<!-- -
 	<div class="container" id="overs">
