@@ -238,3 +238,22 @@
 	cursor:pointer;
 	padding:10px ;
 	}
+	
+	footer {
+		
+		margin:auto;
+		width: 58vw;
+		color:white;
+		background-color:#333;
+		padding:15px;
+	}
+	
+	footer p, footer h2{
+	padding:5px;
+	
+	
+	}
+	footer a {
+	
+	color: white;
+	}
