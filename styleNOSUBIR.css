@@ -257,3 +257,24 @@
 	
 	color: white;
 	}
+	
+	@media screen and (max-width: 780px) {
+		#logohome{
+			position:relative;
+			width:100%;
+		}
+		
+  #manito {
+    font-size:0.7rem;
+	height:10vh;
+  }
+  
+  #manito i {
+	  font-size:1rem; !important
+  }
+  
+  #mapas {
+	  position:relative;
+	  top:0px;
+  }
+}
