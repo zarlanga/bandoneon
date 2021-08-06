@@ -318,7 +318,7 @@ for (var i =0; i<37;i++){
 		//----- ESTOSEVADESCONTORLAAAR
 		var bando = getQueryVariable("band") || "aa";
 		//if ( man == "derecha") 
-		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jp2"} `;
+		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
 		
 		
 		// else  imgsrc[0] = "img_lab/manoIzqBB.png";
@@ -418,6 +418,7 @@ for (var i =0; i<37;i++){
 	/****FUNCIONES MIDI***/
   	function connectToDevice(device) {
 		console.log('Connecting to device', device);
+		bandStatus(2);
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
 		  debugEl.innerText = command + '\nnrotecla: ' + key + '\nvelocity ' +velocity;
@@ -426,7 +427,7 @@ for (var i =0; i<37;i++){
 		  
 		  
 		  
-		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba)
+		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
 		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
 		  else if ( key == 76 && velocity != 0 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
 		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
@@ -435,7 +436,7 @@ for (var i =0; i<37;i++){
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
 		}
-		bandStatus(2);
+
 	}
 
 	
