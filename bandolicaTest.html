@@ -3,23 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bandolica</title>
+  <title>Bandolica Virtual</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="styleNOSUBIR.css">
   
-   <script src="https://kit.fontawesome.com/62aa6b900f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://kit.fontawesome.com/62aa6b900f.js" crossorigin="anonymous"></script>
+  <link rel="icon"  type="image/png"  href="img/favicon.png" sizes="16x16">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4HGRYLKGN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-L4HGRYLKGN');
+</script>
+  
 </head>
-
-
 <body>
-
+  
+  
 <script>  
+
+
+/*
 var url_= window.location.href;
 
-if (window.location.href.indexOf("z") != -1 && window.location.href.indexOf("guarlix") == -1) window.location.href = "https://bandolica.com/bandolica.html"
+
 
 if (window.location.href.substring(0,5)== "http:" )  window.location.href = insert(url_, 4, "s")
 
@@ -27,20 +43,8 @@ if (window.location.href.substring(0,5)== "http:" )  window.location.href = inse
 function insert(str, index, value) {
     return str.substr(0, index) + value + str.substr(index);
 }
-
+*/
 </script>
-	<!-- -
-	<div class="container" id="overs">
-	nronota<input type="number" id="botonoind" oninput="elegirBotono()" step="1" value="0"></input><br>
-    X<input type="number" id="botonox" oninput="moverboton()" step="0.1" value="0"></input><br>
-	Y<input type="number" id="botonoy" oninput="moverboton()" step="0.1" value="0"></input>
-     <br>
-	 <button onclick="printValues()">plantar nritoss</button><button onclick="plantarOverlays()">mostrar overlays</button><div id="oupu"></div>
-	 <br>
-  </div>
-  
-  -> 
-  <!-- --> 
   
   <div id="mapas">
   <a onclick="bajarpdf()">Descargar mapa de notas <i class="fa fa-download"></i>
@@ -55,12 +59,11 @@ function insert(str, index, value) {
    <a href="index.html" id="logohome"><img src="img/logo.png">BANDOLICA</a>
   <br>
   <br>
-  <!-- onclick="toggleDispositivos()" --> 
-  
-  <button id="bandcon">
+  <!-- onclick="toggleDispositivos()" -->
+  <button  id="bandcon">
     CONECTAR BANDOLICA
   </button><span id="circulo" style="font-size:2em;position:relative;bottom:-0.8vh;left:1vw;border-radius:20px;background-color:white;height:1.8vw;width:1.8vw;display:inline-block;opacity:0.65;"> </span><br><br>
-  
+  <br>
   <ul id="midi-list"></ul>
   <div id="debug"></div>
   <br>
@@ -86,7 +89,6 @@ function insert(str, index, value) {
       </div>
     </div>
     <div class="container">
-
       <img id="imgP2" src="">
 	  <div id="tiagarro2">
         
@@ -94,12 +96,9 @@ function insert(str, index, value) {
     </div>
   </div>
   <br>
-<br>
-<br>
-<br>
-<br>
-  
-  <footer class="">
+  <br>
+  <br>
+ <footer class="">
   
 	<h2>© Bandolica</h2>
 	
@@ -114,9 +113,7 @@ function insert(str, index, value) {
   <p>Hecho en notepad++ </p>
 </footer>
   
-  <script src="scriptNOSUBIR.js"></script>
   
-	
-  
+    <script src="scripts/scriptTest.js"></script>
 </body>
 </html>

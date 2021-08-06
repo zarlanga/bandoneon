@@ -420,18 +420,18 @@ for (var i =0; i<37;i++){
 		console.log('Connecting to device', device);
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
-		  //debugEl.innerText = command + '\nrotecla: ' + key;
+		  debugEl.innerText = command + '\nnrotecla: ' + key + '\nvelocity ' +velocity;
 		  if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
 		  else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
 		  
 		  
-		  /* 
-		  else if (velocity == 90 && modo == 1)   tirarnota(58)//  tirarnota(notadearriba)
+		  
+		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba)
 		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
-		  else if ( key == 76 && velocity != 0 && command != 128  && modo == 1)  tirarnota(76) // tirarnota(notadeabajo)
+		  else if ( key == 76 && velocity != 0 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
 		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
 		  
-		  */
+		  
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
 		}
@@ -524,6 +524,7 @@ for (var i =0; i<37;i++){
 			} else if (tecl==76 && corridas != 18) {
 				playaudio(58);
 				resaltarNota(39,true);
+				cargarNotaHold(tecl);
 			} 
 			else 
 			{
@@ -544,10 +545,11 @@ for (var i =0; i<37;i++){
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
 			sourcesCabeza[34]=null;
-		} else if(tecl==76 && corridas != 18)	{
+		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
 			sourcesCabeza[58].stop(audiocontext.currentTime);
 			sourcesCabeza[58]=null;
 			resaltarNota(39,false);
+			resaltarNota(19,false);
 		}
 		else
 		{
