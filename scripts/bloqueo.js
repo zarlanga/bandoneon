@@ -1,5 +1,9 @@
 //avergabriel
 
+var deltaoff= 0.1; //minutos hasta que mutea
+var deltaon = 0.5 // minutos hasta que desmutea
+	
+
 function mutear() {
 	volu= 0;
 	document.getElementById("vol").value = 0;
@@ -13,44 +17,68 @@ function desmutear() {
 	document.getElementById("vol").value = 60;
 }
 
-var seg = 0;
-
 
 function checkTime() {
-	var minutos = 0.1;
-	var delta = minutos * 60 * 1000;
+	
+	var minutos =  60 * 1000;
 	var ahora = Date.parse(new Date());
 	var antes = localStorage.getItem("login") ;
-	if (ahora  -delta >= antes )  mutear();
-	if (ahora -  delta *2 >=antes ) {desmutear(); marcarTiempo()}
 	
 	
+	if (ahora - deltaoff * minutos >= antes )  mutear();
+	if (ahora - deltaon * minutos >= antes ) { desmutear(); marcarTiempo() }
+	
+	/*
 	console.log(seg++);
 	console.log(ahora - antes);
-	console.log("delta" + delta);
+	
 	console.log("antes" + antes);
 	console.log("ahora" + ahora);
-	/*
+	
 	*/
 	
 }
 
-if (!localStorage.getItem("login")) {
-	
-	};
 
 function marcarTiempo() {
-
 	var fesha = new Date();
 	localStorage.setItem("login", Date.parse(fesha));
-//	document.write(localStorage.getItem("login"))
-
 }
 
-marcarTiempo()
+function habilitar() {
+	clearInterval(inter);
+	desmutear();
+}
 
-/* else if (localStorage.getItem("login") +  {
+function checkAnagrama(inpu, base) {
 	
-}*/
+	if (inpu.length == base.length) {
+		inpu = inpu.split("");
+		base = base.split("");
+		for (i of inpu) {
+			//console.log(i);
+			var ind = base.indexOf(i)
+			if (ind != -1) {
+				delete base[ind]
+			} else {
+				return false
+			}
+			
+		}
+		return true;
+		//console.log("mismo tamaño");
+		
+	}
+		
+	else return false;
+}
 
-var int = setInterval(function() {checkTime()} , 1000);
+
+/*********     ACCION      ******/
+
+if (!localStorage.getItem("login")) {
+	marcarTiempo()
+};
+
+
+//var inter = setInterval(function() {checkTime()} , 1000);
