@@ -645,7 +645,7 @@ for (var i =0; i<37;i++){
 	
 	function buildUrlSample(band, mano){
 		var testo;
-		if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandolica/master/\s/";
+		if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandoneon/master/\s/";
 		else if (getQueryVariable("gh") == "l" ) testo = "/s/" // aca get url dominio o algo asi para que sea local?
 		else  testo = "https://bandolica.com/s/"; //(------------------ asi?
 		
