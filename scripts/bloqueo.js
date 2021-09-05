@@ -2,7 +2,9 @@
 
 var deltaoff= 0.1; //minutos hasta que mutea
 var deltaon = 0.5 // minutos hasta que desmutea
-	
+var validators = ["caca", "culo", "pedo", "pis"];
+
+
 
 function mutear() {
 	volu= 0;
@@ -50,6 +52,17 @@ function habilitar() {
 	desmutear();
 }
 
+
+
+function validarPass() {
+		var pass = prompt("Ingresar contraseña");
+		for (v of validators) {
+			if (checkAnagrama(pass,v) ) return true;
+		}
+		return false;
+			
+}
+
 function checkAnagrama(inpu, base) {
 	
 	if (inpu.length == base.length) {
@@ -80,5 +93,6 @@ if (!localStorage.getItem("login")) {
 	marcarTiempo()
 };
 
+alert(validarPass());
 
 //var inter = setInterval(function() {checkTime()} , 1000);
