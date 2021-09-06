@@ -94,5 +94,5 @@ if (!localStorage.getItem("login")) {
 };
 
 alert(validarPass());
-
+//nani?
 var inter = setInterval(function() {checkTime()} , 1000);
