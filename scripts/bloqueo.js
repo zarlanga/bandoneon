@@ -95,4 +95,4 @@ if (!localStorage.getItem("login")) {
 
 alert(validarPass());
 
-//var inter = setInterval(function() {checkTime()} , 1000);
+var inter = setInterval(function() {checkTime()} , 1000);
