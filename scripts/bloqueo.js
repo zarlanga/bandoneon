@@ -1,8 +1,10 @@
 //avergabriel
 
 var deltaoff= 0.1; //minutos hasta que mutea
-var deltaon = 0.5 // minutos hasta que desmutea
+var deltaon = deltaoff + 0.5 // minutos hasta que desmutea
 var validators = ["caca", "culo", "pedo", "pis"];
+var autorizado = parseInt(localStorage.getItem("autorizado"));
+var inter;
 
 
 
@@ -48,14 +50,24 @@ function marcarTiempo() {
 }
 
 function habilitar() {
+	localStorage.setItem("autorizado", 1);
+	autorizado = true;
 	clearInterval(inter);
 	desmutear();
+	
 }
 
+function checkPass(){
+	var pw = document.getElementById("pass").value;
+	console.log(pw);
+	if(validarPass(pw)) {
+		habilitar();
+		mostrarPopup(false);
+	}else alert("contraseña incorrecta");
+}
 
-
-function validarPass() {
-		var pass = prompt("Ingresar contraseña");
+function validarPass(pw) {
+		var pass = pw || prompt("Ingresar contraseña");
 		for (v of validators) {
 			if (checkAnagrama(pass,v) ) return true;
 		}
@@ -86,13 +98,38 @@ function checkAnagrama(inpu, base) {
 	else return false;
 }
 
+function pedirTiempos(){
+	deltaon = prompt("ingrese tiempo hasta muteado en minutos (0.5 = 30 segundos)") +0;
+	deltaoff = deltaon + prompt("ingrese tiempo en minutos desde muteado hasta rehabilitacion (0.5 = 30 segundos)" )
+}
+
+function mostrarPopup(bool) {
+	document.getElementById("desbloquear").style.display = bool? "inline-block" : "none";
+}
+
+function arrancarTimer() {
+	if (!localStorage.getItem("login")) {
+			marcarTiempo()
+	};
+	inter = setInterval(function() {checkTime()} , 1000);
+		
+}
+
+function logout() {
+	localStorage.setItem("autorizado", 0);
+	arrancarTimer();
+
+}
 
 /*********     ACCION      ******/
 
-if (!localStorage.getItem("login")) {
-	marcarTiempo()
-};
+pedirTiempos();
 
-alert(validarPass());
-//nani?
-var inter = setInterval(function() {checkTime()} , 1000);
+if (!autorizado) {
+	//if (!validarPass()) {
+	arrancarTimer();		
+	}	
+	//else habilitar();
+else {
+	mostrarPopup(false);
+}

@@ -126,22 +126,23 @@ for (var i =0; i<37;i++){
 	$(document).ready(function(){
       
 	  $("body").keydown(function(e){
+	  if(document.getElementById("desbloquear").style.display == "none"){
         var keyCode = e.keyCode || e.which;
-		//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
-		e.preventDefault();
+				//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
+				e.preventDefault();
         
         //console.log(keyCode);
-		//if(podemoTocarLaNota(keyCode)){
-		if (keyCode != 32) {
-			tirarnota(entrakeysalenota(keyCode,true)); }
-		  else {
-			//cambiaModo()
-			setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
+				//if(podemoTocarLaNota(keyCode)){
+				if (keyCode != 32) {
+					tirarnota(entrakeysalenota(keyCode,true)); }
+		  	else {
+					//cambiaModo()
+					setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
 			
-		}
-		
-		//}
-      });
+				}
+	    }
+    }
+  );
       
       
 	  $("body").keyup(function(e){
