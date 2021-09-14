@@ -2,13 +2,14 @@
 
 var deltaoff= 0.1; //minutos hasta que mutea
 var deltaon = deltaoff + 0.5 // minutos hasta que desmutea
-var validators = ["caca", "culo", "pedo", "pis"];
+var validators = ["mujeres", "descalzas"];
 var autorizado = parseInt(localStorage.getItem("autorizado"));
 var inter;
 
 
 
 function mutear() {
+	mostrarPopup(true);
 	volu= 0;
 	document.getElementById("vol").value = 0;
 	document.getElementById("vol").disabled = true;
@@ -24,22 +25,31 @@ function desmutear() {
 
 function checkTime() {
 	
+	//console.log("chekio")
 	var minutos =  60 * 1000;
 	var ahora = Date.parse(new Date());
 	var antes = localStorage.getItem("login") ;
 	
 	
-	if (ahora - deltaoff * minutos >= antes )  mutear();
-	if (ahora - deltaon * minutos >= antes ) { desmutear(); marcarTiempo() }
+	if (ahora - deltaoff * minutos >= antes && volu !=0 ) {
+		//console.log("entro");
+		mutear();
+	}
+	if (ahora - deltaon  * minutos >= antes ) {
+		//console.log("marco");
+		desmutear();
+		marcarTiempo()
+	}
 	
 	/*
 	console.log(seg++);
+	
 	console.log(ahora - antes);
 	
 	console.log("antes" + antes);
 	console.log("ahora" + ahora);
-	
 	*/
+	
 	
 }
 
@@ -54,12 +64,12 @@ function habilitar() {
 	autorizado = true;
 	clearInterval(inter);
 	desmutear();
+	showLogin(false);
 	
 }
 
 function checkPass(){
 	var pw = document.getElementById("pass").value;
-	console.log(pw);
 	if(validarPass(pw)) {
 		habilitar();
 		mostrarPopup(false);
@@ -67,7 +77,7 @@ function checkPass(){
 }
 
 function validarPass(pw) {
-		var pass = pw || prompt("Ingresar contraseña");
+		var pass = pw //|| prompt("Ingresar contraseña");
 		for (v of validators) {
 			if (checkAnagrama(pass,v) ) return true;
 		}
@@ -76,7 +86,9 @@ function validarPass(pw) {
 }
 
 function checkAnagrama(inpu, base) {
-	
+	//console.log("i" + inpu.length);
+	//console.log("b" + base.length);
+	//for(i of inpu) console.log("ata|" + i);
 	if (inpu.length == base.length) {
 		inpu = inpu.split("");
 		base = base.split("");
@@ -99,8 +111,9 @@ function checkAnagrama(inpu, base) {
 }
 
 function pedirTiempos(){
-	deltaon = prompt("ingrese tiempo hasta muteado en minutos (0.5 = 30 segundos)") +0;
-	deltaoff = deltaon + prompt("ingrese tiempo en minutos desde muteado hasta rehabilitacion (0.5 = 30 segundos)" )
+	deltaoff =  parseFloat(prompt("ingrese tiempo hasta muteado en minutos (0.5 = 30 segundos)"));
+	deltaon = deltaoff + parseFloat(prompt("ingrese tiempo en minutos desde muteado hasta rehabilitacion (0.5 = 30 segundos)") )
+	
 }
 
 function mostrarPopup(bool) {
@@ -115,10 +128,26 @@ function arrancarTimer() {
 		
 }
 
-function logout() {
-	localStorage.setItem("autorizado", 0);
-	arrancarTimer();
+function log() {
+	if(autorizado) {
+		localStorage.setItem("autorizado", 0);
+		autorizado = false;
+		arrancarTimer();
+		showLogin(true);
+	} else {
+		mostrarPopup(true);
+	}
 
+}
+
+function showLogin(bool) {
+	if (bool) {
+		document.getElementById("log").style.backgroundColor="green";
+		document.getElementById("log").innerText="log in";
+	} else {
+		document.getElementById("log").style.backgroundColor="red";
+		document.getElementById("log").innerText="log out";
+	}
 }
 
 /*********     ACCION      ******/
@@ -127,9 +156,11 @@ pedirTiempos();
 
 if (!autorizado) {
 	//if (!validarPass()) {
+	showLogin(true);
 	arrancarTimer();		
 	}	
 	//else habilitar();
 else {
+	showLogin(false);
 	mostrarPopup(false);
 }
