@@ -136,8 +136,14 @@ function insert(str, index, value) {
         <option value="Si">Si  </option>
       </select>
       <br><br>
-      <!--input type="textbox" id="mailBody" value="Deseo recibir informacion sobre bandolica porque...."><br-->
-      <input type="submit" id="botonMail" value="Enviar" >
+      1
+      <button class="g-recaptcha" 
+        data-sitekey="6Lf0e5UcAAAAADetExWVODMmalkLegIWXyC16fQ8" 
+        data-callback='onSubmit' 
+        data-action='submit'
+        id="botonMail">Enviar</button>
+
+      <!--input type="submit" id="botonMail" value="Enviar" -->
       <!--button onclick="alert('aca mandaria el mail')">Enviar Mail</button><br-->
     </form>
   </div>
@@ -152,5 +158,13 @@ function insert(str, index, value) {
 <script type="text/javascript">
   emailjs.init('user_zr0L15qQ9p5SqpjCSMkkO')
 </script>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("formMail").submit();
+   }
+ </script>
+
 </body>
 </html>
