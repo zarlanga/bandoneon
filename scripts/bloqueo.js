@@ -1,7 +1,7 @@
 //avergabriel
 
-var deltaoff= 0.1; //minutos hasta que mutea
-var deltaon = deltaoff + 0.5 // minutos hasta que desmutea
+var deltaoff= 2; //minutos hasta que mutea
+var deltaon = deltaoff + 118 // minutos hasta que desmutea
 var validators = ["mujeres", "descalzas"];
 var autorizado = parseInt(localStorage.getItem("autorizado"));
 var inter;
@@ -149,10 +149,31 @@ function showLogin(bool) {
 		document.getElementById("log").innerText="log out";
 	}
 }
+/**************email**********/
+const btn = document.getElementById('botonMail');
 
+document.getElementById('formMail')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   	const serviceID = 'service_pjnvxbo';  
+   //const serviceID = 'default_service';
+   const templateID = 'template_2sggfli';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
 /*********     ACCION      ******/
 
-pedirTiempos();
+//pedirTiempos();
 
 if (!autorizado) {
 	//if (!validarPass()) {
