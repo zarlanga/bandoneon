@@ -123,6 +123,7 @@ function insert(str, index, value) {
   </div>
   <div id="mailDiv">
     <form id="formMail">
+      
       <p>Si queres suscribirte completá la información y hace click en suscribirme, en breve recibirás toda la informacion necesaria y formas pago para generar tu usuario ilimitado a bandolica virtual. </p>
       <br>
       <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
@@ -136,18 +137,15 @@ function insert(str, index, value) {
         <option value="Si">Si  </option>
       </select>
       <br><br>
-      2
+      3
+      <div class="g-recaptcha" data-sitekey="6LeXipUcAAAAAHF1lPNM7ZQAp1Ffceps_vdFqjRP"></div>
       <!--button class="g-recaptcha" 
         data-sitekey="6Lf0e5UcAAAAADetExWVODMmalkLegIWXyC16fQ8" 
         data-callback='onSubmit' 
         data-action='submit'
         id="botonMail">Enviar</button-->
 
-      <input type="submit" id="botonMail" value="Enviar" class="g-recaptcha" 
-        data-sitekey="6Lf0e5UcAAAAADetExWVODMmalkLegIWXyC16fQ8" 
-        data-callback='onSubmit' 
-        data-action='submit'
-        id="botonMail">
+      <input type="submit" id="botonMail" value="Enviar">
       <!--button onclick="alert('aca mandaria el mail')">Enviar Mail</button><br-->
     </form>
   </div>
@@ -163,12 +161,15 @@ function insert(str, index, value) {
   emailjs.init('user_zr0L15qQ9p5SqpjCSMkkO')
 </script>
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
- <script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+ <!--script>
    function onSubmit(token) {
      document.getElementById("formMail").submit();
    }
- </script>
+ </script-->
 
 </body>
 </html>
