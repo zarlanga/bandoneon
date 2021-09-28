@@ -125,10 +125,10 @@ function insert(str, index, value) {
     <form id="formMail">
       <p>Si queres suscribirte completá la información y hace click en suscribirme, en breve recibirás toda la informacion necesaria y formas pago para generar tu usuario ilimitado a bandolica virtual. </p>
       <br>
-      <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo">
-      <input type="text" name="mailAD" id="mailAD" placeholder="Ingrese su direccion de mail">
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
+      <input type="email" name="mailAD" id="mailAD" placeholder="Ingrese su direccion de mail" required>
       <br>
-      <input type="text" name="pais" placeholder="Pais de residencia">
+      <input type="text" name="pais" placeholder="Pais de residencia" required>
       <br>
       <label for="usoAntes">Tocaste un bandoneon alguna vez:</label>
       <select type="checkbox" name="usoAntes" id="usoAntes"> 

@@ -156,7 +156,7 @@ document.getElementById('formMail')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Enviando...';
 
    	const serviceID = 'service_pjnvxbo';  
    //const serviceID = 'default_service';
@@ -164,10 +164,10 @@ document.getElementById('formMail')
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+      btn.value = 'Enviar';
+      alert('Hemos recibido tu pedido y te escribiremos a la brevedad');
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Enviar';
       alert(JSON.stringify(err));
     });
 });
