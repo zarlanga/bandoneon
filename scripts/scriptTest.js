@@ -466,8 +466,7 @@ for (var i =0; i<37;i++){
 	}
 
 	function replaceElements1(inputs) {
-		alert("entro a la funcion");
-		for (var i = 0; i < inputs.length ; i++ ) {
+		for (var i = 0; i<inputs.length ; i++ ) {
 			alert("entro al for")
 			var el = inputs[i]
 			document.getElementById("debug").innerHTML += el.name + "<br>";
