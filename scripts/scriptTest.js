@@ -448,16 +448,14 @@ for (var i =0; i<37;i++){
 		
 		bandStatus(0);
 		const elements = inputs.map(e => {
-			//console.log(e);
-
-			document.getElementById("debug").innerHTML += `nombre: ${e.name} <br>`
+			console.log(e);
 			const el = document.createElement('li')
 			el.innerHTML = `${e.name} (${e.manufacturer})`;
-			//if (el.innerHTML.substring(0,4).toLowerCase() == "ardu" || el.innerHTML.substring(0,6).toLowerCase() == "bandol"  ) {
+			if (el.innerHTML.substring(0,4).toLowerCase() == "ardu" || el.innerHTML.substring(0,6).toLowerCase() == "bandol"  ) {
 				document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
 				
 				bandStatus(1);
-			//}
+			}
 			//el.addEventListener('click', connectToDevice.bind(null, e));
 			return el;
 		});
