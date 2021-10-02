@@ -466,7 +466,7 @@ for (var i =0; i<37;i++){
 	}
 
 	function replaceElements1(inputs) {
-		alert("dispositivos reconocidos=" + inputs.length);
+		alert("entro a la funcion");
 		for (var i = 0; i < inputs.length ; i++ ) {
 			alert("entro al for")
 			var el = inputs[i]
@@ -484,6 +484,7 @@ for (var i =0; i<37;i++){
 		
 		navigator.requestMIDIAccess()
 			.then(function(access) {
+				alert("entron en el then");
 				console.log('access', access);
 				replaceElements1(Array.from(access.inputs.values())); //borrar los 1 aca
 				access.onstatechange = function(e) {
