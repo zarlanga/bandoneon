@@ -465,29 +465,16 @@ for (var i =0; i<37;i++){
 		elements.forEach(e => list.appendChild(e));
 	}
 
-	function replaceElements1(inputs) {
-		for (var i = 0; i<inputs.length ; i++ ) {
-			alert("entro al for")
-			var el = inputs[i]
-			document.getElementById("debug").innerHTML += el.name + "<br>";
-			if (el.name.substring(0,6).toLowerCase() == "bandol") {
-				document.getElementById("bandcon").innerHTML = "se puede conectar bandolica, hacer click"
-				document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
-			}
-		}
-	}
-
 	if( !navigator.requestMIDIAccess) {
 		document.getElementById("errormidi").style.display="block";
 	}else { 
 		
 		navigator.requestMIDIAccess()
 			.then(function(access) {
-				alert("entron en el then");
 				console.log('access', access);
-				replaceElements1(Array.from(access.inputs.values())); //borrar los 1 aca
+				replaceElements(Array.from(access.inputs.values()));
 				access.onstatechange = function(e) {
-				replaceElements1(Array.from(this.inputs.values())); //borrar los 1 aca
+				replaceElements(Array.from(this.inputs.values()));
 			}
 		});
 	
