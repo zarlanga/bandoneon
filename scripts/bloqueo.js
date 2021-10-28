@@ -5,12 +5,14 @@ var deltaon = deltaoff + 118 // minutos hasta que desmutea
 var validators = ["mujeres", "descalzas"];
 var autorizado = parseInt(localStorage.getItem("autorizado"));
 var inter;
-
+var checks= 0;
 
 
 function mutear() {
-	//mostrarPopup(true);
-	setTimeout(function(){mostrarPopup(true)}, 1000*60*2);
+	console.log("muteo" + checks)<
+	mostrarPopup(true);
+	//if (checks < 20) mostrarPopup(true);
+	//else setTimeout(function(){mostrarPopup(true)}, 1000*60*2);
 	volu= 0;
 	document.getElementById("vol").value = 0;
 	document.getElementById("vol").disabled = true;
@@ -25,14 +27,14 @@ function desmutear() {
 
 
 function checkTime() {
-	
+	checks++;
 	//console.log("chekio")
 	var minutos =  60 * 1000;
 	var ahora = Date.parse(new Date());
 	var antes = localStorage.getItem("login") ;
 	
 	
-	if (ahora - deltaoff * minutos >= antes && volu !=0 ) {
+	if (ahora - deltaoff * minutos >= antes && volu !=0 && checks > 15 ) {
 		//console.log("entro");
 		mutear();
 	}
@@ -189,3 +191,5 @@ else {
 	showLogin(false);
 	mostrarPopup(false);
 }
+
+desmutear();
