@@ -126,7 +126,8 @@ for (var i =0; i<37;i++){
 	$(document).ready(function(){
       
 	  $("body").keydown(function(e){
-	  if(document.getElementById("desbloquear").style.display == "none"){
+	  	var display = document.getElementById("desbloquear").style.display 
+	  if(display == "none" || display == "") {
         var keyCode = e.keyCode || e.which;
 				//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
 				e.preventDefault();
@@ -427,7 +428,9 @@ for (var i =0; i<37;i++){
 		  if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
 		  else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
 		  
-		  		  
+		  /*
+
+		  */		  
 		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
 		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
 		  else if ( key == 76 && velocity == 100 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
