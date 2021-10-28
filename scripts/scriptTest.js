@@ -546,6 +546,7 @@ for (var i =0; i<37;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
+		descargarNotaHold(tecl);
 		if(tecl==54 && corridas == 18){ 
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
@@ -564,7 +565,7 @@ for (var i =0; i<37;i++){
 				sourcesCabeza[tecl]=null;
 			}
 		}
-		descargarNotaHold(tecl);
+		
 	}
     
 	function resaltarNota(n, bool){
