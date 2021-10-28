@@ -55,3 +55,7 @@ label {
 	width:  40vw;
 	height:  30vh;
 }*/
+#debug {
+	background-color: black;
+	color: white;
+}
