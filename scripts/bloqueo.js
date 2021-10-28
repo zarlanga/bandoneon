@@ -9,7 +9,8 @@ var inter;
 
 
 function mutear() {
-	mostrarPopup(true);
+	//mostrarPopup(true);
+	setTimeout(function(){mostrarPopup(true)}, 1000*60*2);
 	volu= 0;
 	document.getElementById("vol").value = 0;
 	document.getElementById("vol").disabled = true;
@@ -118,6 +119,7 @@ function pedirTiempos(){
 
 function mostrarPopup(bool) {
 	document.getElementById("desbloquear").style.display = bool? "inline-block" : "none";
+	//console.log("popup" + bool);
 }
 
 function arrancarTimer() {
@@ -149,6 +151,8 @@ function showLogin(bool) {
 		document.getElementById("log").innerText="log out";
 	}
 }
+
+
 /**************email**********/
 const btn = document.getElementById('botonMail');
 
