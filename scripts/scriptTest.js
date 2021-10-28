@@ -546,12 +546,14 @@ for (var i =0; i<37;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
-		descargarNotaHold(tecl);
+		
 		if(tecl==54 && corridas == 18){ 
+			descargarNotaHold(tecl);
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
 			sourcesCabeza[34]=null;
 		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
+			descargarNotaHold(tecl);
 			sourcesCabeza[58].stop(audiocontext.currentTime);
 			sourcesCabeza[58]=null;
 			resaltarNota(39,false);
@@ -560,6 +562,7 @@ for (var i =0; i<37;i++){
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
+				descargarNotaHold(tecl);
 				resaltarNota(tecl-corridas, false);
 				sourcesCabeza[tecl].stop(audiocontext.currentTime);
 				sourcesCabeza[tecl]=null;
