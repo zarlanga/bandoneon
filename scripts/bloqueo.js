@@ -136,8 +136,10 @@ function log() {
 	if(autorizado) {
 		localStorage.setItem("autorizado", 0);
 		autorizado = false;
+		checks =0;
 		arrancarTimer();
 		showLogin(true);
+
 	} else {
 		mostrarPopup(true);
 	}
