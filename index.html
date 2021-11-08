@@ -165,8 +165,8 @@ function insert(str, index, value) {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#bv" class="w3-bar-item w3-button"><i class="fas fa-th"></i> BANDOLICA VIRTUAL</a>
-	  <a href="#lanzamiento" class="w3-bar-item w3-button"><i class="fas fa-paper-plane"></i> LANZAMIENTO</a>
-      <a href="#preventa" class="w3-bar-item w3-button"><i class="fas fa-shopping-cart"></i> PREVENTA</a>
+	  <a href="#lanzamiento" class="w3-bar-item w3-button"><i class="fas fa-paper-plane"></i> NOVEDADES</a>
+      <a href="#preventa" class="w3-bar-item w3-button"><i class="fas fa-shopping-cart"></i> TIENDA</a>
       <a href="#nosotros" class="w3-bar-item w3-button"><i class="fas fa-user"></i> NOSOTROS</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> CONTACTO</a>
     </div>
@@ -184,8 +184,8 @@ function insert(str, index, value) {
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#bv" onclick="w3_close()" class="w3-bar-item w3-button">BANDOLICA VIRTUAL</a>
-  <a href="#lanzamiento" onclick="w3_close()" class="w3-bar-item w3-button">LANZAMIENTO</a>
-  <a href="#preventa" onclick="w3_close()" class="w3-bar-item w3-button">PREVENTA</a>
+  <a href="#lanzamiento" onclick="w3_close()" class="w3-bar-item w3-button">NOVEDADES</a>
+  <a href="#preventa" onclick="w3_close()" class="w3-bar-item w3-button">TIENDA</a>
   <a href="#nosotros" onclick="w3_close()" class="w3-bar-item w3-button">NOSOTROS|</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
 </nav>
@@ -332,10 +332,8 @@ function insert(str, index, value) {
 
 <div class="w3-container" style="padding:128px 16px" id="lanzamiento">
 	<div id="lanzcont">
-	  <h3 class="w3-center">LANZAMIENTO</h3>
-	  <p class="w3-center w3-large">El 11 de Julio, en homenaje al bandoneón, se realiazará el lanzamiento de BANDOLICA.
-		<br>
-		Te invitamos a seguirnos en Instagram para ser parte del evento.   
+	  <h3 class="w3-center"> NOVEDADES</h3>
+	  <p class="w3-center w3-large">Te invitamos a seguirnos en Instagram para conocer todas las posibilidades de conexión de la bandólica y sus novedades.   
 		</p>
 	  <p><a href="https://www.instagram.com/bandolica/" class="w3-button w3-grey"><i class="fab fa-instagram w3-text-red" style="font-size:1.5em;"> </i> @bandolica</a></p>
 	</div>
@@ -346,9 +344,9 @@ function insert(str, index, value) {
 <div class="w3-container " style="padding:68px 16px" id="preventa">
   <div class="w3-row-padding">
     <div class="w3-col m8" id="preventacont">
-      <h3>PREVENTA.</h3>
-	  <p>Las primeros 50 dispositivos de BANDOLICA saldrán a la venta el día oficial de lanzamiento y serán una edición seriada, firmada y limitada.</p>
-      <p>Para obtener una de las primeras 50 unidades de BANDOLICA en preventa, escribinos a esta casilla de email, contándonos de tu interés por el instrumento y en breve nos pondremos en contacto.</p>
+      <h3>TIENDA</h3>
+	  <p>Los primeros 100 dispositivos de BANDOLICA  serán una edición seriada, firmada y limitada.</p>
+      <p>Para obtener una de las primeras 100 unidades de BANDOLICA en preventa, escribinos a esta casilla de email, contándonos de tu interés por el instrumento y en breve nos pondremos en contacto.</p>
       <p><a href="mailto:ventasbandolica@gmail.com" class="w3-button w3-black"><i class="fas fa-envelope"> </i> ventasbandolica@gmail.com</a></p>
     </div>
     <div class="w3-col m4">
@@ -542,13 +540,15 @@ Con la motivación de desarrollar un nuevo instrumento en si mismo, llegar a los
 -->
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px; text-shadow: 1px 1px white" id="contact">
-  <h3 class="w3-center"><b>CONTACTO</b></h3>
+  <h3 class="w3-center" ><b style="background-color: rgba(200, 200, 200, 0.6); padding:5px;">CONTACTO</b></h3>
   <p class="w3-center w3-large"><b></b></p>
-  <div style="margin-top:48px" class="w3-center">
-    <p style="font-size:1.5em;"><i class="fas fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> <b>Buenos Aires, Argentina</b></p>
-    <!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
-    <p style="font-size:1.5em;"><i class="fas fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <b>EMAIL: <a href="mailto:ventasbandolica@gmail.com">ventasbandolica@gmail.com </a></b></p>
-    <br>
+  <div style="margin-top:48px" class="w3-center" >
+  	<div style="background-color: rgba(230, 230, 230, 0.6); margin: auto; display:inline-block; padding:15px 30px;">
+  	  <p style="font-size:1.5em;" ><i class="fas fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> <b>Buenos Aires, Argentina</b></p>
+    	<!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
+    	<p style="font-size:1.5em;"><i class="fas fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <b>EMAIL: <a href="mailto:ventasbandolica@gmail.com">ventasbandolica@gmail.com </a></b></p>
+    	<br>
+  	</div>
     <!--
 	<form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -578,10 +578,11 @@ Con la motivación de desarrollar un nuevo instrumento en si mismo, llegar a los
     <a href="https://vm.tiktok.com/ZMdLNhuvM/" ><i class="fab fa-tiktok w3-hover-opacity"></i></a>
   </div>
   
-  <p>Powered by <a href="https://github.com/zarlanga/" title="Zarlanga" target="_blank" class="w3-hover-text-green">Zarlanga dev</a></p>
-  
+   
 </footer>
- 
+
+<div style="text-align: right; margin-right: 2.5vw;">Powered by <a href="https://github.com/zarlanga/" title="Zarlanga" target="_blank" class="w3-hover-text-green">Zarlanga dev</a></div>
+
 <script>
 // Modal Image Gallery
 function onClick(element) {
