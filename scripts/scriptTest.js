@@ -437,8 +437,8 @@ for (var i =0; i<37;i++){
 		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
 		  
 		  else if (key == 54 && modo == 3) { //52 o 54?
-		  	if (velocity == 89) tirarnota(34);
-		  	else if (velocity == 90) tirarnota(54);
+		  	if (velocity == 89)  tirarnota(54);
+		  	else if (velocity == 90) tirarnota(34);
 		  	else if (command == 128 || velocity == 0) {largarnota(34); largarnota(54)}
 		  }
 		  
