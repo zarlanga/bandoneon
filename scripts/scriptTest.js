@@ -179,6 +179,7 @@ for (var i =0; i<37;i++){
 			moneda= !moneda;
 			
 		}
+		document.getElementById('overnota36').removeAttribute("onclick");
 		document.getElementById('overnota37').removeAttribute("onclick");
 		
 		var m = getQueryVariable("mano") != "izq";
@@ -582,9 +583,9 @@ for (var i =0; i<37;i++){
 	
 	console.log("bono" +n);
 		$("#bono"+n).css("opacity",bool ? "0.3": "0.0");
-		$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
-		//if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
-		//if (n ==36) $("#overnota"+16).css("opacity",bool ? "0.7": "0.02");
+		//$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
+		if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
+		if (n ==36) $("#overnota"+16).css("opacity",bool ? "0.7": "0.02");
 	}
 
 	function asignarTecla(i) {
