@@ -181,6 +181,7 @@ for (var i =0; i<37;i++){
 		}
 		document.getElementById('overnota36').removeAttribute("onclick");
 		document.getElementById('overnota37').removeAttribute("onclick");
+		document.getElementById('overnota38').removeAttribute("onclick");
 		
 		var m = getQueryVariable("mano") != "izq";
 		var a = getQueryVariable("cerr") != "true";
