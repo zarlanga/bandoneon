@@ -126,22 +126,24 @@ for (var i =0; i<37;i++){
 	$(document).ready(function(){
       
 	  $("body").keydown(function(e){
+	  	var display = document.getElementById("desbloquear").style.display 
+	  if(display == "none" || display == "") {
         var keyCode = e.keyCode || e.which;
-		//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
-		e.preventDefault();
+				//if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
+				e.preventDefault();
         
         //console.log(keyCode);
-		//if(podemoTocarLaNota(keyCode)){
-		if (keyCode != 32) {
-			tirarnota(entrakeysalenota(keyCode,true)); }
-		  else {
-			//cambiaModo()
-			setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
+				//if(podemoTocarLaNota(keyCode)){
+				if (keyCode != 32) {
+					tirarnota(entrakeysalenota(keyCode,true)); }
+		  	else {
+					//cambiaModo()
+					setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
 			
-		}
-		
-		//}
-      });
+				}
+	    }
+    }
+  );
       
       
 	  $("body").keyup(function(e){
@@ -177,6 +179,9 @@ for (var i =0; i<37;i++){
 			moneda= !moneda;
 			
 		}
+		document.getElementById('overnota36').removeAttribute("onclick");
+		document.getElementById('overnota37').removeAttribute("onclick");
+		document.getElementById('overnota38').removeAttribute("onclick");
 		
 		var m = getQueryVariable("mano") != "izq";
 		var a = getQueryVariable("cerr") != "true";
@@ -318,7 +323,7 @@ for (var i =0; i<37;i++){
 		//----- ESTOSEVADESCONTORLAAAR
 		var bando = getQueryVariable("band") || "aa";
 		//if ( man == "derecha") 
-		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jp2"} `;
+		imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
 		
 		
 		// else  imgsrc[0] = "img_lab/manoIzqBB.png";
@@ -418,24 +423,33 @@ for (var i =0; i<37;i++){
 	/****FUNCIONES MIDI***/
   	function connectToDevice(device) {
 		console.log('Connecting to device', device);
+		bandStatus(2);
 		device.onmidimessage = function(m) {
 		  const [command, key, velocity] = m.data;
-		  //debugEl.innerText = command + '\nrotecla: ' + key;
+		  debugEl.innerText = 'commando:' + command + '\nnrotecla: ' + key + '\nvelocity: ' +velocity;
+		  
 		  if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
 		  else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
 		  
-		  
-		  /* 
-		  else if (velocity == 90 && modo == 1)   tirarnota(58)//  tirarnota(notadearriba)
+		  /*
+
+		  */		  
+		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
 		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
-		  else if ( key == 76 && velocity != 0 && command != 128  && modo == 1)  tirarnota(76) // tirarnota(notadeabajo)
+		  else if ( key == 76 && velocity == 100 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
 		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
 		  
-		  */
+
+		  else if (key == 52 && modo == 3) { //52 o 54?
+		  	if (velocity == 89) tirarnota(54);
+		  	else if (velocity == 90) tirarnota(34);
+		  	else if (command == 128 || velocity == 0) {largarnota(34); largarnota(54)}
+		  }
+		  
 		  else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
 		  else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
 		}
-		bandStatus(2);
+
 	}
 
 	
@@ -524,6 +538,7 @@ for (var i =0; i<37;i++){
 			} else if (tecl==76 && corridas != 18) {
 				playaudio(58);
 				resaltarNota(39,true);
+				cargarNotaHold(tecl);
 			} 
 			else 
 			{
@@ -540,30 +555,36 @@ for (var i =0; i<37;i++){
     
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
+		
 		if(tecl==54 && corridas == 18){ 
+			descargarNotaHold(tecl);
 			resaltarNota(36,false);
 			sourcesCabeza[34].stop(audiocontext.currentTime);
 			sourcesCabeza[34]=null;
-		} else if(tecl==76 && corridas != 18)	{
+		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
+			descargarNotaHold(tecl);
 			sourcesCabeza[58].stop(audiocontext.currentTime);
 			sourcesCabeza[58]=null;
 			resaltarNota(39,false);
+			resaltarNota(19,false);
 		}
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
+				descargarNotaHold(tecl);
 				resaltarNota(tecl-corridas, false);
 				sourcesCabeza[tecl].stop(audiocontext.currentTime);
 				sourcesCabeza[tecl]=null;
 			}
 		}
-		descargarNotaHold(tecl);
+		
 	}
     
 	function resaltarNota(n, bool){
 	
 	console.log("bono" +n);
 		$("#bono"+n).css("opacity",bool ? "0.3": "0.0");
+		//$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
 		if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
 		if (n ==36) $("#overnota"+16).css("opacity",bool ? "0.7": "0.02");
 	}
@@ -642,7 +663,7 @@ for (var i =0; i<37;i++){
 	
 	function buildUrlSample(band, mano){
 		var testo;
-		if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandolica/master/\s/";
+		if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandoneon/master/\s/";
 		else if (getQueryVariable("gh") == "l" ) testo = "/s/" // aca get url dominio o algo asi para que sea local?
 		else  testo = "https://bandolica.com/s/"; //(------------------ asi?
 		
@@ -826,3 +847,4 @@ for (var i =0; i<37;i++){
 	
 	document.getElementById("titulo0").innerText = ( getQueryVariable("band") == "aa" || !getQueryVariable("band") ) ? "Doble A" :  getQueryVariable("band").toUpperCase() ;
   
+  debugEl.innerText = "debug"

@@ -278,3 +278,82 @@
 	  top:0px;
   }
 }
+
+#desbloquear{
+	display: none;
+	max-width: 40vw;
+	position:absolute;
+	top:45vh;
+	left:30vw;
+	//background-color: rgba(160, 160, 160, 0.9);
+	background-color: rgba(250, 250, 250, 0.9);
+	font-size: 1em;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 15px;
+}
+
+#desbloquear * {
+	border-radius: 7px;
+}
+
+#instrucciones {
+	background-color: gray;
+	color: white;/*#197;*/
+	padding: 20px;
+	margin: 3vw;
+
+}
+
+#passDiv {
+	background-color: #1b9;
+	padding: 20px;
+	margin: auto;
+	
+	margin: 3vw;
+
+
+}
+#passDiv input{
+	width: 70%;
+	text-align: center;
+	margin: 7px;
+}
+
+#passButt {
+	color: #222;
+	background-color: silver;
+	margin: 7px;
+}
+
+
+
+#mailDiv {
+	background-color: aquamarine;
+	padding: 20px;
+	margin: 3vw;
+	font-size: 0.7em;
+
+}
+form input{
+	width: 40%;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+label {
+	margin: 10px;
+}
+/*
+#mailAD {
+	width: 40vw;
+	text-align: center;	
+}
+#mailBody {
+	width:  40vw;
+	height:  30vh;
+}*/
+#debug {
+	background-color: blue;
+	color: white;
+}

@@ -74,6 +74,7 @@ label {
 	height:  30vh;
 }*/
 #debug {
+	display: none;
 	background-color: blue;
 	color: white;
 }
