@@ -122,6 +122,7 @@ function pedirTiempos(){
 function mostrarPopup(bool) {
 	document.getElementById("desbloquear").style.display = bool? "inline-block" : "none";
 	//console.log("popup" + bool);
+	document.querySelectorAll(".overlay").forEach( o => o.style.display = bool ? "none" : "inline-block" )
 }
 
 function arrancarTimer() {
