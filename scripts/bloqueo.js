@@ -196,3 +196,12 @@ else {
 }
 
 desmutear();
+
+
+//ESTOESTAMAAAAAL
+if (screen.width < 800) {
+	document.getElementById("desbloquear").style.maxWidth = "90vw"
+	document.getElementById("desbloquear").style.left = "5vw"
+	document.getElementById("errormidi").style.maxWidth ="45vw"
+	document.getElementById("errormidi").style.right ="10vw"
+}
