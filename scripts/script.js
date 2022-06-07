@@ -791,11 +791,13 @@ for (var i =0; i<37;i++){
 		var start = audiocontext.currentTime + delayInSeconds;
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
-		var fadeIN = (getQueryVariable("fade") || 0 ) / 1000;
+		var fade = (getQueryVariable("fade") || 0 ) / 1000;
 
-		if (fadeIN) {
+		if (fade) {
 			gainNode.gain.setValueAtTime(0, start);
-			gainNode.gain.linearRampToValueAtTime(volume, start + fadeIN );
+			gainNode.gain.linearRampToValueAtTime(volume, start + fade );
+			gainNode.gain.linearRampToValueAtTime(volume, stop - fade );
+			gainNode.gain.linearRampToValueAtTime(0, stop );
 		
 		} else {
 			gainNode.gain.setValueAtTime(volume, start);
