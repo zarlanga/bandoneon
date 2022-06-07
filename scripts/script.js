@@ -1,7 +1,7 @@
 /*******************************************************************/
 /*******************************************************************/
 /*
-
+allboyyysss!!!
 	1) el carrito 
 2) las fotos que se agrandan en el celular 
 3) lo de chrome
@@ -787,7 +787,7 @@ for (var i =0; i<37;i++){
 		var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
                   Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
 		var volume = volu;
-		var duration = 0.6; // in seconds
+		var duration = 4;//0.6; // in seconds
 		var start = audiocontext.currentTime + delayInSeconds;
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
