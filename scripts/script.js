@@ -791,9 +791,16 @@ for (var i =0; i<37;i++){
 		var start = audiocontext.currentTime + delayInSeconds;
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
-		gainNode.gain.setValueAtTime(volume, start);
-		gainNode.gain.linearRampToValueAtTime(volume, stop);
-		// gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
+		var fadeIN = (getQueryVariable("fade") || 0 ) / 1000;
+
+		if (fadeIN) {
+			gainNode.gain.setValueAtTime(0, start);
+			gainNode.gain.linearRampToValueAtTime(volume, start + fadeIN );
+		
+		} else {
+			gainNode.gain.setValueAtTime(volume, start);
+			gainNode.gain.linearRampToValueAtTime(volume, stop);
+		}
 		gainNode.connect(audiocontext.destination);
 
 		var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
