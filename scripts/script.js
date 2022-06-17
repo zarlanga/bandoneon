@@ -572,9 +572,11 @@ sourcesCabeza[ind].connect(gainNode);
 		//poner timeout al stop
 */	
 		var ahora = audiocontext.currentTime;
-		var fade = getQueryVariable("band") == "emu" ? 0.4 : 0; //0.02
+		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
 		var gainNode = audiocontext.createGain();
-		gainNode.gain.linearRampToValueAtTime(0, ahora + fade );
+		//gainNode.gain.setValueAtTime(volu, ahora);
+		gainNode.gain.setValueAtTime(0, ahora );
+		gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
 		gainNode.connect(audiocontext.destination);
 
 
@@ -585,7 +587,7 @@ sourcesCabeza[ind].connect(gainNode);
 			setTimeout(function (){
 				sourcesCabeza[34].stop(audiocontext.currentTime);
 				sourcesCabeza[34]=null;
-			},1000)
+			},fade * 1000)
 		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
 			descargarNotaHold(tecl);
 			resaltarNota(39,false);
@@ -595,7 +597,7 @@ sourcesCabeza[ind].connect(gainNode);
 			setTimeout(function (){
 				sourcesCabeza[58].stop(audiocontext.currentTime);
 				sourcesCabeza[58]=null;
-			},1000)
+			},fade * 1000)
 		}
 		else
 		{
@@ -607,7 +609,7 @@ sourcesCabeza[ind].connect(gainNode);
 				setTimeout(function (){
 					sourcesCabeza[tecl].stop(audiocontext.currentTime);
 					sourcesCabeza[tecl]=null;
-				},1000)
+				},fade * 1000)
 				
 			}
 		}
@@ -826,7 +828,7 @@ sourcesCabeza[ind].connect(gainNode);
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
 		//var fade = (getQueryVariable("fade") || 0 ) / 1000;
-		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; // 0.02
+		var fade = getQueryVariable("band") == "emu" ? 0 : 0; // 0.02
 
 		if (fade) {
 			gainNode.gain.setValueAtTime(0, start);
@@ -848,7 +850,7 @@ sourcesCabeza[ind].connect(gainNode);
 		sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
 		sourcesCabeza[ind].connect(gainNode);
 		sourcesCabeza[ind].start(start); 
-    
+		
 	}
   
 	function playpiano7sound(n,delayInSeconds) {
