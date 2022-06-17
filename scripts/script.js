@@ -1,7 +1,7 @@
 /*******************************************************************/
 /*******************************************************************/
 /*
-allboyyysss!!!
+allboyyyssszzzzzzzz!!!
 	1) el carrito 
 2) las fotos que se agrandan en el celular 
 3) lo de chrome
@@ -791,7 +791,8 @@ for (var i =0; i<37;i++){
 		var start = audiocontext.currentTime + delayInSeconds;
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
-		var fade = (getQueryVariable("fade") || 0 ) / 1000;
+		//var fade = (getQueryVariable("fade") || 0 ) / 1000;
+		var fade = getQueryVariable("band") == "emu" ? 0.3 : 0; // 0.02
 
 		if (fade) {
 			gainNode.gain.setValueAtTime(0, start);
@@ -816,8 +817,10 @@ for (var i =0; i<37;i++){
   
 	function playpiano7sound(n,delayInSeconds) {
 		//delayInSeconds = delayInSeconds || 0;
-		delayInSeconds = (getQueryVariable("delay") || 0 ) / 1000;
-		if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+		//delayInSeconds = (getQueryVariable("delay") || 0 ) / 1000;
+		delayInSeconds = getQueryVariable("band") == "emu" ? 0.1 : 0 ;
+
+		//if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
 		if (n == 77) return sourcestart(72, Math.pow(2,5/12),delayInSeconds);
 		else {
 			//if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
