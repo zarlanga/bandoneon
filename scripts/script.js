@@ -556,25 +556,59 @@ for (var i =0; i<37;i++){
 	function largarnota(tecl){
 		//console.log("largo "+tecl);
 		
+		/*var gainNode = audiocontext.createGain();
+var start = audiocontext.currentTime + delayInSeconds;
+gainNode.gain.linearRampToValueAtTime(volume, start + fade );
+gainNode.connect(audiocontext.destination);
+sourcesCabeza[ind].connect(gainNode);
+
+		var ind = tecl;
+
+		if(tecl==54 && corridas == 18){ 
+			ind = 
+		} //no, no me atrevo
+
+		//conectar el fade
+		//poner timeout al stop
+*/	
+		var ahora = audiocontext.currentTime;
+		var fade = getQueryVariable("band") == emu ? 0.4 : 0; //0.02
+		var gainNode = audiocontext.createGain();
+		gainNode.gain.linearRampToValueAtTime(0, ahora + fade );
+		gainNode.connect(audiocontext.destination);
+
+
 		if(tecl==54 && corridas == 18){ 
 			descargarNotaHold(tecl);
 			resaltarNota(36,false);
-			sourcesCabeza[34].stop(audiocontext.currentTime);
-			sourcesCabeza[34]=null;
+			sourcesCabeza[34].connect(gainNode);
+			setTimeout(function (){
+				sourcesCabeza[34].stop(audiocontext.currentTime);
+				sourcesCabeza[34]=null;
+			},1000)
 		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
 			descargarNotaHold(tecl);
-			sourcesCabeza[58].stop(audiocontext.currentTime);
-			sourcesCabeza[58]=null;
 			resaltarNota(39,false);
 			resaltarNota(19,false);
+			sourcesCabeza[58].connect(gainNode);
+			
+			setTimeout(function (){
+				sourcesCabeza[58].stop(audiocontext.currentTime);
+				sourcesCabeza[58]=null;
+			},1000)
 		}
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
 				descargarNotaHold(tecl);
 				resaltarNota(tecl-corridas, false);
-				sourcesCabeza[tecl].stop(audiocontext.currentTime);
-				sourcesCabeza[tecl]=null;
+				sourcesCabeza[tecl].connect(gainNode);
+				
+				setTimeout(function (){
+					sourcesCabeza[tecl].stop(audiocontext.currentTime);
+					sourcesCabeza[tecl]=null;
+				},1000)
+				
 			}
 		}
 		
@@ -805,6 +839,8 @@ for (var i =0; i<37;i++){
 			gainNode.gain.linearRampToValueAtTime(volume, stop);
 		}
 		gainNode.connect(audiocontext.destination);
+
+
 
 		var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
 		sourcesCabeza[ind] = audiocontext.createBufferSource();
