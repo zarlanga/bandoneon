@@ -1,7 +1,7 @@
 /*******************************************************************/
 /*******************************************************************/
 /*
-allboyyyszchh!!!
+allboyyyszchhalvinschhh!!!
 	1) el carrito 
 2) las fotos que se agrandan en el celular 
 3) lo de chrome
@@ -572,7 +572,7 @@ sourcesCabeza[ind].connect(gainNode);
 		//poner timeout al stop
 */	
 		var ahora = audiocontext.currentTime;
-		var fade = getQueryVariable("band") == emu ? 0.4 : 0; //0.02
+		var fade = getQueryVariable("band") == "emu" ? 0.4 : 0; //0.02
 		var gainNode = audiocontext.createGain();
 		gainNode.gain.linearRampToValueAtTime(0, ahora + fade );
 		gainNode.connect(audiocontext.destination);
