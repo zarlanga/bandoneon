@@ -554,66 +554,54 @@ for (var i =0; i<37;i++){
 	}
     
 	function largarnota(tecl){
-		//console.log("largo "+tecl);
 		
-		/*var gainNode = audiocontext.createGain();
-var start = audiocontext.currentTime + delayInSeconds;
-gainNode.gain.linearRampToValueAtTime(volume, start + fade );
-gainNode.connect(audiocontext.destination);
-sourcesCabeza[ind].connect(gainNode);
-
-		var ind = tecl;
-
-		if(tecl==54 && corridas == 18){ 
-			ind = 
-		} //no, no me atrevo
-
-		//conectar el fade
-		//poner timeout al stop
-*/	
-		var ahora = audiocontext.currentTime;
-		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
-		var gainNode = audiocontext.createGain();
-		//gainNode.gain.setValueAtTime(volu, ahora);
-		gainNode.gain.setValueAtTime(0, ahora );
-		gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
-		gainNode.connect(audiocontext.destination);
-
-
 		if(tecl==54 && corridas == 18){ 
 			descargarNotaHold(tecl);
 			resaltarNota(36,false);
-			sourcesCabeza[34].connect(gainNode);
-			setTimeout(function (){
-				sourcesCabeza[34].stop(audiocontext.currentTime);
-				sourcesCabeza[34]=null;
-			},fade * 1000)
+
+			soltarconfade(34);
+			
 		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
 			descargarNotaHold(tecl);
 			resaltarNota(39,false);
 			resaltarNota(19,false);
-			sourcesCabeza[58].connect(gainNode);
 			
-			setTimeout(function (){
-				sourcesCabeza[58].stop(audiocontext.currentTime);
-				sourcesCabeza[58]=null;
-			},fade * 1000)
+			soltarconfade(58);
+
 		}
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
 				descargarNotaHold(tecl);
 				resaltarNota(tecl-corridas, false);
-				sourcesCabeza[tecl].connect(gainNode);
-				
-				setTimeout(function (){
-					sourcesCabeza[tecl].stop(audiocontext.currentTime);
-					sourcesCabeza[tecl]=null;
-				},fade * 1000)
+		
+				soltarconfade(tecl);
 				
 			}
 		}
+	}
+
+	function soltarconfade(note) {
+		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
+		var ahora = audiocontext.currentTime;
+		var gainNode = audiocontext.createGain();
+		gainNode.gain.setValueAtTime(0, ahora );
+		gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
+		gainNode.connect(audiocontext.destination);
+
+		if (fade != 0) {
+
+			sourcesCabeza[note].connect(gainNode);
 		
+			setTimeout(function (){
+				sourcesCabeza[note].stop(audiocontext.currentTime);
+				sourcesCabeza[note]=null;
+			},fade * 1000)
+		
+		} else {
+			sourcesCabeza[note].stop(audiocontext.currentTime);
+			sourcesCabeza[note]=null;
+		}
 	}
     
 	function resaltarNota(n, bool){
