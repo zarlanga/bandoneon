@@ -1,7 +1,7 @@
 /*******************************************************************/
 /*******************************************************************/
 /*
-
+allboyyyszchhalvinschhh!!!
 	1) el carrito 
 2) las fotos que se agrandan en el celular 
 3) lo de chrome
@@ -554,30 +554,54 @@ for (var i =0; i<37;i++){
 	}
     
 	function largarnota(tecl){
-		//console.log("largo "+tecl);
 		
 		if(tecl==54 && corridas == 18){ 
 			descargarNotaHold(tecl);
 			resaltarNota(36,false);
-			sourcesCabeza[34].stop(audiocontext.currentTime);
-			sourcesCabeza[34]=null;
+
+			soltarconfade(34);
+			
 		} else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
 			descargarNotaHold(tecl);
-			sourcesCabeza[58].stop(audiocontext.currentTime);
-			sourcesCabeza[58]=null;
 			resaltarNota(39,false);
 			resaltarNota(19,false);
+			
+			soltarconfade(58);
+
 		}
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
 				descargarNotaHold(tecl);
 				resaltarNota(tecl-corridas, false);
-				sourcesCabeza[tecl].stop(audiocontext.currentTime);
-				sourcesCabeza[tecl]=null;
+		
+				soltarconfade(tecl);
+				
 			}
 		}
+	}
+
+	function soltarconfade(note) {
+		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
+		var ahora = audiocontext.currentTime;
+		var gainNode = audiocontext.createGain();
+		gainNode.gain.setValueAtTime(0, ahora );
+		gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
+		gainNode.connect(audiocontext.destination);
+
+		if (fade != 0) {
+
+			sourcesCabeza[note].connect(gainNode);
 		
+			setTimeout(function (){
+				sourcesCabeza[note].stop(audiocontext.currentTime);
+				sourcesCabeza[note]=null;
+			},fade * 1000)
+		
+		} else {
+			sourcesCabeza[note].stop(audiocontext.currentTime);
+			sourcesCabeza[note]=null;
+		}
 	}
     
 	function resaltarNota(n, bool){
@@ -787,14 +811,26 @@ for (var i =0; i<37;i++){
 		var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
                   Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
 		var volume = volu;
-		var duration = 0.6; // in seconds
+		var duration = 4;//0.6; // in seconds
 		var start = audiocontext.currentTime + delayInSeconds;
 		var stop = start + duration;
 		var gainNode = audiocontext.createGain();
-		gainNode.gain.setValueAtTime(volume, start);
-		gainNode.gain.linearRampToValueAtTime(volume, stop);
-		// gainNode.gain.linearRampToValueAtTime(0, stop+0.1);
+		//var fade = (getQueryVariable("fade") || 0 ) / 1000;
+		var fade = getQueryVariable("band") == "emu" ? 0 : 0; // 0.02
+
+		if (fade) {
+			gainNode.gain.setValueAtTime(0, start);
+			gainNode.gain.linearRampToValueAtTime(volume, start + fade );
+			gainNode.gain.linearRampToValueAtTime(volume, stop - fade );
+			gainNode.gain.linearRampToValueAtTime(0, stop );
+		
+		} else {
+			gainNode.gain.setValueAtTime(volume, start);
+			gainNode.gain.linearRampToValueAtTime(volume, stop);
+		}
 		gainNode.connect(audiocontext.destination);
+
+
 
 		var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
 		sourcesCabeza[ind] = audiocontext.createBufferSource();
@@ -802,12 +838,15 @@ for (var i =0; i<37;i++){
 		sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
 		sourcesCabeza[ind].connect(gainNode);
 		sourcesCabeza[ind].start(start); 
-    
+		
 	}
   
 	function playpiano7sound(n,delayInSeconds) {
-		delayInSeconds = delayInSeconds || 0;
-		if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+		//delayInSeconds = delayInSeconds || 0;
+		//delayInSeconds = (getQueryVariable("delay") || 0 ) / 1000;
+		delayInSeconds = getQueryVariable("band") == "emu" ? 0.005 : 0 ;
+
+		//if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
 		if (n == 77) return sourcestart(72, Math.pow(2,5/12),delayInSeconds);
 		else {
 			//if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
