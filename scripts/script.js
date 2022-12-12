@@ -429,18 +429,18 @@ for (var i =0; i<37;i++){
 		  else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
 		  
 		  /*
-		  */		  
-		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
-		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
-		  else if ( key == 76 && velocity == 100 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
-		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { 
-				 if(sourcesCabeza[76]) largarnota(76); 
+		  */
+		  else if (key == 76 && modo == 1) {
+			  if (velocity == 90 && !sourcesCabeza[58])     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
+			  else if ( velocity == 100 && command != 128 && !sourcesCabeza[76]  ) tirarnota(58) // tirarnota(notadeabajo)
+			  else if (  command == 128 || velocity == 0  ) { 
+				if(sourcesCabeza[76]) largarnota(76); 
 				else if(sourcesCabeza[58]) largarnota(58) 
-				/*	
-				 largarnota(76); 
-				 largarnota(58)*/
-		  }//largarnota(notadeabajo)
-		  
+					/*	
+					 largarnota(76); 
+					 largarnota(58)*/
+			  }//largarnota(notadeabajo)
+		  }
 
 		  else if (key == 52 && modo == 3) { //52 o 54?
 		  	if (velocity == 89) tirarnota(54);
