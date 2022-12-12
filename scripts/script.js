@@ -433,7 +433,13 @@ for (var i =0; i<37;i++){
 		  else if ( key == 76 && velocity == 90 && modo == 1)     tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
 		  //elsei if (key == 76 && velocity != 90 && modo == 1 ) largarnota(58) //largarnota(notadearriba)
 		  else if ( key == 76 && velocity == 100 && command != 128  && modo == 1) tirarnota(58) // tirarnota(notadeabajo)
-		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { largarnota(76); largarnota(58) }//largarnota(notadeabajo)
+		  else if (key == 76 && ( command == 128 || velocity == 0 ) && modo == 1) { 
+				 if(sourcesCabeza[76]) largarnota(76); 
+				else if(sourcesCabeza[58]) largarnota(58) 
+				/*	
+				 largarnota(76); 
+				 largarnota(58)*/
+		  }//largarnota(notadeabajo)
 		  
 
 		  else if (key == 52 && modo == 3) { //52 o 54?
@@ -530,11 +536,11 @@ for (var i =0; i<37;i++){
 				//console.log("entro");
 				resaltarNota(36,true);
 				playaudio(34)
-				cargarNotaHold(tecl);
+				cargarNotaHold(34);
 			} else if (tecl==76 && corridas != 18) {
 				playaudio(58);
 				resaltarNota(39,true);
-				cargarNotaHold(tecl);
+				cargarNotaHold(58);
 			} 
 			else 
 			{
@@ -568,25 +574,25 @@ for (var i =0; i<37;i++){
 		else
 		{
 			if(notasAntitremolo.indexOf(tecl) != -1){
-				
+		
 				resaltarNota(tecl-corridas, false);
 		
 				soltarconfade(tecl);
 				
 			}
 		}
-    descargarNotaHold(tecl);
-    console.log("no rompio")
+		descargarNotaHold(tecl);
+    
 	}
 
 	function soltarconfade(note) {
-		var fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
-		var ahora = audiocontext.currentTime;
-		var gainNode = audiocontext.createGain();
+		const fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
+		const ahora = audiocontext.currentTime;
+		const gainNode = audiocontext.createGain();
 		gainNode.gain.setValueAtTime(0, ahora );
 		gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
 		gainNode.connect(audiocontext.destination);
-
+		console.log("con fade " + note) 
 		if (fade != 0) {
 
 			sourcesCabeza[note].connect(gainNode);
@@ -604,7 +610,6 @@ for (var i =0; i<37;i++){
     
 	function resaltarNota(n, bool){
 	
-	console.log("bono" +n);
 		$("#bono"+n).css("opacity",bool ? "0.3": "0.0");
 		//$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
 		if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
@@ -634,7 +639,8 @@ for (var i =0; i<37;i++){
   
 	function descargarNotaHold(n){
 		var ind = notasAntitremolo.indexOf(n);
-		notasAntitremolo.splice(ind,1);
+//		if (ind != -1)
+			notasAntitremolo.splice(ind,1);
 	}
   
 	function podemoTocarLaNota(n){
