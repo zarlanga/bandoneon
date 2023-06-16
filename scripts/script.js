@@ -672,10 +672,20 @@ for (var i =0; i<37;i++){
 	}
 	
 	function silenciarTodo(){
+		
 		notasAntitremolo.forEach(m => {
-			console.log("silencia" +m);
 			sourcesCabeza[m].stop(audiocontext.currentTime);
 		  });
+
+		
+		// for (var i = 18; i < 79; i++) {
+		// 	if (sourcesCabeza[i]){
+		// 	 	sourcesCabeza[i].stop(audiocontext.currentTime);
+		// 		console.log("allboys" + i );
+		// 	}
+		// 	sourcesCabeza[i] = null;
+		// }
+		
 		notasAntitremolo.forEach(m => descargarNotaHold(m));
 		for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
 		
