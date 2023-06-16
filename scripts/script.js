@@ -300,7 +300,9 @@ for (var i =0; i<37;i++){
     /***********CAMBIO DE MODOO******/
 	
 	function setMode(n) {
-	//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
+		//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
+		silenciarTodo();
+		
 		var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
 		var man = n < 2  ? "derecha" : "izquierda";
 		var modificador = ["D_A", "D_C", "I_A", "I_C"];
