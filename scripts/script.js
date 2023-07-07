@@ -301,7 +301,7 @@ for (var i =0; i<37;i++){
 	
 	function setMode(n) {
 		//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
-		setTimeout(silenciarTodo(), getQueryVariable("ti") || 200);
+		setTimeout(() => silenciarTodo(), getQueryVariable("ti") || 200);
 		
 		var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
 		var man = n < 2  ? "derecha" : "izquierda";
