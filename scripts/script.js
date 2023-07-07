@@ -670,21 +670,23 @@ for (var i =0; i<37;i++){
 		clearInterval(pepe);
 		for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
 	}
+
+	alert("pepe");
 	
 	function silenciarTodo(){
 		
-		notasAntitremolo.forEach(m => {
-			sourcesCabeza[m].stop(audiocontext.currentTime);
-		  });
+		// notasAntitremolo.forEach(m => {
+		// 	sourcesCabeza[m].stop(audiocontext.currentTime);
+		//   });
 
 		
-		// for (var i = 18; i < 79; i++) {
-		// 	if (sourcesCabeza[i]){
-		// 	 	sourcesCabeza[i].stop(audiocontext.currentTime);
-		// 		console.log("allboys" + i );
-		// 	}
-		// 	sourcesCabeza[i] = null;
-		// }
+		for (var i = 18; i < 79; i++) {
+		 	if (sourcesCabeza[i]){
+		 	 	sourcesCabeza[i].stop(audiocontext.currentTime);
+		 		console.log("allboys" + i );
+		 	}
+		 	sourcesCabeza[i] = null;
+		}
 		
 		notasAntitremolo.forEach(m => descargarNotaHold(m));
 		for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
