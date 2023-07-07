@@ -671,7 +671,6 @@ for (var i =0; i<37;i++){
 		for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
 	}
 
-	alert("pepe");
 	
 	function silenciarTodo(){
 		
