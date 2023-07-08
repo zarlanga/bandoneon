@@ -301,7 +301,7 @@ for (var i =0; i<37;i++){
 	
 	function setMode(n) {
 		//cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
-		setTimeout(() => silenciarTodo(), getQueryVariable("ti") || 200);
+		silenciarTodo();
 		
 		var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
 		var man = n < 2  ? "derecha" : "izquierda";
@@ -674,18 +674,18 @@ for (var i =0; i<37;i++){
 	
 	function silenciarTodo(){
 		
-		// notasAntitremolo.forEach(m => {
-		// 	sourcesCabeza[m].stop(audiocontext.currentTime);
-		//   });
+		notasAntitremolo.forEach(m => {
+			sourcesCabeza[m].stop(audiocontext.currentTime);
+		});
 
 		
-		for (var i = 18; i < 79; i++) {
-		 	if (sourcesCabeza[i]){
-		 	 	sourcesCabeza[i].stop(audiocontext.currentTime);
-		 		console.log("allboys" + i );
-		 	}
-		 	sourcesCabeza[i] = null;
-		}
+		// for (var i = 18; i < 79; i++) {
+		//  	if (sourcesCabeza[i]){
+		//  	 	sourcesCabeza[i].stop(audiocontext.currentTime);
+		//  		console.log("allboys" + i );
+		//  	}
+		//  	sourcesCabeza[i] = null;
+		// }
 		
 		notasAntitremolo.forEach(m => descargarNotaHold(m));
 		for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
