@@ -575,18 +575,18 @@ for (var i =0; i<37;i++){
 		}
 		else
 		{
-			if(notasAntitremolo.indexOf(tecl) != -1){
+			//if(notasAntitremolo.indexOf(tecl) != -1){
 		
 				resaltarNota(tecl-corridas, false);
 		
 				soltarconfade(tecl);
 				
-			}
+			//}
 		}
 		descargarNotaHold(tecl);
     
 	}
-
+	alert("1");
 	function soltarconfade(note) {
 		const fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
 		const ahora = audiocontext.currentTime;
