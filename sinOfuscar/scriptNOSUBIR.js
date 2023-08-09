@@ -586,7 +586,7 @@ for (var i =0; i<37;i++){
 	   descargarNotaHold(tecl);
    
    }
-   alert("1");
+   
    function soltarconfade(note) {
 	   const fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
 	   const ahora = audiocontext.currentTime;
