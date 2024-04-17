@@ -322,8 +322,11 @@ for (var i =0; i<37;i++){
 	   //----- ESTOSEVADESCONTORLAAAR
 	   var bando = getQueryVariable("band") || "aa";
 	   //if ( man == "derecha") 
+        if (bando == "troiloV") bando = "troilo";
+
 	   imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
 	   
+       
 	   
 	   // else  imgsrc[0] = "img_lab/manoIzqBB.png";
 	   // imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
