@@ -1,1 +1,925 @@
-var _0x65f0ea=_0x4687;(function(_0x1b1883,_0x4271b0){var _0x178845=_0x4687,_0xad8080=_0x1b1883();while(!![]){try{var _0x3d02d9=parseInt(_0x178845(0x129))/0x1+parseInt(_0x178845(0x10b))/0x2+-parseInt(_0x178845(0xd3))/0x3+-parseInt(_0x178845(0x182))/0x4+-parseInt(_0x178845(0x1c6))/0x5*(parseInt(_0x178845(0x175))/0x6)+parseInt(_0x178845(0x192))/0x7+-parseInt(_0x178845(0xe8))/0x8*(-parseInt(_0x178845(0xd7))/0x9);if(_0x3d02d9===_0x4271b0)break;else _0xad8080['push'](_0xad8080['shift']());}catch(_0x54faea){_0xad8080['push'](_0xad8080['shift']());}}}(_0x5da4,0xe138a));function elegirBotono(){var _0x5f49ad=_0x4687;plantarOverlays();var _0x348a6c=$('#botonoind')['val'](),_0xb32f13=document[_0x5f49ad(0x1f0)](_0x5f49ad(0xfc)+_0x348a6c)['style'][_0x5f49ad(0x1da)],_0x4b3962=document[_0x5f49ad(0x1f0)]('bono'+_0x348a6c)[_0x5f49ad(0x1d4)][_0x5f49ad(0x109)];_0xb32f13=_0xb32f13['substr'](0x0,_0xb32f13['length']-0x2),_0x4b3962=_0x4b3962[_0x5f49ad(0x135)](0x0,_0x4b3962[_0x5f49ad(0x161)]-0x2),$('#botonox')[_0x5f49ad(0x1d5)](_0xb32f13),$(_0x5f49ad(0x120))[_0x5f49ad(0x1d5)](_0x4b3962),$(_0x5f49ad(0xdf)+_0x348a6c)[_0x5f49ad(0x122)]({'opacity':'1','background-color':'green'});}function moverboton(_0x53eae0){var _0x536e86=_0x4687,_0x159417=$(_0x536e86(0x168))[_0x536e86(0x1d5)](),_0x5c9040=$(_0x536e86(0x18e))[_0x536e86(0x1d5)](),_0x36fa10=$(_0x536e86(0x120))['val']();$('#bono'+_0x159417)['css']('top',_0x5c9040+'vw'),$(_0x536e86(0xdf)+_0x159417)[_0x536e86(0x122)](_0x536e86(0x109),_0x36fa10+'vw');}function printValues(){var _0x24c45f=_0x4687,_0x256dd7='[';for(var _0x55a675=0x0;_0x55a675<0x27;_0x55a675++){if(document[_0x24c45f(0x1f0)](_0x24c45f(0xfc)+_0x55a675)){var _0x2d913f=document[_0x24c45f(0x1f0)](_0x24c45f(0xfc)+_0x55a675)[_0x24c45f(0x1d4)][_0x24c45f(0x1da)],_0xfa3d86=document['getElementById'](_0x24c45f(0xfc)+_0x55a675)['style'][_0x24c45f(0x109)];_0x256dd7+='[\x22'+_0x2d913f+'\x22,\x22'+_0xfa3d86+_0x24c45f(0xbb);}else _0x256dd7+='[\x22'+_0x24c45f(0x1de)+'\x22,\x22'+_0x24c45f(0x1de)+'\x22],';}_0x256dd7+=']',console[_0x24c45f(0xf8)](_0x256dd7);}function plantarOverlays(){var _0x4865d9=_0x4687;for(var _0x28412c=0x0;_0x28412c<0x27;_0x28412c++)$(_0x4865d9(0xdf)+_0x28412c)[_0x4865d9(0x122)]({'opacity':_0x4865d9(0x1f4),'background-color':'yellow'});}$(document)[_0x65f0ea(0x1c9)](function(){var _0xd679d0=_0x65f0ea;$(_0xd679d0(0x1d6))['keydown'](function(_0x4098bf){var _0x3fcb96=_0xd679d0,_0x3f3121=document[_0x3fcb96(0x1f0)](_0x3fcb96(0x1b6))[_0x3fcb96(0x1d4)]['display'];if(_0x3f3121==_0x3fcb96(0x18d)||_0x3f3121==''){var _0x195a4d=_0x4098bf[_0x3fcb96(0xe1)]||_0x4098bf['which'];_0x4098bf[_0x3fcb96(0x103)](),_0x195a4d!=0x20?tirarnota(entrakeysalenota(_0x195a4d,!![])):setMode(modo%0x2==0x0?modo+0x1:modo-0x1);}}),$(_0xd679d0(0x1d6))['keyup'](function(_0x951185){var _0x3fe899=_0xd679d0,_0x41f516=_0x951185[_0x3fe899(0xe1)]||_0x951185['which'];if(_0x41f516!=0x20)largarnota(entrakeysalenota(_0x41f516));});}),$(document)[_0x65f0ea(0x1c9)](function(){var _0x4cd56a=_0x65f0ea,_0x42ace2=!![];for(var _0x19847b=0x0;_0x19847b<0x28;_0x19847b++){var _0x2e3118=_0x42ace2?0x1e:0x96,_0x5c0ebe=_0x4cd56a(0x106)+_0x2e3118+','+_0x2e3118+','+_0x2e3118+')\x20',_0x1970ee=_0x4cd56a(0x1a3)+_0x5c0ebe+';opacity:0.02;\x22\x20id=\x22overnota'+_0x19847b+'\x22\x20onclick=\x22tirarnota('+_0x19847b+_0x4cd56a(0xcf)+_0x19847b+'\x20+\x20corridas)},500)\x22\x20></div>',_0x556e11=_0x4cd56a(0x18c)+_0x19847b+_0x4cd56a(0xcf)+_0x19847b+_0x4cd56a(0x125)+_0x19847b+_0x4cd56a(0x17e);$(_0x4cd56a(0x1ba))[_0x4cd56a(0xf7)](_0x556e11),_0x19847b<0x18?$('#tiagarro1')[_0x4cd56a(0xf7)](_0x1970ee):$(_0x4cd56a(0x12c))[_0x4cd56a(0xf7)](_0x1970ee),_0x42ace2=!_0x42ace2;}document['getElementById'](_0x4cd56a(0xda))[_0x4cd56a(0x163)](_0x4cd56a(0x139)),document['getElementById']('overnota37')[_0x4cd56a(0x163)]('onclick'),document[_0x4cd56a(0x1f0)](_0x4cd56a(0xc2))['removeAttribute'](_0x4cd56a(0x139));var _0x39b7ca=getQueryVariable(_0x4cd56a(0x1f7))!='izq',_0x342e0e=getQueryVariable('cerr')!=_0x4cd56a(0x14e),_0x4666d5=_0x39b7ca&&_0x342e0e?0x0:_0x39b7ca&&!_0x342e0e?0x1:!_0x39b7ca&&_0x342e0e?0x2:0x3;setMode(_0x4666d5),console[_0x4cd56a(0xd1)](_0x4cd56a(0x180)+posbot[_0x4cd56a(0x161)]);});var estaAbriendo=![],notasAntitremolo=[],notas=[],notasD_A=[0x41,0x5a,0x57,0x33,0x72,0x34,0x58,0x45,0x53,0x54,0x35,0x46,0x59,0x44,0x47,0x55,0x52,0x48,0x56,0x49,0x43,0x42,0xbc,0x4a,0x4e,0x36,0x4b,0x37,0x4d,0x38,0x76,0x75,null,0x74,null,null,0x73],notasD_C=[0x41,0x5a,0x57,0x72,0x34,0x33,0x58,0x44,0x53,0x45,0x54,0x35,0x46,0x36,0x59,0x37,0x47,0x55,0xbc,0x48,0x43,0x52,0x49,0x42,0x4a,0x74,0x4e,0x75,0x4b,0x38,0x76,0x4d,null,null,0x73,null,null,0x56],notasI_A=[0xbc,null,0x5a,0x4d,0x33,0x39,0x4b,0x49,0x73,0x34,0x74,0x58,0x55,0x75,0x45,0x36,0x53,0x76,0x4e,0x35,0x44,0x52,0x38,0x46,0x54,0x4a,0x47,0x42,0x59,0x37,0x48,0x43,0x77,0x56],notasI_C=[null,0x4d,0x33,null,0x5a,0xbc,0x39,0x45,0x73,0x53,0x74,0x4b,0x38,0x37,0x34,0x75,0x44,0x4e,0x49,0x52,0x4a,0x46,0x35,0x54,0x36,0x47,0x59,0x76,0x48,0x55,0x43,0x77,0x56,null,null,0x42,0x58],notasFull=[notasD_A,notasD_C,notasI_A,notasI_C],posbot=[],posbotD_A=[['16.8vw','9.9vw'],[_0x65f0ea(0x1e7),_0x65f0ea(0x199)],[_0x65f0ea(0x124),_0x65f0ea(0x154)],[_0x65f0ea(0x13b),'14.7vw'],[_0x65f0ea(0x108),'17.5vw'],['8.1vw','20.5vw'],[_0x65f0ea(0xca),_0x65f0ea(0x1e9)],['11.4vw',_0x65f0ea(0x1f2)],[_0x65f0ea(0x141),_0x65f0ea(0xff)],[_0x65f0ea(0x1a9),'28.5vw'],[_0x65f0ea(0x10c),_0x65f0ea(0x16f)],[_0x65f0ea(0x1ad),_0x65f0ea(0x1af)],[_0x65f0ea(0x1a5),_0x65f0ea(0x14c)],[_0x65f0ea(0x183),_0x65f0ea(0x12b)],['14.6vw','30.4vw'],[_0x65f0ea(0x187),_0x65f0ea(0xf5)],[_0x65f0ea(0x132),_0x65f0ea(0x1ea)],[_0x65f0ea(0xee),_0x65f0ea(0x13e)],[_0x65f0ea(0xd4),_0x65f0ea(0x1a7)],['13.8vw',_0x65f0ea(0x148)],[_0x65f0ea(0x1f2),'21.7vw'],[_0x65f0ea(0x19a),_0x65f0ea(0x185)],['21vw',_0x65f0ea(0x1e0)],[_0x65f0ea(0x117),_0x65f0ea(0x1cb)],[_0x65f0ea(0x1fd),'36.8vw'],['8vw',_0x65f0ea(0x17c)],[_0x65f0ea(0x1b0),'45.8vw'],[_0x65f0ea(0xfa),_0x65f0ea(0xe5)],[_0x65f0ea(0x165),_0x65f0ea(0x17b)],[_0x65f0ea(0x10a),'42.5vw'],[_0x65f0ea(0x1c4),_0x65f0ea(0x1e1)],[_0x65f0ea(0x1e8),_0x65f0ea(0x1ce)],[_0x65f0ea(0x174),_0x65f0ea(0xf6)],[_0x65f0ea(0x1e6),_0x65f0ea(0x1fa)],[_0x65f0ea(0x112),_0x65f0ea(0x134)],['3.1vw','26.4vw'],['5.3vw','23.2vw'],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],['3.3vw',_0x65f0ea(0x165)]],posbotD_C=[[_0x65f0ea(0x159),'9.9vw'],[_0x65f0ea(0x1ef),_0x65f0ea(0x12d)],['12.4vw',_0x65f0ea(0xbe)],['5.8vw',_0x65f0ea(0x1bf)],[_0x65f0ea(0xf3),_0x65f0ea(0x16d)],[_0x65f0ea(0x13b),_0x65f0ea(0x133)],[_0x65f0ea(0x188),_0x65f0ea(0x15c)],[_0x65f0ea(0x133),_0x65f0ea(0x12b)],['15.4vw','14.8vw'],[_0x65f0ea(0x1a5),_0x65f0ea(0x16c)],[_0x65f0ea(0x132),_0x65f0ea(0x1ae)],[_0x65f0ea(0x10c),_0x65f0ea(0x16f)],[_0x65f0ea(0x196),_0x65f0ea(0x114)],['8vw','31.5vw'],[_0x65f0ea(0x1a5),_0x65f0ea(0x14c)],['8.8vw',_0x65f0ea(0x1d7)],[_0x65f0ea(0x10f),_0x65f0ea(0x128)],[_0x65f0ea(0x187),_0x65f0ea(0xf5)],[_0x65f0ea(0xf4),_0x65f0ea(0x1e0)],[_0x65f0ea(0xee),_0x65f0ea(0xce)],[_0x65f0ea(0x16c),_0x65f0ea(0x1b2)],[_0x65f0ea(0x1a9),_0x65f0ea(0x1fb)],[_0x65f0ea(0x14d),_0x65f0ea(0x148)],[_0x65f0ea(0xd4),_0x65f0ea(0x185)],[_0x65f0ea(0x117),'40.7vw'],[_0x65f0ea(0x1e6),_0x65f0ea(0x1fa)],[_0x65f0ea(0x147),_0x65f0ea(0x172)],[_0x65f0ea(0x1e8),_0x65f0ea(0xf1)],[_0x65f0ea(0x1b0),_0x65f0ea(0x1ee)],['10.2vw',_0x65f0ea(0x1a2)],[_0x65f0ea(0x12e),_0x65f0ea(0xb9)],['19.5vw',_0x65f0ea(0x1a2)],[_0x65f0ea(0x174),_0x65f0ea(0x144)],[_0x65f0ea(0x166),_0x65f0ea(0x134)],[_0x65f0ea(0x177),_0x65f0ea(0x181)],[_0x65f0ea(0x127),_0x65f0ea(0xe9)],['3.3vw',_0x65f0ea(0x12b)],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],['0vw',_0x65f0ea(0x1de)],[_0x65f0ea(0xcb),_0x65f0ea(0x1a7)]],posbotI_A=[[_0x65f0ea(0x10d),_0x65f0ea(0x176)],[_0x65f0ea(0x1de),'0vw'],[_0x65f0ea(0x1b7),_0x65f0ea(0x1bc)],[_0x65f0ea(0x10e),_0x65f0ea(0x149)],[_0x65f0ea(0x18b),_0x65f0ea(0x119)],[_0x65f0ea(0x15e),_0x65f0ea(0x13c)],[_0x65f0ea(0xff),_0x65f0ea(0x190)],['11.3vw','43.2vw'],[_0x65f0ea(0x1b8),_0x65f0ea(0xf0)],[_0x65f0ea(0x152),_0x65f0ea(0x117)],[_0x65f0ea(0x1f9),_0x65f0ea(0x1cc)],['18vw','11.9vw'],[_0x65f0ea(0xd2),'37.3vw'],[_0x65f0ea(0x136),_0x65f0ea(0x1f8)],[_0x65f0ea(0x111),_0x65f0ea(0x1c0)],['5.7vw','28.8vw'],['14.7vw','9.7vw'],[_0x65f0ea(0x113),_0x65f0ea(0xe4)],[_0x65f0ea(0x1c7),_0x65f0ea(0x13e)],['5.8vw',_0x65f0ea(0x167)],['13.2vw',_0x65f0ea(0xc9)],[_0x65f0ea(0x1ca),'19.3vw'],[_0x65f0ea(0x1bc),'41.3vw'],[_0x65f0ea(0x124),'21.7vw'],['8.4vw',_0x65f0ea(0x1cc)],['13.2vw','39.1vw'],[_0x65f0ea(0x1d3),_0x65f0ea(0x1d1)],[_0x65f0ea(0x102),_0x65f0ea(0x115)],[_0x65f0ea(0x1ca),_0x65f0ea(0x18a)],[_0x65f0ea(0xd9),'34.9vw'],['12.3vw','33vw'],['16.4vw',_0x65f0ea(0x1a0)],[_0x65f0ea(0xd9),_0x65f0ea(0x1bd)],[_0x65f0ea(0x102),'23.8vw'],['0vw',_0x65f0ea(0x1de)],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],['0vw','0vw'],[_0x65f0ea(0x1de),'0vw'],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)]],posbotI_C=[[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],['16.9vw',_0x65f0ea(0x149)],['8.1vw',_0x65f0ea(0x119)],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],[_0x65f0ea(0x1b7),_0x65f0ea(0x1bc)],[_0x65f0ea(0x16a),_0x65f0ea(0x13c)],['9.7vw',_0x65f0ea(0x176)],[_0x65f0ea(0x13f),_0x65f0ea(0x1c0)],['4.2vw',_0x65f0ea(0xd0)],[_0x65f0ea(0x133),_0x65f0ea(0x1a6)],[_0x65f0ea(0x1f9),'25.6vw'],['14.9vw',_0x65f0ea(0x190)],[_0x65f0ea(0x1bc),_0x65f0ea(0x149)],[_0x65f0ea(0xd9),_0x65f0ea(0x1ac)],['6.8vw',_0x65f0ea(0x117)],[_0x65f0ea(0x136),_0x65f0ea(0xfd)],[_0x65f0ea(0xbe),_0x65f0ea(0xc9)],[_0x65f0ea(0x1c7),'35.2vw'],[_0x65f0ea(0x199),_0x65f0ea(0xc1)],[_0x65f0ea(0x13b),_0x65f0ea(0xca)],['13.2vw',_0x65f0ea(0x1f6)],[_0x65f0ea(0xc3),'21.7vw'],['5.9vw','22.6vw'],[_0x65f0ea(0x142),_0x65f0ea(0xde)],[_0x65f0ea(0x100),'28.8vw'],[_0x65f0ea(0x170),_0x65f0ea(0x1d1)],[_0x65f0ea(0x1ca),'31.4vw'],[_0x65f0ea(0x113),'38.7vw'],[_0x65f0ea(0x124),_0x65f0ea(0x19c)],['9.2vw',_0x65f0ea(0xe5)],['16.4vw',_0x65f0ea(0x1a0)],['6.2vw',_0x65f0ea(0x1bd)],[_0x65f0ea(0x102),'23.7vw'],[_0x65f0ea(0x1de),'0vw'],['0vw','0vw'],[_0x65f0ea(0x155),_0x65f0ea(0x1c1)],[_0x65f0ea(0x19a),_0x65f0ea(0x1d3)],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)],[_0x65f0ea(0x1de),_0x65f0ea(0x1de)]],posbotFull=[posbotD_A,posbotD_C,posbotI_A,posbotI_C],modo,corridas=getQueryVariable('mano')==_0x65f0ea(0x1e3)?0x12:0x27,sourcesCabeza=[];for(var i=0x0;i<0x64;i++)sourcesCabeza[i]=null;var pepe,volu=0.6,samplesCargados=0x0;const list=document[_0x65f0ea(0x1f0)]('midi-list'),debugEl=document[_0x65f0ea(0x1f0)](_0x65f0ea(0x1f1));function bajarpdf(){var _0x513380=_0x65f0ea,_0x3e0a9e=_0x513380(0x130);switch(modo){case 0x0:_0x3e0a9e+=_0x513380(0x18f);break;case 0x1:_0x3e0a9e+=_0x513380(0xeb);break;case 0x2:_0x3e0a9e+=_0x513380(0xe3);break;case 0x3:_0x3e0a9e+='izq_cerrando.pdf';break;}console[_0x513380(0xd1)](_0x3e0a9e),window['open'](_0x3e0a9e,'_blank');}function cambiarMano(){var _0x3548ed=_0x65f0ea,_0x544784=_0x3548ed(0x164);if(getQueryVariable('gh'))_0x544784+='&gh=t';if(getQueryVariable('band'))_0x544784+='&band='+getQueryVariable('band');if(!getQueryVariable(_0x3548ed(0x1f7))||getQueryVariable(_0x3548ed(0x1f7))==_0x3548ed(0x162))_0x544784+=_0x3548ed(0xd6);window[_0x3548ed(0x1eb)](_0x544784,'_self');}function setManito(_0x4e0c9f){var _0x3864b1=_0x65f0ea;_0x4e0c9f<0x2?($(_0x3864b1(0xf2))[_0x3864b1(0x17a)]('CAMBIAR\x20DE\x20MANO<br><i\x20class=\x27fa\x20fa-hand-paper-o\x20\x27\x20style=\x27font-size:40px;\x20\x27></i>'),$('#manito')[_0x3864b1(0x122)]({'display':_0x3864b1(0x146),'right':'','left':_0x3864b1(0x110),'border-radius':_0x3864b1(0x153)}),$(_0x3864b1(0xf2))[_0x3864b1(0x14a)](_0x3864b1(0x1b1))):($('#manito')[_0x3864b1(0x17a)](_0x3864b1(0x123)),$(_0x3864b1(0xf2))[_0x3864b1(0x122)]({'display':_0x3864b1(0x146),'right':_0x3864b1(0x110),'left':'','border-radius':'15px\x200px\x200px\x2015px'}),$(_0x3864b1(0xf2))[_0x3864b1(0x14a)]('abreDerecha'));}function setMode(_0x57edb7){var _0x236b86=_0x65f0ea;silenciarTodo();var _0xe2f658=_0x57edb7%0x2==0x0?'Abriendo':'Cerrando',_0xdc30f2=_0x57edb7<0x2?_0x236b86(0x12f):'izquierda',_0x92ea0a=[_0x236b86(0x1ed),_0x236b86(0x1dc),'I_A',_0x236b86(0x19e)],_0x1be0d0=[_0x236b86(0x137)+_0x92ea0a[_0x57edb7]+_0x236b86(0x1dd),_0x236b86(0x1bb)+_0x92ea0a[_0x57edb7]+_0x236b86(0x1b5),_0x236b86(0x1bb)+_0x92ea0a[_0x57edb7]+_0x236b86(0xba)];notas=notasFull[_0x57edb7],posbot=posbotFull[_0x57edb7],setManito(_0x57edb7),modo=_0x57edb7;var _0x28921c=getQueryVariable('band')||'aa';_0x1be0d0[0x0]='img/teclados/'+_0x28921c+'_'+_0xdc30f2+'.'+(_0x28921c!=_0x236b86(0x15b)?_0x236b86(0x179):'jpg')+'\x20',$(_0x236b86(0x191))[_0x236b86(0x189)](_0x236b86(0x17d),_0x1be0d0[0x0]),$(_0x236b86(0x14f))['attr'](_0x236b86(0x17d),_0x1be0d0[0x1]),$(_0x236b86(0x11b))[_0x236b86(0x189)](_0x236b86(0x17d),_0x1be0d0[0x2]),$(_0x236b86(0x11e))['html'](_0xe2f658),$(_0x236b86(0x1cd))[_0x236b86(0x17a)](_0x236b86(0x198)+_0xdc30f2[_0x236b86(0x1d8)]()),reordenarOverlays();}function cambiaModo(){var _0x182300=_0x65f0ea;console[_0x182300(0xd1)]('cambioModo'),estaAbriendo=!estaAbriendo;if(estaAbriendo){$('#titulo')[_0x182300(0x17a)](_0x182300(0x13a)),notas=[0xbc,null,0x5a,0x4d,0x33,0x39,0x4b,0x49,0x73,0x34,0x74,0x58,0x55,0x75,0x45,0x36,0x53,0x76,0x4e,0x35,0x44,0x52,0x38,0x46,0x54,0x4a,0x47,0x42,0x59,0x37,0x48,0x43,0x77,0x56],$('#img0')[_0x182300(0x122)](_0x182300(0x1b3),''),$(_0x182300(0x15a))['css'](_0x182300(0x1b3),_0x182300(0x18d));for(var _0x523e04=0x0;_0x523e04<0x25;_0x523e04++){$('#bono'+_0x523e04)[_0x182300(0x122)](_0x182300(0x1da),posbot[_0x523e04][0x0]),$(_0x182300(0xdf)+_0x523e04)['css'](_0x182300(0x109),posbot[_0x523e04][0x1]);if(posbot[_0x523e04][0x0]==_0x182300(0x1de))$(_0x182300(0xdf)+_0x523e04)[_0x182300(0x122)](_0x182300(0x1b3),_0x182300(0x18d));else $(_0x182300(0xdf)+_0x523e04)[_0x182300(0x122)](_0x182300(0x1b3),'');}}else{$(_0x182300(0x11e))[_0x182300(0x17a)](_0x182300(0xe2)),$(_0x182300(0x191))[_0x182300(0x122)](_0x182300(0x1b3),'none'),$(_0x182300(0x15a))[_0x182300(0x122)](_0x182300(0x1b3),''),notas=[null,0x4d,0x33,null,0x5a,0xbc,0x39,0x45,0x73,0x53,0x74,0x4b,0x38,0x37,0x34,0x75,0x44,0x4e,0x49,0x52,0x4a,0x46,0x35,0x54,0x36,0x47,0x59,0x76,0x48,0x55,0x43,0x77,0x56,null,null,0x42,0x58];for(var _0x523e04=0x0;_0x523e04<0x25;_0x523e04++){$(_0x182300(0xdf)+_0x523e04)[_0x182300(0x122)]('top',posbot1[_0x523e04][0x0]),$(_0x182300(0xdf)+_0x523e04)[_0x182300(0x122)](_0x182300(0x109),posbot1[_0x523e04][0x1]);if(posbot1[_0x523e04][0x0]=='0vw')$(_0x182300(0xdf)+_0x523e04)[_0x182300(0x122)](_0x182300(0x1b3),_0x182300(0x18d));else $(_0x182300(0xdf)+_0x523e04)['css'](_0x182300(0x1b3),'');}}silenciarTodo();}function reordenarOverlays(){var _0x44e731=_0x65f0ea;for(var _0x35307d=0x0;_0x35307d<posbot[_0x44e731(0x161)];_0x35307d++){$('#bono'+_0x35307d)[_0x44e731(0x122)](_0x44e731(0x1da),posbot[_0x35307d][0x0]),$(_0x44e731(0xdf)+_0x35307d)[_0x44e731(0x122)](_0x44e731(0x109),posbot[_0x35307d][0x1]);if(posbot[_0x35307d][0x0]==_0x44e731(0x1de))$(_0x44e731(0xdf)+_0x35307d)['css'](_0x44e731(0x1b3),_0x44e731(0x18d));else $(_0x44e731(0xdf)+_0x35307d)[_0x44e731(0x122)](_0x44e731(0x1b3),'');}}function setColor(_0x4bab70){var _0x1bf2ce=_0x65f0ea,_0x394f3f=getColor3();$(_0x4bab70)[_0x1bf2ce(0x122)](_0x1bf2ce(0x1fc),_0x394f3f[0x0]),$(_0x4bab70)[_0x1bf2ce(0x122)](_0x1bf2ce(0x107),_0x394f3f[0x1]);}function getColor3(){var _0x202663=_0x65f0ea;return gr=Math[_0x202663(0xc8)](Math['random']()*0xff),re=Math['floor'](Math[_0x202663(0x194)]()*0xff),blu=Math[_0x202663(0xc8)](Math[_0x202663(0x194)]()*0xff),gr1=0xff-gr,re1=0xff-re,blu1=0xff-blu,['rgb('+re+','+gr+','+blu+')',_0x202663(0x106)+re1+','+gr1+','+blu1+')'];}function connectToDevice(_0x3e74a8){var _0x38631d=_0x65f0ea;console['log'](_0x38631d(0xd8),_0x3e74a8),bandStatus(0x2),_0x3e74a8['onmidimessage']=function(_0x4045d7){var _0x127bdc=_0x38631d;const [_0x481b00,_0x4717e1,_0x23026f]=_0x4045d7[_0x127bdc(0x16e)];debugEl[_0x127bdc(0x178)]=_0x127bdc(0x1c2)+_0x481b00+_0x127bdc(0xdb)+_0x4717e1+'\x0avelocity:\x20'+_0x23026f;if(_0x4717e1==0x78&&modo%0x2!=0x0)setMode(modo-0x1);else{if(_0x4717e1==0x79&&modo%0x2==0x0)setMode(modo+0x1);else{if(_0x4717e1==0x4c&&modo==0x1){if(_0x23026f==0x5a&&!sourcesCabeza[0x3a])tirarnota(0x4c);else{if(_0x23026f==0x64&&_0x481b00!=0x80&&!sourcesCabeza[0x4c])tirarnota(0x3a);else{if(_0x481b00==0x80||_0x23026f==0x0){if(sourcesCabeza[0x4c])largarnota(0x4c);else{if(sourcesCabeza[0x3a])largarnota(0x3a);}}}}}else{if(_0x4717e1==0x34&&modo==0x3){if(_0x23026f==0x59&&!sourcesCabeza[0x22])tirarnota(0x36);else{if(_0x23026f==0x5a&&!sourcesCabeza[0x36])tirarnota(0x22);else{if(_0x481b00==0x80||_0x23026f==0x0){if(sourcesCabeza[0x22])largarnota(0x22);else{if(sourcesCabeza[0x36])largarnota(0x36);}}}};}else{if(_0x481b00==0x90&&_0x23026f!=0x0)tirarnota(_0x4717e1-0x12);else{if(_0x481b00==0x80||_0x23026f==0x0)largarnota(_0x4717e1-0x12);}}}}}};}function replaceElements(_0x319357){var _0x5d1bf5=_0x65f0ea;while(list[_0x5d1bf5(0xdc)]){list[_0x5d1bf5(0xe6)](list['firstChild']);}bandStatus(0x0);const _0x3b7ab=_0x319357[_0x5d1bf5(0x1d9)](_0xc0c30f=>{var _0x503a6f=_0x5d1bf5;console[_0x503a6f(0xd1)](_0xc0c30f);const _0x1e8f33=document[_0x503a6f(0xd5)]('li');return _0x1e8f33['innerHTML']=_0xc0c30f[_0x503a6f(0x126)]+'\x20('+_0xc0c30f[_0x503a6f(0x173)]+')',(_0x1e8f33['innerHTML'][_0x503a6f(0xed)](0x0,0x4)[_0x503a6f(0xe7)]()==_0x503a6f(0xc6)||_0x1e8f33[_0x503a6f(0x160)]['substring'](0x0,0x6)[_0x503a6f(0xe7)]()==_0x503a6f(0xc4))&&(document['getElementById']('bandcon')[_0x503a6f(0x19b)](_0x503a6f(0x138),connectToDevice[_0x503a6f(0x19d)](null,_0xc0c30f)),bandStatus(0x1)),_0x1e8f33;});_0x3b7ab['forEach'](_0xc1a239=>list[_0x5d1bf5(0x1be)](_0xc1a239));}!navigator[_0x65f0ea(0x1c8)]?document['getElementById']('errormidi')['style'][_0x65f0ea(0x1b3)]=_0x65f0ea(0x146):navigator[_0x65f0ea(0x1c8)]()[_0x65f0ea(0x151)](function(_0x407a5e){var _0x549e47=_0x65f0ea;console[_0x549e47(0xd1)]('access',_0x407a5e),replaceElements(Array[_0x549e47(0xfe)](_0x407a5e[_0x549e47(0x11c)][_0x549e47(0x1b4)]())),_0x407a5e['onstatechange']=function(_0x22fd8a){var _0x4afae3=_0x549e47;replaceElements(Array[_0x4afae3(0xfe)](this[_0x4afae3(0x11c)][_0x4afae3(0x1b4)]()));};});function bandStatus(_0x3cf053){var _0x589c8a=_0x65f0ea,_0x370d32=document[_0x589c8a(0x1f0)]('bandcon'),_0x286222=document['getElementById'](_0x589c8a(0x197));switch(_0x3cf053){case 0x0:_0x370d32[_0x589c8a(0x160)]=_0x589c8a(0x14b),_0x286222[_0x589c8a(0x1d4)][_0x589c8a(0x1db)]=_0x589c8a(0xf9);break;case 0x1:_0x370d32[_0x589c8a(0x160)]='BANDOLICA\x20DISPONIBLE:\x20CLICK\x20PARA\x20ACTIVAR',_0x286222[_0x589c8a(0x1d4)][_0x589c8a(0x1db)]=_0x589c8a(0x186);break;case 0x2:_0x370d32['innerHTML']=_0x589c8a(0x1d2),_0x286222[_0x589c8a(0x1d4)][_0x589c8a(0x1db)]=_0x589c8a(0x145);break;}}function cambiarVolumen(_0x4fea73){var _0x6a46b4=_0x65f0ea;console[_0x6a46b4(0xd1)](_0x4fea73),volu=_0x4fea73/0x64;}function entrakeysalenota(_0x5d9446,_0x57b892){var _0x42dc77=notas['indexOf'](_0x5d9446);return _0x42dc77+corridas;}function tirarnota(_0x5a5abc){var _0x36fe40=_0x65f0ea;if(podemoTocarLaNota(_0x5a5abc)){console[_0x36fe40(0xd1)](_0x36fe40(0x13d)+_0x5a5abc);if(_0x5a5abc==0x36&&corridas==0x12)resaltarNota(0x24,!![]),playaudio(0x22),cargarNotaHold(0x22);else _0x5a5abc==0x4c&&corridas!=0x12?(playaudio(0x3a),resaltarNota(0x27,!![]),cargarNotaHold(0x3a)):_0x5a5abc>=corridas&&(playaudio(_0x5a5abc),resaltarNota(_0x5a5abc-corridas,!![]),cargarNotaHold(_0x5a5abc));}}function largarnota(_0x542d97){if(_0x542d97==0x36&&corridas==0x12)resaltarNota(0x24,![]),soltarconfade(0x22);else(_0x542d97==0x4c||_0x542d97==0x3a)&&corridas!=0x12?(resaltarNota(0x27,![]),resaltarNota(0x13,![]),soltarconfade(0x3a)):(resaltarNota(_0x542d97-corridas,![]),soltarconfade(_0x542d97));descargarNotaHold(_0x542d97);}function soltarconfade(_0x1e789c){var _0xe9b287=_0x65f0ea;const _0xa93bfc=getQueryVariable('band')==_0xe9b287(0x15b)?0.02:0x0,_0x1ade91=audiocontext[_0xe9b287(0x19f)],_0xc2998c=audiocontext[_0xe9b287(0x1f3)]();_0xc2998c[_0xe9b287(0x1c3)]['setValueAtTime'](0x0,_0x1ade91),_0xc2998c['gain']['linearRampToValueAtTime'](volu*-0x1,_0x1ade91+_0xa93bfc),_0xc2998c[_0xe9b287(0x1c5)](audiocontext[_0xe9b287(0x11d)]),console[_0xe9b287(0xd1)]('con\x20fade\x20'+_0x1e789c),_0xa93bfc!=0x0?(sourcesCabeza[_0x1e789c][_0xe9b287(0x1c5)](_0xc2998c),setTimeout(function(){var _0x3407a4=_0xe9b287;sourcesCabeza[_0x1e789c][_0x3407a4(0xbc)](audiocontext['currentTime']),sourcesCabeza[_0x1e789c]=null;},_0xa93bfc*0x3e8)):(sourcesCabeza[_0x1e789c][_0xe9b287(0xbc)](audiocontext[_0xe9b287(0x19f)]),sourcesCabeza[_0x1e789c]=null);}function resaltarNota(_0x510dfc,_0xa53c59){var _0x204363=_0x65f0ea;$(_0x204363(0xdf)+_0x510dfc)[_0x204363(0x122)](_0x204363(0x1f5),_0xa53c59?_0x204363(0x11a):_0x204363(0xc7));if(_0x510dfc!=0x24)$(_0x204363(0x150)+_0x510dfc)['css']('opacity',_0xa53c59?_0x204363(0x1b9):_0x204363(0xbd));if(_0x510dfc==0x24)$(_0x204363(0x150)+0x10)[_0x204363(0x122)](_0x204363(0x1f5),_0xa53c59?_0x204363(0x1b9):'0.02');}function asignarTecla(_0x4ceea7){var _0x33d85c=_0x65f0ea,_0x327699=String[_0x33d85c(0xfb)](notas[_0x4ceea7]);if(_0x4ceea7!=0x24)$('#overnota'+_0x4ceea7)['html'](_0x327699);$(_0x33d85c(0xdf)+_0x4ceea7)[_0x33d85c(0x17a)](_0x327699),console['log'](_0x4ceea7+'//'+_0x327699);}function toggleDispositivos(){var _0x51e37e=_0x65f0ea;if(list[_0x51e37e(0x1d4)]['display']=='')list['style']['display']=_0x51e37e(0x18d);else list[_0x51e37e(0x1d4)][_0x51e37e(0x1b3)]='';}function cargarNotaHold(_0x3e170f){var _0x416483=_0x65f0ea;notasAntitremolo[_0x416483(0x118)](_0x3e170f);}function descargarNotaHold(_0x22abe2){var _0x2209c8=_0x65f0ea,_0x73d27e=notasAntitremolo[_0x2209c8(0x1a1)](_0x22abe2);notasAntitremolo[_0x2209c8(0x15d)](_0x73d27e,0x1);}function podemoTocarLaNota(_0x9e5e7f){return notasAntitremolo['indexOf'](_0x9e5e7f)==-0x1;}function testearNotas(){var _0x2dabfc=0xe;pepe=setInterval(function(){var _0x18be30=_0x4687;tirarnota(_0x2dabfc);if(_0x2dabfc>0xe)largarnota(_0x2dabfc-0x1);resaltarNota(_0x2dabfc-0x12,!![]),resaltarNota(_0x2dabfc-0x28,![]),console[_0x18be30(0xd1)](_0x2dabfc++),_0x2dabfc>0x44&&(clearInterval(pepe),resaltarNota(_0x2dabfc-0x28,![]));},0x7d0);}function _0x4687(_0x48812b,_0x1ee56e){var _0x5da4b1=_0x5da4();return _0x4687=function(_0x46879f,_0x4ea383){_0x46879f=_0x46879f-0xb9;var _0x2ba438=_0x5da4b1[_0x46879f];return _0x2ba438;},_0x4687(_0x48812b,_0x1ee56e);}function pararTesteo(){clearInterval(pepe);for(var _0x5badf3=0x12;_0x5badf3<0x4f;_0x5badf3++)resaltarNota(_0x5badf3-0x12,![]);}function _0x5da4(){var _0x13fcc9=['25.1vw','17.3vw','abreIzquierda','21.8vw','display','values','_1.jpg','desbloquear','19vw','4.2vw','0.7','#tiagarro0','img/pentagramas/penta_','7.5vw','45.4vw','appendChild','17.5vw','13.3vw','29.5vw','commando:','gain','6.9vw','connect','553115KgVDzz','15.8vw','requestMIDIAccess','ready','8.7vw','40.7vw','25.6vw','#titulo1','34.9vw','):\x20','2_f2','27.7vw','BANDOLICA\x20ACTIVADA','12vw','style','val','body','37.3vw','toUpperCase','map','top','backgroundColor','D_C','.jpg','0vw','start','47.6vw','40.8vw','Piano','izq','2_d4','split','5.2vw','20.3vw','5.8vw','16.6vw','23.3vw','open','.wav','D_A','45.8vw','20.2vw','getElementById','debug','18.3vw','createGain','0.5','opacity','39.1vw','mano','32.2vw','3.6vw','28.9vw','23.4vw','background-color','18.4vw','40.9vw','_2.jpg','\x22],','stop','0.02','13.1vw','band','3_a4','43.2vw','overnota38','12.3vw','bandol','resume','ardu','0.0','floor','15.7vw','19.3vw','17.7vw','sampleStatus','createBufferSource','35.1vw','\x20+\x20corridas);\x20setTimeout(function(){largarnota(','18.8vw','log','9.2vw','2066919JtoxAQ','18vw','createElement','&mano=izq','552213ydeGfD','Connecting\x20to\x20device','6.2vw','overnota36','\x0anrotecla:\x20','firstChild','forEach','25.99vw','#bono','error\x20decoding\x20file\x20data\x20(','keyCode','cerrando','izq_abriendo.pdf','38.7vw','37.2vw','removeChild','toLowerCase','16KTmvkI','26.4vw','decodeAudioData\x20error\x20(','der_cerrando.pdf','linearRampToValueAtTime','substring','14.8vw','4_g3','18.9vw','35vw','#manito','8.2vw','20.8vw','39vw','38.1vw','append','table','transparent','8.9vw','fromCharCode','bono','32.3vw','from','14.9vw','5.7vw','responseType','15.6vw','preventDefault','/s/','5_d4','rgb(','color','5.9vw','left','10.1vw','2341092MkQmlG','8vw','18.6vw','16.9vw','14.5vw','0px','10vw','3.4vw','4.6vw','25.2vw','29.4vw','\x20de\x206\x20samples\x20cargados','16.1vw','push','10.2vw','0.3','#imgP2','inputs','destination','#titulo','error','#botonoy','AudioContext','css','CAMBIAR\x20DE\x20MANO<br><i\x20class=\x27fa\x20fa-hand-paper-o\x20espejado\x27\x20style=\x27font-size:40px;\x20\x27></i>','12.4vw','\x20+\x20corridas)},500)\x22\x20style=\x22opacity:0.0;\x22\x20id=\x22bono','name','3vw','30.4vw','812293AdrFku','6_a4','19.9vw','#tiagarro2','11.3vw','7.1vw','derecha','img/mapas/','https://raw.githubusercontent.com/zarlanga/bandoneon/master/s/','10.7vw','14.7vw','32.4vw','substr','3.7vw','img_lab/teclas_','click','onclick','abriendo','8.8vw','47.3vw','tironota','35.2vw','9.9vw','webkitAudioContext','15.4vw','8.49vw','Content-Type','38.2vw','green','block','18.5vw','44.2vw','41.3vw','addClass','CONECTAR\x20BANDOLICA','33.4vw','13.9vw','true','#imgP1','#overnota','then','6.8vw','0px\x2015px\x2015px\x200px\x20','13vw','15.5vw','decodeAudioData','playbackRate','cargo\x20','16.8vw','#img1','emu','16.7vw','splice','9.7vw','setValueAtTime','innerHTML','length','der','removeAttribute','./bandolica.html?','19.6vw','3.3vw','22.6vw','#botonoind','buffer','18.7vw','onload','18.2vw','20.5vw','data','26.1vw','12.1vw','pow','36.8vw','manufacturer','3.9vw','6fIzlGN','47.2vw','5.4vw','innerText','png','html','42.5vw','31.5vw','src','\x22></div>','mi_','largo','23.2vw','4326272yrLDDS','14.6vw','search','31.9vw','white','12.5vw','19.1vw','attr','31.3vw','8.1vw','<div\x20class=\x22botonota\x22\x20onclick=\x22tirarnota(','none','#botonox','der_abriendo.pdf','45.2vw','#img0','4886819PNRqlc','3_c3','random','BufferLoader:\x20XHR\x20error\x20(','14.4vw','circulo','MANO\x20','11.2vw','17.9vw','addEventListener','33.1vw','bind','I_C','currentTime','17.6vw','indexOf','42.6vw','<div\x20class=\x22overlay\x22style=\x22background:','setRequestHeader','11.4vw','9.8vw','26.8vw','location','10.8vw','get','titulo0','34.8vw','14.2vw','28.5vw'];_0x5da4=function(){return _0x13fcc9;};return _0x5da4();}function silenciarTodo(){var _0x414b2f=_0x65f0ea;notasAntitremolo[_0x414b2f(0xdd)](_0x24cd3c=>{var _0x24234e=_0x414b2f;sourcesCabeza[_0x24cd3c][_0x24234e(0xbc)](audiocontext[_0x24234e(0x19f)]);}),notasAntitremolo['forEach'](_0x205386=>descargarNotaHold(_0x205386));for(var _0x1c66ae=0x12;_0x1c66ae<0x4f;_0x1c66ae++)resaltarNota(_0x1c66ae-0x12,![]);}function getQueryVariable(_0x4a011e){var _0x56f8c0=_0x65f0ea,_0x55453a=window[_0x56f8c0(0x1a8)][_0x56f8c0(0x184)][_0x56f8c0(0xed)](0x1),_0x4083a2=_0x55453a['split']('&');for(var _0x2c35e8=0x0;_0x2c35e8<_0x4083a2[_0x56f8c0(0x161)];_0x2c35e8++){var _0x19dc5e=_0x4083a2[_0x2c35e8][_0x56f8c0(0x1e5)]('=');if(_0x19dc5e[0x0]==_0x4a011e)return _0x19dc5e[0x1];}return![];}function buildUrlSample(_0xf23fbe,_0x537eac){var _0x1013c6=_0x65f0ea,_0x37a5cf;if(getQueryVariable('gh')=='t')_0x37a5cf=_0x1013c6(0x131);else{if(getQueryVariable('gh')=='l')_0x37a5cf=_0x1013c6(0x104);else _0x37a5cf='https://bandolica.com/s/';}if(_0x537eac==_0x1013c6(0x1e3))_0x37a5cf+=_0x1013c6(0x17f);else _0x37a5cf+='md_';_0x37a5cf+=_0xf23fbe+'/';var _0x4d5ede=_0x537eac=='izq'?['1_bb2',_0x1013c6(0x1d0),_0x1013c6(0x193),_0x1013c6(0xef),_0x1013c6(0x105),_0x1013c6(0x12a)]:['1_g3',_0x1013c6(0x1e4),_0x1013c6(0xc0),'4_e5','5_b5','6_f6'];return _0x4d5ede=_0x4d5ede[_0x1013c6(0x1d9)](_0x2ea353=>_0x37a5cf+_0x2ea353+_0x1013c6(0x1ec)),_0x4d5ede;}function mostrarSamplesCargados(){var _0x5086d7=_0x65f0ea;document[_0x5086d7(0x1f0)](_0x5086d7(0xcc))[_0x5086d7(0x178)]=samplesCargados+_0x5086d7(0x116);}var g_instrument=_0x65f0ea(0x1e2),AudioContext=window[_0x65f0ea(0x121)]||window[_0x65f0ea(0x140)],audiocontext=new AudioContext(),piano7sounds=[];for(var i=0x18;i<=0x6c;i++)piano7sounds[i]=null;var urlsG=buildUrlSample(getQueryVariable('band')||'aa',getQueryVariable(_0x65f0ea(0x1f7)));function piano7loadsound(_0x174e92){var _0xb24e8d=_0x65f0ea,_0xeb0ca9=new XMLHttpRequest();if(getQueryVariable(_0xb24e8d(0x1f7))==_0xb24e8d(0x1e3))_0xeb0ca9[_0xb24e8d(0x1eb)](_0xb24e8d(0x1aa),_0x174e92==0x10?urlsG[0x0]:_0x174e92==0x17?urlsG[0x1]:_0x174e92==0x1e?urlsG[0x2]:_0x174e92==0x25?urlsG[0x3]:_0x174e92==0x2c?urlsG[0x4]:_0x174e92==0x33?urlsG[0x5]:'',!![]);else _0xeb0ca9['open'](_0xb24e8d(0x1aa),_0x174e92==0x25?urlsG[0x0]:_0x174e92==0x2c?urlsG[0x1]:_0x174e92==0x33?urlsG[0x2]:_0x174e92==0x3a?urlsG[0x3]:_0x174e92==0x41?urlsG[0x4]:_0x174e92==0x48?urlsG[0x5]:'',!![]);_0xeb0ca9[_0xb24e8d(0x1a4)](_0xb24e8d(0x143),'application/x-www-form-urlencoded'),_0xeb0ca9[_0xb24e8d(0x101)]='arraybuffer',_0xeb0ca9[_0xb24e8d(0x16b)]=function(){var _0x365c2c=_0xb24e8d;audiocontext[_0x365c2c(0x156)](_0xeb0ca9['response'],function(_0x1efd65){var _0x283c52=_0x365c2c;if(!_0x1efd65){console['error'](_0x283c52(0xe0)+_0x174e92+_0x283c52(0x1cf)+url);return;}piano7sounds[_0x174e92]=_0x1efd65,console[_0x283c52(0xd1)](_0x283c52(0x158)+_0x174e92);},function(_0x22e6b3){var _0x526491=_0x365c2c;console[_0x526491(0x11f)](_0x526491(0xea)+_0x174e92+'):\x20',_0x22e6b3);});},_0xeb0ca9['onerror']=function(){var _0x5376e3=_0xb24e8d;console['error'](_0x5376e3(0x195)+_0x174e92+')');},_0xeb0ca9['send']('n='+_0x174e92);}function piano7loadbasic(){getQueryVariable('mano')=='izq'?(piano7loadsound(0x10),piano7loadsound(0x17),piano7loadsound(0x1e),piano7loadsound(0x25),piano7loadsound(0x2c),piano7loadsound(0x33)):(piano7loadsound(0x25),piano7loadsound(0x2c),piano7loadsound(0x33),piano7loadsound(0x3a),piano7loadsound(0x41),piano7loadsound(0x48));}function sourcestart(_0x5c4f9c,_0x561288,_0x3ea65b){var _0x166958=_0x65f0ea;if(audiocontext['state']=='suspended')audiocontext[_0x166958(0xc5)]();var _0x330b19=[Math[_0x166958(0x171)](0x2,-0x3/0xc),Math['pow'](0x2,-0x2/0xc),Math[_0x166958(0x171)](0x2,-0x1/0xc),0x1,Math[_0x166958(0x171)](0x2,0x1/0xc),Math[_0x166958(0x171)](0x2,0x2/0xc),Math[_0x166958(0x171)](0x2,0x3/0xc)],_0x131488=volu,_0x4fe3fe=0x4,_0xe4b12c=audiocontext[_0x166958(0x19f)]+_0x3ea65b,_0xf14ec4=_0xe4b12c+_0x4fe3fe,_0xa0818f=audiocontext[_0x166958(0x1f3)](),_0x34065a=getQueryVariable(_0x166958(0xbf))==_0x166958(0x15b)?0x0:0x0;_0x34065a?(_0xa0818f[_0x166958(0x1c3)]['setValueAtTime'](0x0,_0xe4b12c),_0xa0818f['gain'][_0x166958(0xec)](_0x131488,_0xe4b12c+_0x34065a),_0xa0818f[_0x166958(0x1c3)][_0x166958(0xec)](_0x131488,_0xf14ec4-_0x34065a),_0xa0818f['gain'][_0x166958(0xec)](0x0,_0xf14ec4)):(_0xa0818f['gain'][_0x166958(0x15f)](_0x131488,_0xe4b12c),_0xa0818f[_0x166958(0x1c3)][_0x166958(0xec)](_0x131488,_0xf14ec4));_0xa0818f[_0x166958(0x1c5)](audiocontext[_0x166958(0x11d)]);var _0x3e6eff=_0x561288==Math[_0x166958(0x171)](0x2,0x5/0xc)?0x4d:_0x5c4f9c+_0x330b19[_0x166958(0x1a1)](_0x561288)-0x3;sourcesCabeza[_0x3e6eff]=audiocontext[_0x166958(0xcd)](),sourcesCabeza[_0x3e6eff][_0x166958(0x169)]=piano7sounds[_0x5c4f9c],sourcesCabeza[_0x3e6eff][_0x166958(0x157)][_0x166958(0x15f)](_0x561288,0x0),sourcesCabeza[_0x3e6eff]['connect'](_0xa0818f),sourcesCabeza[_0x3e6eff][_0x166958(0x1df)](_0xe4b12c);}function playpiano7sound(_0xf6563,_0x37d4f4){var _0xc47f18=_0x65f0ea;_0x37d4f4=getQueryVariable(_0xc47f18(0xbf))=='emu'?0.005:0x0;if(_0xf6563==0x4d)return sourcestart(0x48,Math[_0xc47f18(0x171)](0x2,0x5/0xc),_0x37d4f4);else{if(_0xf6563%0x7==0x2)return sourcestart(_0xf6563,0x1,_0x37d4f4);if(_0xf6563%0x7==0x3)return sourcestart(_0xf6563-0x1,Math[_0xc47f18(0x171)](0x2,0x1/0xc),_0x37d4f4);if(_0xf6563%0x7==0x4)return sourcestart(_0xf6563-0x2,Math['pow'](0x2,0x2/0xc),_0x37d4f4);if(_0xf6563%0x7==0x5)return sourcestart(_0xf6563-0x3,Math[_0xc47f18(0x171)](0x2,0x3/0xc),_0x37d4f4);if(_0xf6563%0x7==0x6)return sourcestart(_0xf6563+0x3,Math[_0xc47f18(0x171)](0x2,-0x3/0xc),_0x37d4f4);if(_0xf6563%0x7==0x0)return sourcestart(_0xf6563+0x2,Math[_0xc47f18(0x171)](0x2,-0x2/0xc),_0x37d4f4);if(_0xf6563%0x7==0x1)return sourcestart(_0xf6563+0x1,Math[_0xc47f18(0x171)](0x2,-0x1/0xc),_0x37d4f4);}}function playpianosound(_0x2ea400,_0x281095,_0x1c000c){playpiano7sound(_0x281095,_0x1c000c);}function playaudio(_0x3525f8){playpianosound(audiocontext,_0x3525f8);}piano7loadbasic(),toggleDispositivos(),document[_0x65f0ea(0x1f0)](_0x65f0ea(0x1ab))[_0x65f0ea(0x178)]=getQueryVariable(_0x65f0ea(0xbf))=='aa'||!getQueryVariable(_0x65f0ea(0xbf))?'Doble\x20A':getQueryVariable('band')[_0x65f0ea(0x1d8)](),debugEl[_0x65f0ea(0x178)]='debug';
+/*******************************************************************/
+/*******************************************************************/
+/*
+allboyyyszchhalvinschhh!!!
+	1) el carrito 
+2) las fotos que se agrandan en el celular 
+3) lo de chrome
+4) armar las redes y sincronizar 
+5) siguen cargando lento ... serán las fotos ? Probar bajarlas más de calidad
+Dice que 90 le puso al de más arriba
+https://obfuscator.io/
+	
+  -cambiar imagenes (ta, borrarle el moco a la disposicion 3) 
+  -cambiar teclas (z,s,e,3,f4)
+  -cambiar sonidos
+  -cambiar los nros que se corren los indices (el viejo es -39)
+  -cambiar posiciones del overlay
+  -creo que nada mas? el indentado y la concha de la vaca?
+  
+  -ver en que casos combiene hacer directamente pares de array (para las notas? para los buffers?, para las posiciones casi seguro que si)
+  
+  
+  on key press (barra espaciadora) hacer una funcion que cambia de modo.
+cambio de modo :
+  - cambiar el array de notas y teclas del teclado (y)
+  - cambiar la imagen (y)
+  - cambiar los overlays (hacer otro array de posiciones? y mandarle un for cabeza que cambie style.top, style.left?)
+  - (cortar cualquier nota que haya quedado sonando) (y)
+  - y de todo esto que pueda volver para atras (ponele tirarle un boolean como parametro? mejor un numero y que sobreescriba violento? 
+  
+    
+despues va a haber que hacerle otro cambio de modo que seria todo lo de arriba 
+     +.... cambiar los samples?
+	 +cambiar una variable que corrija el -39 de la funcion playaudio(tecl)
+  
+  -preguntar: la barra espaciadora que la mantengan apretada y en key up volver al anterior? (se podrian tirar menos notas asi)
+  -como va a hacer en el midi para cambiar de abierto a cerrado y de una mano a otra?
+  
+  */
+/*******************************************************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/**************terminan las keys carga los overlays***/
+
+   
+  /**** pacalibrar los overlays de los botones */
+  function elegirBotono() {
+  
+	plantarOverlays();
+	
+	var n = $("#botonoind").val();
+	
+	var cssTop = document.getElementById("bono"+n).style.top;
+	var cssLeft = document.getElementById("bono"+n).style.left;
+	cssTop = cssTop.substr(0,cssTop.length -2);
+	cssLeft = cssLeft.substr(0,cssLeft.length -2,);
+	$("#botonox").val(cssTop  );
+	$("#botonoy").val(cssLeft  );
+	
+	$("#bono"+n).css({"opacity":"1","background-color":"green"});
+	
+ }
+ 
+  function moverboton(bool){
+	var n = $("#botonoind").val();
+	var x=  $("#botonox").val() ;
+	var y= $("#botonoy").val() 
+	$("#bono"+n).css("top",x+"vw");
+	$("#bono"+n).css("left",y+"vw");
+  }
+  
+  function printValues(){
+  var testo = "["
+   for(var i= 0; i<39;i++){
+	   if( document.getElementById("bono"+i)) {
+		   var x = document.getElementById("bono"+i).style.top; // $("#bono" + i ).css("top");
+		   var y =   document.getElementById("bono"+i).style.left; //$("#bono" + i ).css("left");
+		   testo += "[\"" + x + "\",\"" +y+"\"],";
+	   } else {
+	   testo += "[\"" + "0vw" + "\",\"" +"0vw"+"\"],";
+	   }
+   }
+   testo += "]";
+   console.table(testo);
+   //$("#oupu").append(testo);
+ }
+ 
+ function plantarOverlays(){
+   //for(var i= 0; i<39;i++) $("#bono" + i ).css({"opacity":"0.5","top":"0","left":"0"});
+   for(var i= 0; i<39;i++) $("#bono" + i ).css({"opacity":"0.5","background-color":"yellow"});
+ }
+
+ /*
+ [215.5px,468.066px],[0px,0px],[228.43px,12.93px],[198.26px,399.968px],[88.786px,43.962px],[106.888px,468.066px],[172.4px,448.24px],[125.852px,421.518px],[39.652px,146.54px],[73.27px,112.06px],[35.342px,224.12px],[212.052px,63.788px],[106.026px,356.006px],[37.928px,295.666px],[111.198px,81.028px],[64.65px,258.6px],[173.262px,43.1px],[50.858px,374.97px],[185.33px,332.732px],[59.478px,187.054px],[149.988px,106.888px],[96.544px,155.16px],[85.338px,402.554px],[138.782px,177.572px],[92.234px,220.672px],[152.574px,379.28px],[135.334px,246.532px],[181.02px,267.22px],[93.958px,291.356px],[63.788px,327.56px],[142.23px,310.32px],[193.088px,131.886px],[66.374px,445.654px],[180.158px,198.26px],[0px,0px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]
+ [163.78px,37.066px],[200.846px,54.306px],[112.06px,72.408px],[43.962px,113.784px],[73.27px,148.264px],[74.994px,92.234px],[188.778px,104.302px],[140.506px,143.092px],[149.126px,87.924px],[101.716px,124.128px],[94.82px,231.016px],[70.684px,201.708px],[136.196px,196.536px],[68.96px,260.324px],[102.578px,282.736px],[75.856px,315.492px],[137.058px,243.946px],[114.646px,335.318px],[209.466px,424.966px],[142.23px,298.252px],[178.434px,159.47px],[98.268px,175.848px],[131.024px,386.176px],[174.986px,265.496px],[155.16px,352.558px],[39.652px,233.602px],[184.468px,317.216px],[42.238px,288.77px],[168.09px,406.002px],[93.958px,369.798px],[56.892px,347.386px],[193.088px,370.66px],[24.136px,325.836px],[12.068px,268.944px],[38.79px,173.262px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]]
+ //530.39 (--- ancho de la imagen 
+  517.19
+ var posbotones0=[["179.452px","38.012px"],["217.464px","55.692px"],["124.644px","75.14px"],["85.748px","95.472px"],["53.924px","118.456px"],["83.98px","155.584px"],["205.972px","108.732px"],["114.036px","129.948px"],["162.656px","92.82px"],["107.848px","242.216px"],["82.212px","212.16px"],["150.28px","206.856px"],["114.92px","296.14px"],["153.816px","149.396px"],["150.28px","254.592px"],["127.296px","350.064px"],["111.384px","184.756px"],["156.468px","312.052px"],["192.712px","221.884px"],["144.976px","404.872px"],["194.48px","165.308px"],["190.944px","277.576px"],["227.188px","444.652px"],["169.728px","369.512px"],["200.668px","332.384px"],["79.56px","273.156px"],["183.872px","425.204px"],["87.516px","329.732px"],["209.508px","388.96px"],["106.964px","387.192px"],["68.068px","363.324px"],["52.156px","301.444px"],["32.708px","341.224px"],["49.504px","243.984px"],["19.448px","281.996px"],["23.868px","213.044px"],["47.736px","181.22px"],["24.752px","152.048px"],["0px","0px"]];
+ 
+ var posbotones1= [["215.5px","468.066px"],["0px","0px"],["228.43px","12.93px"],["198.26px","399.968px"],["88.786px","43.962px"],["106.888px","468.066px"],["172.4px","448.24px"],["125.852px","421.518px"],["39.652px","146.54px"],["73.27px","112.06px"],["35.342px","224.12px"],["212.052px","63.788px"],["106.026px","356.006px"],["37.928px","295.666px"],["111.198px","81.028px"],["64.65px","258.6px"],["173.262px","43.1px"],["50.858px","374.97px"],["185.33px","332.732px"],["59.478px","187.054px"],["149.988px","106.888px"],["96.544px","155.16px"],["85.338px","402.554px"],["138.782px","177.572px"],["92.234px","220.672px"],["152.574px","379.28px"],["135.334px","246.532px"],["181.02px","267.22px"],["93.958px","291.356px"],["63.788px","327.56px"],["142.23px","310.32px"],["193.088px","131.886px"],["66.374px","445.654px"],["180.158px","198.26px"],["0px","0px"],["0px","0px"],["0px","0px"],["0px","0px"],["0px","0px"]]
+ var ancho = 664.8;
+ var posbotones=[["0px","0px"],["229.356px","516.328px"],["90.856px","64.264px"],["0px","0px"],["268.136px","24.376px"],["251.516px","601.644px"],["114.124px","603.86px"],["118.556px","111.908px"],["27.7px","192.792px"],["197.224px","62.048px"],["23.268px","292.512px"],["197.224px","577.268px"],["86.424px","518.544px"],["58.724px","424.364px"],["70.912px","149.58px"],["25.484px","383.368px"],["168.416px","141.824px"],["212.736px","431.012px"],["138.5px","542.92px"],["99.72px","204.98px"],["170.632px","488.628px"],["154.012px","232.68px"],["52.076px","244.868px"],["94.18px","288.08px"],["59.832px","336.832px"],["148.472px","320.212px"],["97.504px","377.828px"],["43.212px","484.196px"],["157.336px","402.204px"],["111.908px","460.928px"],["221.6px","175.064px"],["62.048px","573.944px"],["206.088px","259.272px"],["0px","0px"],["0px","0px"],["208.304px","347.912px"],["247.084px","87.532px"],["0px","0px"],["0px","0px"]];
+				
+ var posbotones2 = []
+for (var i =0; i<37;i++){
+ var y = posbotones[i][0]
+ var x = posbotones[i][1]
+ y = y.substr(0, y.length -3);
+ x = x.substr(0, x.length -3);
+ y = Math.floor((y / (ancho/60))*100)/100;
+ x = Math.floor((x /  (ancho/60))*100)/100;
+ posbotones2[i] = [y+"vw", x+"vw"]
+} 
+var testo = "[";
+for (var i =0; i<37;i++){
+   testo += "[\""+posbotones2[i][0] + "\",\"" + posbotones2[i][1] + "\"],";
+}
+*/
+
+/***********************las keys **************************/
+   
+   $(document).ready(function(){
+	 
+	 $("body").keydown(function(e){
+		 var display = document.getElementById("desbloquear").style.display 
+	 if(display == "none" || display == "") {
+	   var keyCode = e.keyCode || e.which;
+			   //if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
+			   e.preventDefault();
+	   
+	   //console.log(keyCode);
+			   //if(podemoTocarLaNota(keyCode)){
+			   if (keyCode != 32) {
+				   tirarnota(entrakeysalenota(keyCode,true)); }
+			 else {
+				   //cambiaModo()
+				   setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
+		   
+			   }
+	   }
+   }
+ );
+	 
+	 
+	 $("body").keyup(function(e){
+	   var keyCode = e.keyCode || e.which;
+	   if (keyCode != 32) largarnota(entrakeysalenota(keyCode));
+	 });
+	 
+   });
+   
+   
+   /*********************************crea y carga los overlays**********************************/
+
+  $(document).ready(function(){
+	   
+	   
+	   
+	   var moneda=true;
+	   for(var i= 0; i<40;i++){
+		   // var c= moneda ? i*10 : 250 - i*10
+		   var c= moneda ? 30 : 150 ;
+		   var color =`rgb(${c},${c},${c}) `
+		   //var color =`rgb(200,${c},${c}) `
+		   var testo= `<div class="overlay"style="background:${color};opacity:0.02;" id="overnota${i}" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" ></div>`
+		   //var testo2= `<div class="botonota" style="background:white;opacity:0.0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}"></div>`
+		   var testo2= `<div class="botonota" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" style="opacity:0.0;" id="bono${i}"></div>`;
+		   $("#tiagarro0").append(testo2);
+		   if (i < 24) { 
+			   $("#tiagarro1").append(testo)
+		   }else{
+			   $("#tiagarro2").append(testo)
+		   }
+		   //$("#tiagarro" + i<24 ? "1" : "2").append(testo)
+		   moneda= !moneda;
+		   
+	   }
+	   document.getElementById('overnota36').removeAttribute("onclick");
+	   document.getElementById('overnota37').removeAttribute("onclick");
+	   document.getElementById('overnota38').removeAttribute("onclick");
+	   
+	   var m = getQueryVariable("mano") != "izq";
+	   var a = getQueryVariable("cerr") != "true";
+	   
+	   var mod = m && a ? 0 : 
+				  m && !a ? 1 :
+				   !m && a ? 2 : 3;
+				   
+	   
+	   setMode(mod);
+	   console.log("largo" + posbot.length) 
+	   
+	   
+   });
+ 
+   /**************************************************************************************/
+   
+   /*************************VARIABLES (PONELE)************************/
+   
+   var estaAbriendo = false;
+   
+   var notasAntitremolo=[];
+   var notas =[];
+   
+   var notasD_A = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+			   54,75,55,77,56,118,117,null,116,null,null,115];
+   var notasD_C = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,82,73,66,74,116,78,117,75,56,118,77,null,null,115,null,null,86];
+   var notasI_A =  [188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,84,74,71,66,89,55,72,67,119,86];
+   var notasI_C = [null,77,51,null,90,188,57,69,115,83,116,75,56,55,52,117,68,78,73,82,74,70,53,84,54,71,89,118,72,85,67,119,86,null,null,66,88];
+   var notasFull = [notasD_A, notasD_C, notasI_A, notasI_C]
+   
+   var posbot= [];
+   
+   
+   var posbotD_A = [["16.8vw","9.9vw"],["20.3vw","11.2vw"],["12.4vw","13vw"],["8.8vw","14.7vw"],["5.9vw","17.5vw"],["8.1vw","20.5vw"],["19.3vw","16.6vw"],["11.4vw","18.3vw"],["15.4vw","14.9vw"],["10.8vw","28.5vw"],["8vw","26.1vw"],["14.2vw","25.1vw"],["11.4vw","33.4vw"],["14.6vw","19.9vw"],["14.6vw","30.4vw"],["12.5vw","39vw"],["10.7vw","23.3vw"],["14.8vw","35.2vw"],["18vw","26.8vw"],["13.8vw","44.2vw"],["18.3vw","21.7vw"],["17.9vw","31.9vw"],["21vw","47.6vw"],["16.1vw","40.7vw"],["18.4vw","36.8vw"],["8vw","31.5vw"],["17.3vw","45.8vw"],["8.9vw","37.2vw"],["19.6vw","42.5vw"],["10.1vw","42.5vw"],["6.9vw","40.8vw"],["5.8vw","34.9vw"],["3.9vw","38.1vw"],["5.2vw","28.9vw"],["3.4vw","32.4vw"],["3.1vw","26.4vw"],["5.3vw","23.2vw"],["0vw","0vw"],["3.3vw","19.6vw"]] ;
+   //[["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],["0vw","0vw"]];
+   var posbotD_C = [["16.8vw","9.9vw"],["20.2vw","11.3vw"],["12.4vw","13.1vw"],["5.8vw","17.5vw"],["8.2vw","20.5vw"],["8.8vw","14.7vw"],["19.1vw","16.7vw"],["14.7vw","19.9vw"],["15.4vw","14.8vw"],["11.4vw","18.2vw"],["10.7vw","28.5vw"],["8vw","26.1vw"],["14.4vw","25.2vw"],["8vw","31.5vw"],["11.4vw","33.4vw"],["8.8vw","37.3vw"],["14.5vw","30.4vw"],["12.5vw","39vw"],["20.8vw","47.6vw"],["14.8vw","35.1vw"],["18.2vw","21.8vw"],["10.8vw","23.4vw"],["13.9vw","44.2vw"],["18vw","31.9vw"],["16.1vw","40.7vw"],["5.2vw","28.9vw"],["18.5vw","36.8vw"],["5.8vw","35vw"],["17.3vw","45.8vw"],["10.2vw","42.6vw"],["7.1vw","40.9vw"],["19.5vw","42.6vw"],["3.9vw","38.2vw"],["3.3vw","32.4vw"],["5.4vw","23.2vw"],["3vw","26.4vw"],["3.3vw","19.9vw"],["0vw","0vw"],["0vw","0vw"],["17.7vw","26.8vw"]];
+   //[["18.99vw","4.29vw"],["23.29vw","6.29vw"],["12.99vw","8.39vw"],["5.09vw","13.19vw"],["8.49vw","17.19vw"],["8.69vw","10.69vw"],["21.89vw","12.1vw"],["16.29vw","16.6vw"],["17.29vw","10.19vw"],["11.79vw","14.39vw"],["10.99vw","26.79vw"],["8.19vw","23.39vw"],["15.79vw","22.79vw"],["7.99vw","30.2vw"],["11.89vw","32.79vw"],["8.79vw","36.6vw"],["15.89vw","28.29vw"],["13.29vw","38.89vw"],["24.29vw","49.3vw"],["16.49vw","34.6vw"],["20.69vw","18.49vw"],["11.39vw","20.39vw"],["15.19vw","44.8vw"],["20.29vw","30.79vw"],["17.99vw","40.89vw"],["4.59vw","27.1vw"],["21.39vw","36.8vw"],["4.89vw","33.49vw"],["19.48vw","47.1vw"],["10.89vw","42.89vw"],["6.59vw","40.3vw"],["22.39vw","42.99vw"],["2.79vw","37.8vw"],["1.39vw","31.2vw"],["4.48vw","20.1vw"],["1.69vw","23.39vw"],["1.79vw","16.8vw"],["0vw","0vw"],["0vw","0vw"],["20.49vw","24.59vw"]];
+   var posbotI_A = [["18.6vw","47.2vw"],["0vw","0vw"],["19vw","7.5vw"],["16.9vw","41.3vw"],["8.1vw","10.2vw"],["9.7vw","47.3vw"],["14.9vw","45.2vw"],["11.3vw","43.2vw"],["4.2vw","18.9vw"],["6.8vw","16.1vw"],["3.6vw","25.6vw"],["18vw","11.9vw"],["9.2vw","37.3vw"],["3.7vw","32.2vw"],["10vw","13.3vw"],["5.7vw","28.8vw"],["14.7vw","9.7vw"],["4.6vw","38.7vw"],["15.8vw","35.2vw"],["5.8vw","22.6vw"],["13.2vw","15.7vw"],["8.7vw","19.3vw"],["7.5vw","41.3vw"],["12.4vw","21.7vw"],["8.4vw","25.6vw"],["13.2vw","39.1vw"],["12vw","27.7vw"],["15.6vw","29.4vw"],["8.7vw","31.3vw"],["6.2vw","34.9vw"],["12.3vw","33vw"],["16.4vw","17.6vw"],["6.2vw","45.4vw"],["15.6vw","23.8vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"]] ;
+   //[["24.94vw","54.3vw"],["0vw","0vw"],["26.49vw","1.49vw"],["22.99vw","46.39vw"],["10.29vw","5.09vw"],["12.39vw","54.3vw"],["19.95vw","51.99vw"],["14.6vw","48.9vw"],["4.59vw","16.99vw"],["8.49vw","12.99vw"],["4.09vw","25.99vw"],["24.6vw","7.39vw"],["12.29vw","41.3vw"],["4.39vw","34.29vw"],["12.89vw","9.39vw"],["7.49vw","29.93vw"],["20.1vw","4.98vw"],["5.89vw","43.49vw"],["21.49vw","38.6vw"],["6.89vw","21.69vw"],["17.39vw","12.39vw"],["11.19vw","17.99vw"],["9.89vw","46.7vw"],["16.1vw","20.6vw"],["10.69vw","25.6vw"],["17.69vw","43.99vw"],["15.69vw","28.6vw"],["20.99vw","30.99vw"],["10.89vw","33.79vw"],["7.39vw","37.99vw"],["16.49vw","35.99vw"],["22.39vw","15.29vw"],["7.69vw","51.7vw"],["20.89vw","22.99vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"]];
+   var posbotI_C =[["0vw","0vw"],["16.9vw","41.3vw"],["8.1vw","10.2vw"],["0vw","0vw"],["19vw","7.5vw"],["18.7vw","47.3vw"],["9.7vw","47.2vw"],["9.9vw","13.3vw"],["4.2vw","18.8vw"],["14.7vw","9.8vw"],["3.6vw","25.6vw"],["14.9vw","45.2vw"],["7.5vw","41.3vw"],["6.2vw","34.8vw"],["6.8vw","16.1vw"],["3.7vw","32.3vw"],["13.1vw","15.7vw"],["15.8vw","35.2vw"],["11.2vw","43.2vw"],["8.8vw","19.3vw"],["13.2vw","39.1vw"],["12.3vw","21.7vw"],["5.9vw","22.6vw"],["8.49vw","25.99vw"],["5.7vw","28.8vw"],["12.1vw","27.7vw"],["8.7vw","31.4vw"],["4.6vw","38.7vw"],["12.4vw","33.1vw"],["9.2vw","37.2vw"],["16.4vw","17.6vw"],["6.2vw","45.4vw"],["15.6vw","23.7vw"],["0vw","0vw"],["0vw","0vw"],["15.5vw","29.5vw"],["17.9vw","12vw"],["0vw","0vw"],["0vw","0vw"]];
+   //[["0vw","0vw"],["20.69vw","46.59vw"],["8.19vw","5.79vw"],["0vw","0vw"],["24.19vw","2.19vw"],["22.69vw","54.29vw"],["10.29vw","54.49vw"],["10.69vw","10.09vw"],["2.43vw","17.39vw"],["17.79vw","5.59vw"],["2.09vw","26.39vw"],["17.79vw","52.09vw"],["7.79vw","46.79vw"],["5.29vw","38.29vw"],["6.39vw","13.49vw"],["2.29vw","34.59vw"],["15.19vw","12.79vw"],["19.19vw","38.89vw"],["12.45vw","48.99vw"],["8.99vw","18.49vw"],["15.39vw","44.09vw"],["13.89vw","20.99vw"],["4.69vw","22.09vw"],["8.49vw","25.99vw"],["5.39vw","30.39vw"],["13.39vw","28.89vw"],["8.79vw","34.09vw"],["3.89vw","43.69vw"],["14.19vw","36.29vw"],["10.09vw","41.59vw"],["19.94vw","15.79vw"],["5.59vw","51.79vw"],["18.59vw","23.39vw"],["0vw","0vw"],["0vw","0vw"],["18.79vw","31.39vw"],["22.29vw","7.89vw"]];
+   var posbotFull = [posbotD_A, posbotD_C, posbotI_A, posbotI_C ]
+   
+   var modo;
+   
+   var corridas =	getQueryVariable("mano") == 'izq' ? 18 : 39; //dudoooooso
+   
+   var sourcesCabeza=[];  
+   for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
+   
+   var pepe; // intervalo para testeo de notas
+   
+   var volu = 0.6;
+   
+   var samplesCargados= 0;
+ 
+   const list = document.getElementById('midi-list');
+   const debugEl = document.getElementById('debug');
+ 
+   /*****************FUNCIONES*******************************************/
+   
+   function bajarpdf() {
+   var url = "img/mapas/";
+	   switch (modo) {
+		   case 0 :
+			   url += "der_abriendo.pdf"
+		   break;
+		   
+		   case 1 :
+			   url += "der_cerrando.pdf"
+		   break;
+		   
+		   case 2 :
+			   url += "izq_abriendo.pdf"
+		   break;
+		   
+		   case 3 :
+			   url += "izq_cerrando.pdf"
+		   break;
+	   }
+	   console.log(url);
+   window.open(url, '_blank');
+   }
+   
+   function cambiarMano() {
+	var url = "./bandolica.html?";
+	if (getQueryVariable("gh") ) url += "&gh=t";
+	if (getQueryVariable("band") ) url += "&band=" + getQueryVariable("band");
+	if ( !getQueryVariable("mano") || getQueryVariable("mano") == "der")  url += "&mano=izq";
+   
+   window.open(url,"_self");
+   //window.open("./bandolica.html?band=aa","_self");
+   }
+   
+   function setManito(n) {
+	   if (n < 2) {
+		   //$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+		   $("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+		   $("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
+		   
+		   $("#manito").addClass("abreIzquierda");
+		   
+		   
+		   
+	   } else {
+		   //$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+		   $("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+		   $("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
+		   $("#manito").addClass("abreDerecha");
+	   
+		   
+	   
+	   }
+	   
+   }
+   
+
+   /***********CAMBIO DE MODOO******/
+   
+   function setMode(n) {
+	   //cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
+	   silenciarTodo();
+	   
+	   var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
+	   var man = n < 2  ? "derecha" : "izquierda";
+	   var modificador = ["D_A", "D_C", "I_A", "I_C"];
+	   var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`,  //pisar este
+				   `img/pentagramas/penta_${modificador[n]}_1.jpg`, 
+				   `img/pentagramas/penta_${modificador[n]}_2.jpg` ]
+	   
+	   notas = notasFull[n];
+	   posbot= posbotFull[n];
+	   setManito(n);
+	   
+	   modo = n;
+	   
+	   
+	   
+	   
+	   //----- ESTOSEVADESCONTORLAAAR
+	   var bando = getQueryVariable("band") || "aa";
+	   //if ( man == "derecha") 
+	   imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
+	   
+	   
+	   // else  imgsrc[0] = "img_lab/manoIzqBB.png";
+	   // imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
+	   
+	   
+	   //-----
+	   
+	   $("#img0").attr("src", imgsrc[0]);
+	   $("#imgP1").attr("src", imgsrc[1]);
+	   $("#imgP2").attr("src", imgsrc[2]);
+	   
+	   
+	   //$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+	   
+	   $("#titulo").html( abr);
+	   $("#titulo1").html("MANO " + man.toUpperCase());
+	   reordenarOverlays();
+   }
+
+   function cambiaModo(){
+   
+	   // funcion vieja, la dejamos nomas de recuerdo (?)
+	   
+	   
+	   console.log("cambioModo");
+	   estaAbriendo = !estaAbriendo;
+	   if (estaAbriendo){
+		   $("#titulo").html("abriendo");
+		   notas =  [188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,84,74,71,66,89,55,72,67,119,86];
+		   //[188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,*17*,84,74,71,66,89,55,72,119,86];
+		   //console.log("metionotas");
+		   //[65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+			   //54,75,55,77,56,118,117,null,116,null,null,115]; //insertar aca las notas
+		   $("#img0").css("display","");
+		   $("#img1").css("display","none");
+	 
+		   for( var i = 0; i<37; i++){
+			   $("#bono"+i).css("top", posbot[i][0]);
+			   $("#bono"+i).css("left", posbot[i][1]);
+			   if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
+			   else $("#bono"+i).css("display","");
+			   //asignarTecla(i);
+		   }
+		   //reordenarOverlays(1); //ver que onda el array de posiciones
+	   } else{
+		   $("#titulo").html("cerrando");
+		   $("#img0").css("display","none");
+		   $("#img1").css("display","");
+		   notas = [null,77,51,null,90,188,57,69,115,83,116,75,56,55,52,117,68,78,73,82,74,70,53,84,54,71,89,118,72,85,67,119,86,null,null,66,88];//insertar aca las notas cerrando
+		   //notas = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,73,66,74,116,78,117,75,56,118,77,null,null,115] //insertar aca las notas cerrando
+		   for( var i = 0; i<37; i++){
+			   
+			   $("#bono"+i).css("top", posbot1[i][0]);
+			   $("#bono"+i).css("left", posbot1[i][1]);
+			   
+			   if (posbot1[i][0] == "0vw") $("#bono"+i).css("display","none");
+			   else $("#bono"+i).css("display","");
+			   
+			   //asignarTecla(i);
+		   }
+		   //reordenarOverlays(2); //
+	   }
+	   silenciarTodo();
+	   
+   
+   }
+   
+   function reordenarOverlays() {
+	   for( var i = 0; i<posbot.length; i++){
+		   $("#bono"+i).css("top", posbot[i][0]);
+		   $("#bono"+i).css("left", posbot[i][1]);
+		   if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
+		   else $("#bono"+i).css("display","");
+	   }
+   }
+   
+   function setColor(t){
+	   var col = getColor3();
+	   $(t).css("background-color", col[0])
+	   $(t).css("color", col[1])
+   }
+
+   function getColor3(){
+	   gr = Math.floor(Math.random()*255);
+	   re = Math.floor(Math.random()*255);
+	   blu = Math.floor(Math.random()*255);
+	   gr1 = 255 - gr;
+	   re1 = 255- re;
+	   blu1 = 255- blu;
+	   return ["rgb("+ re+","+gr+","+blu+")","rgb("+ re1+","+gr1+","+blu1+")"];
+	 }
+
+
+
+
+   /****FUNCIONES MIDI***/
+	 function connectToDevice(device) {
+	   console.log('Connecting to device', device);
+	   bandStatus(2);
+	   device.onmidimessage = function(m) {
+		 const [command, key, velocity] = m.data;
+		 debugEl.innerText = 'commando:' + command + '\nnrotecla: ' + key + '\nvelocity: ' +velocity;
+		 
+		 if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
+		 else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
+		 
+		 /*
+		 */
+		 else if (key == 76 && modo == 1) {
+			 if (velocity == 90 && !sourcesCabeza[58])  tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
+			 else if ( velocity == 100 && command != 128 && !sourcesCabeza[76]  ) tirarnota(58) // tirarnota(notadeabajo)
+			 else if (  command == 128 || velocity == 0  ) { 
+			   if(sourcesCabeza[76]) largarnota(76); 
+			   else if(sourcesCabeza[58]) largarnota(58);
+				   
+			 }
+		 }
+
+		 else if (key == 52 && modo == 3) { //52 o 54?
+			 if (velocity == 89 && !sourcesCabeza[34]) tirarnota(54);
+			 else if (velocity == 90 && !sourcesCabeza[54]) tirarnota(34);
+			 else if (command == 128 || velocity == 0) {
+			   if (sourcesCabeza[34]) largarnota(34); 
+			   else if (sourcesCabeza[54]) largarnota(54)};
+		 }
+		 
+		 else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
+		 else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
+	   }
+
+   }
+
+   
+   function replaceElements(inputs) {
+	   while(list.firstChild) {
+		   list.removeChild(list.firstChild)
+	   }
+	   
+	   bandStatus(0);
+	   const elements = inputs.map(e => {
+		   console.log(e);
+		   const el = document.createElement('li')
+		   el.innerHTML = `${e.name} (${e.manufacturer})`;
+		   if (el.innerHTML.substring(0,4).toLowerCase() == "ardu" || el.innerHTML.substring(0,6).toLowerCase() == "bandol"  ) {
+			   document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
+			   
+			   bandStatus(1);
+		   }
+		   //el.addEventListener('click', connectToDevice.bind(null, e));
+		   return el;
+	   });
+
+	   elements.forEach(e => list.appendChild(e));
+   }
+
+   if( !navigator.requestMIDIAccess) {
+	   document.getElementById("errormidi").style.display="block";
+   }else { 
+	   
+	   navigator.requestMIDIAccess()
+		   .then(function(access) {
+			   console.log('access', access);
+			   replaceElements(Array.from(access.inputs.values()));
+			   access.onstatechange = function(e) {
+			   replaceElements(Array.from(this.inputs.values()));
+		   }
+	   });
+   
+   }
+   
+   function bandStatus(i) {
+	   var sta = document.getElementById("bandcon");
+	   var culo = document.getElementById("circulo");
+	   switch (i){
+	   case 0: 
+		   sta.innerHTML ="CONECTAR BANDOLICA";
+		   culo.style.backgroundColor="transparent";
+		   break;
+	   case 1:
+		   sta.innerHTML ="BANDOLICA DISPONIBLE: CLICK PARA ACTIVAR";
+		   culo.style.backgroundColor="white";
+		   break;
+	   case 2:
+		   sta.innerHTML ="BANDOLICA ACTIVADA";
+		   culo.style.backgroundColor="green";
+		   break;
+	   }
+   }
+   
+   
+   /******************LA MAGIA**********************/
+   /******************LA MAGIA**********************/
+   
+   function cambiarVolumen(v) {
+	   console.log(v);
+	   volu = v/100;
+   }
+   
+   function entrakeysalenota(n,bool){
+	   var ret = notas.indexOf(n);
+	   //if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
+	   
+	   return ret+corridas;
+   }
+	 
+   //para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest? tecl = nota para el sampler
+   //18 para el sampler (mano izq)
+   function tirarnota(tecl){
+	   if (podemoTocarLaNota(tecl)){
+		   console.log("tironota"+tecl);
+		   if(tecl==54 && corridas == 18){ 
+			   //console.log("entro");
+			   resaltarNota(36,true);
+			   playaudio(34)
+			   cargarNotaHold(34);
+		   } else if (tecl==76 && corridas != 18) {
+			   playaudio(58);
+			   resaltarNota(39,true);
+			   cargarNotaHold(58);
+		   } 
+		   else 
+		   {
+			   
+			   if(tecl>=corridas) {
+				   playaudio(tecl);
+				   resaltarNota(tecl-corridas, true);
+				   cargarNotaHold(tecl);
+			   }
+		   }
+		   
+	   }
+   }
+   
+   function largarnota(tecl){
+	   
+	   if(tecl==54 && corridas == 18){ 
+		   
+		   resaltarNota(36,false);
+
+		   soltarconfade(34);
+		   
+	   } else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
+		   
+		   resaltarNota(39,false);
+		   resaltarNota(19,false);
+		   
+		   soltarconfade(58);
+
+	   }
+	   else
+	   {
+		   //if(notasAntitremolo.indexOf(tecl) != -1){
+	   
+			   resaltarNota(tecl-corridas, false);
+	   
+			   soltarconfade(tecl);
+			   
+		   //}
+	   }
+	   descargarNotaHold(tecl);
+   
+   }
+   
+   function soltarconfade(note) {
+	   const fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
+	   const ahora = audiocontext.currentTime;
+	   const gainNode = audiocontext.createGain();
+	   gainNode.gain.setValueAtTime(0, ahora );
+	   gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
+	   gainNode.connect(audiocontext.destination);
+	   console.log("con fade " + note) 
+	   if (fade != 0) {
+
+		   sourcesCabeza[note].connect(gainNode);
+	   
+		   setTimeout(function (){
+			   sourcesCabeza[note].stop(audiocontext.currentTime);
+			   sourcesCabeza[note]=null;
+		   },fade * 1000)
+	   
+	   } else {
+		   sourcesCabeza[note].stop(audiocontext.currentTime);
+		   sourcesCabeza[note]=null;
+	   }
+   }
+   
+   function resaltarNota(n, bool){
+   
+	   $("#bono"+n).css("opacity",bool ? "0.3": "0.0");
+	   //$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
+	   if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
+	   if (n ==36) $("#overnota"+16).css("opacity",bool ? "0.7": "0.02");
+   }
+
+   function asignarTecla(i) {
+	   var txt = String.fromCharCode(notas[i]);
+	   if (i !=36)	$("#overnota"+i).html(txt);
+	   $("#bono"+i).html(txt);
+	   
+	   console.log(i + "//" + txt);
+   }
+   
+   /***************/
+   
+   function toggleDispositivos(){
+	   if (list.style.display == "") list.style.display="none";
+	   else list.style.display="";
+   }
+
+   
+   /************antitremolo*****/
+   function cargarNotaHold(n) {
+	   notasAntitremolo.push(n);
+   }
+ 
+   function descargarNotaHold(n){
+	   var ind = notasAntitremolo.indexOf(n);
+//		if (ind != -1)
+		   notasAntitremolo.splice(ind,1);
+   }
+ 
+   function podemoTocarLaNota(n){
+	   return notasAntitremolo.indexOf(n) == -1
+   }
+   
+   
+   /**********************************/
+   function testearNotas() {
+	   var n =14 ; //34
+	   pepe = setInterval(function(){
+			 tirarnota(n);
+			 if (n>14)largarnota(n-1);
+			 //playaudio(n);
+			 
+			 resaltarNota(n-18,true);
+			 resaltarNota(n-40,false);
+			 console.log(n++);
+			 if(n>68) {clearInterval(pepe); resaltarNota(n-40,false);
+		   }
+	   },2000);
+   }
+ 
+   function pararTesteo(){
+	   clearInterval(pepe);
+	   for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
+   }
+
+   
+   function silenciarTodo(){
+	   
+	   notasAntitremolo.forEach(m => {
+		   sourcesCabeza[m].stop(audiocontext.currentTime);
+	   });
+
+	   
+	   // for (var i = 18; i < 79; i++) {
+	   //  	if (sourcesCabeza[i]){
+	   //  	 	sourcesCabeza[i].stop(audiocontext.currentTime);
+	   //  		console.log("allboys" + i );
+	   //  	}
+	   //  	sourcesCabeza[i] = null;
+	   // }
+	   
+	   notasAntitremolo.forEach(m => descargarNotaHold(m));
+	   for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
+	   
+   }
+   
+   function getQueryVariable(variable){
+	  var query = window.location.search.substring(1);
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+			  var pair = vars[i].split("=");
+			  if(pair[0] == variable){return pair[1];}
+	  }
+	  return(false);
+   }
+   
+   function buildUrlSample(band, mano){
+	   var testo;
+	   if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandoneon/master/\s/";
+	   else if (getQueryVariable("gh") == "l" ) testo = "/s/" // aca get url dominio o algo asi para que sea local?
+	   else  testo = "https://bandolica.com/s/"; //(------------------ asi?
+	   
+	   if (mano == "izq") testo += "mi_";
+	   else testo += "md_";
+
+	   
+	   
+	   testo += band + "/";
+	   
+	   var notas = mano == "izq" ?  ["1_bb2", "2_f2", "3_c3", "4_g3", "5_d4", "6_a4"] 
+			   : ["1_g3","2_d4","3_a4","4_e5","5_b5","6_f6"] ;
+	   // var notas = ["1_bb2", "2_f2", "3_c3", "4_g3", "5_d4", "6_a4"] ;
+	   
+	   //var notas = ["1_bb2", "2_f2", "3_c3", "5_d4", "6_a4", "4_g3"] ;
+	   
+	   notas = notas.map( (n) => testo + n + ".wav" )
+	   
+	   return notas;
+	   
+   }
+   
+   function mostrarSamplesCargados(){
+	   document.getElementById("sampleStatus").innerText = `${samplesCargados} de 6 samples cargados`;
+   }
+ 
+
+   /******************************************************************************/ 
+   /**********************AFANADO Y MANOSEADO*************************************/ 
+   /******************************************************************************/ 
+   /******************************************************************************/ 
+   
+   
+   var g_instrument = 'Piano';
+
+
+   var AudioContext = window.AudioContext || window.webkitAudioContext;
+   var audiocontext = new AudioContext();
+   var piano7sounds = [];
+   for (var i=24; i<=108; i++) piano7sounds[i] = null;
+ 
+   /* var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fd3.mp3?v=1590711281058",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa4.mp3?v=1590711070510",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]              var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsol%202%2B.wav?v=1590779270760",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fre%203%2B.wav?v=1590777317892",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fla%203%2B.wav?v=1590777316166",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fmi%204%2B.wav?v=1590777316937",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsi%204%2B.wav?v=1590777317258",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ffa%20%235%2B.wav?v=1590777317355"];  var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];*/     
+
+   /*var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
+			   
+			   //sib1 = 16
+			   //fa2 = 23
+			   //do3 = 30
+			   //g3=37 (---
+			   //re4 = 44
+			   //la4 = 51
+			   16,23,30,37,44,51
+   
+   var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq1-SIb1.wav?v=1593541243180",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq2-FA2.wav?v=1593541374483",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq3-DO3.wav?v=1593541396076",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq4-SOL3.wav?v=1593541407627",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq5-RE4.wav?v=1593541415207",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq6-LA4.wav?v=1593541425728"];
+   
+   
+   */
+   var urlsG = buildUrlSample(getQueryVariable("band") || "aa", getQueryVariable("mano"));
+   
+   function piano7loadsound(n){
+	   var request = new XMLHttpRequest();
+	   
+	   if (getQueryVariable("mano") == 'izq' )
+		   request.open("get", n == 16 ? urlsG[0] :n == 23 ? urlsG[1] : n == 30 ? urlsG[2] :
+				   n == 37 ? urlsG[3] : n == 44 ? urlsG[4] : n == 51 ? urlsG[5] : ""   , true); 
+	   else 
+		   request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
+			   n == 58 ? urlsG[3] : n == 65 ? urlsG[4] : n == 72 ? urlsG[5] : ""   , true); //n dividido 7?*/
+			   
+	   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	   request.responseType = "arraybuffer";
+	   request.onload =
+		 function() {
+		   audiocontext.decodeAudioData (
+			 request.response,
+			 function(buffer) {
+			   if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
+			   piano7sounds[n] = buffer;
+			   console.log("cargo " + n); 
+			 },
+			 function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
+			 }
+		   );
+		   
+		   
+		   //samplesCargados++;//
+		   //mostrarSamplesCargados();
+		   
+		 }
+	   request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
+	   request.send('n='+n);
+   }
+
+   function piano7loadbasic(){ //*********aca no tendria que haber un if para si es mano izquierda o derecha?????
+	   if (getQueryVariable("mano") == 'izq' ) {
+		   piano7loadsound(16);
+		   piano7loadsound(23); piano7loadsound(30); piano7loadsound(37);
+		   piano7loadsound(44); 
+		   piano7loadsound(51);
+	   } else {
+	   piano7loadsound(37);
+	   piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
+	   piano7loadsound(65); 
+	   piano7loadsound(72);
+	   }
+	   
+   }
+
+   function sourcestart(n,rate,delayInSeconds) {
+	   if (audiocontext.state == 'suspended') audiocontext.resume();
+	   var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
+				 Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
+	   var volume = volu;
+	   var duration = 4;//0.6; // in seconds
+	   var start = audiocontext.currentTime + delayInSeconds;
+	   var stop = start + duration;
+	   var gainNode = audiocontext.createGain();
+	   //var fade = (getQueryVariable("fade") || 0 ) / 1000;
+	   var fade = getQueryVariable("band") == "emu" ? 0 : 0; // 0.02
+
+	   if (fade) {
+		   gainNode.gain.setValueAtTime(0, start);
+		   gainNode.gain.linearRampToValueAtTime(volume, start + fade );
+		   gainNode.gain.linearRampToValueAtTime(volume, stop - fade );
+		   gainNode.gain.linearRampToValueAtTime(0, stop );
+	   
+	   } else {
+		   gainNode.gain.setValueAtTime(volume, start);
+		   gainNode.gain.linearRampToValueAtTime(volume, stop);
+	   }
+	   gainNode.connect(audiocontext.destination);
+
+
+
+	   var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
+	   sourcesCabeza[ind] = audiocontext.createBufferSource();
+	   sourcesCabeza[ind].buffer = piano7sounds[n];
+	   sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
+	   sourcesCabeza[ind].connect(gainNode);
+	   sourcesCabeza[ind].start(start); 
+	   
+   }
+ 
+   function playpiano7sound(n,delayInSeconds) {
+	   //delayInSeconds = delayInSeconds || 0;
+	   //delayInSeconds = (getQueryVariable("delay") || 0 ) / 1000;
+	   delayInSeconds = getQueryVariable("band") == "emu" ? 0.005 : 0 ;
+
+	   //if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+	   if (n == 77) return sourcestart(72, Math.pow(2,5/12),delayInSeconds);
+	   else {
+		   //if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
+		   //if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
+		   if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
+		   if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
+		   if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
+		   if (n%7 == 5) return sourcestart(n-3,Math.pow(2,3/12),delayInSeconds);
+		   if (n%7 == 6) return sourcestart(n+3,Math.pow(2,-3/12),delayInSeconds);
+		   if (n%7 == 0) return sourcestart(n+2,Math.pow(2,-2/12),delayInSeconds);
+		   if (n%7 == 1) return sourcestart(n+1,Math.pow(2,-1/12),delayInSeconds);
+	   }
+   }
+
+   function playpianosound(context,n,delayInSeconds) {
+	   playpiano7sound(n,delayInSeconds);
+   }
+
+  
+   function playaudio(n) {
+	   playpianosound(audiocontext,n);
+   }
+
+
+   function casosEspeciales() {
+        let bandq = getQueryVariable("band");
+        let switchv = document.getElementById("switchVibrato");
+        //console.log(bandq)
+        //switchv.innerHTML = "laoncha";
+        document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
+                                                        : bandq == "troiloV" ? "Troilo vibrato":
+                                                            bandq.toUpperCase() ;
+        if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img src="img/switchoff.png" style="position:absolute;left:80vw;width:15vw;border-radius: 15vw;display:inline-block;"> </a>'
+        else if (bandq == "troiloV") switchv.innerHTML = '<a  href="bandolica.html?band=troilo"> <img src="img/switchon.png" style="position:absolute;left:80vw;width:15vw;border-radius: 15vw;display:inline-block;"> </a>'
+
+
+   }
+
+   piano7loadbasic();
+   
+
+   
+   toggleDispositivos();
+
+   casosEspeciales();
+   
+   //mostrarSamplesCargados();
+   
+   //setColor("#header");
+   //setColor("body");
+   //setColor("button");
+   
+   
+   
+   
+ 
+
+
+ debugEl.innerText = "debug"
