@@ -897,9 +897,9 @@ for (var i =0; i<37;i++){
         //console.log(bandq)
         //switchv.innerHTML = "laoncha";
         document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
-                                                        : bandq == "troiloV" ? "Troilo vibrato":
+                                                        : bandq == "troiloV" ? "TROILO VIBRATO":
                                                             bandq.toUpperCase() ;
-        if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img src="img/switchoff.png" style="position:absolute;left:80vw;width:15vw;border-radius: 15vw;display:inline-block;"> </a>'
+        if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img src="img/switchoff1.png" style="position:absolute;left:80vw;width:15vw;border-radius: 15vw;display:inline-block;"> </a>'
         else if (bandq == "troiloV") switchv.innerHTML = '<a  href="bandolica.html?band=troilo"> <img src="img/switchon.png" style="position:absolute;left:80vw;width:15vw;border-radius: 15vw;display:inline-block;"> </a>'
 
 
