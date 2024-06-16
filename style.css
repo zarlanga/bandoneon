@@ -231,13 +231,17 @@ footer a {
 
 .switchVibr {
 	position:absolute;
-	left:80vw;
+	left:81.5vw;
 	width:15vw;
 	border-radius: 15vw;
 	display:inline-block;
+	transform: translate(0,57vh);
 }
 
 @media screen and (max-width: 780px) {
+	.switchVibr{
+		transform: translate(0,15vh);
+	}
 	#logohome {
 		position: relative;
 		width: 100%
