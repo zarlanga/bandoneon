@@ -229,6 +229,14 @@ footer a {
 	color: white
 }
 
+.switchVibr {
+	position:absolute;
+	left:80vw;
+	width:15vw;
+	border-radius: 15vw;
+	display:inline-block;
+}
+
 @media screen and (max-width: 780px) {
 	#logohome {
 		position: relative;

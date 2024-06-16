@@ -184,7 +184,7 @@ document.getElementById('formMail')
 
 //pedirTiempos();
 
-if (!autorizado) {
+if (!autorizado && getQueryVariable("band") != "ela") {
 	//if (!validarPass()) {
 	showLogin(true);
 	arrancarTimer();		
