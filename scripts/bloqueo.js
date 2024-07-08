@@ -2,7 +2,7 @@
 
 var deltaoff= 2; //minutos hasta que mutea
 var deltaon = deltaoff + 118 // minutos hasta que desmutea
-var validators = ["mujeres", "descalzas"];
+var validators =  getQueryVariable("band") == "troilo" || getQueryVariable("band") == "troiloV" ? ["zitaypichuco"]  : ["mujeres", "descalzas"];
 var autorizado = parseInt(localStorage.getItem("autorizado"));
 var inter;
 var checks= 0;
