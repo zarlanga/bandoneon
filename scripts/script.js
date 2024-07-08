@@ -312,7 +312,13 @@ for (var i =0; i<37;i++){
 	   
 	   notas = notasFull[n];
 	   posbot= posbotFull[n];
-	   setManito(n);
+
+	   var bando = getQueryVariable("band") || "aa";
+	   
+       if (bando == "troiloV") bando = "troilo";
+	   
+	 
+	   if(bando != "troilo" && bando != "troiloV") setManito(n);
 	   
 	   modo = n;
 	   
@@ -320,9 +326,7 @@ for (var i =0; i<37;i++){
 	   
 	   
 	   //----- ESTOSEVADESCONTORLAAAR
-	   var bando = getQueryVariable("band") || "aa";
-	   //if ( man == "derecha") 
-        if (bando == "troiloV") bando = "troilo";
+	   
 
 	   imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
 	   
@@ -901,6 +905,16 @@ for (var i =0; i<37;i++){
                                                             bandq.toUpperCase() ;
         if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img class="switchVibr" src="img/switchoff1.png" > </a>'
         else if (bandq == "troiloV") switchv.innerHTML = '<a  href="bandolica.html?band=troilo"> <img class="switchVibr" src="img/switchon1.png" > </a>'
+
+		
+/*
+		if (bandq == "troilo" || bandq == "troiloV") {
+			alert("caca")
+			
+			document.getElementById("manito").innerHTML = "culo"
+			alert("pis")
+		}
+*/		
 
 
    }
