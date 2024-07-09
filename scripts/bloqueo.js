@@ -2,7 +2,8 @@
 
 var deltaoff= 2; //minutos hasta que mutea
 var deltaon = deltaoff + 118 // minutos hasta que desmutea
-var validators =  getQueryVariable("band") == "troilo" || getQueryVariable("band") == "troiloV" ? ["zitaypichuco"]  : ["mujeres", "descalzas"];
+var validators =  getQueryVariable("band") == "troilo" || getQueryVariable("band") == "troiloV" ? ["zitaypichuco"]  : ["mujeres", "descalzas", "zitaypichuco"];
+var autorizadoT = parseInt(localStorage.getItem("autorizadoT"))
 var autorizado = parseInt(localStorage.getItem("autorizado"));
 var inter;
 var checks= 0;
@@ -63,8 +64,14 @@ function marcarTiempo() {
 }
 
 function habilitar() {
-	localStorage.setItem("autorizado", 1);
-	autorizado = true;
+	if(!esTroilo()) {
+		localStorage.setItem("autorizado", 1);
+		autorizado = true;
+	} else{
+		localStorage.setItem("autorizadoT", 1);
+		autorizadoT = true;
+	}
+
 	clearInterval(inter);
 	desmutear();
 	showLogin(false);
@@ -73,7 +80,9 @@ function habilitar() {
 
 function checkPass(){
 	var pw = document.getElementById("pass").value;
+	
 	if(validarPass(pw)) {
+		
 		habilitar();
 		mostrarPopup(false);
 	}else alert("contraseña incorrecta");
@@ -134,9 +143,17 @@ function arrancarTimer() {
 }
 
 function log() {
-	if(autorizado) {
-		localStorage.setItem("autorizado", 0);
-		autorizado = false;
+
+	if(autorizado && !esTroilo() || autorizadoT && esTroilo()) {
+		if(!esTroilo()) {
+
+			localStorage.setItem("autorizado", 0);
+			autorizado = false;
+		} else{
+			localStorage.setItem("autorizadoT", 0);
+			autorizadoT = false;
+		}
+
 		checks =0;
 		arrancarTimer();
 		showLogin(true);
@@ -184,19 +201,37 @@ document.getElementById('formMail')
 
 //pedirTiempos();
 
-if (!autorizado && getQueryVariable("band") != "ela") {
-	//if (!validarPass()) {
-	showLogin(true);
-	arrancarTimer();		
+if (!esTroilo()){
+
+	if (!autorizado && getQueryVariable("band") != "ela" ) {  //(...) || getQueryVariable("band") == "troilo"
+		//if (!validarPass()) {
+		showLogin(true);
+		arrancarTimer();		
 	}	
-	//else habilitar();
-else {
-	showLogin(false);
-	mostrarPopup(false);
+		//else habilitar();
+	else {
+		showLogin(false);
+		mostrarPopup(false);
+	}
+} else {
+	//alert("tamoaca");
+
+	if(!autorizadoT) {
+		
+		showLogin(true);
+		arrancarTimer();		
+	} else {
+		showLogin(false);
+		mostrarPopup(false);
+	}
+
 }
 
 desmutear();
 
+function esTroilo() {
+	return getQueryVariable("band") == "troilo" || getQueryVariable("band") == "troiloV"
+}
 
 //ESTOESTAMAAAAAL
 if (screen.width < 800) {
