@@ -312,7 +312,13 @@ for (var i =0; i<37;i++){
 	   
 	   notas = notasFull[n];
 	   posbot= posbotFull[n];
-	   setManito(n);
+
+	   var bando = getQueryVariable("band") || "aa";
+	   
+       if (bando == "troiloV") bando = "troilo";
+	   
+	 
+	   if(bando != "troilo" && bando != "troiloV") setManito(n);
 	   
 	   modo = n;
 	   
@@ -320,10 +326,11 @@ for (var i =0; i<37;i++){
 	   
 	   
 	   //----- ESTOSEVADESCONTORLAAAR
-	   var bando = getQueryVariable("band") || "aa";
-	   //if ( man == "derecha") 
+	   
+
 	   imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
 	   
+       
 	   
 	   // else  imgsrc[0] = "img_lab/manoIzqBB.png";
 	   // imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
@@ -887,11 +894,38 @@ for (var i =0; i<37;i++){
 	   playpianosound(audiocontext,n);
    }
 
+
+   function casosEspeciales() {
+        let bandq = getQueryVariable("band");
+        let switchv = document.getElementById("switchVibrato");
+        //console.log(bandq)
+        //switchv.innerHTML = "laoncha";
+        document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
+                                                        : bandq == "troiloV" ? "TROILO VIBRATO":
+                                                            bandq.toUpperCase() ;
+        if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img class="switchVibr" src="img/switchoff1.png" > </a>'
+        else if (bandq == "troiloV") switchv.innerHTML = '<a  href="bandolica.html?band=troilo"> <img class="switchVibr" src="img/switchon1.png" > </a>'
+
+		
+/*
+		if (bandq == "troilo" || bandq == "troiloV") {
+			alert("caca")
+			
+			document.getElementById("manito").innerHTML = "culo"
+			alert("pis")
+		}
+*/		
+
+
+   }
+
    piano7loadbasic();
    
 
    
    toggleDispositivos();
+
+   casosEspeciales();
    
    //mostrarSamplesCargados();
    
@@ -901,6 +935,8 @@ for (var i =0; i<37;i++){
    
    
    
-   document.getElementById("titulo0").innerText = ( getQueryVariable("band") == "aa" || !getQueryVariable("band") ) ? "Doble A" :  getQueryVariable("band").toUpperCase() ;
+   
  
+
+
  debugEl.innerText = "debug"
