@@ -13,9 +13,23 @@
 </head>
 <body>
     <h1>a dos manos</h1>
-    <h2>a</h2>
-
+    <h2>e</h2>
+    elegir bandoneon<select name="" id="" onchange="cambiarbando(this.value)">
+        <option value="aa">aa</option>
+        <option value="bb">bb</option>
+        <option value="ela">ela</option>
+        <option value="emu">emu</option>
+        <option value="troilo">troilo</option>
+    </select>
+    <br><br>
     <iframe src="bandolica.html?gh=t" frameborder="0" id="izquierda"></iframe>
     <!--iframe src="/bandolica.html" frameborder="0" id="derecha"></iframe-->
+
+    <script>
+        function cambiarbando(val) {
+            console.log(val)
+            document.getElementById('izquierda').src= "bandolica.html?gh=t&band=" +val ;
+        }
+    </script>
 </body>
 </html>
