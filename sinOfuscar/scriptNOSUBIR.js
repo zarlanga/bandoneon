@@ -898,13 +898,14 @@ for (var i =0; i<37;i++){
    function casosEspeciales() {
         let bandq = getQueryVariable("band");
         let switchv = document.getElementById("switchVibrato");
+		const metemano = () => {getQueryVariable("mano") ? "&mano=izq" : ""}
         //console.log(bandq)
         //switchv.innerHTML = "laoncha";
         document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
                                                         : bandq == "troiloV" ? "TROILO VIBRATO":
                                                             bandq.toUpperCase() ;
-        if (bandq == "troilo") switchv.innerHTML = '<a  href="bandolica.html?band=troiloV"> <img class="switchVibr" src="img/switchoff1.png" > </a>'
-        else if (bandq == "troiloV") switchv.innerHTML = '<a  href="bandolica.html?band=troilo"> <img class="switchVibr" src="img/switchon1.png" > </a>'
+        if (bandq == "troilo") switchv.innerHTML = `<a  href="bandolica.html?band=troiloV${metemano()}"> <img class="switchVibr" src="img/switchoff1.png" > </a>`
+        else if (bandq == "troiloV") switchv.innerHTML = `<a  href="bandolica.html?band=troilo${metemano()}"> <img class="switchVibr" src="img/switchon1.png" > </a>`
 
 		
 /*
