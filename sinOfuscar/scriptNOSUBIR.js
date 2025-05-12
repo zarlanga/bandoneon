@@ -318,7 +318,8 @@ for (var i =0; i<37;i++){
        if (bando == "troiloV") bando = "troilo";
 	   
 	 
-	   if(bando != "troilo" && bando != "troiloV") setManito(n);
+	   //if(bando != "troilo" && bando != "troiloV")
+        setManito(n);
 	   
 	   modo = n;
 	   
@@ -898,7 +899,7 @@ for (var i =0; i<37;i++){
    function casosEspeciales() {
         let bandq = getQueryVariable("band");
         let switchv = document.getElementById("switchVibrato");
-		const metemano = () => {getQueryVariable("mano") ? "&mano=izq" : ""}
+		const metemano = () => {return getQueryVariable("mano") == "izq" ? "&mano=izq" : ""}
         //console.log(bandq)
         //switchv.innerHTML = "laoncha";
         document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
