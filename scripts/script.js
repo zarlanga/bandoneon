@@ -318,7 +318,8 @@ for (var i =0; i<37;i++){
        if (bando == "troiloV") bando = "troilo";
 	   
 	 
-	   if(bando != "troilo" && bando != "troiloV") setManito(n);
+	   //if(bando != "troilo" && bando != "troiloV")
+        setManito(n);
 	   
 	   modo = n;
 	   
