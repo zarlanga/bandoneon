@@ -1,1 +1,945 @@
-var _0x20e383=_0x3618;(function(_0x1d69ec,_0x1dee30){var _0x5428ed=_0x3618,_0x4c1cca=_0x1d69ec();while(!![]){try{var _0x2790a6=-parseInt(_0x5428ed(0x16e))/0x1*(-parseInt(_0x5428ed(0x24b))/0x2)+parseInt(_0x5428ed(0x24e))/0x3*(parseInt(_0x5428ed(0x1e5))/0x4)+-parseInt(_0x5428ed(0x24d))/0x5+-parseInt(_0x5428ed(0x225))/0x6+-parseInt(_0x5428ed(0x1c9))/0x7*(-parseInt(_0x5428ed(0x151))/0x8)+-parseInt(_0x5428ed(0x1f0))/0x9*(parseInt(_0x5428ed(0x1d6))/0xa)+-parseInt(_0x5428ed(0x1df))/0xb;if(_0x2790a6===_0x1dee30)break;else _0x4c1cca['push'](_0x4c1cca['shift']());}catch(_0x24fe08){_0x4c1cca['push'](_0x4c1cca['shift']());}}}(_0x58c0,0xba4df));function elegirBotono(){var _0x7733f7=_0x3618;plantarOverlays();var _0x534259=$(_0x7733f7(0x1a1))[_0x7733f7(0x178)](),_0x109c35=document[_0x7733f7(0x1b6)](_0x7733f7(0x194)+_0x534259)[_0x7733f7(0x1ff)][_0x7733f7(0x258)],_0x84a109=document[_0x7733f7(0x1b6)]('bono'+_0x534259)[_0x7733f7(0x1ff)][_0x7733f7(0x261)];_0x109c35=_0x109c35['substr'](0x0,_0x109c35[_0x7733f7(0x15e)]-0x2),_0x84a109=_0x84a109['substr'](0x0,_0x84a109['length']-0x2),$(_0x7733f7(0x19c))['val'](_0x109c35),$('#botonoy')['val'](_0x84a109),$(_0x7733f7(0x165)+_0x534259)['css']({'opacity':'1','background-color':'green'});}function moverboton(_0xe51a44){var _0x30f7f9=_0x3618,_0x46f12c=$('#botonoind')[_0x30f7f9(0x178)](),_0x1c4bdd=$('#botonox')[_0x30f7f9(0x178)](),_0x58e1cd=$(_0x30f7f9(0x284))[_0x30f7f9(0x178)]();$('#bono'+_0x46f12c)['css'](_0x30f7f9(0x258),_0x1c4bdd+'vw'),$('#bono'+_0x46f12c)[_0x30f7f9(0x1e7)](_0x30f7f9(0x261),_0x58e1cd+'vw');}function printValues(){var _0x392ad7=_0x3618,_0x65e62='[';for(var _0xbf11e=0x0;_0xbf11e<0x27;_0xbf11e++){if(document[_0x392ad7(0x1b6)]('bono'+_0xbf11e)){var _0x4cc8fa=document[_0x392ad7(0x1b6)]('bono'+_0xbf11e)[_0x392ad7(0x1ff)][_0x392ad7(0x258)],_0x557622=document['getElementById'](_0x392ad7(0x194)+_0xbf11e)[_0x392ad7(0x1ff)][_0x392ad7(0x261)];_0x65e62+='[\x22'+_0x4cc8fa+'\x22,\x22'+_0x557622+_0x392ad7(0x274);}else _0x65e62+='[\x22'+_0x392ad7(0x23a)+'\x22,\x22'+_0x392ad7(0x23a)+'\x22],';}_0x65e62+=']',console[_0x392ad7(0x208)](_0x65e62);}function plantarOverlays(){var _0x39fc10=_0x3618;for(var _0x170bfc=0x0;_0x170bfc<0x27;_0x170bfc++)$('#bono'+_0x170bfc)[_0x39fc10(0x1e7)]({'opacity':_0x39fc10(0x17a),'background-color':_0x39fc10(0x162)});}$(document)[_0x20e383(0x283)](function(){var _0x46fb61=_0x20e383;$(_0x46fb61(0x1d8))[_0x46fb61(0x1f2)](function(_0x5453cd){var _0x17699a=_0x46fb61,_0x26bfa3=document['getElementById'](_0x17699a(0x220))[_0x17699a(0x1ff)]['display'];if(_0x26bfa3==_0x17699a(0x1da)||_0x26bfa3==''){var _0x4870ce=_0x5453cd['keyCode']||_0x5453cd[_0x17699a(0x249)];_0x5453cd[_0x17699a(0x270)](),_0x4870ce!=0x20?tirarnota(entrakeysalenota(_0x4870ce,!![])):setMode(modo%0x2==0x0?modo+0x1:modo-0x1);}}),$('body')[_0x46fb61(0x255)](function(_0x47b87b){var _0x3c77e8=_0x46fb61,_0xffc146=_0x47b87b[_0x3c77e8(0x1f1)]||_0x47b87b[_0x3c77e8(0x249)];if(_0xffc146!=0x20)largarnota(entrakeysalenota(_0xffc146));});}),$(document)['ready'](function(){var _0x1e41a6=_0x20e383,_0x439fcf=!![];for(var _0x50990e=0x0;_0x50990e<0x28;_0x50990e++){var _0x1a0096=_0x439fcf?0x1e:0x96,_0x348757=_0x1e41a6(0x25b)+_0x1a0096+','+_0x1a0096+','+_0x1a0096+')\x20',_0x354304='<div\x20class=\x22overlay\x22style=\x22background:'+_0x348757+';opacity:0.02;\x22\x20id=\x22overnota'+_0x50990e+_0x1e41a6(0x28a)+_0x50990e+_0x1e41a6(0x179)+_0x50990e+'\x20+\x20corridas)},500)\x22\x20></div>',_0x5269bd=_0x1e41a6(0x204)+_0x50990e+_0x1e41a6(0x179)+_0x50990e+_0x1e41a6(0x267)+_0x50990e+'\x22></div>';$(_0x1e41a6(0x205))[_0x1e41a6(0x242)](_0x5269bd),_0x50990e<0x18?$('#tiagarro1')[_0x1e41a6(0x242)](_0x354304):$(_0x1e41a6(0x175))[_0x1e41a6(0x242)](_0x354304),_0x439fcf=!_0x439fcf;}document[_0x1e41a6(0x1b6)](_0x1e41a6(0x216))[_0x1e41a6(0x1d2)](_0x1e41a6(0x164)),document[_0x1e41a6(0x1b6)]('overnota37')['removeAttribute']('onclick'),document[_0x1e41a6(0x1b6)]('overnota38')[_0x1e41a6(0x1d2)]('onclick');var _0x458d27=getQueryVariable('mano')!=_0x1e41a6(0x161),_0x30f390=getQueryVariable('cerr')!=_0x1e41a6(0x28b),_0x4b28fc=_0x458d27&&_0x30f390?0x0:_0x458d27&&!_0x30f390?0x1:!_0x458d27&&_0x30f390?0x2:0x3;setMode(_0x4b28fc),console[_0x1e41a6(0x1a6)](_0x1e41a6(0x1b2)+posbot['length']);});var estaAbriendo=![],notasAntitremolo=[],notas=[],notasD_A=[0x41,0x5a,0x57,0x33,0x72,0x34,0x58,0x45,0x53,0x54,0x35,0x46,0x59,0x44,0x47,0x55,0x52,0x48,0x56,0x49,0x43,0x42,0xbc,0x4a,0x4e,0x36,0x4b,0x37,0x4d,0x38,0x76,0x75,null,0x74,null,null,0x73],notasD_C=[0x41,0x5a,0x57,0x72,0x34,0x33,0x58,0x44,0x53,0x45,0x54,0x35,0x46,0x36,0x59,0x37,0x47,0x55,0xbc,0x48,0x43,0x52,0x49,0x42,0x4a,0x74,0x4e,0x75,0x4b,0x38,0x76,0x4d,null,null,0x73,null,null,0x56],notasI_A=[0xbc,null,0x5a,0x4d,0x33,0x39,0x4b,0x49,0x73,0x34,0x74,0x58,0x55,0x75,0x45,0x36,0x53,0x76,0x4e,0x35,0x44,0x52,0x38,0x46,0x54,0x4a,0x47,0x42,0x59,0x37,0x48,0x43,0x77,0x56],notasI_C=[null,0x4d,0x33,null,0x5a,0xbc,0x39,0x45,0x73,0x53,0x74,0x4b,0x38,0x37,0x34,0x75,0x44,0x4e,0x49,0x52,0x4a,0x46,0x35,0x54,0x36,0x47,0x59,0x76,0x48,0x55,0x43,0x77,0x56,null,null,0x42,0x58],notasFull=[notasD_A,notasD_C,notasI_A,notasI_C],posbot=[],posbotD_A=[[_0x20e383(0x213),_0x20e383(0x196)],[_0x20e383(0x1fc),_0x20e383(0x244)],[_0x20e383(0x236),_0x20e383(0x176)],[_0x20e383(0x1fb),'14.7vw'],[_0x20e383(0x237),_0x20e383(0x202)],[_0x20e383(0x199),_0x20e383(0x155)],['19.3vw','16.6vw'],[_0x20e383(0x1bd),_0x20e383(0x1c8)],['15.4vw',_0x20e383(0x210)],[_0x20e383(0x230),_0x20e383(0x285)],[_0x20e383(0x256),_0x20e383(0x1d4)],[_0x20e383(0x280),'25.1vw'],[_0x20e383(0x1bd),'33.4vw'],[_0x20e383(0x28d),_0x20e383(0x198)],['14.6vw',_0x20e383(0x1b9)],[_0x20e383(0x1a4),_0x20e383(0x1ba)],['10.7vw',_0x20e383(0x16c)],[_0x20e383(0x16f),_0x20e383(0x1ed)],['18vw','26.8vw'],[_0x20e383(0x26d),_0x20e383(0x277)],[_0x20e383(0x1c8),'21.7vw'],[_0x20e383(0x1a8),_0x20e383(0x1f4)],['21vw','47.6vw'],[_0x20e383(0x226),_0x20e383(0x19e)],[_0x20e383(0x273),_0x20e383(0x23e)],['8vw',_0x20e383(0x266)],[_0x20e383(0x26c),'45.8vw'],['8.9vw',_0x20e383(0x19a)],[_0x20e383(0x215),'42.5vw'],[_0x20e383(0x20b),_0x20e383(0x163)],[_0x20e383(0x195),_0x20e383(0x25d)],[_0x20e383(0x186),_0x20e383(0x184)],[_0x20e383(0x214),_0x20e383(0x251)],['5.2vw',_0x20e383(0x1d0)],[_0x20e383(0x24a),_0x20e383(0x1cf)],['3.1vw',_0x20e383(0x183)],[_0x20e383(0x287),_0x20e383(0x253)],[_0x20e383(0x23a),'0vw'],['3.3vw',_0x20e383(0x215)]],posbotD_C=[[_0x20e383(0x213),_0x20e383(0x196)],[_0x20e383(0x25e),'11.3vw'],[_0x20e383(0x236),_0x20e383(0x17d)],[_0x20e383(0x186),'17.5vw'],[_0x20e383(0x239),'20.5vw'],[_0x20e383(0x1fb),_0x20e383(0x27c)],[_0x20e383(0x289),_0x20e383(0x27f)],[_0x20e383(0x27c),_0x20e383(0x198)],[_0x20e383(0x263),_0x20e383(0x16f)],[_0x20e383(0x1bd),'18.2vw'],['10.7vw','28.5vw'],[_0x20e383(0x256),_0x20e383(0x1d4)],[_0x20e383(0x1e6),_0x20e383(0x167)],[_0x20e383(0x256),_0x20e383(0x266)],['11.4vw',_0x20e383(0x21f)],[_0x20e383(0x1fb),'37.3vw'],[_0x20e383(0x1d5),_0x20e383(0x1b9)],[_0x20e383(0x1a4),'39vw'],[_0x20e383(0x20a),'47.6vw'],['14.8vw',_0x20e383(0x19b)],['18.2vw',_0x20e383(0x1f9)],[_0x20e383(0x230),_0x20e383(0x1eb)],[_0x20e383(0x26a),_0x20e383(0x277)],['18vw','31.9vw'],[_0x20e383(0x226),_0x20e383(0x19e)],['5.2vw',_0x20e383(0x1d0)],[_0x20e383(0x16b),'36.8vw'],[_0x20e383(0x186),_0x20e383(0x272)],[_0x20e383(0x26c),_0x20e383(0x271)],[_0x20e383(0x191),'42.6vw'],[_0x20e383(0x246),_0x20e383(0x1c5)],[_0x20e383(0x292),_0x20e383(0x269)],[_0x20e383(0x214),_0x20e383(0x1f7)],[_0x20e383(0x1b4),'32.4vw'],[_0x20e383(0x232),_0x20e383(0x253)],[_0x20e383(0x172),_0x20e383(0x183)],[_0x20e383(0x1b4),_0x20e383(0x198)],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x23a),_0x20e383(0x23a)],['17.7vw',_0x20e383(0x187)]],posbotI_A=[[_0x20e383(0x20f),_0x20e383(0x1be)],[_0x20e383(0x23a),'0vw'],[_0x20e383(0x160),_0x20e383(0x1ac)],['16.9vw','41.3vw'],[_0x20e383(0x199),'10.2vw'],['9.7vw','47.3vw'],['14.9vw',_0x20e383(0x227)],[_0x20e383(0x1aa),_0x20e383(0x1e4)],[_0x20e383(0x1e1),_0x20e383(0x223)],['6.8vw','16.1vw'],[_0x20e383(0x1de),'25.6vw'],[_0x20e383(0x219),_0x20e383(0x15c)],[_0x20e383(0x1f3),'37.3vw'],['3.7vw',_0x20e383(0x275)],[_0x20e383(0x252),_0x20e383(0x1f6)],[_0x20e383(0x1c4),_0x20e383(0x19d)],[_0x20e383(0x27c),_0x20e383(0x22d)],[_0x20e383(0x1e9),_0x20e383(0x241)],[_0x20e383(0x1d1),'35.2vw'],['5.8vw',_0x20e383(0x171)],[_0x20e383(0x25a),_0x20e383(0x20e)],[_0x20e383(0x190),'19.3vw'],[_0x20e383(0x1ac),_0x20e383(0x21c)],[_0x20e383(0x236),'21.7vw'],[_0x20e383(0x1b5),'25.6vw'],[_0x20e383(0x25a),_0x20e383(0x154)],[_0x20e383(0x1c1),'27.7vw'],['15.6vw',_0x20e383(0x233)],[_0x20e383(0x190),_0x20e383(0x22a)],[_0x20e383(0x254),_0x20e383(0x184)],[_0x20e383(0x17f),'33vw'],['16.4vw',_0x20e383(0x28c)],[_0x20e383(0x254),_0x20e383(0x26e)],[_0x20e383(0x1fe),_0x20e383(0x228)],[_0x20e383(0x23a),_0x20e383(0x23a)],['0vw',_0x20e383(0x23a)],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x23a),_0x20e383(0x23a)]],posbotI_C=[['0vw',_0x20e383(0x23a)],['16.9vw',_0x20e383(0x21c)],[_0x20e383(0x199),_0x20e383(0x191)],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x160),_0x20e383(0x1ac)],[_0x20e383(0x20d),'47.3vw'],[_0x20e383(0x22d),_0x20e383(0x1be)],[_0x20e383(0x196),_0x20e383(0x1f6)],[_0x20e383(0x1e1),'18.8vw'],['14.7vw',_0x20e383(0x1c0)],[_0x20e383(0x1de),'25.6vw'],[_0x20e383(0x210),_0x20e383(0x227)],[_0x20e383(0x1ac),_0x20e383(0x21c)],[_0x20e383(0x254),_0x20e383(0x152)],[_0x20e383(0x278),_0x20e383(0x226)],[_0x20e383(0x22e),'32.3vw'],[_0x20e383(0x17d),_0x20e383(0x20e)],[_0x20e383(0x1d1),_0x20e383(0x1ed)],[_0x20e383(0x244),_0x20e383(0x1e4)],['8.8vw',_0x20e383(0x153)],['13.2vw',_0x20e383(0x154)],[_0x20e383(0x17f),_0x20e383(0x157)],[_0x20e383(0x237),_0x20e383(0x171)],[_0x20e383(0x222),_0x20e383(0x294)],['5.7vw','28.8vw'],[_0x20e383(0x286),_0x20e383(0x217)],[_0x20e383(0x190),'31.4vw'],[_0x20e383(0x1e9),_0x20e383(0x241)],['12.4vw','33.1vw'],[_0x20e383(0x1f3),'37.2vw'],[_0x20e383(0x218),_0x20e383(0x28c)],[_0x20e383(0x254),_0x20e383(0x26e)],[_0x20e383(0x1fe),'23.7vw'],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x23a),'0vw'],['15.5vw',_0x20e383(0x290)],[_0x20e383(0x1a8),'12vw'],[_0x20e383(0x23a),_0x20e383(0x23a)],[_0x20e383(0x23a),_0x20e383(0x23a)]],posbotFull=[posbotD_A,posbotD_C,posbotI_A,posbotI_C],modo,corridas=getQueryVariable(_0x20e383(0x291))==_0x20e383(0x161)?0x12:0x27,sourcesCabeza=[];for(var i=0x0;i<0x64;i++)sourcesCabeza[i]=null;var pepe,volu=0.6,samplesCargados=0x0;const list=document['getElementById'](_0x20e383(0x193)),debugEl=document['getElementById'](_0x20e383(0x23b));function _0x58c0(){var _0x4984d5=['true','17.6vw','14.6vw','buffer','gain','29.5vw','mano','19.5vw','<a\x20\x20href=\x22bandolica.html?band=troiloV','25.99vw','_1.jpg','derecha','&band=','271288LthVXe','34.8vw','19.3vw','39.1vw','20.5vw','\x0anrotecla:\x20','21.7vw','splice','destination','from','D_A','11.9vw','png','length','2_d4','19vw','izq','yellow','42.5vw','onclick','#bono','<a\x20\x20href=\x22bandolica.html?band=troilo','25.2vw','4_g3','der_cerrando.pdf','response','18.5vw','23.3vw','emu','11tyNWXX','14.8vw','):\x20','22.6vw','3vw','switchVibrato','innerHTML','#tiagarro2','13vw','get','val','\x20+\x20corridas);\x20setTimeout(function(){largarnota(','0.5','application/x-www-form-urlencoded','1_g3','13.1vw','troilo','12.3vw','CAMBIAR\x20DE\x20MANO<br><i\x20class=\x27fa\x20fa-hand-paper-o\x20espejado\x27\x20style=\x27font-size:40px;\x20\x27></i>','indexOf','2_f2','26.4vw','34.9vw','name','5.8vw','26.8vw','removeChild','img/pentagramas/penta_','Content-Type','inputs','sampleStatus','BANDOLICA\x20ACTIVADA','onstatechange','stop','8.7vw','10.2vw','playbackRate','midi-list','bono','6.9vw','9.9vw','titulo0','19.9vw','8.1vw','37.2vw','35.1vw','#botonox','28.8vw','40.7vw','pow','abreDerecha','#botonoind','bandcon','fromCharCode','12.5vw','CONECTAR\x20BANDOLICA','log','\x22>\x20<img\x20class=\x22switchVibr\x22\x20src=\x22img/switchon1.png\x22\x20>\x20</a>','17.9vw','Piano','11.3vw','connect','7.5vw','circulo','floor','createGain','4_e5','arraybuffer','largo','AudioContext','3.3vw','8.4vw','getElementById','0.7','map','30.4vw','39vw','1_bb2','addClass','11.4vw','47.2vw','jpg','9.8vw','12vw','5_d4','izq_cerrando.pdf','5.7vw','40.9vw','access','innerText','18.3vw','259dQuIlK','location','#img1','setRequestHeader','toUpperCase','./bandolica.html?','32.4vw','28.9vw','15.8vw','removeAttribute','6_a4','26.1vw','14.5vw','780hWRlFS','toLowerCase','body','html','none','requestMIDIAccess','.jpg','then','3.6vw','8603100fCfizr','random','4.2vw','webkitAudioContext','state','43.2vw','4916812UUkoZb','14.4vw','css','suspended','4.6vw','Abriendo','23.4vw','decodeAudioData','35.2vw','#titulo','tironota','142227dwqLTp','keyCode','keydown','9.2vw','31.9vw','izquierda','13.3vw','38.2vw','addEventListener','21.8vw','open','8.8vw','20.3vw','createElement','15.6vw','style','split','linearRampToValueAtTime','17.5vw','con\x20fade\x20','<div\x20class=\x22botonota\x22\x20onclick=\x22tirarnota(','#tiagarro0','cargo\x20','setValueAtTime','table','send','20.8vw','10.1vw','substring','18.7vw','15.7vw','18.6vw','14.9vw','background-color','_2.jpg','16.8vw','3.9vw','19.6vw','overnota36','27.7vw','16.4vw','18vw','BANDOLICA\x20DISPONIBLE:\x20CLICK\x20PARA\x20ACTIVAR','onerror','41.3vw','\x0avelocity:\x20','start','33.4vw','desbloquear','troiloV','8.49vw','18.9vw','#img0','1181274gZpaZR','16.1vw','45.2vw','23.8vw','https://raw.githubusercontent.com/zarlanga/bandoneon/master/s/','31.3vw','#overnota','bandol','9.7vw','3.7vw','6_f6','10.8vw','createBufferSource','5.4vw','29.4vw','green','BufferLoader:\x20XHR\x20error\x20(','12.4vw','5.9vw','3_c3','8.2vw','0vw','debug','currentTime','attr','36.8vw','block','D_C','38.7vw','append','Connecting\x20to\x20device','11.2vw','der_abriendo.pdf','7.1vw','errormidi','Cerrando','which','3.4vw','126188oGbkAE','#imgP2','1016140PCMEDF','3VpBjwJ','img/teclados/','error','38.1vw','10vw','23.2vw','6.2vw','keyup','8vw','white','top','0px','13.2vw','rgb(','firstChild','40.8vw','20.2vw','#imgP1','abriendo','left','backgroundColor','15.4vw','#manito','commando:','31.5vw','\x20+\x20corridas)},500)\x22\x20style=\x22opacity:0.0;\x22\x20id=\x22bono','forEach','42.6vw','13.9vw','\x20de\x206\x20samples\x20cargados','17.3vw','13.8vw','45.4vw','0.3','preventDefault','45.8vw','35vw','18.4vw','\x22],','32.2vw','values','44.2vw','6.8vw','band','src','https://bandolica.com/s/','14.7vw','img_lab/teclas_','I_C','16.7vw','14.2vw','appendChild','opacity','ready','#botonoy','28.5vw','12.1vw','5.3vw','display','19.1vw','\x22\x20onclick=\x22tirarnota('];_0x58c0=function(){return _0x4984d5;};return _0x58c0();}function bajarpdf(){var _0x1b3c48=_0x20e383,_0x3174f6='img/mapas/';switch(modo){case 0x0:_0x3174f6+=_0x1b3c48(0x245);break;case 0x1:_0x3174f6+=_0x1b3c48(0x169);break;case 0x2:_0x3174f6+='izq_abriendo.pdf';break;case 0x3:_0x3174f6+=_0x1b3c48(0x1c3);break;}console['log'](_0x3174f6),window[_0x1b3c48(0x1fa)](_0x3174f6,'_blank');}function cambiarMano(){var _0xa72b77=_0x20e383,_0x2576ca=_0xa72b77(0x1ce);if(getQueryVariable('gh'))_0x2576ca+='&gh=t';if(getQueryVariable(_0xa72b77(0x279)))_0x2576ca+=_0xa72b77(0x150)+getQueryVariable(_0xa72b77(0x279));if(!getQueryVariable(_0xa72b77(0x291))||getQueryVariable(_0xa72b77(0x291))=='der')_0x2576ca+='&mano=izq';window[_0xa72b77(0x1fa)](_0x2576ca,'_self');}function setManito(_0x5b6273){var _0xacb2ac=_0x20e383;_0x5b6273<0x2?($(_0xacb2ac(0x264))[_0xacb2ac(0x1d9)]('CAMBIAR\x20DE\x20MANO<br><i\x20class=\x27fa\x20fa-hand-paper-o\x20\x27\x20style=\x27font-size:40px;\x20\x27></i>'),$(_0xacb2ac(0x264))[_0xacb2ac(0x1e7)]({'display':_0xacb2ac(0x23f),'right':'','left':_0xacb2ac(0x259),'border-radius':'0px\x2015px\x2015px\x200px\x20'}),$(_0xacb2ac(0x264))[_0xacb2ac(0x1bc)]('abreIzquierda')):($(_0xacb2ac(0x264))[_0xacb2ac(0x1d9)](_0xacb2ac(0x180)),$(_0xacb2ac(0x264))[_0xacb2ac(0x1e7)]({'display':_0xacb2ac(0x23f),'right':_0xacb2ac(0x259),'left':'','border-radius':'15px\x200px\x200px\x2015px'}),$(_0xacb2ac(0x264))[_0xacb2ac(0x1bc)](_0xacb2ac(0x1a0)));}function setMode(_0x47f3f2){var _0x3d4794=_0x20e383;silenciarTodo();var _0xc6cf32=_0x47f3f2%0x2==0x0?_0x3d4794(0x1ea):_0x3d4794(0x248),_0x532a4f=_0x47f3f2<0x2?_0x3d4794(0x14f):_0x3d4794(0x1f5),_0x5a8eb0=[_0x3d4794(0x15b),_0x3d4794(0x240),'I_A',_0x3d4794(0x27e)],_0x243b5d=[_0x3d4794(0x27d)+_0x5a8eb0[_0x47f3f2]+_0x3d4794(0x1dc),'img/pentagramas/penta_'+_0x5a8eb0[_0x47f3f2]+_0x3d4794(0x14e),_0x3d4794(0x189)+_0x5a8eb0[_0x47f3f2]+_0x3d4794(0x212)];notas=notasFull[_0x47f3f2],posbot=posbotFull[_0x47f3f2];var _0x94741a=getQueryVariable(_0x3d4794(0x279))||'aa';if(_0x94741a==_0x3d4794(0x221))_0x94741a=_0x3d4794(0x17e);setManito(_0x47f3f2),modo=_0x47f3f2,_0x243b5d[0x0]=_0x3d4794(0x24f)+_0x94741a+'_'+_0x532a4f+'.'+(_0x94741a!=_0x3d4794(0x16d)?_0x3d4794(0x15d):_0x3d4794(0x1bf))+'\x20',$(_0x3d4794(0x224))[_0x3d4794(0x23d)](_0x3d4794(0x27a),_0x243b5d[0x0]),$(_0x3d4794(0x25f))[_0x3d4794(0x23d)](_0x3d4794(0x27a),_0x243b5d[0x1]),$(_0x3d4794(0x24c))[_0x3d4794(0x23d)](_0x3d4794(0x27a),_0x243b5d[0x2]),$(_0x3d4794(0x1ee))[_0x3d4794(0x1d9)](_0xc6cf32),$('#titulo1')[_0x3d4794(0x1d9)]('MANO\x20'+_0x532a4f[_0x3d4794(0x1cd)]()),reordenarOverlays();}function _0x3618(_0xa539ea,_0x4010a0){var _0x58c079=_0x58c0();return _0x3618=function(_0x3618d6,_0x391fd2){_0x3618d6=_0x3618d6-0x14e;var _0x3b9494=_0x58c079[_0x3618d6];return _0x3b9494;},_0x3618(_0xa539ea,_0x4010a0);}function cambiaModo(){var _0x122e60=_0x20e383;console['log']('cambioModo'),estaAbriendo=!estaAbriendo;if(estaAbriendo){$(_0x122e60(0x1ee))['html'](_0x122e60(0x260)),notas=[0xbc,null,0x5a,0x4d,0x33,0x39,0x4b,0x49,0x73,0x34,0x74,0x58,0x55,0x75,0x45,0x36,0x53,0x76,0x4e,0x35,0x44,0x52,0x38,0x46,0x54,0x4a,0x47,0x42,0x59,0x37,0x48,0x43,0x77,0x56],$(_0x122e60(0x224))[_0x122e60(0x1e7)](_0x122e60(0x288),''),$(_0x122e60(0x1cb))[_0x122e60(0x1e7)]('display',_0x122e60(0x1da));for(var _0x80b96f=0x0;_0x80b96f<0x25;_0x80b96f++){$(_0x122e60(0x165)+_0x80b96f)[_0x122e60(0x1e7)]('top',posbot[_0x80b96f][0x0]),$(_0x122e60(0x165)+_0x80b96f)[_0x122e60(0x1e7)]('left',posbot[_0x80b96f][0x1]);if(posbot[_0x80b96f][0x0]==_0x122e60(0x23a))$(_0x122e60(0x165)+_0x80b96f)[_0x122e60(0x1e7)]('display',_0x122e60(0x1da));else $('#bono'+_0x80b96f)[_0x122e60(0x1e7)](_0x122e60(0x288),'');}}else{$(_0x122e60(0x1ee))[_0x122e60(0x1d9)]('cerrando'),$(_0x122e60(0x224))[_0x122e60(0x1e7)](_0x122e60(0x288),_0x122e60(0x1da)),$(_0x122e60(0x1cb))[_0x122e60(0x1e7)]('display',''),notas=[null,0x4d,0x33,null,0x5a,0xbc,0x39,0x45,0x73,0x53,0x74,0x4b,0x38,0x37,0x34,0x75,0x44,0x4e,0x49,0x52,0x4a,0x46,0x35,0x54,0x36,0x47,0x59,0x76,0x48,0x55,0x43,0x77,0x56,null,null,0x42,0x58];for(var _0x80b96f=0x0;_0x80b96f<0x25;_0x80b96f++){$('#bono'+_0x80b96f)[_0x122e60(0x1e7)](_0x122e60(0x258),posbot1[_0x80b96f][0x0]),$(_0x122e60(0x165)+_0x80b96f)['css'](_0x122e60(0x261),posbot1[_0x80b96f][0x1]);if(posbot1[_0x80b96f][0x0]==_0x122e60(0x23a))$(_0x122e60(0x165)+_0x80b96f)['css'](_0x122e60(0x288),'none');else $(_0x122e60(0x165)+_0x80b96f)[_0x122e60(0x1e7)](_0x122e60(0x288),'');}}silenciarTodo();}function reordenarOverlays(){var _0x12dba2=_0x20e383;for(var _0x5bb423=0x0;_0x5bb423<posbot['length'];_0x5bb423++){$('#bono'+_0x5bb423)[_0x12dba2(0x1e7)](_0x12dba2(0x258),posbot[_0x5bb423][0x0]),$('#bono'+_0x5bb423)['css'](_0x12dba2(0x261),posbot[_0x5bb423][0x1]);if(posbot[_0x5bb423][0x0]==_0x12dba2(0x23a))$(_0x12dba2(0x165)+_0x5bb423)['css'](_0x12dba2(0x288),_0x12dba2(0x1da));else $('#bono'+_0x5bb423)[_0x12dba2(0x1e7)]('display','');}}function setColor(_0x22f291){var _0x5d488c=_0x20e383,_0xf1f98f=getColor3();$(_0x22f291)[_0x5d488c(0x1e7)](_0x5d488c(0x211),_0xf1f98f[0x0]),$(_0x22f291)[_0x5d488c(0x1e7)]('color',_0xf1f98f[0x1]);}function getColor3(){var _0x2f3862=_0x20e383;return gr=Math[_0x2f3862(0x1ae)](Math['random']()*0xff),re=Math[_0x2f3862(0x1ae)](Math[_0x2f3862(0x1e0)]()*0xff),blu=Math[_0x2f3862(0x1ae)](Math['random']()*0xff),gr1=0xff-gr,re1=0xff-re,blu1=0xff-blu,[_0x2f3862(0x25b)+re+','+gr+','+blu+')',_0x2f3862(0x25b)+re1+','+gr1+','+blu1+')'];}function connectToDevice(_0x486800){var _0xdb27ca=_0x20e383;console[_0xdb27ca(0x1a6)](_0xdb27ca(0x243),_0x486800),bandStatus(0x2),_0x486800['onmidimessage']=function(_0x509640){var _0x3a344a=_0xdb27ca;const [_0x1ead10,_0x4d556b,_0x4deb8f]=_0x509640['data'];debugEl['innerText']=_0x3a344a(0x265)+_0x1ead10+_0x3a344a(0x156)+_0x4d556b+_0x3a344a(0x21d)+_0x4deb8f;if(_0x4d556b==0x78&&modo%0x2!=0x0)setMode(modo-0x1);else{if(_0x4d556b==0x79&&modo%0x2==0x0)setMode(modo+0x1);else{if(_0x4d556b==0x4c&&modo==0x1){if(_0x4deb8f==0x5a&&!sourcesCabeza[0x3a])tirarnota(0x4c);else{if(_0x4deb8f==0x64&&_0x1ead10!=0x80&&!sourcesCabeza[0x4c])tirarnota(0x3a);else{if(_0x1ead10==0x80||_0x4deb8f==0x0){if(sourcesCabeza[0x4c])largarnota(0x4c);else{if(sourcesCabeza[0x3a])largarnota(0x3a);}}}}}else{if(_0x4d556b==0x34&&modo==0x3){if(_0x4deb8f==0x59&&!sourcesCabeza[0x22])tirarnota(0x36);else{if(_0x4deb8f==0x5a&&!sourcesCabeza[0x36])tirarnota(0x22);else{if(_0x1ead10==0x80||_0x4deb8f==0x0){if(sourcesCabeza[0x22])largarnota(0x22);else{if(sourcesCabeza[0x36])largarnota(0x36);}}}};}else{if(_0x1ead10==0x90&&_0x4deb8f!=0x0)tirarnota(_0x4d556b-0x12);else{if(_0x1ead10==0x80||_0x4deb8f==0x0)largarnota(_0x4d556b-0x12);}}}}}};}function replaceElements(_0x4be63f){var _0x3df8c4=_0x20e383;while(list[_0x3df8c4(0x25c)]){list[_0x3df8c4(0x188)](list[_0x3df8c4(0x25c)]);}bandStatus(0x0);const _0x102f8b=_0x4be63f[_0x3df8c4(0x1b8)](_0x493bd0=>{var _0x498136=_0x3df8c4;console[_0x498136(0x1a6)](_0x493bd0);const _0x6a10ab=document[_0x498136(0x1fd)]('li');return _0x6a10ab[_0x498136(0x174)]=_0x493bd0[_0x498136(0x185)]+'\x20('+_0x493bd0['manufacturer']+')',(_0x6a10ab[_0x498136(0x174)][_0x498136(0x20c)](0x0,0x4)[_0x498136(0x1d7)]()=='ardu'||_0x6a10ab['innerHTML'][_0x498136(0x20c)](0x0,0x6)[_0x498136(0x1d7)]()==_0x498136(0x22c))&&(document[_0x498136(0x1b6)](_0x498136(0x1a2))[_0x498136(0x1f8)]('click',connectToDevice['bind'](null,_0x493bd0)),bandStatus(0x1)),_0x6a10ab;});_0x102f8b[_0x3df8c4(0x268)](_0x1faa7b=>list[_0x3df8c4(0x281)](_0x1faa7b));}!navigator[_0x20e383(0x1db)]?document[_0x20e383(0x1b6)](_0x20e383(0x247))[_0x20e383(0x1ff)][_0x20e383(0x288)]=_0x20e383(0x23f):navigator['requestMIDIAccess']()[_0x20e383(0x1dd)](function(_0x10242a){var _0x3e5282=_0x20e383;console['log'](_0x3e5282(0x1c6),_0x10242a),replaceElements(Array[_0x3e5282(0x15a)](_0x10242a['inputs']['values']())),_0x10242a[_0x3e5282(0x18e)]=function(_0x25c968){var _0x2796d4=_0x3e5282;replaceElements(Array[_0x2796d4(0x15a)](this[_0x2796d4(0x18b)][_0x2796d4(0x276)]()));};});function bandStatus(_0x2b8d5c){var _0x11bf26=_0x20e383,_0x115a0d=document[_0x11bf26(0x1b6)](_0x11bf26(0x1a2)),_0x3264a3=document['getElementById'](_0x11bf26(0x1ad));switch(_0x2b8d5c){case 0x0:_0x115a0d[_0x11bf26(0x174)]=_0x11bf26(0x1a5),_0x3264a3[_0x11bf26(0x1ff)][_0x11bf26(0x262)]='transparent';break;case 0x1:_0x115a0d['innerHTML']=_0x11bf26(0x21a),_0x3264a3[_0x11bf26(0x1ff)][_0x11bf26(0x262)]=_0x11bf26(0x257);break;case 0x2:_0x115a0d[_0x11bf26(0x174)]=_0x11bf26(0x18d),_0x3264a3[_0x11bf26(0x1ff)][_0x11bf26(0x262)]=_0x11bf26(0x234);break;}}function cambiarVolumen(_0x458523){var _0x411873=_0x20e383;console[_0x411873(0x1a6)](_0x458523),volu=_0x458523/0x64;}function entrakeysalenota(_0x27a196,_0x1b1654){var _0x537875=notas['indexOf'](_0x27a196);return _0x537875+corridas;}function tirarnota(_0x7d9da8){var _0x3f02d3=_0x20e383;if(podemoTocarLaNota(_0x7d9da8)){console['log'](_0x3f02d3(0x1ef)+_0x7d9da8);if(_0x7d9da8==0x36&&corridas==0x12)resaltarNota(0x24,!![]),playaudio(0x22),cargarNotaHold(0x22);else _0x7d9da8==0x4c&&corridas!=0x12?(playaudio(0x3a),resaltarNota(0x27,!![]),cargarNotaHold(0x3a)):_0x7d9da8>=corridas&&(playaudio(_0x7d9da8),resaltarNota(_0x7d9da8-corridas,!![]),cargarNotaHold(_0x7d9da8));}}function largarnota(_0x598d8e){if(_0x598d8e==0x36&&corridas==0x12)resaltarNota(0x24,![]),soltarconfade(0x22);else(_0x598d8e==0x4c||_0x598d8e==0x3a)&&corridas!=0x12?(resaltarNota(0x27,![]),resaltarNota(0x13,![]),soltarconfade(0x3a)):(resaltarNota(_0x598d8e-corridas,![]),soltarconfade(_0x598d8e));descargarNotaHold(_0x598d8e);}function soltarconfade(_0x228c2e){var _0x271116=_0x20e383;const _0x2a922a=getQueryVariable(_0x271116(0x279))==_0x271116(0x16d)?0.02:0x0,_0x11c48b=audiocontext['currentTime'],_0x424871=audiocontext[_0x271116(0x1af)]();_0x424871['gain'][_0x271116(0x207)](0x0,_0x11c48b),_0x424871[_0x271116(0x28f)][_0x271116(0x201)](volu*-0x1,_0x11c48b+_0x2a922a),_0x424871[_0x271116(0x1ab)](audiocontext[_0x271116(0x159)]),console[_0x271116(0x1a6)](_0x271116(0x203)+_0x228c2e),_0x2a922a!=0x0?(sourcesCabeza[_0x228c2e][_0x271116(0x1ab)](_0x424871),setTimeout(function(){var _0x24150e=_0x271116;sourcesCabeza[_0x228c2e][_0x24150e(0x18f)](audiocontext[_0x24150e(0x23c)]),sourcesCabeza[_0x228c2e]=null;},_0x2a922a*0x3e8)):(sourcesCabeza[_0x228c2e][_0x271116(0x18f)](audiocontext[_0x271116(0x23c)]),sourcesCabeza[_0x228c2e]=null);}function resaltarNota(_0x586ff7,_0xb07c22){var _0x3263dd=_0x20e383;$(_0x3263dd(0x165)+_0x586ff7)[_0x3263dd(0x1e7)](_0x3263dd(0x282),_0xb07c22?_0x3263dd(0x26f):'0.0');if(_0x586ff7!=0x24)$(_0x3263dd(0x22b)+_0x586ff7)['css'](_0x3263dd(0x282),_0xb07c22?_0x3263dd(0x1b7):'0.02');if(_0x586ff7==0x24)$(_0x3263dd(0x22b)+0x10)[_0x3263dd(0x1e7)](_0x3263dd(0x282),_0xb07c22?_0x3263dd(0x1b7):'0.02');}function asignarTecla(_0xd5f876){var _0x312531=_0x20e383,_0x3c0bc9=String[_0x312531(0x1a3)](notas[_0xd5f876]);if(_0xd5f876!=0x24)$(_0x312531(0x22b)+_0xd5f876)['html'](_0x3c0bc9);$(_0x312531(0x165)+_0xd5f876)[_0x312531(0x1d9)](_0x3c0bc9),console['log'](_0xd5f876+'//'+_0x3c0bc9);}function toggleDispositivos(){var _0x2b6bb3=_0x20e383;if(list[_0x2b6bb3(0x1ff)][_0x2b6bb3(0x288)]=='')list[_0x2b6bb3(0x1ff)][_0x2b6bb3(0x288)]='none';else list[_0x2b6bb3(0x1ff)][_0x2b6bb3(0x288)]='';}function cargarNotaHold(_0x168e4c){notasAntitremolo['push'](_0x168e4c);}function descargarNotaHold(_0x29f287){var _0x3f7beb=_0x20e383,_0x273154=notasAntitremolo['indexOf'](_0x29f287);notasAntitremolo[_0x3f7beb(0x158)](_0x273154,0x1);}function podemoTocarLaNota(_0xa6b547){var _0x44a561=_0x20e383;return notasAntitremolo[_0x44a561(0x181)](_0xa6b547)==-0x1;}function testearNotas(){var _0x6d2577=0xe;pepe=setInterval(function(){var _0x5db970=_0x3618;tirarnota(_0x6d2577);if(_0x6d2577>0xe)largarnota(_0x6d2577-0x1);resaltarNota(_0x6d2577-0x12,!![]),resaltarNota(_0x6d2577-0x28,![]),console[_0x5db970(0x1a6)](_0x6d2577++),_0x6d2577>0x44&&(clearInterval(pepe),resaltarNota(_0x6d2577-0x28,![]));},0x7d0);}function pararTesteo(){clearInterval(pepe);for(var _0x65feea=0x12;_0x65feea<0x4f;_0x65feea++)resaltarNota(_0x65feea-0x12,![]);}function silenciarTodo(){var _0x21726e=_0x20e383;notasAntitremolo['forEach'](_0x5614c8=>{var _0xfdf674=_0x3618;sourcesCabeza[_0x5614c8][_0xfdf674(0x18f)](audiocontext[_0xfdf674(0x23c)]);}),notasAntitremolo[_0x21726e(0x268)](_0x12a481=>descargarNotaHold(_0x12a481));for(var _0xcf7a86=0x12;_0xcf7a86<0x4f;_0xcf7a86++)resaltarNota(_0xcf7a86-0x12,![]);}function getQueryVariable(_0x33ed08){var _0x14b6c7=_0x20e383,_0xa68204=window[_0x14b6c7(0x1ca)]['search']['substring'](0x1),_0x261664=_0xa68204[_0x14b6c7(0x200)]('&');for(var _0x22ed6a=0x0;_0x22ed6a<_0x261664[_0x14b6c7(0x15e)];_0x22ed6a++){var _0x29f07e=_0x261664[_0x22ed6a][_0x14b6c7(0x200)]('=');if(_0x29f07e[0x0]==_0x33ed08)return _0x29f07e[0x1];}return![];}function buildUrlSample(_0x741b5a,_0x526054){var _0x16ff13=_0x20e383,_0x1163bc;if(getQueryVariable('gh')=='t')_0x1163bc=_0x16ff13(0x229);else{if(getQueryVariable('gh')=='l')_0x1163bc='/s/';else _0x1163bc=_0x16ff13(0x27b);}if(_0x526054==_0x16ff13(0x161))_0x1163bc+='mi_';else _0x1163bc+='md_';_0x1163bc+=_0x741b5a+'/';var _0xa22a5e=_0x526054=='izq'?[_0x16ff13(0x1bb),_0x16ff13(0x182),_0x16ff13(0x238),_0x16ff13(0x168),_0x16ff13(0x1c2),_0x16ff13(0x1d3)]:[_0x16ff13(0x17c),_0x16ff13(0x15f),'3_a4',_0x16ff13(0x1b0),'5_b5',_0x16ff13(0x22f)];return _0xa22a5e=_0xa22a5e[_0x16ff13(0x1b8)](_0x33b113=>_0x1163bc+_0x33b113+'.wav'),_0xa22a5e;}function mostrarSamplesCargados(){var _0x5b8113=_0x20e383;document[_0x5b8113(0x1b6)](_0x5b8113(0x18c))[_0x5b8113(0x1c7)]=samplesCargados+_0x5b8113(0x26b);}var g_instrument=_0x20e383(0x1a9),AudioContext=window[_0x20e383(0x1b3)]||window[_0x20e383(0x1e2)],audiocontext=new AudioContext(),piano7sounds=[];for(var i=0x18;i<=0x6c;i++)piano7sounds[i]=null;var urlsG=buildUrlSample(getQueryVariable(_0x20e383(0x279))||'aa',getQueryVariable('mano'));function piano7loadsound(_0x6ba870){var _0x496b4b=_0x20e383,_0x46a7c0=new XMLHttpRequest();if(getQueryVariable(_0x496b4b(0x291))==_0x496b4b(0x161))_0x46a7c0[_0x496b4b(0x1fa)](_0x496b4b(0x177),_0x6ba870==0x10?urlsG[0x0]:_0x6ba870==0x17?urlsG[0x1]:_0x6ba870==0x1e?urlsG[0x2]:_0x6ba870==0x25?urlsG[0x3]:_0x6ba870==0x2c?urlsG[0x4]:_0x6ba870==0x33?urlsG[0x5]:'',!![]);else _0x46a7c0[_0x496b4b(0x1fa)](_0x496b4b(0x177),_0x6ba870==0x25?urlsG[0x0]:_0x6ba870==0x2c?urlsG[0x1]:_0x6ba870==0x33?urlsG[0x2]:_0x6ba870==0x3a?urlsG[0x3]:_0x6ba870==0x41?urlsG[0x4]:_0x6ba870==0x48?urlsG[0x5]:'',!![]);_0x46a7c0[_0x496b4b(0x1cc)](_0x496b4b(0x18a),_0x496b4b(0x17b)),_0x46a7c0['responseType']=_0x496b4b(0x1b1),_0x46a7c0['onload']=function(){var _0xee28fe=_0x496b4b;audiocontext[_0xee28fe(0x1ec)](_0x46a7c0[_0xee28fe(0x16a)],function(_0xfabe15){var _0x3dd545=_0xee28fe;if(!_0xfabe15){console[_0x3dd545(0x250)]('error\x20decoding\x20file\x20data\x20('+_0x6ba870+'):\x20'+url);return;}piano7sounds[_0x6ba870]=_0xfabe15,console['log'](_0x3dd545(0x206)+_0x6ba870);},function(_0x4a448b){var _0x46fc89=_0xee28fe;console[_0x46fc89(0x250)]('decodeAudioData\x20error\x20('+_0x6ba870+_0x46fc89(0x170),_0x4a448b);});},_0x46a7c0[_0x496b4b(0x21b)]=function(){var _0x36404b=_0x496b4b;console['error'](_0x36404b(0x235)+_0x6ba870+')');},_0x46a7c0[_0x496b4b(0x209)]('n='+_0x6ba870);}function piano7loadbasic(){var _0x3b7b25=_0x20e383;getQueryVariable('mano')==_0x3b7b25(0x161)?(piano7loadsound(0x10),piano7loadsound(0x17),piano7loadsound(0x1e),piano7loadsound(0x25),piano7loadsound(0x2c),piano7loadsound(0x33)):(piano7loadsound(0x25),piano7loadsound(0x2c),piano7loadsound(0x33),piano7loadsound(0x3a),piano7loadsound(0x41),piano7loadsound(0x48));}function sourcestart(_0x3fc9e0,_0x5adc8d,_0x1c9dca){var _0x40e257=_0x20e383;if(audiocontext[_0x40e257(0x1e3)]==_0x40e257(0x1e8))audiocontext['resume']();var _0x543995=[Math[_0x40e257(0x19f)](0x2,-0x3/0xc),Math[_0x40e257(0x19f)](0x2,-0x2/0xc),Math['pow'](0x2,-0x1/0xc),0x1,Math[_0x40e257(0x19f)](0x2,0x1/0xc),Math[_0x40e257(0x19f)](0x2,0x2/0xc),Math[_0x40e257(0x19f)](0x2,0x3/0xc)],_0x3964a8=volu,_0x5d0939=0x4,_0x1bd5d9=audiocontext[_0x40e257(0x23c)]+_0x1c9dca,_0x103090=_0x1bd5d9+_0x5d0939,_0x22b564=audiocontext[_0x40e257(0x1af)](),_0x2f2e7f=getQueryVariable(_0x40e257(0x279))=='emu'?0x0:0x0;_0x2f2e7f?(_0x22b564[_0x40e257(0x28f)][_0x40e257(0x207)](0x0,_0x1bd5d9),_0x22b564[_0x40e257(0x28f)]['linearRampToValueAtTime'](_0x3964a8,_0x1bd5d9+_0x2f2e7f),_0x22b564[_0x40e257(0x28f)][_0x40e257(0x201)](_0x3964a8,_0x103090-_0x2f2e7f),_0x22b564['gain'][_0x40e257(0x201)](0x0,_0x103090)):(_0x22b564[_0x40e257(0x28f)][_0x40e257(0x207)](_0x3964a8,_0x1bd5d9),_0x22b564[_0x40e257(0x28f)][_0x40e257(0x201)](_0x3964a8,_0x103090));_0x22b564[_0x40e257(0x1ab)](audiocontext[_0x40e257(0x159)]);var _0x35a822=_0x5adc8d==Math[_0x40e257(0x19f)](0x2,0x5/0xc)?0x4d:_0x3fc9e0+_0x543995[_0x40e257(0x181)](_0x5adc8d)-0x3;sourcesCabeza[_0x35a822]=audiocontext[_0x40e257(0x231)](),sourcesCabeza[_0x35a822][_0x40e257(0x28e)]=piano7sounds[_0x3fc9e0],sourcesCabeza[_0x35a822][_0x40e257(0x192)]['setValueAtTime'](_0x5adc8d,0x0),sourcesCabeza[_0x35a822][_0x40e257(0x1ab)](_0x22b564),sourcesCabeza[_0x35a822][_0x40e257(0x21e)](_0x1bd5d9);}function playpiano7sound(_0x49d586,_0x454196){var _0x4f8495=_0x20e383;_0x454196=getQueryVariable(_0x4f8495(0x279))==_0x4f8495(0x16d)?0.005:0x0;if(_0x49d586==0x4d)return sourcestart(0x48,Math['pow'](0x2,0x5/0xc),_0x454196);else{if(_0x49d586%0x7==0x2)return sourcestart(_0x49d586,0x1,_0x454196);if(_0x49d586%0x7==0x3)return sourcestart(_0x49d586-0x1,Math[_0x4f8495(0x19f)](0x2,0x1/0xc),_0x454196);if(_0x49d586%0x7==0x4)return sourcestart(_0x49d586-0x2,Math[_0x4f8495(0x19f)](0x2,0x2/0xc),_0x454196);if(_0x49d586%0x7==0x5)return sourcestart(_0x49d586-0x3,Math[_0x4f8495(0x19f)](0x2,0x3/0xc),_0x454196);if(_0x49d586%0x7==0x6)return sourcestart(_0x49d586+0x3,Math['pow'](0x2,-0x3/0xc),_0x454196);if(_0x49d586%0x7==0x0)return sourcestart(_0x49d586+0x2,Math[_0x4f8495(0x19f)](0x2,-0x2/0xc),_0x454196);if(_0x49d586%0x7==0x1)return sourcestart(_0x49d586+0x1,Math[_0x4f8495(0x19f)](0x2,-0x1/0xc),_0x454196);}}function playpianosound(_0x5b7e0d,_0x27b643,_0x21188d){playpiano7sound(_0x27b643,_0x21188d);}function playaudio(_0x3dd95f){playpianosound(audiocontext,_0x3dd95f);}function casosEspeciales(){var _0x212943=_0x20e383;let _0x15705d=getQueryVariable(_0x212943(0x279)),_0x470350=document[_0x212943(0x1b6)](_0x212943(0x173));const _0x11123d=()=>{var _0x55bbdf=_0x212943;return getQueryVariable(_0x55bbdf(0x291))==_0x55bbdf(0x161)?'&mano=izq':'';};document[_0x212943(0x1b6)](_0x212943(0x197))['innerText']=_0x15705d=='aa'||!getQueryVariable(_0x212943(0x279))?'Doble\x20A':_0x15705d==_0x212943(0x221)?'TROILO\x20VIBRATO':_0x15705d['toUpperCase']();if(_0x15705d==_0x212943(0x17e))_0x470350['innerHTML']=_0x212943(0x293)+_0x11123d()+'\x22>\x20<img\x20class=\x22switchVibr\x22\x20src=\x22img/switchoff1.png\x22\x20>\x20</a>';else{if(_0x15705d=='troiloV')_0x470350[_0x212943(0x174)]=_0x212943(0x166)+_0x11123d()+_0x212943(0x1a7);}}piano7loadbasic(),toggleDispositivos(),casosEspeciales(),debugEl[_0x20e383(0x1c7)]=_0x20e383(0x23b);
+/*******************************************************************/
+/*******************************************************************/
+/*
+allboyyyszchhalvinschhh!!!
+	1) el carrito 
+2) las fotos que se agrandan en el celular 
+3) lo de chrome
+4) armar las redes y sincronizar 
+5) siguen cargando lento ... serán las fotos ? Probar bajarlas más de calidad
+Dice que 90 le puso al de más arriba
+https://obfuscator.io/
+	
+  -cambiar imagenes (ta, borrarle el moco a la disposicion 3) 
+  -cambiar teclas (z,s,e,3,f4)
+  -cambiar sonidos
+  -cambiar los nros que se corren los indices (el viejo es -39)
+  -cambiar posiciones del overlay
+  -creo que nada mas? el indentado y la concha de la vaca?
+  
+  -ver en que casos combiene hacer directamente pares de array (para las notas? para los buffers?, para las posiciones casi seguro que si)
+  
+  
+  on key press (barra espaciadora) hacer una funcion que cambia de modo.
+cambio de modo :
+  - cambiar el array de notas y teclas del teclado (y)
+  - cambiar la imagen (y)
+  - cambiar los overlays (hacer otro array de posiciones? y mandarle un for cabeza que cambie style.top, style.left?)
+  - (cortar cualquier nota que haya quedado sonando) (y)
+  - y de todo esto que pueda volver para atras (ponele tirarle un boolean como parametro? mejor un numero y que sobreescriba violento? 
+  
+    
+despues va a haber que hacerle otro cambio de modo que seria todo lo de arriba 
+     +.... cambiar los samples?
+	 +cambiar una variable que corrija el -39 de la funcion playaudio(tecl)
+  
+  -preguntar: la barra espaciadora que la mantengan apretada y en key up volver al anterior? (se podrian tirar menos notas asi)
+  -como va a hacer en el midi para cambiar de abierto a cerrado y de una mano a otra?
+  
+  */
+/*******************************************************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/**************terminan las keys carga los overlays***/
+
+   
+  /**** pacalibrar los overlays de los botones */
+  function elegirBotono() {
+  
+	plantarOverlays();
+	
+	var n = $("#botonoind").val();
+	
+	var cssTop = document.getElementById("bono"+n).style.top;
+	var cssLeft = document.getElementById("bono"+n).style.left;
+	cssTop = cssTop.substr(0,cssTop.length -2);
+	cssLeft = cssLeft.substr(0,cssLeft.length -2,);
+	$("#botonox").val(cssTop  );
+	$("#botonoy").val(cssLeft  );
+	
+	$("#bono"+n).css({"opacity":"1","background-color":"green"});
+	
+ }
+ 
+  function moverboton(bool){
+	var n = $("#botonoind").val();
+	var x=  $("#botonox").val() ;
+	var y= $("#botonoy").val() 
+	$("#bono"+n).css("top",x+"vw");
+	$("#bono"+n).css("left",y+"vw");
+  }
+  
+  function printValues(){
+  var testo = "["
+   for(var i= 0; i<39;i++){
+	   if( document.getElementById("bono"+i)) {
+		   var x = document.getElementById("bono"+i).style.top; // $("#bono" + i ).css("top");
+		   var y =   document.getElementById("bono"+i).style.left; //$("#bono" + i ).css("left");
+		   testo += "[\"" + x + "\",\"" +y+"\"],";
+	   } else {
+	   testo += "[\"" + "0vw" + "\",\"" +"0vw"+"\"],";
+	   }
+   }
+   testo += "]";
+   console.table(testo);
+   //$("#oupu").append(testo);
+ }
+ 
+ function plantarOverlays(){
+   //for(var i= 0; i<39;i++) $("#bono" + i ).css({"opacity":"0.5","top":"0","left":"0"});
+   for(var i= 0; i<39;i++) $("#bono" + i ).css({"opacity":"0.5","background-color":"yellow"});
+ }
+
+ /*
+ [215.5px,468.066px],[0px,0px],[228.43px,12.93px],[198.26px,399.968px],[88.786px,43.962px],[106.888px,468.066px],[172.4px,448.24px],[125.852px,421.518px],[39.652px,146.54px],[73.27px,112.06px],[35.342px,224.12px],[212.052px,63.788px],[106.026px,356.006px],[37.928px,295.666px],[111.198px,81.028px],[64.65px,258.6px],[173.262px,43.1px],[50.858px,374.97px],[185.33px,332.732px],[59.478px,187.054px],[149.988px,106.888px],[96.544px,155.16px],[85.338px,402.554px],[138.782px,177.572px],[92.234px,220.672px],[152.574px,379.28px],[135.334px,246.532px],[181.02px,267.22px],[93.958px,291.356px],[63.788px,327.56px],[142.23px,310.32px],[193.088px,131.886px],[66.374px,445.654px],[180.158px,198.26px],[0px,0px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]
+ [163.78px,37.066px],[200.846px,54.306px],[112.06px,72.408px],[43.962px,113.784px],[73.27px,148.264px],[74.994px,92.234px],[188.778px,104.302px],[140.506px,143.092px],[149.126px,87.924px],[101.716px,124.128px],[94.82px,231.016px],[70.684px,201.708px],[136.196px,196.536px],[68.96px,260.324px],[102.578px,282.736px],[75.856px,315.492px],[137.058px,243.946px],[114.646px,335.318px],[209.466px,424.966px],[142.23px,298.252px],[178.434px,159.47px],[98.268px,175.848px],[131.024px,386.176px],[174.986px,265.496px],[155.16px,352.558px],[39.652px,233.602px],[184.468px,317.216px],[42.238px,288.77px],[168.09px,406.002px],[93.958px,369.798px],[56.892px,347.386px],[193.088px,370.66px],[24.136px,325.836px],[12.068px,268.944px],[38.79px,173.262px],[0px,0px],[0px,0px],[0px,0px],[0px,0px]]
+ //530.39 (--- ancho de la imagen 
+  517.19
+ var posbotones0=[["179.452px","38.012px"],["217.464px","55.692px"],["124.644px","75.14px"],["85.748px","95.472px"],["53.924px","118.456px"],["83.98px","155.584px"],["205.972px","108.732px"],["114.036px","129.948px"],["162.656px","92.82px"],["107.848px","242.216px"],["82.212px","212.16px"],["150.28px","206.856px"],["114.92px","296.14px"],["153.816px","149.396px"],["150.28px","254.592px"],["127.296px","350.064px"],["111.384px","184.756px"],["156.468px","312.052px"],["192.712px","221.884px"],["144.976px","404.872px"],["194.48px","165.308px"],["190.944px","277.576px"],["227.188px","444.652px"],["169.728px","369.512px"],["200.668px","332.384px"],["79.56px","273.156px"],["183.872px","425.204px"],["87.516px","329.732px"],["209.508px","388.96px"],["106.964px","387.192px"],["68.068px","363.324px"],["52.156px","301.444px"],["32.708px","341.224px"],["49.504px","243.984px"],["19.448px","281.996px"],["23.868px","213.044px"],["47.736px","181.22px"],["24.752px","152.048px"],["0px","0px"]];
+ 
+ var posbotones1= [["215.5px","468.066px"],["0px","0px"],["228.43px","12.93px"],["198.26px","399.968px"],["88.786px","43.962px"],["106.888px","468.066px"],["172.4px","448.24px"],["125.852px","421.518px"],["39.652px","146.54px"],["73.27px","112.06px"],["35.342px","224.12px"],["212.052px","63.788px"],["106.026px","356.006px"],["37.928px","295.666px"],["111.198px","81.028px"],["64.65px","258.6px"],["173.262px","43.1px"],["50.858px","374.97px"],["185.33px","332.732px"],["59.478px","187.054px"],["149.988px","106.888px"],["96.544px","155.16px"],["85.338px","402.554px"],["138.782px","177.572px"],["92.234px","220.672px"],["152.574px","379.28px"],["135.334px","246.532px"],["181.02px","267.22px"],["93.958px","291.356px"],["63.788px","327.56px"],["142.23px","310.32px"],["193.088px","131.886px"],["66.374px","445.654px"],["180.158px","198.26px"],["0px","0px"],["0px","0px"],["0px","0px"],["0px","0px"],["0px","0px"]]
+ var ancho = 664.8;
+ var posbotones=[["0px","0px"],["229.356px","516.328px"],["90.856px","64.264px"],["0px","0px"],["268.136px","24.376px"],["251.516px","601.644px"],["114.124px","603.86px"],["118.556px","111.908px"],["27.7px","192.792px"],["197.224px","62.048px"],["23.268px","292.512px"],["197.224px","577.268px"],["86.424px","518.544px"],["58.724px","424.364px"],["70.912px","149.58px"],["25.484px","383.368px"],["168.416px","141.824px"],["212.736px","431.012px"],["138.5px","542.92px"],["99.72px","204.98px"],["170.632px","488.628px"],["154.012px","232.68px"],["52.076px","244.868px"],["94.18px","288.08px"],["59.832px","336.832px"],["148.472px","320.212px"],["97.504px","377.828px"],["43.212px","484.196px"],["157.336px","402.204px"],["111.908px","460.928px"],["221.6px","175.064px"],["62.048px","573.944px"],["206.088px","259.272px"],["0px","0px"],["0px","0px"],["208.304px","347.912px"],["247.084px","87.532px"],["0px","0px"],["0px","0px"]];
+				
+ var posbotones2 = []
+for (var i =0; i<37;i++){
+ var y = posbotones[i][0]
+ var x = posbotones[i][1]
+ y = y.substr(0, y.length -3);
+ x = x.substr(0, x.length -3);
+ y = Math.floor((y / (ancho/60))*100)/100;
+ x = Math.floor((x /  (ancho/60))*100)/100;
+ posbotones2[i] = [y+"vw", x+"vw"]
+} 
+var testo = "[";
+for (var i =0; i<37;i++){
+   testo += "[\""+posbotones2[i][0] + "\",\"" + posbotones2[i][1] + "\"],";
+}
+*/
+
+/***********************las keys **************************/
+   
+   $(document).ready(function(){
+	 
+	 $("body").keydown(function(e){
+		 var display = document.getElementById("desbloquear").style.display 
+	 if(display == "none" || display == "") {
+	   var keyCode = e.keyCode || e.which;
+			   //if( keyCode <= 112 && keyCode >= 123 || keyCode == 32)  
+			   e.preventDefault();
+	   
+	   //console.log(keyCode);
+			   //if(podemoTocarLaNota(keyCode)){
+			   if (keyCode != 32) {
+				   tirarnota(entrakeysalenota(keyCode,true)); }
+			 else {
+				   //cambiaModo()
+				   setMode( modo % 2 == 0 ?  modo + 1 : modo - 1)
+		   
+			   }
+	   }
+   }
+ );
+	 
+	 
+	 $("body").keyup(function(e){
+	   var keyCode = e.keyCode || e.which;
+	   if (keyCode != 32) largarnota(entrakeysalenota(keyCode));
+	 });
+	 
+   });
+   
+   
+   /*********************************crea y carga los overlays**********************************/
+
+  $(document).ready(function(){
+	   
+	   
+	   
+	   var moneda=true;
+	   for(var i= 0; i<40;i++){
+		   // var c= moneda ? i*10 : 250 - i*10
+		   var c= moneda ? 30 : 150 ;
+		   var color =`rgb(${c},${c},${c}) `
+		   //var color =`rgb(200,${c},${c}) `
+		   var testo= `<div class="overlay"style="background:${color};opacity:0.02;" id="overnota${i}" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" ></div>`
+		   //var testo2= `<div class="botonota" style="background:white;opacity:0.0;top:${posbot[i][0]};left:${posbot[i][1]}" id="bono${i}"></div>`
+		   var testo2= `<div class="botonota" onclick="tirarnota(${i} + corridas); setTimeout(function(){largarnota(${i} + corridas)},500)" style="opacity:0.0;" id="bono${i}"></div>`;
+		   $("#tiagarro0").append(testo2);
+		   if (i < 24) { 
+			   $("#tiagarro1").append(testo)
+		   }else{
+			   $("#tiagarro2").append(testo)
+		   }
+		   //$("#tiagarro" + i<24 ? "1" : "2").append(testo)
+		   moneda= !moneda;
+		   
+	   }
+	   document.getElementById('overnota36').removeAttribute("onclick");
+	   document.getElementById('overnota37').removeAttribute("onclick");
+	   document.getElementById('overnota38').removeAttribute("onclick");
+	   
+	   var m = getQueryVariable("mano") != "izq";
+	   var a = getQueryVariable("cerr") != "true";
+	   
+	   var mod = m && a ? 0 : 
+				  m && !a ? 1 :
+				   !m && a ? 2 : 3;
+				   
+	   
+	   setMode(mod);
+	   console.log("largo" + posbot.length) 
+	   
+	   
+   });
+ 
+   /**************************************************************************************/
+   
+   /*************************VARIABLES (PONELE)************************/
+   
+   var estaAbriendo = false;
+   
+   var notasAntitremolo=[];
+   var notas =[];
+   
+   var notasD_A = [65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+			   54,75,55,77,56,118,117,null,116,null,null,115];
+   var notasD_C = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,82,73,66,74,116,78,117,75,56,118,77,null,null,115,null,null,86];
+   var notasI_A =  [188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,84,74,71,66,89,55,72,67,119,86];
+   var notasI_C = [null,77,51,null,90,188,57,69,115,83,116,75,56,55,52,117,68,78,73,82,74,70,53,84,54,71,89,118,72,85,67,119,86,null,null,66,88];
+   var notasFull = [notasD_A, notasD_C, notasI_A, notasI_C]
+   
+   var posbot= [];
+   
+   
+   var posbotD_A = [["16.8vw","9.9vw"],["20.3vw","11.2vw"],["12.4vw","13vw"],["8.8vw","14.7vw"],["5.9vw","17.5vw"],["8.1vw","20.5vw"],["19.3vw","16.6vw"],["11.4vw","18.3vw"],["15.4vw","14.9vw"],["10.8vw","28.5vw"],["8vw","26.1vw"],["14.2vw","25.1vw"],["11.4vw","33.4vw"],["14.6vw","19.9vw"],["14.6vw","30.4vw"],["12.5vw","39vw"],["10.7vw","23.3vw"],["14.8vw","35.2vw"],["18vw","26.8vw"],["13.8vw","44.2vw"],["18.3vw","21.7vw"],["17.9vw","31.9vw"],["21vw","47.6vw"],["16.1vw","40.7vw"],["18.4vw","36.8vw"],["8vw","31.5vw"],["17.3vw","45.8vw"],["8.9vw","37.2vw"],["19.6vw","42.5vw"],["10.1vw","42.5vw"],["6.9vw","40.8vw"],["5.8vw","34.9vw"],["3.9vw","38.1vw"],["5.2vw","28.9vw"],["3.4vw","32.4vw"],["3.1vw","26.4vw"],["5.3vw","23.2vw"],["0vw","0vw"],["3.3vw","19.6vw"]] ;
+   //[["20.3vw","4.29vw"],["24.6vw","6.29vw"],["14.1vw","8.5vw"],["9.7vw","10.79vw"],["6.1vw","13.34vw"],["9.5vw","17.53vw"],["23.3vw","12.29vw"],["12.9vw","14.69vw"],["18.4vw","10.5vw"],["12.2vw","27.39vw"],["9.3vw","23.98vw"],["17vw","23.3vw"],["13vw","33.48vw"],["17.4vw","16.88vw"],["17vw","28.73vw"],["14.4vw","39.59vw"],["12.6vw","20.89vw"],["17.7vw","35.29vw"],["21.8vw","25.09vw"],["16.4vw","45.79vw"],["22vw","18.66vw"],["21.6vw","31.39vw"],["25.7vw","50.29vw"],["19.2vw","41.79vw"],["22.7vw","37.59vw"],["9vw","30.88vw"],["20.8vw","48.1vw"],["9.9vw","37.21vw"],["23.7vw","43.99vw"],["12.1vw","43.79vw"],["7.7vw","41.06vw"],["5.9vw","34.05vw"],["3.7vw","38.57vw"],["5.6vw","27.48vw"],["2.2vw","31.78vw"],["2.7vw","24.09vw"],["5.4vw","20.47vw"],["0vw","0vw"],["2.8vw","17.19vw"],["0vw","0vw"]];
+   var posbotD_C = [["16.8vw","9.9vw"],["20.2vw","11.3vw"],["12.4vw","13.1vw"],["5.8vw","17.5vw"],["8.2vw","20.5vw"],["8.8vw","14.7vw"],["19.1vw","16.7vw"],["14.7vw","19.9vw"],["15.4vw","14.8vw"],["11.4vw","18.2vw"],["10.7vw","28.5vw"],["8vw","26.1vw"],["14.4vw","25.2vw"],["8vw","31.5vw"],["11.4vw","33.4vw"],["8.8vw","37.3vw"],["14.5vw","30.4vw"],["12.5vw","39vw"],["20.8vw","47.6vw"],["14.8vw","35.1vw"],["18.2vw","21.8vw"],["10.8vw","23.4vw"],["13.9vw","44.2vw"],["18vw","31.9vw"],["16.1vw","40.7vw"],["5.2vw","28.9vw"],["18.5vw","36.8vw"],["5.8vw","35vw"],["17.3vw","45.8vw"],["10.2vw","42.6vw"],["7.1vw","40.9vw"],["19.5vw","42.6vw"],["3.9vw","38.2vw"],["3.3vw","32.4vw"],["5.4vw","23.2vw"],["3vw","26.4vw"],["3.3vw","19.9vw"],["0vw","0vw"],["0vw","0vw"],["17.7vw","26.8vw"]];
+   //[["18.99vw","4.29vw"],["23.29vw","6.29vw"],["12.99vw","8.39vw"],["5.09vw","13.19vw"],["8.49vw","17.19vw"],["8.69vw","10.69vw"],["21.89vw","12.1vw"],["16.29vw","16.6vw"],["17.29vw","10.19vw"],["11.79vw","14.39vw"],["10.99vw","26.79vw"],["8.19vw","23.39vw"],["15.79vw","22.79vw"],["7.99vw","30.2vw"],["11.89vw","32.79vw"],["8.79vw","36.6vw"],["15.89vw","28.29vw"],["13.29vw","38.89vw"],["24.29vw","49.3vw"],["16.49vw","34.6vw"],["20.69vw","18.49vw"],["11.39vw","20.39vw"],["15.19vw","44.8vw"],["20.29vw","30.79vw"],["17.99vw","40.89vw"],["4.59vw","27.1vw"],["21.39vw","36.8vw"],["4.89vw","33.49vw"],["19.48vw","47.1vw"],["10.89vw","42.89vw"],["6.59vw","40.3vw"],["22.39vw","42.99vw"],["2.79vw","37.8vw"],["1.39vw","31.2vw"],["4.48vw","20.1vw"],["1.69vw","23.39vw"],["1.79vw","16.8vw"],["0vw","0vw"],["0vw","0vw"],["20.49vw","24.59vw"]];
+   var posbotI_A = [["18.6vw","47.2vw"],["0vw","0vw"],["19vw","7.5vw"],["16.9vw","41.3vw"],["8.1vw","10.2vw"],["9.7vw","47.3vw"],["14.9vw","45.2vw"],["11.3vw","43.2vw"],["4.2vw","18.9vw"],["6.8vw","16.1vw"],["3.6vw","25.6vw"],["18vw","11.9vw"],["9.2vw","37.3vw"],["3.7vw","32.2vw"],["10vw","13.3vw"],["5.7vw","28.8vw"],["14.7vw","9.7vw"],["4.6vw","38.7vw"],["15.8vw","35.2vw"],["5.8vw","22.6vw"],["13.2vw","15.7vw"],["8.7vw","19.3vw"],["7.5vw","41.3vw"],["12.4vw","21.7vw"],["8.4vw","25.6vw"],["13.2vw","39.1vw"],["12vw","27.7vw"],["15.6vw","29.4vw"],["8.7vw","31.3vw"],["6.2vw","34.9vw"],["12.3vw","33vw"],["16.4vw","17.6vw"],["6.2vw","45.4vw"],["15.6vw","23.8vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"]] ;
+   //[["24.94vw","54.3vw"],["0vw","0vw"],["26.49vw","1.49vw"],["22.99vw","46.39vw"],["10.29vw","5.09vw"],["12.39vw","54.3vw"],["19.95vw","51.99vw"],["14.6vw","48.9vw"],["4.59vw","16.99vw"],["8.49vw","12.99vw"],["4.09vw","25.99vw"],["24.6vw","7.39vw"],["12.29vw","41.3vw"],["4.39vw","34.29vw"],["12.89vw","9.39vw"],["7.49vw","29.93vw"],["20.1vw","4.98vw"],["5.89vw","43.49vw"],["21.49vw","38.6vw"],["6.89vw","21.69vw"],["17.39vw","12.39vw"],["11.19vw","17.99vw"],["9.89vw","46.7vw"],["16.1vw","20.6vw"],["10.69vw","25.6vw"],["17.69vw","43.99vw"],["15.69vw","28.6vw"],["20.99vw","30.99vw"],["10.89vw","33.79vw"],["7.39vw","37.99vw"],["16.49vw","35.99vw"],["22.39vw","15.29vw"],["7.69vw","51.7vw"],["20.89vw","22.99vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"],["0vw","0vw"]];
+   var posbotI_C =[["0vw","0vw"],["16.9vw","41.3vw"],["8.1vw","10.2vw"],["0vw","0vw"],["19vw","7.5vw"],["18.7vw","47.3vw"],["9.7vw","47.2vw"],["9.9vw","13.3vw"],["4.2vw","18.8vw"],["14.7vw","9.8vw"],["3.6vw","25.6vw"],["14.9vw","45.2vw"],["7.5vw","41.3vw"],["6.2vw","34.8vw"],["6.8vw","16.1vw"],["3.7vw","32.3vw"],["13.1vw","15.7vw"],["15.8vw","35.2vw"],["11.2vw","43.2vw"],["8.8vw","19.3vw"],["13.2vw","39.1vw"],["12.3vw","21.7vw"],["5.9vw","22.6vw"],["8.49vw","25.99vw"],["5.7vw","28.8vw"],["12.1vw","27.7vw"],["8.7vw","31.4vw"],["4.6vw","38.7vw"],["12.4vw","33.1vw"],["9.2vw","37.2vw"],["16.4vw","17.6vw"],["6.2vw","45.4vw"],["15.6vw","23.7vw"],["0vw","0vw"],["0vw","0vw"],["15.5vw","29.5vw"],["17.9vw","12vw"],["0vw","0vw"],["0vw","0vw"]];
+   //[["0vw","0vw"],["20.69vw","46.59vw"],["8.19vw","5.79vw"],["0vw","0vw"],["24.19vw","2.19vw"],["22.69vw","54.29vw"],["10.29vw","54.49vw"],["10.69vw","10.09vw"],["2.43vw","17.39vw"],["17.79vw","5.59vw"],["2.09vw","26.39vw"],["17.79vw","52.09vw"],["7.79vw","46.79vw"],["5.29vw","38.29vw"],["6.39vw","13.49vw"],["2.29vw","34.59vw"],["15.19vw","12.79vw"],["19.19vw","38.89vw"],["12.45vw","48.99vw"],["8.99vw","18.49vw"],["15.39vw","44.09vw"],["13.89vw","20.99vw"],["4.69vw","22.09vw"],["8.49vw","25.99vw"],["5.39vw","30.39vw"],["13.39vw","28.89vw"],["8.79vw","34.09vw"],["3.89vw","43.69vw"],["14.19vw","36.29vw"],["10.09vw","41.59vw"],["19.94vw","15.79vw"],["5.59vw","51.79vw"],["18.59vw","23.39vw"],["0vw","0vw"],["0vw","0vw"],["18.79vw","31.39vw"],["22.29vw","7.89vw"]];
+   var posbotFull = [posbotD_A, posbotD_C, posbotI_A, posbotI_C ]
+   
+   var modo;
+   
+   var corridas =	getQueryVariable("mano") == 'izq' ? 18 : 39; //dudoooooso
+   
+   var sourcesCabeza=[];  
+   for (var i = 0; i<100;i++) sourcesCabeza[i] = null;  
+   
+   var pepe; // intervalo para testeo de notas
+   
+   var volu = 0.6;
+   
+   var samplesCargados= 0;
+ 
+   const list = document.getElementById('midi-list');
+   const debugEl = document.getElementById('debug');
+ 
+   /*****************FUNCIONES*******************************************/
+   
+   function bajarpdf() {
+   var url = "img/mapas/";
+	   switch (modo) {
+		   case 0 :
+			   url += "der_abriendo.pdf"
+		   break;
+		   
+		   case 1 :
+			   url += "der_cerrando.pdf"
+		   break;
+		   
+		   case 2 :
+			   url += "izq_abriendo.pdf"
+		   break;
+		   
+		   case 3 :
+			   url += "izq_cerrando.pdf"
+		   break;
+	   }
+	   console.log(url);
+   window.open(url, '_blank');
+   }
+   
+   function cambiarMano() {
+	var url = "./bandolica.html?";
+	if (getQueryVariable("gh") ) url += "&gh=t";
+	if (getQueryVariable("band") ) url += "&band=" + getQueryVariable("band");
+	if ( !getQueryVariable("mano") || getQueryVariable("mano") == "der")  url += "&mano=izq";
+   
+   window.open(url,"_self");
+   //window.open("./bandolica.html?band=aa","_self");
+   }
+   
+   function setManito(n) {
+	   if (n < 2) {
+		   //$("#manito").html("Ir a mano izquierda <br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+		   $("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o ' style='font-size:40px; '></i>");
+		   $("#manito").css({"display":"block","right":"","left":"0px","border-radius":"0px 15px 15px 0px "})
+		   
+		   $("#manito").addClass("abreIzquierda");
+		   
+		   
+		   
+	   } else {
+		   //$("#manito").html("Ir a mano derecha<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+		   $("#manito").html("CAMBIAR DE MANO<br><i class='fa fa-hand-paper-o espejado' style='font-size:40px; '></i>");
+		   $("#manito").css({"display":"block","right":"0px","left":"","border-radius":"15px 0px 0px 15px"})
+		   $("#manito").addClass("abreDerecha");
+	   
+		   
+	   
+	   }
+	   
+   }
+   
+
+   /***********CAMBIO DE MODOO******/
+   
+   function setMode(n) {
+	   //cambiar variable notas, cambiar variable posbot, cambiar las tres imagenes, algo mas? uhcomomierdahagoconlosamples... (mirar como se hacia el load)
+	   silenciarTodo();
+	   
+	   var abr = n % 2 == 0 ? "Abriendo" : "Cerrando";
+	   var man = n < 2  ? "derecha" : "izquierda";
+	   var modificador = ["D_A", "D_C", "I_A", "I_C"];
+	   var imgsrc = [`img_lab/teclas_${modificador[n]}.jpg`,  //pisar este
+				   `img/pentagramas/penta_${modificador[n]}_1.jpg`, 
+				   `img/pentagramas/penta_${modificador[n]}_2.jpg` ]
+	   
+	   notas = notasFull[n];
+	   posbot= posbotFull[n];
+
+	   var bando = getQueryVariable("band") || "aa";
+	   
+       if (bando == "troiloV") bando = "troilo";
+	   
+	 
+	   //if(bando != "troilo" && bando != "troiloV")
+        setManito(n);
+	   
+	   modo = n;
+	   
+	   
+	   
+	   
+	   //----- ESTOSEVADESCONTORLAAAR
+	   
+
+	   imgsrc[0] = `img/teclados/${bando}_${man}.${bando != "emu" ? "png": "jpg"} `;
+	   
+       
+	   
+	   // else  imgsrc[0] = "img_lab/manoIzqBB.png";
+	   // imgsrc[0] = bando == "aa" ?"img_lab/rectangularbordess.png" : 
+	   
+	   
+	   //-----
+	   
+	   $("#img0").attr("src", imgsrc[0]);
+	   $("#imgP1").attr("src", imgsrc[1]);
+	   $("#imgP2").attr("src", imgsrc[2]);
+	   
+	   
+	   //$("#titulo").html( n % 2 == 0 ? "Abriendo" : "Cerrando");
+	   
+	   $("#titulo").html( abr);
+	   $("#titulo1").html("MANO " + man.toUpperCase());
+	   reordenarOverlays();
+   }
+
+   function cambiaModo(){
+   
+	   // funcion vieja, la dejamos nomas de recuerdo (?)
+	   
+	   
+	   console.log("cambioModo");
+	   estaAbriendo = !estaAbriendo;
+	   if (estaAbriendo){
+		   $("#titulo").html("abriendo");
+		   notas =  [188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,84,74,71,66,89,55,72,67,119,86];
+		   //[188,null,90,77,51,57,75,73,115,52,116,88,85,117,69,54,83,118,78,53,68,82,56,70,*17*,84,74,71,66,89,55,72,119,86];
+		   //console.log("metionotas");
+		   //[65, 90,87,51,114,52,88,69,83,84,53,70,89,68,71,85,82,72,86,73,67,66,188,74,78,
+			   //54,75,55,77,56,118,117,null,116,null,null,115]; //insertar aca las notas
+		   $("#img0").css("display","");
+		   $("#img1").css("display","none");
+	 
+		   for( var i = 0; i<37; i++){
+			   $("#bono"+i).css("top", posbot[i][0]);
+			   $("#bono"+i).css("left", posbot[i][1]);
+			   if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
+			   else $("#bono"+i).css("display","");
+			   //asignarTecla(i);
+		   }
+		   //reordenarOverlays(1); //ver que onda el array de posiciones
+	   } else{
+		   $("#titulo").html("cerrando");
+		   $("#img0").css("display","none");
+		   $("#img1").css("display","");
+		   notas = [null,77,51,null,90,188,57,69,115,83,116,75,56,55,52,117,68,78,73,82,74,70,53,84,54,71,89,118,72,85,67,119,86,null,null,66,88];//insertar aca las notas cerrando
+		   //notas = [65,90,87,114,52,51,88,68,83,69,84,53,70,54,89,55,71,85,188,72,67,73,66,74,116,78,117,75,56,118,77,null,null,115] //insertar aca las notas cerrando
+		   for( var i = 0; i<37; i++){
+			   
+			   $("#bono"+i).css("top", posbot1[i][0]);
+			   $("#bono"+i).css("left", posbot1[i][1]);
+			   
+			   if (posbot1[i][0] == "0vw") $("#bono"+i).css("display","none");
+			   else $("#bono"+i).css("display","");
+			   
+			   //asignarTecla(i);
+		   }
+		   //reordenarOverlays(2); //
+	   }
+	   silenciarTodo();
+	   
+   
+   }
+   
+   function reordenarOverlays() {
+	   for( var i = 0; i<posbot.length; i++){
+		   $("#bono"+i).css("top", posbot[i][0]);
+		   $("#bono"+i).css("left", posbot[i][1]);
+		   if (posbot[i][0] == "0vw") $("#bono"+i).css("display","none");
+		   else $("#bono"+i).css("display","");
+	   }
+   }
+   
+   function setColor(t){
+	   var col = getColor3();
+	   $(t).css("background-color", col[0])
+	   $(t).css("color", col[1])
+   }
+
+   function getColor3(){
+	   gr = Math.floor(Math.random()*255);
+	   re = Math.floor(Math.random()*255);
+	   blu = Math.floor(Math.random()*255);
+	   gr1 = 255 - gr;
+	   re1 = 255- re;
+	   blu1 = 255- blu;
+	   return ["rgb("+ re+","+gr+","+blu+")","rgb("+ re1+","+gr1+","+blu1+")"];
+	 }
+
+
+
+
+   /****FUNCIONES MIDI***/
+	 function connectToDevice(device) {
+	   console.log('Connecting to device', device);
+	   bandStatus(2);
+	   device.onmidimessage = function(m) {
+		 const [command, key, velocity] = m.data;
+		 debugEl.innerText = 'commando:' + command + '\nnrotecla: ' + key + '\nvelocity: ' +velocity;
+		 
+		 if (key == 120 && modo % 2 != 0 ) setMode(modo - 1)
+		 else if (key == 121 && modo % 2 == 0 ) setMode(modo + 1) 
+		 
+		 /*
+		 */
+		 else if (key == 76 && modo == 1) {
+			 if (velocity == 90 && !sourcesCabeza[58])  tirarnota(76) //  tirarnota(notadearriba) velocity 90 es la de abajo
+			 else if ( velocity == 100 && command != 128 && !sourcesCabeza[76]  ) tirarnota(58) // tirarnota(notadeabajo)
+			 else if (  command == 128 || velocity == 0  ) { 
+			   if(sourcesCabeza[76]) largarnota(76); 
+			   else if(sourcesCabeza[58]) largarnota(58);
+				   
+			 }
+		 }
+
+		 else if (key == 52 && modo == 3) { //52 o 54?
+			 if (velocity == 89 && !sourcesCabeza[34]) tirarnota(54);
+			 else if (velocity == 90 && !sourcesCabeza[54]) tirarnota(34);
+			 else if (command == 128 || velocity == 0) {
+			   if (sourcesCabeza[34]) largarnota(34); 
+			   else if (sourcesCabeza[54]) largarnota(54)};
+		 }
+		 
+		 else if (command == 144 && velocity != 0) tirarnota(key-18); //cuando cambie el dispositivo key - 18 (requepodriaponerloenunavariable)
+		 else if (command ==128 || velocity == 0) largarnota(key-18); // antes era key +6
+	   }
+
+   }
+
+   
+   function replaceElements(inputs) {
+	   while(list.firstChild) {
+		   list.removeChild(list.firstChild)
+	   }
+	   
+	   bandStatus(0);
+	   const elements = inputs.map(e => {
+		   console.log(e);
+		   const el = document.createElement('li')
+		   el.innerHTML = `${e.name} (${e.manufacturer})`;
+           document.write(el.innerHTML)
+		   if (el.innerHTML.substring(0,4).toLowerCase() == "ardu" || el.innerHTML.substring(0,6).toLowerCase() == "bandol"  ) {
+			   document.getElementById("bandcon").addEventListener('click', connectToDevice.bind(null, e));
+			   
+			   bandStatus(1);
+		   }
+		   //el.addEventListener('click', connectToDevice.bind(null, e));
+		   return el;
+	   });
+
+	   elements.forEach(e => list.appendChild(e));
+   }
+
+   if( !navigator.requestMIDIAccess) {
+	   document.getElementById("errormidi").style.display="block";
+   }else { 
+	   
+	   navigator.requestMIDIAccess()
+		   .then(function(access) {
+			   console.log('access', access);
+			   replaceElements(Array.from(access.inputs.values()));
+			   access.onstatechange = function(e) {
+			   replaceElements(Array.from(this.inputs.values()));
+		   }
+	   });
+   
+   }
+   
+   function bandStatus(i) {
+	   var sta = document.getElementById("bandcon");
+	   var culo = document.getElementById("circulo");
+	   switch (i){
+	   case 0: 
+		   sta.innerHTML ="CONECTAR BANDOLICA";
+		   culo.style.backgroundColor="transparent";
+		   break;
+	   case 1:
+		   sta.innerHTML ="BANDOLICA DISPONIBLE: CLICK PARA ACTIVAR";
+		   culo.style.backgroundColor="white";
+		   break;
+	   case 2:
+		   sta.innerHTML ="BANDOLICA ACTIVADA";
+		   culo.style.backgroundColor="green";
+		   break;
+	   }
+   }
+   
+   
+   /******************LA MAGIA**********************/
+   /******************LA MAGIA**********************/
+   
+   function cambiarVolumen(v) {
+	   console.log(v);
+	   volu = v/100;
+   }
+   
+   function entrakeysalenota(n,bool){
+	   var ret = notas.indexOf(n);
+	   //if(bool) $("body").append("<br>,"+n); //(((((ESTOLOVAMOANECESITARMASADELANTE)))))
+	   
+	   return ret+corridas;
+   }
+	 
+   //para el sampler 39 = la3, para el midi la3 = 33, ni idea que onda, ta todo traspuest? tecl = nota para el sampler
+   //18 para el sampler (mano izq)
+   function tirarnota(tecl){
+	   if (podemoTocarLaNota(tecl)){
+		   console.log("tironota"+tecl);
+		   if(tecl==54 && corridas == 18){ 
+			   //console.log("entro");
+			   resaltarNota(36,true);
+			   playaudio(34)
+			   cargarNotaHold(34);
+		   } else if (tecl==76 && corridas != 18) {
+			   playaudio(58);
+			   resaltarNota(39,true);
+			   cargarNotaHold(58);
+		   } 
+		   else 
+		   {
+			   
+			   if(tecl>=corridas) {
+				   playaudio(tecl);
+				   resaltarNota(tecl-corridas, true);
+				   cargarNotaHold(tecl);
+			   }
+		   }
+		   
+	   }
+   }
+   
+   function largarnota(tecl){
+	   
+	   if(tecl==54 && corridas == 18){ 
+		   
+		   resaltarNota(36,false);
+
+		   soltarconfade(34);
+		   
+	   } else if( (tecl==76 || tecl == 58 ) && corridas != 18)	{
+		   
+		   resaltarNota(39,false);
+		   resaltarNota(19,false);
+		   
+		   soltarconfade(58);
+
+	   }
+	   else
+	   {
+		   //if(notasAntitremolo.indexOf(tecl) != -1){
+	   
+			   resaltarNota(tecl-corridas, false);
+	   
+			   soltarconfade(tecl);
+			   
+		   //}
+	   }
+	   descargarNotaHold(tecl);
+   
+   }
+   
+   function soltarconfade(note) {
+	   const fade = getQueryVariable("band") == "emu" ? 0.02 : 0; //0.02
+	   const ahora = audiocontext.currentTime;
+	   const gainNode = audiocontext.createGain();
+	   gainNode.gain.setValueAtTime(0, ahora );
+	   gainNode.gain.linearRampToValueAtTime(volu * -1, ahora + fade );
+	   gainNode.connect(audiocontext.destination);
+	   console.log("con fade " + note) 
+	   if (fade != 0) {
+
+		   sourcesCabeza[note].connect(gainNode);
+	   
+		   setTimeout(function (){
+			   sourcesCabeza[note].stop(audiocontext.currentTime);
+			   sourcesCabeza[note]=null;
+		   },fade * 1000)
+	   
+	   } else {
+		   sourcesCabeza[note].stop(audiocontext.currentTime);
+		   sourcesCabeza[note]=null;
+	   }
+   }
+   
+   function resaltarNota(n, bool){
+   
+	   $("#bono"+n).css("opacity",bool ? "0.3": "0.0");
+	   //$("#overnota"+n).css("opacity",bool ? "0.7": "0.02"); //queeee?????
+	   if (n !=36)	$("#overnota"+n).css("opacity",bool ? "0.7": "0.02");
+	   if (n ==36) $("#overnota"+16).css("opacity",bool ? "0.7": "0.02");
+   }
+
+   function asignarTecla(i) {
+	   var txt = String.fromCharCode(notas[i]);
+	   if (i !=36)	$("#overnota"+i).html(txt);
+	   $("#bono"+i).html(txt);
+	   
+	   console.log(i + "//" + txt);
+   }
+   
+   /***************/
+   
+   function toggleDispositivos(){
+	   if (list.style.display == "") list.style.display="none";
+	   else list.style.display="";
+   }
+
+   
+   /************antitremolo*****/
+   function cargarNotaHold(n) {
+	   notasAntitremolo.push(n);
+   }
+ 
+   function descargarNotaHold(n){
+	   var ind = notasAntitremolo.indexOf(n);
+//		if (ind != -1)
+		   notasAntitremolo.splice(ind,1);
+   }
+ 
+   function podemoTocarLaNota(n){
+	   return notasAntitremolo.indexOf(n) == -1
+   }
+   
+   
+   /**********************************/
+   function testearNotas() {
+	   var n =14 ; //34
+	   pepe = setInterval(function(){
+			 tirarnota(n);
+			 if (n>14)largarnota(n-1);
+			 //playaudio(n);
+			 
+			 resaltarNota(n-18,true);
+			 resaltarNota(n-40,false);
+			 console.log(n++);
+			 if(n>68) {clearInterval(pepe); resaltarNota(n-40,false);
+		   }
+	   },2000);
+   }
+ 
+   function pararTesteo(){
+	   clearInterval(pepe);
+	   for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
+   }
+
+   
+   function silenciarTodo(){
+	   
+	   notasAntitremolo.forEach(m => {
+		   sourcesCabeza[m].stop(audiocontext.currentTime);
+	   });
+
+	   
+	   // for (var i = 18; i < 79; i++) {
+	   //  	if (sourcesCabeza[i]){
+	   //  	 	sourcesCabeza[i].stop(audiocontext.currentTime);
+	   //  		console.log("allboys" + i );
+	   //  	}
+	   //  	sourcesCabeza[i] = null;
+	   // }
+	   
+	   notasAntitremolo.forEach(m => descargarNotaHold(m));
+	   for (var i = 18; i < 79; i++) resaltarNota(i-18,false);
+	   
+   }
+   
+   function getQueryVariable(variable){
+	  var query = window.location.search.substring(1);
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+			  var pair = vars[i].split("=");
+			  if(pair[0] == variable){return pair[1];}
+	  }
+	  return(false);
+   }
+   
+   function buildUrlSample(band, mano){
+	   var testo;
+	   if (getQueryVariable("gh") == "t")  testo = "https://raw.githubusercontent.com/zarlanga/bandoneon/master/\s/";
+	   else if (getQueryVariable("gh") == "l" ) testo = "/s/" // aca get url dominio o algo asi para que sea local?
+	   else  testo = "https://bandolica.com/s/"; //(------------------ asi?
+	   
+	   if (mano == "izq") testo += "mi_";
+	   else testo += "md_";
+
+	   
+	   
+	   testo += band + "/";
+	   
+	   var notas = mano == "izq" ?  ["1_bb2", "2_f2", "3_c3", "4_g3", "5_d4", "6_a4"] 
+			   : ["1_g3","2_d4","3_a4","4_e5","5_b5","6_f6"] ;
+	   // var notas = ["1_bb2", "2_f2", "3_c3", "4_g3", "5_d4", "6_a4"] ;
+	   
+	   //var notas = ["1_bb2", "2_f2", "3_c3", "5_d4", "6_a4", "4_g3"] ;
+	   
+	   notas = notas.map( (n) => testo + n + ".wav" )
+	   
+	   return notas;
+	   
+   }
+   
+   function mostrarSamplesCargados(){
+	   document.getElementById("sampleStatus").innerText = `${samplesCargados} de 6 samples cargados`;
+   }
+ 
+
+   /******************************************************************************/ 
+   /**********************AFANADO Y MANOSEADO*************************************/ 
+   /******************************************************************************/ 
+   /******************************************************************************/ 
+   
+   
+   var g_instrument = 'Piano';
+
+
+   var AudioContext = window.AudioContext || window.webkitAudioContext;
+   var audiocontext = new AudioContext();
+   var piano7sounds = [];
+   for (var i=24; i<=108; i++) piano7sounds[i] = null;
+ 
+   /* var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fd3.mp3?v=1590711281058",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fa4.mp3?v=1590711070510",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fe4.mp3?v=1590711070546",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fb5.mp3?v=1590711070887",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ff-5.mp3?v=1590711071048"]              var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsol%202%2B.wav?v=1590779270760",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fre%203%2B.wav?v=1590777317892",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fla%203%2B.wav?v=1590777316166",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fmi%204%2B.wav?v=1590777316937",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fsi%204%2B.wav?v=1590777317258",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Ffa%20%235%2B.wav?v=1590777317355"];  var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",             "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",            "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];*/     
+
+   /*var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1G3.wav?v=1592529971334",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1D4.wav?v=1592529972107",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1A4.wav?v=1592529972178",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1E4.wav?v=1592529974983",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1B5.wav?v=1592529974982",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fg1F%236.wav?v=1592529972280"];
+			   
+			   //sib1 = 16
+			   //fa2 = 23
+			   //do3 = 30
+			   //g3=37 (---
+			   //re4 = 44
+			   //la4 = 51
+			   16,23,30,37,44,51
+   
+   var urlsG=["https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq1-SIb1.wav?v=1593541243180",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq2-FA2.wav?v=1593541374483",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq3-DO3.wav?v=1593541396076",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq4-SOL3.wav?v=1593541407627",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq5-RE4.wav?v=1593541415207",
+			   "https://cdn.glitch.com/a15c2729-c203-4a18-a5ba-1bf43a9da91c%2Fizq6-LA4.wav?v=1593541425728"];
+   
+   
+   */
+   var urlsG = buildUrlSample(getQueryVariable("band") || "aa", getQueryVariable("mano"));
+   
+   function piano7loadsound(n){
+	   var request = new XMLHttpRequest();
+	   
+	   if (getQueryVariable("mano") == 'izq' )
+		   request.open("get", n == 16 ? urlsG[0] :n == 23 ? urlsG[1] : n == 30 ? urlsG[2] :
+				   n == 37 ? urlsG[3] : n == 44 ? urlsG[4] : n == 51 ? urlsG[5] : ""   , true); 
+	   else 
+		   request.open("get", n == 37 ? urlsG[0] :n == 44 ? urlsG[1] : n == 51 ? urlsG[2] :
+			   n == 58 ? urlsG[3] : n == 65 ? urlsG[4] : n == 72 ? urlsG[5] : ""   , true); //n dividido 7?*/
+			   
+	   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	   request.responseType = "arraybuffer";
+	   request.onload =
+		 function() {
+		   audiocontext.decodeAudioData (
+			 request.response,
+			 function(buffer) {
+			   if (!buffer) { console.error('error decoding file data ('+n+'): ' + url); return; }
+			   piano7sounds[n] = buffer;
+			   console.log("cargo " + n); 
+			 },
+			 function(error) { console.error('decodeAudioData error ('+n+'): ', error); 
+			 }
+		   );
+		   
+		   
+		   //samplesCargados++;//
+		   //mostrarSamplesCargados();
+		   
+		 }
+	   request.onerror = function() { console.error('BufferLoader: XHR error ('+n+')'); }
+	   request.send('n='+n);
+   }
+
+   function piano7loadbasic(){ //*********aca no tendria que haber un if para si es mano izquierda o derecha?????
+	   if (getQueryVariable("mano") == 'izq' ) {
+		   piano7loadsound(16);
+		   piano7loadsound(23); piano7loadsound(30); piano7loadsound(37);
+		   piano7loadsound(44); 
+		   piano7loadsound(51);
+	   } else {
+	   piano7loadsound(37);
+	   piano7loadsound(44); piano7loadsound(51); piano7loadsound(58);
+	   piano7loadsound(65); 
+	   piano7loadsound(72);
+	   }
+	   
+   }
+
+   function sourcestart(n,rate,delayInSeconds) {
+	   if (audiocontext.state == 'suspended') audiocontext.resume();
+	   var indexes =[Math.pow(2,-3/12),Math.pow(2,-2/12),Math.pow(2,-1/12),1,
+				 Math.pow(2,1/12),Math.pow(2,2/12),Math.pow(2,3/12)]
+	   var volume = volu;
+	   var duration = 4;//0.6; // in seconds
+	   var start = audiocontext.currentTime + delayInSeconds;
+	   var stop = start + duration;
+	   var gainNode = audiocontext.createGain();
+	   //var fade = (getQueryVariable("fade") || 0 ) / 1000;
+	   var fade = getQueryVariable("band") == "emu" ? 0 : 0; // 0.02
+
+	   if (fade) {
+		   gainNode.gain.setValueAtTime(0, start);
+		   gainNode.gain.linearRampToValueAtTime(volume, start + fade );
+		   gainNode.gain.linearRampToValueAtTime(volume, stop - fade );
+		   gainNode.gain.linearRampToValueAtTime(0, stop );
+	   
+	   } else {
+		   gainNode.gain.setValueAtTime(volume, start);
+		   gainNode.gain.linearRampToValueAtTime(volume, stop);
+	   }
+	   gainNode.connect(audiocontext.destination);
+
+
+
+	   var ind = rate == Math.pow(2,5/12) ? 77 : n+ indexes.indexOf(rate)-3;
+	   sourcesCabeza[ind] = audiocontext.createBufferSource();
+	   sourcesCabeza[ind].buffer = piano7sounds[n];
+	   sourcesCabeza[ind].playbackRate.setValueAtTime(rate,0);
+	   sourcesCabeza[ind].connect(gainNode);
+	   sourcesCabeza[ind].start(start); 
+	   
+   }
+ 
+   function playpiano7sound(n,delayInSeconds) {
+	   //delayInSeconds = delayInSeconds || 0;
+	   //delayInSeconds = (getQueryVariable("delay") || 0 ) / 1000;
+	   delayInSeconds = getQueryVariable("band") == "emu" ? 0.005 : 0 ;
+
+	   //if (delayInSeconds > 0) setTimeout( "recordnow("+n+");" , delayInSeconds*1000);	
+	   if (n == 77) return sourcestart(72, Math.pow(2,5/12),delayInSeconds);
+	   else {
+		   //if (n <= 28) return sourcestart(24,Math.pow(2,(n-24)/12),delayInSeconds);
+		   //if (n >= 93) return sourcestart(93,Math.pow(2,(n-93)/12),delayInSeconds);
+		   if (n%7 == 2) return sourcestart(n,1,delayInSeconds);
+		   if (n%7 == 3) return sourcestart(n-1,Math.pow(2,1/12),delayInSeconds);
+		   if (n%7 == 4) return sourcestart(n-2,Math.pow(2,2/12),delayInSeconds);
+		   if (n%7 == 5) return sourcestart(n-3,Math.pow(2,3/12),delayInSeconds);
+		   if (n%7 == 6) return sourcestart(n+3,Math.pow(2,-3/12),delayInSeconds);
+		   if (n%7 == 0) return sourcestart(n+2,Math.pow(2,-2/12),delayInSeconds);
+		   if (n%7 == 1) return sourcestart(n+1,Math.pow(2,-1/12),delayInSeconds);
+	   }
+   }
+
+   function playpianosound(context,n,delayInSeconds) {
+	   playpiano7sound(n,delayInSeconds);
+   }
+
+  
+   function playaudio(n) {
+	   playpianosound(audiocontext,n);
+   }
+
+
+   function casosEspeciales() {
+        let bandq = getQueryVariable("band");
+        let switchv = document.getElementById("switchVibrato");
+		const metemano = () => {return getQueryVariable("mano") == "izq" ? "&mano=izq" : ""}
+        //console.log(bandq)
+        //switchv.innerHTML = "laoncha";
+        document.getElementById("titulo0").innerText = ( bandq == "aa" || !getQueryVariable("band") ) ? "Doble A" 
+                                                        : bandq == "troiloV" ? "TROILO VIBRATO":
+                                                            bandq.toUpperCase() ;
+        if (bandq == "troilo") switchv.innerHTML = `<a  href="bandolica.html?band=troiloV${metemano()}"> <img class="switchVibr" src="img/switchoff1.png" > </a>`
+        else if (bandq == "troiloV") switchv.innerHTML = `<a  href="bandolica.html?band=troilo${metemano()}"> <img class="switchVibr" src="img/switchon1.png" > </a>`
+
+		
+/*
+		if (bandq == "troilo" || bandq == "troiloV") {
+			alert("caca")
+			
+			document.getElementById("manito").innerHTML = "culo"
+			alert("pis")
+		}
+*/		
+
+
+   }
+
+   piano7loadbasic();
+   
+
+   
+   toggleDispositivos();
+
+   casosEspeciales();
+   
+   //mostrarSamplesCargados();
+   
+   //setColor("#header");
+   //setColor("body");
+   //setColor("button");
+   
+   
+   
+   
+ 
+
+
+ debugEl.innerText = "debug"
